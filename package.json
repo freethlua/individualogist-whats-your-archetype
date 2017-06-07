@@ -1,0 +1,21 @@
+{
+  "name": "slider",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --inline --hot"
+  },
+  "repository": "freethlua/01898920c84e2c9f50_slider",
+  "dependencies": {
+    "linkstate": "^1.0.1",
+    "parse-srt": "^1.0.0-alpha",
+    "preact": "^8.1.0",
+    "preact-hyperscript": "^0.7.1",
+    "preact-hyperscript-h": "^0.1.1",
+    "preact-markup": "^1.6.0"
+  },
+  "devDependencies": {
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
