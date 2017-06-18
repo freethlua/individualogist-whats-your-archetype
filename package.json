@@ -1,20 +1,31 @@
 {
-  "name": "slider",
+  "name": "whats-your-archetype",
   "version": "0.0.0",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --inline --hot"
+    "dev": "webpack-dev-server --hot --inline"
   },
   "repository": "freethlua/01898920c84e2c9f50_slider",
   "dependencies": {
+    "case": "^1.5.2",
+    "debounce": "^1.0.2",
     "linkstate": "^1.0.1",
     "parse-srt": "^1.0.0-alpha",
     "preact": "^8.1.0",
     "preact-hyperscript": "^0.7.1",
     "preact-hyperscript-h": "^0.1.1",
+    "preact-hyperstyler": "^0.3.0",
     "preact-markup": "^1.6.0"
   },
   "devDependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "pug": "^2.0.0-rc.2",
+    "pug-loader": "^2.3.0",
+    "style-loader": "^0.18.2",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   }
