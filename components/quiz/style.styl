@@ -91,16 +91,18 @@ body
 
 
 .ol
+  // border: 2px dotted red
   position: relative
+  height: 30em
 .li
-  transition:opacity 333ms
+  transition:opacity 1000ms
+  position: absolute
+  width: 96%
   &:not(.visible)
-    position: absolute
     opacity: 0
-    z-index: -1
   &.visible
     opacity: 1
-    z-index: 1
+    z-index: 2
 
 .ol, .ul
   margin: 0

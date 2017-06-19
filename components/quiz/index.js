@@ -31,10 +31,17 @@ export default class Quiz extends Component {
         max: this.state.questions.length - 1,
         step: 1,
         value: cqi,
-        onchange: e => this.setState({ cqi: parseInt(e.target.value) }),
+        onchange: e => {
+          const cqi = parseInt(e.target.value);
+          for (let i = cqi; i < this.state.questions.length; i++) {
+            delete this.state.questions[i].answer;
+            delete this.state.questions[i].ai;
+          }
+          this.setState({ questions: this.state.questions, cqi });
+        },
       }),
       h.ol(this.state.questions.map((q, qi) =>
-        h.li({ class: { visible: cqi === qi } }, [
+        h.li({ class: { visible: cqi === qi }, }, [
           h.label('.question', { for: `q[${qi}]` }, [h.span('.order', [`${qi+1}/${this.state.questions.length}`]), h.span('.question', [q.question])]),
           h.div('.answers', {}, q.answers.map((a, ai) => h.label('.answer', { for: `q[${qi}][${ai}]` }, [h.input({
             // class: { checked: this.state.questions[qi].ai === ai },
