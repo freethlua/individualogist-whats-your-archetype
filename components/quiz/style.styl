@@ -1,11 +1,120 @@
+@import './progress-bar.styl'
+
+body
+  width: 100%
+  margin: 0
+  padding: 0
+.main
+  @media(max-width: 600px)
+    font-size: .8em
+  width: 100%
+  > *
+    width: 100%
+    // border: 5px dotted black
+    max-width: 900px
+  margin: 0
+  padding: 0
+  padding-top: 1em
+  background: #9559CE
+  color: white
+  font-family: Nunito, Helvetica, Arial, Lucida, sans-serif
+  // border: 5px dotted black
+  display: flex
+  flex-direction: column
+  > *
+    // border: 1px solid
+    margin: auto
+
+.header
+  text-align: center
+  // display: flex
+  // flex-direction: column
+
+.img
+  margin: 1em auto
+  // display: flex
+  max-width: 95%
+
+.intro
+  text-align: center
+  width: 100%
+  display: flex
+  // align-self: stretch
+  justify-content: space-around
+  // margin: 1em 0
+  > .p:before
+    display: block
+    text-align: center
+    font-size: 5em
+
+
+.form
+  // border: 2px dotted black
+  width: 100%
+  display: flex
+  flex-direction: column
+  > *
+    margin: 1em auto
+
+.li
+  display: flex
+  flex-direction: column
+  margin: 1em
+
+
+.question
+  display: flex
+  flex-direction: column
+  background: #E8E8E8
+  font-weight: bold
+
+  .question
+    align-self: center
+    text-align: center
+    color: black
+    padding: .5em 10%
+    font-size: 1.5em
+
+.answer
+  display: block
+  // border: 2px dotted red
+  background: #E8E8E8
+  font-weight: bold
+  margin: 1em auto
+  padding: 1em auto
+  color: black
+  .input
+    margin: 1em
+
+  &:hover
+    cursor: pointer
+
 
 .ol
   position: relative
 .li
-  position: absolute
-  opacity: 0
   transition:opacity 333ms
-  z-index: -1
-.visible
-  opacity: 1
-  z-index: 1
+  &:not(.visible)
+    position: absolute
+    opacity: 0
+    z-index: -1
+  &.visible
+    opacity: 1
+    z-index: 1
+
+.ol, .ul
+  margin: 0
+  padding: 0
+  list-style: none inside
+
+.li .order
+  display: none
+  padding-right: .5em
+  // font-size: .9em
+  font-family: monospace
+  &:after
+    content: ':'
+
+
+
+

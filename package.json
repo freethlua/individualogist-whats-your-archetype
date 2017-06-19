@@ -7,8 +7,13 @@
   },
   "repository": "freethlua/01898920c84e2c9f50_slider",
   "dependencies": {
+    "@font/nunito": "^1.0.3",
+    "animate.css": "^3.5.2",
     "case": "^1.5.2",
     "debounce": "^1.0.2",
+    "elegant-icons": "^0.0.1",
+    "font-awesome": "^4.7.0",
+    "ionicons": "^3.0.0",
     "linkstate": "^1.0.1",
     "parse-srt": "^1.0.0-alpha",
     "preact": "^8.1.0",
@@ -26,6 +31,7 @@
     "style-loader": "^0.18.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
+    "url-loader": "^0.5.9",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   }

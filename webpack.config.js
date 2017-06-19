@@ -24,6 +24,15 @@ module.exports = {
         }, 'stylus-loader']
       })
     }, {
+      test: /\.(png|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      use: {
+        loader: 'url-loader',
+        query: {
+          limit: 100000000,
+          name: 'build/assets/[name].[ext]',
+        },
+      },
+    }, {
       test: /\.(pug|jade)$/,
       use: 'pug-loader',
     }]
