@@ -17,10 +17,12 @@ class App extends Component {
     return h.div('.app', [
       h.div('.header', [cmp.header]),
       h.div('.component', [!this.state.quizData
-        ? h(cmp.Quiz, { onFinish: quizData => this.setState({ quizData }) })
+        ? h(cmp.quiz, { onFinish: quizData => this.setState({ quizData }) })
         : !this.state.formData
-        // ? h(cmp.Form, { onSubmit: formData => this.setState({ formData }) })
-        ? h.div(['Form'])
+        ? h.div('.section', [
+          cmp.reportIntro(this.state.quizData.archetype)
+        ])
+        // ? h.div(['Form'])
         // : h(cmp.Slider, this.state)
         : h.div(['Slider'])
       ]),

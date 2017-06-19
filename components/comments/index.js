@@ -1,5 +1,5 @@
 import hs from 'preact-hyperstyler';
-import commentLogo from '../../assets/archetype-comment1.png';
+import commentLogo from './assets/comment-logo.png';
 import styles from './style.styl';
 
 const h = hs(styles);

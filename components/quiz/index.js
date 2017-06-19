@@ -94,7 +94,7 @@ export default class Quiz extends Component {
                   );
                   this.setState({
                     sortedArchetypes,
-                    archetype: this.state.archetypes[sortedArchetypes[0]],
+                    archetype: sortedArchetypes[0],
                   });
                   setTimeout(() => this.props.onFinish(this.state), 333);
                 }

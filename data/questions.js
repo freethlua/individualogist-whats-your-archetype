@@ -73,4 +73,6 @@ export default [{
     { answer: `Yourself`, points: { hero: 2, ruler: 1 } },
     { answer: `Your colleagues`, points: { jester: 2, sage: 1 } },
   ],
-}];
+}]
+.slice(2,3)
+;
