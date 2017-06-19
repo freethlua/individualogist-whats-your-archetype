@@ -20,7 +20,7 @@ export default [{
     { answer: `Comes up with the most innovative ideas`, points: { creator: 2, magician: 1 } },
     { answer: `Helps the team stay united`, points: { member: 2, sage: 1 } },
     { answer: `Does what the team tells you to do`, points: { outlaw: 2, innocent: 1 } },
-    { answer: `Jokes around all the time`, points: { jester: 1, explorer: 1 } },
+    { answer: `Jokes around all the time`, points: { jester: 2, explorer: 1 } },
   ],
 }, {
   question: `2. What about your ambitions? Which of the following seems like a job you could do?`,
@@ -73,6 +73,4 @@ export default [{
     { answer: `Yourself`, points: { hero: 2, ruler: 1 } },
     { answer: `Your colleagues`, points: { jester: 2, sage: 1 } },
   ],
-}]
-// .slice(2,3)
-;
+}];

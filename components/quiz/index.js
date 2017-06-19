@@ -82,21 +82,17 @@ export default class Quiz extends Component {
                   for (const question of this.state.questions) {
                     for (const archetype in question.answer.points) {
                       const points = question.answer.points[archetype];
-                      this.state.archetypes.points = (this.state.archetypes.points || 0) + points;
+                      this.state.archetypes[archetype].points = (this.state.archetypes[archetype].points || 0) + points;
                     }
                   }
-                  const sortedArchetypes = Object.keys(this.state.archetypes).sort((a, b) =>
-                    this.state.archetypes[a] > this.state.archetypes[b]
-                    ? 1
-                    : this.state.archetypes[a] < this.state.archetypes[b]
-                    ? -1
-                    : 0
-                  );
+                  const sortedArchetypes = Object.keys(this.state.archetypes).sort((a, b) => (this.state.archetypes[b].points || 0) - (this.state.archetypes[a].points || 0));
                   this.setState({
                     sortedArchetypes,
                     archetype: sortedArchetypes[0],
+                    archetypes: this.state.archetypes,
                   });
                   setTimeout(() => this.props.onFinish(this.state), 333);
+                  console.log(this.state);
                 }
               }
             }), a.answer])))
