@@ -16,6 +16,11 @@ class App extends Component {
   render() {
     return h.div('.app', [
       h.div('.header', [cmp.header]),
+      // h.div('.component', [
+      //   h.div('.section', [
+      //     cmp.reportIntro('lover')
+      //   ]),
+      // ]),
       h.div('.component', [!this.state.quizData
         ? h(cmp.quiz, { onFinish: quizData => this.setState({ quizData }) })
         : !this.state.formData

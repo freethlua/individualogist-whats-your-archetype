@@ -74,5 +74,5 @@ export default [{
     { answer: `Your colleagues`, points: { jester: 2, sage: 1 } },
   ],
 }]
-.slice(2,3)
+// .slice(2,3)
 ;
