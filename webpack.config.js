@@ -7,6 +7,7 @@ module.exports = {
   output: {
     filename: 'build/app.js',
     sourceMapFilename: '[file].map',
+    publicPath: isDev ? '' : '/wp-content/themes/individualogist/templates/whats-your-archetype/'
   },
   devtool: isDev ? 'cheap-module-source-map' : 'source-map',
   module: {
@@ -31,7 +32,7 @@ module.exports = {
       use: {
         loader: 'url-loader',
         query: {
-          limit: 100000000,
+          limit: 1000,
           name: 'build/assets/[name].[ext]',
         },
       },

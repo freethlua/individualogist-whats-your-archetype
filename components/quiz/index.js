@@ -1,7 +1,7 @@
 import { Component, render } from 'preact';
 import hs from 'preact-hyperstyler';
-import archetypes from './archetypes';
-import questions from './questions';
+import archetypes from '../../data/archetypes';
+import questions from '../../data/questions';
 import styles from './style.styl';
 
 const h = hs(styles);
