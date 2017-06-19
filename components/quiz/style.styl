@@ -1,52 +1,8 @@
 @import './progress-bar.styl'
 
-body
-  width: 100%
-  margin: 0
-  padding: 0
-.main
-  position: relative
-  @media(max-width: 600px)
-    font-size: .8em
-  width: 100%
-  > *
-    width: 100%
-    // border: 5px dotted black
-    // max-width: 900px
-  margin: 0
-  padding: 0
-  // background: #9559CE
-  background: #E8E8E8
-  .container
-    color: white
-    padding-top: 1em
-    background: #9559CE
-    display: flex
-    flex-direction: column
-    > *
-      // border: 1px solid
-      margin: auto
-    > *
-      width: 100%
-      // border: 5px dotted black
-      max-width: 900px
-  font-family: Nunito, Helvetica, Arial, Lucida, sans-serif
-  // border: 5px dotted black
-  display: flex
-  flex-direction: column
-  > *
-    // border: 1px solid
-    margin: auto
-
-.header
-  text-align: center
-  // display: flex
-  // flex-direction: column
-
-.img
-  margin: 1em auto
-  // display: flex
-  max-width: 95%
+.container
+  max-width: 900px
+  margin: auto
 
 .intro
   text-align: center
@@ -60,7 +16,6 @@ body
     text-align: center
     font-size: 5em
 
-
 .form
   // border: 2px dotted black
   width: 100%
@@ -73,7 +28,6 @@ body
   display: flex
   flex-direction: column
   margin: 1em
-
 
 .question
   display: flex
@@ -99,10 +53,6 @@ body
   .input
     margin: 1em
 
-  // &:hover
-  //   cursor: pointer
-
-
 .ol
   // border: 2px dotted red
   position: relative
@@ -123,7 +73,7 @@ body
   margin: 0
   padding: 0
   list-style: none inside
-  margin-bottom: 7.5em
+  // margin-bottom: 7.5em
 
 .li .order
   display: none
@@ -134,28 +84,4 @@ body
     content: ':'
 
 
-
-.comments
-  // background:
-  // border: 2px dotted red
-  border-top: 10px solid #14CCA7
-  position: relative
-  // position: absolute
-  display: flex
-  flex-direction: column
-  > *
-    margin: auto
-  .img
-    // border: 2px dotted #14CCA7
-    height: 150px
-    display: block
-    top: -80px
-    position: absolute
-    left: 50%
-    margin-left: -75px
-    // position: absolute
-    +.h2
-      margin-top: 100px
-  .h2
-    text-align: center
 

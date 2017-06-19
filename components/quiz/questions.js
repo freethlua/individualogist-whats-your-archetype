@@ -13,7 +13,7 @@ export default [{
     { answer: `I'm widowed` },
   ],
 }, {
-  question: `Let's get cracking! When it comes to teamwork, you are the one who:`,
+  question: `1. Let's get cracking! When it comes to teamwork, you are the one who:`,
   answers: [
     { answer: `Leads the team`, points: { ruler: 2, hero: 1 } },
     { answer: `Helps others with their tasks`, points: { caregiver: 2, lover: 1 } },
@@ -23,7 +23,7 @@ export default [{
     { answer: `Jokes around all the time`, points: { jester: 1, explorer: 1 } },
   ],
 }, {
-  question: `What about your ambitions? Which of the following seems like a job you could do?`,
+  question: `2. What about your ambitions? Which of the following seems like a job you could do?`,
   answers: [
     { answer: `Inventor`, points: { magician: 2, creator: 1 } },
     { answer: `Counsellor`, points: { innocent: 2, caregiver: 1 } },
@@ -33,7 +33,7 @@ export default [{
     { answer: `Copywriter`, points: { explorer: 2, jester: 1 } },
   ],
 }, {
-  question: `Let's talk about something fun! When you read a book or watch a film, you want it to be:`,
+  question: `3. Let's talk about something fun! When you read a book or watch a film, you want it to be:`,
   answers: [
     { answer: `Original and creative`, points: { creator: 2, magician: 1 } },
     { answer: `Funny and lighthearted`, points: { jester: 2, explorer: 1 } },
@@ -43,7 +43,7 @@ export default [{
     { answer: `Free-spirited and simple`, points: { outlaw: 2, innocent: 1 } },
   ],
 }, {
-  question: `How do you think your friends would describe you?`,
+  question: `4. How do you think your friends would describe you?`,
   answers: [
     { answer: `Thoughtful and caring`, points: { lover: 2, caregiver: 1 } },
     { answer: `Imaginative and resourceful`, points: { magician: 2, creator: 1 } },
@@ -54,7 +54,7 @@ export default [{
     { answer: `Original and creative`, points: { creator: 2, magician: 1 } },
   ],
 }, {
-  question: `We're almost done! If you were on vacation, you would most likely be:`,
+  question: `5. We're almost done! If you were on vacation, you would most likely be:`,
   answers: [
     { answer: `Relaxing by the beach and sipping martinis`, points: { jester: 2, innocent: 1 } },
     { answer: `Skydiving for the first time`, points: { explorer: 2, sage: 1 } },
@@ -64,7 +64,7 @@ export default [{
     { answer: `Wishing that you were back home already`, points: { outlaw: 2, ruler: 1 } },
   ],
 }, {
-  question: `Last one! You prefer to spend time with...`,
+  question: `6. Last one! You prefer to spend time with...`,
   answers: [
     { answer: `Your significant other`, points: { lover: 2, caregiver: 1 } },
     { answer: `New people you've just met`, points: { explorer: 2, member: 1 } },

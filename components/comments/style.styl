@@ -1,0 +1,40 @@
+.outer
+  background: #9559CE
+  padding-top: 100px
+
+.container
+  background: #E8E8E8
+  border-top: 10px solid #14CCA7
+  position: relative
+  // position: absolute
+  display: flex
+  flex-direction: column
+  > *
+    margin: auto
+  .img
+    // border: 2px dotted #14CCA7
+    height: 150px
+    display: block
+    top: -80px
+    // margin-top: 100px
+    position: absolute
+    left: 50%
+    margin-left: -75px
+    // position: absolute
+  .heading
+    font-size: 2em
+    font-weight: bold
+    margin-top: 100px
+    text-align: center
+  padding-bottom: 2em
+
+:global .fb-comments > span
+  display: flex!important
+  justify-content: center
+  background: #E8E8E8
+:global .fb-comments > span > iframe
+  display: block!important
+  margin: auto
+  max-width: 900px
+
+

@@ -6,8 +6,11 @@ module.exports = {
   entry: './app',
   output: {
     filename: 'build/app.js',
+    sourceMapFilename: '[file].map',
   },
+  devtool: isDev ? 'cheap-module-source-map' : 'source-map',
   module: {
+    // isDev && {test:/\.js$/,use:'webpack-module-hot-accept'},
     rules: [{
       test: /\.css$/,
       use: ExtractTextPlugin.extract({
@@ -35,7 +38,7 @@ module.exports = {
     }, {
       test: /\.(pug|jade)$/,
       use: 'pug-loader',
-    }]
+    }],
   },
   plugins: [
     new ExtractTextPlugin({
