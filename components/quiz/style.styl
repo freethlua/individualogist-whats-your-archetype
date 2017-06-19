@@ -5,18 +5,31 @@ body
   margin: 0
   padding: 0
 .main
+  position: relative
   @media(max-width: 600px)
     font-size: .8em
   width: 100%
   > *
     width: 100%
     // border: 5px dotted black
-    max-width: 900px
+    // max-width: 900px
   margin: 0
   padding: 0
-  padding-top: 1em
-  background: #9559CE
-  color: white
+  // background: #9559CE
+  background: #E8E8E8
+  .container
+    color: white
+    padding-top: 1em
+    background: #9559CE
+    display: flex
+    flex-direction: column
+    > *
+      // border: 1px solid
+      margin: auto
+    > *
+      width: 100%
+      // border: 5px dotted black
+      max-width: 900px
   font-family: Nunito, Helvetica, Arial, Lucida, sans-serif
   // border: 5px dotted black
   display: flex
@@ -86,14 +99,14 @@ body
   .input
     margin: 1em
 
-  &:hover
-    cursor: pointer
+  // &:hover
+  //   cursor: pointer
 
 
 .ol
   // border: 2px dotted red
   position: relative
-  height: 30em
+  // height: 30em
 .li
   transition:opacity 1000ms
   position: absolute
@@ -103,11 +116,14 @@ body
   &.visible
     opacity: 1
     z-index: 2
+    .answer:hover
+      cursor: pointer
 
 .ol, .ul
   margin: 0
   padding: 0
   list-style: none inside
+  margin-bottom: 7.5em
 
 .li .order
   display: none
@@ -119,4 +135,27 @@ body
 
 
 
+.comments
+  // background:
+  // border: 2px dotted red
+  border-top: 10px solid #14CCA7
+  position: relative
+  // position: absolute
+  display: flex
+  flex-direction: column
+  > *
+    margin: auto
+  .img
+    // border: 2px dotted #14CCA7
+    height: 150px
+    display: block
+    top: -80px
+    position: absolute
+    left: 50%
+    margin-left: -75px
+    // position: absolute
+    +.h2
+      margin-top: 100px
+  .h2
+    text-align: center
 

@@ -42,5 +42,12 @@ module.exports = {
       filename: 'build/styles.css',
       disable: isDev,
     }),
-  ]
+  ],
+  resolve: {
+    alias: {
+      'react': 'preact-compat',
+      'react-dom': 'preact-compat',
+      'create-react-class': 'preact-compat/lib/create-react-class'
+    }
+  },
 };

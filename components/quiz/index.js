@@ -3,7 +3,9 @@ import hs from 'preact-hyperstyler';
 import 'ionicons/dist/css/ionicons.css'
 import 'animate.css';
 import '@font/nunito/light.css';
+import FBComments from 'facebook-plugins';
 import logo from '../../assets/individualogist-logo2.png';
+import commentLogo from '../../assets/archetype-comment1.png';
 import archetypes from './archetypes';
 import questions from './questions';
 import styles from './style.styl';
@@ -13,7 +15,10 @@ const h = hs(styles);
 
 export default class Quiz extends Component {
 
-  componentWillMount() { this.setState({ archetypes, questions }); }
+  componentWillMount() {
+    this.setState({ archetypes, questions });
+    this.refs = { li: [] };
+  }
 
   calcCqi() {
     for (let i = 0; i < this.state.questions.length; i++) {
@@ -25,6 +30,7 @@ export default class Quiz extends Component {
 
   render() {
     const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();
+
     const form = h.div('.form', [
       h.input('.progress-bar', {
         type: 'range',
@@ -39,9 +45,17 @@ export default class Quiz extends Component {
           }
           this.setState({ questions: this.state.questions, cqi });
         },
+        ref: ref => this.refs.progressBar = ref,
       }),
-      h.ol(this.state.questions.map((q, qi) =>
-        h.li({ class: { visible: cqi === qi }, }, [
+      h.ol({
+        style: {
+          height: this.refs.li[cqi] ? this.refs.li[cqi].offsetHeight : '12.5em',
+        }
+      }, this.state.questions.map((q, qi) =>
+        h.li({
+          class: { visible: cqi === qi },
+          ref: ref => this.refs.li[qi] = ref,
+        }, [
           h.label('.question', { for: `q[${qi}]` }, [h.span('.order', [`${qi+1}/${this.state.questions.length}`]), h.span('.question', [q.question])]),
           h.div('.answers', {}, q.answers.map((a, ai) => h.label('.answer', { for: `q[${qi}][${ai}]` }, [h.input({
             // class: { checked: this.state.questions[qi].ai === ai },
@@ -51,6 +65,13 @@ export default class Quiz extends Component {
             name: `q[${qi}]`,
             // value: Object.keys(a.points).map(t => `${t}=${a.points[t]}`).join(';'),
             onclick: e => {
+              if (cqi !== qi) {
+                return;
+              }
+              if (!this.state.scrolled) {
+                this.refs.progressBar.scrollIntoView({ behavior: 'smooth' });
+                this.setState({ scrolled: true });
+              }
               this.state.questions[qi].answer = a;
               this.state.questions[qi].ai = ai;
               this.setState({ qi, ai, questions: this.state.questions });
@@ -81,20 +102,34 @@ export default class Quiz extends Component {
     ]);
 
     return h.div('.main', [
-      h.header([
-        h.img({ src: logo }),
-        h.h1('.heading', 'FREE PERSONALITY READING'),
-        h.p('.subtitle', 'What’s Your Archetype?'),
-        h.p('.subtext', 'Individuation Archetype Explorer®'),
+      h.div('.container', [
+        h.header([
+          h.img({ src: logo }),
+          h.h1('.heading', 'FREE PERSONALITY READING'),
+          h.p('.subtitle', 'What’s Your Archetype?'),
+          h.p('.subtext', 'Individuation Archetype Explorer®'),
+        ]),
+
+        h.div('.intro.animated.slideInDown', [
+          h.p('.ion-ios-timer-outline', 'Takes less than 60 seconds'),
+          h.p('.ion-ios-color-wand-outline', 'Only 6 questions'),
+          h.p('.ion-ios-heart-outline', 'Honesty leads to accuracy'),
+        ]),
+
+        form,
+      ]),
+      h.div('.comments', [
+        h.img({ src: commentLogo }),
+        h.h2('What archetype did you get? Let us know in the comments below!'),
+        h.div('.fb-comments', {
+          'data-href': 'http://individualogist.com/whats-your-archetype/',
+          'data-width': '100%',
+          'data-numposts': 5,
+        }),
       ]),
 
-      h.div('.intro.animated.slideInDown', [
-        h.p('.ion-ios-timer-outline', 'Takes less than 60 seconds'),
-        h.p('.ion-ios-color-wand-outline', 'Only 6 questions'),
-        h.p('.ion-ios-heart-outline', 'Honesty leads to accuracy'),
-      ]),
+      // h.pre('.debug', { style: 'position:fixed!important;bottom:0!important;right:0!important' }, JSON.stringify(this.state.questions.map(q => q.answer), null, 2))
 
-      form,
     ]);
   }
 }
