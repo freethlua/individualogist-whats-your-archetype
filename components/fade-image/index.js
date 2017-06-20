@@ -46,7 +46,7 @@ export default class extends Component {
     return h.div('.container', [
       h.img('.img1', { ref: ref => this.ref1 = ref, src: this.state.src1, class: this.state.class1 }),
       h.img('.img2', { ref: ref => this.ref2 = ref, src: this.state.src2, class: this.state.class2 }),
-      h.pre(JSON.stringify(this.state, null, 2)),
+      // h.pre(JSON.stringify(this.state, null, 2)),
     ]);
   }
 }

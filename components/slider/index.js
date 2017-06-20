@@ -9,10 +9,11 @@ const h = hs(styles);
 
 export default class Slider extends Component {
   componentWillMount() {
-    // if (!this.props || !this.props.archetype) {
-    //   throw new Error('Need to have an archetype before this component could be rendered');
-    // }
     this.changeBackground();
+    document.body.onkeyup = e => e.keyCode === 32 && this.playPause();
+  }
+  componentWillUnmount() {
+    delete document.body.onkeyup;
   }
 
   componentDidMount() {
@@ -91,7 +92,7 @@ export default class Slider extends Component {
         h.img({ src: require(`../../assets/images/logos/large-text.png`) }),
       ]),
       h.div('.content', { onclick: e => this.playPause() }, [
-        h.div('.play-pause', {class: this.state.audioPaused ? 'visible': ''}),
+        h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
         h.div('.text', [this.state.currentLine
           ? h(markup, { markup: this.state.currentLine })
           // ? h.pre(JSON.stringify(this.state.currentLine, null, 2))
@@ -100,8 +101,8 @@ export default class Slider extends Component {
         h.div('.image', [
           h.div('.background', [h(fadeImage, { src: this.state.background })]),
           // h.div('.background', [h.img({ src: this.state.background })]),
-          // h.div('.foreground', [this.state.img && h(fadeImage, { src: this.state.img })]),
-          h.div('.foreground', [this.state.img && h.img({ src: this.state.img })]),
+          h.div('.foreground', [this.state.img && h(fadeImage, { src: this.state.img })]),
+          // h.div('.foreground', [this.state.img && h.img({ src: this.state.img })]),
         ]),
         h.audio({
           // controls: true,
@@ -135,7 +136,16 @@ export default class Slider extends Component {
           },
         }),
       ]),
-      h.pre([JSON.stringify(this.state, null, 1)]),
+      h.div('.rest', [
+        h.div('.action-1', [
+          h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) }),]),
+          h.div([
+            h.p(`Get Your Deluxe Archetype Report For Only $37.00 Now!`),
+            h.button('Click Here To Order Now'),
+          ]),
+        ]),
+      ]),
+      // h.pre([JSON.stringify(this.state, null, 1)]),
     ])]);
   }
 }
