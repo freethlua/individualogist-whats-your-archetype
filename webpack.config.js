@@ -35,7 +35,7 @@ module.exports = {
         loader: 'url-loader',
         query: {
           limit: 1000,
-          name: 'build/assets/[name].[hash:5].[ext]',
+          name: 'build/[path][name].[ext]',
         },
       },
     }, {
