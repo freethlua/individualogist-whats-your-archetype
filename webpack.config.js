@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
 
@@ -45,6 +46,13 @@ module.exports = {
     new ExtractTextPlugin({
       filename: 'build/styles.css',
       disable: isDev,
+    }),
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.(js|css)$/,
+      threshold: 10240,
+      minRatio: 0.8
     }),
   ],
   resolve: {
