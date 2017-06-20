@@ -26,7 +26,7 @@ export default class Form extends Component {
           onchange: linkstate(this, 'email'),
           required: true,
         }),
-        h.button('Download'),
+        h.button('Start My Free Reading!'),
       ])
     ]);
   }

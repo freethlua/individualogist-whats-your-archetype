@@ -8,11 +8,12 @@ import styles from './style.styl';
 const h = hs(styles);
 
 export default class Slider extends Component {
-  // componentWillMount() {
-  //   if (!this.props || !this.props.archetype) {
-  //     throw new Error('Need to have an archetype before this component could be rendered');
-  //   }
-  // }
+  componentWillMount() {
+    // if (!this.props || !this.props.archetype) {
+    //   throw new Error('Need to have an archetype before this component could be rendered');
+    // }
+    this.changeBackground();
+  }
 
   componentDidMount() {
     this.audioEl.play()
@@ -39,6 +40,22 @@ export default class Slider extends Component {
     }
   }
 
+  changeBackground() {
+    if (!this.state.lastBackgroundChangeTime || (this.state.lastBackgroundChangeTime + 4000 < new Date())) {
+      const cbg = this.state.currentBackgroundIndex || 0;
+      const nbg = cbg >= 4 ? 1 : cbg + 1;
+      this.setState({
+        background: require(`../../assets/images/backgrounds/quiz-slider-${nbg}.jpg`),
+        currentBackgroundIndex: nbg,
+        lastBackgroundChangeTime: +new Date(),
+      });
+    }
+  }
+
+  componentWillUpdate() {
+    // this.changeBackground();
+  }
+
   render() {
     const archetype = this.props.quizData.archetype;
     if (!archetype) {
@@ -61,48 +78,54 @@ export default class Slider extends Component {
 
     // console.log(this.state.currentLine);
 
-    return h.div([
-      h.div({
-        onclick: e => this.playPause(),
-      }, [
-        // this.state.currentTime,
-        this.state.currentLine
-        ? h(markup, { markup: this.state.currentLine })
-        // ? h.pre(JSON.stringify(this.state.currentLine, null, 2))
-        : h.p('Loading...'),
-        // JSON.stringify(this.props.formData, null, 2)
+    return h.div('.wrapper', [h.div('.container', [
+      h.header([
+        h.img({ src: require(`../../assets/images/logos/large-text.png`) }),
       ]),
-      this.state.img && h.div({ onclick: e => this.playPause() }, [h(fadeImage, {
-        src: this.state.img,
-        ref: ref => this.imgEl = ref,
-      })]),
-      h.audio({
-        // controls: true,
-        src: audio,
-        ref: ref => this.audioEl = ref,
-        ontimeupdate: e => {
-          const currentTime = e.target.currentTime;
-          for (const line of transcript) {
-            if (currentTime < line.end) {
-              let currentLine = line.text;
-              for (const key of line.keys) {
-                if (key.key) {
-                  if (this.props.formData[key.key]) {
-                    currentLine = currentLine.substring(0, key.index)
-                      + this.props.formData[key.key]
-                      + currentLine.substring(key.index);
+      h.div('.content', { onclick: e => this.playPause() }, [
+        h.div('.text', [this.state.currentLine
+          ? h(markup, { markup: this.state.currentLine })
+          // ? h.pre(JSON.stringify(this.state.currentLine, null, 2))
+          : h.p('Loading...'),
+        ]),
+        h.div('.image', [
+          h.div('.background', [h(fadeImage, { src: this.state.background })]),
+          // h.div('.background', [h.img({ src: this.state.background })]),
+          h.div('.foreground', [this.state.img && h(fadeImage, { src: this.state.img })]),
+        ]),
+        h.audio({
+          // controls: true,
+          src: audio,
+          ref: ref => this.audioEl = ref,
+          ontimeupdate: e => {
+            const currentTime = e.target.currentTime;
+            for (const line of transcript) {
+              if (currentTime < line.end) {
+                let currentLine = line.text;
+                if (this.state.currentLine === currentLine) {
+
+                } else {
+                  for (const key of line.keys) {
+                    if (key.key) {
+                      if (this.props.formData[key.key]) {
+                        currentLine = currentLine.substring(0, key.index)
+                          + this.props.formData[key.key]
+                          + currentLine.substring(key.index);
+                      }
+                    } else if (key.js) {
+                      this.cueAction(key.js.fn, key.js, line);
+                    }
                   }
-                } else if (key.js) {
-                  this.cueAction(key.js.fn, key.js, line);
+                  this.changeBackground();
+                  this.setState({ currentTime, currentLine })
                 }
+                break;
               }
-              this.setState({ currentTime, currentLine })
-              break;
             }
-          }
-        },
-      }),
+          },
+        }),
+      ]),
       h.pre([JSON.stringify(this.state, null, 1)]),
-    ])
+    ])]);
   }
 }
