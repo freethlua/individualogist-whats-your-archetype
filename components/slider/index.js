@@ -38,6 +38,14 @@ export default class Slider extends Component {
     }
   }
 
+  playPause() {
+    if (this.audioEl.paused) {
+      this.audioEl.play();
+    } else {
+      this.audioEl.pause();
+    }
+  }
+
   render() {
     // console.log(`this.props:`, this.props);
     // const archetype = this.props.quizData.archetype;
@@ -64,18 +72,7 @@ export default class Slider extends Component {
 
     return h.div([
       h.div({
-        // style: {
-        //   width: '100%',
-        //   height: '100vw',
-        // },
-        onclick: e => {
-          // console.log('hi');
-          if (this.audioEl.paused) {
-            this.audioEl.play();
-          } else {
-            this.audioEl.pause();
-          }
-        },
+        onclick: e => this.playPause(),
       }, [
         // this.state.currentTime,
         this.state.currentLine
@@ -84,10 +81,10 @@ export default class Slider extends Component {
         : h.p('Loading...'),
         // JSON.stringify(this.props.formData, null, 2)
       ]),
-      this.state.img && h(fadeImage, {
+      this.state.img && h.div({ onclick: e => this.playPause() }, [h(fadeImage, {
         src: this.state.img,
         ref: ref => this.imgEl = ref,
-      }),
+      })]),
       h.audio({
         // controls: true,
         src: audio,
@@ -114,7 +111,7 @@ export default class Slider extends Component {
           }
         },
       }),
-      h.pre({ style: 'position:fixed;left:0;bottom:0' }, [JSON.stringify(this.state, null, 1)]),
+      h.pre([JSON.stringify(this.state, null, 1)]),
     ])
   }
 }
