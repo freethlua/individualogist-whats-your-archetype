@@ -6,7 +6,7 @@ const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
 module.exports = {
   entry: './app',
   output: {
-    filename: 'build/app.[chunkhash].js',
+    filename: 'build/app.[hash].js',
     sourceMapFilename: '[file].map',
     publicPath: isDev ? '' : '/wp-content/themes/individualogist/whats-your-archetype/',
     hashDigestLength: 5,
@@ -45,10 +45,10 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: 'build/styles.[chunkhash].css',
+      filename: 'build/styles.[hash].css',
       disable: isDev,
     }),
-    new CleanWebpackPlugin(['build']),
+    new CleanWebpackPlugin(['build'], { watch: true }),
   ],
   resolve: {
     alias: {
