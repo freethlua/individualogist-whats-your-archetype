@@ -1,0 +1,29 @@
+
+
+
+.container
+  position: relative
+.img
+  position: absolute
+  left: 0
+  top: 0
+
+
+// .container .img:not(.immediate)
+.container .img
+  transition: opacity 2000ms
+
+.img.visible
+  opacity: 1
+.img:not(.visible)
+  opacity: 0
+  // z-index: 1
+
+
+.pre
+  position: fixed
+  right: 0
+  bottom: 0
+
+
+

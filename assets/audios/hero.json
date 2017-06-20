@@ -18,7 +18,7 @@
       {
         "js": {
           "fn": "displayImage",
-          "path": "images/archetype-icons/hero.png",
+          "path": "images/archetypes/icons/hero.png",
           "fadeIn": true
         },
         "index": 98
@@ -33,7 +33,7 @@
       {
         "js": {
           "fn": "displayImage",
-          "path": "images/archetype-icons/hero.png",
+          "path": "images/script/globe.png",
           "fadeOut": true
         },
         "index": 182
@@ -155,7 +155,7 @@
       {
         "js": {
           "fn": "displayImage",
-          "path": "images/script-images/globe.png",
+          "path": "images/script/globe.png",
           "fadeIn": true
         },
         "index": 37
@@ -170,7 +170,7 @@
       {
         "js": {
           "fn": "displayImage",
-          "path": "images/script-images/globe.png",
+          "path": "images/script/globe.png",
           "fadeOut": true
         },
         "index": 172
@@ -432,7 +432,7 @@
       {
         "js": {
           "fn": "displayImage",
-          "path": "images/script-images/spiritual.png",
+          "path": "images/script/spiritual.png",
           "fadeIn": true
         },
         "index": 68
@@ -459,7 +459,7 @@
       {
         "js": {
           "fn": "displayImage",
-          "path": "images/script-images/spiritual.png",
+          "path": "images/script/spiritual.png",
           "fadeOut": true
         },
         "index": 93

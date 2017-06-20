@@ -2,6 +2,7 @@ import { Component } from 'preact';
 import hs from 'preact-hyperstyler';
 import linkstate from 'linkstate';
 import markup from 'preact-markup';
+import fadeImage from '../fade-image';
 import styles from './style.styl';
 
 const h = hs(styles);
@@ -21,7 +22,20 @@ export default class Slider extends Component {
     //     // console.log(`srt:`, srt);
     //     this.setState({ srt });
     //   })
-    // this.audioElement.play()
+    this.audioEl.play()
+  }
+
+  cueAction(action, opts, transcriptLine) {
+    this[action](opts, transcriptLine);
+  }
+
+  displayImage(opts, transcriptLine) {
+    try {
+      this.setState({ img: require(`../../assets/` + opts.path) });
+    } catch (error) {
+      this.setState({ img: '' });
+      console.error(error);
+    }
   }
 
   render() {
@@ -46,20 +60,20 @@ export default class Slider extends Component {
       return `Cannot load the transcript file: '${archetype}.json'`;
     }
 
-    console.log(this.state.currentLine);
+    // console.log(this.state.currentLine);
 
     return h.div([
       h.div({
-        style: {
-          width: '100%',
-          height: '100vw',
-        },
+        // style: {
+        //   width: '100%',
+        //   height: '100vw',
+        // },
         onclick: e => {
           // console.log('hi');
-          if (this.audioElement.paused) {
-            this.audioElement.play();
+          if (this.audioEl.paused) {
+            this.audioEl.play();
           } else {
-            this.audioElement.pause();
+            this.audioEl.pause();
           }
         },
       }, [
@@ -70,10 +84,14 @@ export default class Slider extends Component {
         : h.p('Loading...'),
         // JSON.stringify(this.props.formData, null, 2)
       ]),
+      this.state.img && h(fadeImage, {
+        src: this.state.img,
+        ref: ref => this.imgEl = ref,
+      }),
       h.audio({
         // controls: true,
         src: audio,
-        ref: ref => this.audioElement = ref,
+        ref: ref => this.audioEl = ref,
         ontimeupdate: e => {
           const currentTime = e.target.currentTime;
           for (const line of transcript) {
@@ -87,11 +105,7 @@ export default class Slider extends Component {
                       + currentLine.substring(key.index);
                   }
                 } else if (key.js) {
-                  if (key.js.fn) {
-                    if (this[key.js.fn]) {
-                      this[key.js.fn](key.js);
-                    }
-                  }
+                  this.cueAction(key.js.fn, key.js, line);
                 }
               }
               this.setState({ currentTime, currentLine })
@@ -99,7 +113,8 @@ export default class Slider extends Component {
             }
           }
         },
-      })
+      }),
+      h.pre({ style: 'position:fixed;left:0;bottom:0' }, [JSON.stringify(this.state, null, 1)]),
     ])
   }
 }
