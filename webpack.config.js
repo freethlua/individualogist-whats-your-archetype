@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: 'build/app.js',
     sourceMapFilename: '[file].map',
-    publicPath: isDev ? '' : '/wp-content/themes/individualogist/templates/whats-your-archetype/'
+    publicPath: isDev ? '' : '/wp-content/themes/individualogist/whats-your-archetype/'
   },
   devtool: isDev ? 'cheap-module-source-map' : 'source-map',
   module: {
