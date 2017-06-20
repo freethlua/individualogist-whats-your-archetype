@@ -48,11 +48,13 @@ module.exports = {
       disable: isDev,
     }),
     new CompressionPlugin({
-      asset: '[path].gz[query]',
+      // asset: '[path].gz[query]',
+      asset: '[path]',
       algorithm: 'gzip',
       test: /\.(js|css)$/,
       threshold: 10240,
-      minRatio: 0.8
+      minRatio: 0.8,
+      deleteOriginalAssets: true,
     }),
   ],
   resolve: {
