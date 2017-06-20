@@ -6,7 +6,7 @@ const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
 module.exports = {
   entry: './app',
   output: {
-    filename: 'build/app.[hash].js',
+    filename: 'build/app.js',
     sourceMapFilename: '[file].map',
     publicPath: isDev ? '' : '/wp-content/themes/individualogist/whats-your-archetype/',
     hashDigestLength: 5,
@@ -45,7 +45,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: 'build/styles.[hash].css',
+      filename: 'build/styles.css',
       disable: isDev,
     }),
     new CleanWebpackPlugin(['build'], { watch: true }),
