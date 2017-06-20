@@ -91,7 +91,7 @@ export default class Slider extends Component {
         h.img({ src: require(`../../assets/images/logos/large-text.png`) }),
       ]),
       h.div('.content', { onclick: e => this.playPause() }, [
-        h.div('.play-pause.ion-ios-arrow-dropright-circle', {class: this.state.audioPaused ? 'visible': ''}),
+        h.div('.play-pause', {class: this.state.audioPaused ? 'visible': ''}),
         h.div('.text', [this.state.currentLine
           ? h(markup, { markup: this.state.currentLine })
           // ? h.pre(JSON.stringify(this.state.currentLine, null, 2))

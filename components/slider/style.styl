@@ -58,13 +58,22 @@
   position: fixed
   top:50vh
   left:50vw
-  font-size: 5vw
-  text-align: center
-  width: 5vw
+  // font-size: 5vw
+  // text-align: center
+  // width: 5vw
   margin-left: -2.5vw
   margin-top: -2.5vw
-  text-shadow: 0 0 3px  white
-  z-index: 2
+  // text-shadow: 0 0 3px  white
+  // box-shadow: 0 0 3px  white
+  filter: drop-shadow(0 0 3px white)
+  // z-index: 2
+
+  width: 0;
+  height: 0;
+  border-top: 2em solid transparent;
+  border-left: 3em solid #000;
+  border-bottom: 2em solid transparent;
+
   &:not(.visible)
     display: none
 
