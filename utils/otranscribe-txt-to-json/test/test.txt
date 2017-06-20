@@ -1,0 +1,27 @@
+1
+
+00:05 
+
+Hello {{name}},
+
+ 2
+
+00:11 
+
+If you’ve made it here, then congratulations! Because this means that your archetype is the Hero!
+
+ {{JS:{fn:'displayImage', path:'images/archetype-icons/hero.png', fadeIn: true}}}
+
+3
+
+ 00:19 
+
+But what does this actually mean? Don’t worry, everything you need to know will be on this page. Stick to the end of it and I promise that you’ll experience something truly magical.
+
+ {{JS:{fn:'displayImage', path:'images/archetype-icons/hero.png', fadeOut: true}}}
+
+4
+
+00:32 
+
+The quiz that you’ve just taken is designed to identify your archetype – a personality profile that’s broken down your entire being. Your tendencies, your strengths, your past, and your future.

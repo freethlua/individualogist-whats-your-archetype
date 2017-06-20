@@ -1,0 +1,28 @@
+
+.form
+  display: flex
+  flex-flow: column
+  align-content: stretch
+.input, .button
+  display: block
+  border: 0
+  border-radius: 5px
+  margin: 1em
+  height: 4em
+  padding: 1em
+  &:hover,&:active,&:focus
+    box-shadow: 5px 5px 2.5px rgba(0, 0, 0, .4)
+.button
+  &:hover,&:active,&:focus
+    cursor: pointer
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, .4)
+  &:active
+    box-shadow: none
+    text-shadow: none
+  color: white
+  background: #F7990A
+  font-size: 2em
+  font-weight: bold
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .8)
+  text-transform: uppercase
+

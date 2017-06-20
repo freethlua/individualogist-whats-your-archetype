@@ -1,0 +1,5 @@
+[{
+  "start": 5,
+  "end": 11,
+  "text": "Hello {{name}}, and welcome! {{JS:{fn:'displayImage', path:'images/archetype-icons/hero.png', fadeIn: true}}}"
+}]

@@ -28,7 +28,7 @@ module.exports = {
         }, 'stylus-loader']
       })
     }, {
-      test: /\.(png|jpe?g|woff|woff2|eot|ttf|svg|pdf)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      test: /\.(png|jpe?g|woff|woff2|eot|ttf|svg|pdf|mp3)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       use: {
         loader: 'url-loader',
         query: {

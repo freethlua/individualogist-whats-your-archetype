@@ -14,25 +14,31 @@ const h = hs(styles);
 
 class App extends Component {
   render() {
-    return h.div('.app', [
-      h.div('.header', [cmp.header]),
-      // h.div('.component', [
-      //   h.div('.section', [
-      //     cmp.reportIntro('lover')
-      //   ]),
-      // ]),
-      h.div('.component', [!this.state.quizData
-        ? h(cmp.quiz, { onFinish: quizData => this.setState({ quizData }) })
-        : !this.state.formData
-        ? h.div('.section', [
-          cmp.reportIntro(this.state.quizData.archetype)
-        ])
-        // ? h.div(['Form'])
-        // : h(cmp.Slider, this.state)
-        : h.div(['Slider'])
-      ]),
-      cmp.comments,
-    ]);
+
+    return h.div('.slider', [h(cmp.slider, {
+      formData: {
+        name: 'freeth'
+      },
+      quizData: {
+        archetype: 'hero'
+      }
+    })]);
+
+    const header = h.div('.header', [cmp.header]);
+    const form = h.div('.form', [h(cmp.form, { onSubmit: formData => this.setState({ formData }) })]);
+    const quiz = h.div('.quiz', [h(cmp.quiz, { onFinish: quizData => this.setState({ quizData }) })]);
+    const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, { form, archetype: this.state && this.state.quizData && this.state.quizData.archetype })]);
+    const slider = h.div('.slider', [h(cmp.slider, this.state)]);
+
+    if (!this.state.quizData) {
+      return h.div('.app', [header, quiz, cmp.comments]);
+    } else {
+      if (!this.state.formData) {
+        return h.div('.app', [header, reportIntro, cmp.comments]);
+      } else {
+        return h.div('.app', [slider]);
+      }
+    }
   }
 }
 

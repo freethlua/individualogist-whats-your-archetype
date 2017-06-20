@@ -1,0 +1,399 @@
+1
+
+00:05 
+
+Hello {{name}},
+
+ 2
+
+00:11 
+
+If you’ve made it here, then congratulations! Because this means that your archetype is the Hero!
+
+ {{JS:{fn:'displayImage', path:'images/archetype-icons/hero.png', fadeIn: true}}}
+
+3
+
+ 00:19 
+
+But what does this actually mean? Don’t worry, everything you need to know will be on this page. Stick to the end of it and I promise that you’ll experience something truly magical.
+
+ {{JS:{fn:'displayImage', path:'images/archetype-icons/hero.png', fadeOut: true}}}
+
+4
+
+00:32 
+
+The quiz that you’ve just taken is designed to identify your archetype – a personality profile that’s broken down your entire being. Your tendencies, your strengths, your past, and your future.
+
+5
+
+00:47  
+
+Your archetype takes into account your gender, your marital status, how you answered the quiz, and how long you took to get those answers.
+
+6
+
+00:57  
+
+That’s right, {{name}}. You can use that information to make astronomical changes in your life. You’ll be able to leverage on your strengths, improve on your weaknesses, and embark on the life that you’ve always dreamed of.
+
+7
+
+01:13 
+
+But before we get into that, I want to share with you about your archetype, The Hero, and what it means.
+
+8
+
+01:22  
+
+{{name}}, you truly are a unique individual. And I genuinely believe that this world needs more people like you.
+
+9
+
+01:30  
+
+You are a brave and deeply intelligent being – not necessarily in the sense of academics, but in terms of connecting with people and building rapport with people from all sorts of backgrounds.
+
+10
+
+01:43 
+
+You’re different that way, {{name}}. While the world walks in one direction, you have no qualms with going against it.
+
+11
+
+01:52  
+
+That’s what makes you so special, {{name}}.
+
+12
+
+01:55 
+
+You are the epitome of selflessness. You’re able to empathize with anyone and everyone.
+
+13
+
+02:02  
+
+And if given the opportunity to lay down yourself for the sake of someone else, you have the courage to do so without hesitation.
+
+ 14
+
+02:11 
+
+That’s because as a Hero, you are highly compassionate.
+
+15
+
+02:16  
+
+You put the needs of others before your own, and you’re able to connect with strangers just as well as you’re able to connect with your closest loved ones.
+
+16
+
+02:26  
+
+{{name}}, you might not know it yet, but you are more morally and ethically upright than others. You hold your values and principles close to your heart, and you’re always ready to stick to your guns.
+
+17
+
+02:40  
+
+There is something else about you, {{name}}…
+
+ {{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
+
+18
+
+ 02:42 
+
+You are not just an everyday “Hero”. You are the Hero who will one day save the world. Not like a superhero, but you will create solutions to the world’s biggest problems.
+
+ {{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
+
+19
+
+02:55  
+
+{{name}}, I’m getting the sense that you’re going to live a long, and happy life. And although success might not be at your feet right now, your riches and fulfilment are merely waiting for you.
+
+20
+
+03:08 
+
+But there’s something else, {{name}}. Even though you will triumph, your path to success will not come easy.
+
+21
+
+03:17 
+
+Talking to people is never a problem for you, but I’m getting the sense that you tend to struggle when it comes to being yourself.
+
+22
+
+03:25  
+
+Your nature revolves so much around how people perceive you that you can become too cautious of how you act.
+
+23
+
+03:32 
+
+{{name}}, don’t let that discourage you. The world needs your selfless and kind nature. The world needs people like you to be in positions of power.
+
+24
+
+03:43  
+
+You are what keeps the world grounded. You do, however, need to understand that it’s important for you to be who you are without worrying about the perceptions of others.
+
+25
+
+03:56  
+
+That way, you’ll be able to build trust and create even more fruitful interactions.
+
+26
+
+04:01 
+
+After all, {{name}}, your confidence is unparalleled. And there is no better way to exercise confidence than just simply being you.
+
+27
+
+04:12  
+
+{{name}}, I can already tell that your friends and family hold high regards for you.
+
+28
+
+04:18  
+
+You’re the one who they come to for detailed advice, a listening ear, or just for a quick chat. {{name}}, you might not know it, but you truly are a hero to more people than you think.
+
+29
+
+04:32 
+
+{{name}}, I’m sensing that you’re the type of person who has many friends. You’re well-liked by most people, and you’re not someone who has trouble with making a good impression.
+
+30
+
+04:44 
+
+In fact, you have no trouble at all when it comes to impressing others with your intelligence and courageous nature.
+
+31
+
+04:50 
+
+But you’re extremely selective with who you choose to let into your life. You prefer to keep your loved ones close, and your wolf pack small.
+
+32
+
+05:01  
+
+{{name}}, you are incredibly grounded. You possess the unique ability to discern right from wrong, and you’re never afraid to put your foot down.
+
+33
+
+ 05:11 
+
+You have a great deal to offer to this world. {{name}}, you are a natural-born leader. I sense that you will find success and fulfilment as an entrepreneur, a politician, a police officer, or a doctor.
+
+34
+
+05:28 
+
+You can be very protective, {{name}}. Especially as a parent. You love your children, friends, and family fiercely.
+
+35
+
+05:37 
+
+You are willing to give and sacrifice everything that you have for them.
+
+36
+
+05:41 
+
+ {{name}}, you are going to make a lasting mark in your lifetime. You’re able to look at the world from a detailed and compassionate perspective.
+
+37
+
+05:51 
+
+You recognize the everyday problems of the world, and you have what it takes to make the world a better and safer place for everyone.
+
+38
+
+06:00 
+
+{{name}}, you are practically the definition of “bravado”. You’re never afraid to rise to challenges of all sorts. But beyond that, you can be extremely innovative when it comes to solving problems.
+
+39
+
+06:16 
+
+You excel at one-on-one interactions, and never fail to make an excellent impression on others. Your charisma and eloquence intrigues people.
+
+40
+
+06:27 
+
+Ultimately, {{name}}, you are a realist. You have a clear conscience. Discerning right from wrong has never been a difficult task for you.
+
+41
+
+06:38 
+
+I’m getting the sense that you’re not too concerned about monetary riches, although you do wish you had more wealth. There is, however, a greater purpose for you in this lifetime, {{name}}.
+
+42
+
+06:52 
+
+However, {{name}}, you will have to keep pushing your limits before you eventually discover your life’s purpose and direction. And that is something that you need to work towards.
+
+43
+
+07:04 
+
+At times, it might feel as if you’re living your life for others. That’s not what you want, {{name}}.
+
+44
+
+07:12 
+
+You want to live life for yourself. You want to love yourself. When you’re able to do that, success and the life of your dreams will follow. And that’s what Individuation aims to teach you.
+
+45
+
+07:25 
+
+But there’s more to what I’ve learned about you, {{name}}…
+
+46
+
+07:30 
+
+It feels to me that you’re a deeply emotional and spiritual person.
+
+ {{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeIn: true}}}
+
+ 47
+
+07:34 
+
+You’re connected to your soul in a way that’s far more profound than others.
+
+48
+
+07:39 
+
+Your thought process does not follow the rules and logic of the world. In fact, I get the sense that you have quite the imagination.
+
+49
+
+07:49 
+
+Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
+
+  {{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
+
+50
+
+07:55 
+
+And unlike others, you’re never one to shy away from a challenge or a task – no matter how difficult it appears to be.
+
+51
+
+ 08:03  
+
+{{name}}, you’re not someone who likes to argue. You tend to avoid conflict and you’re uncanny when it comes to devising win-win situations.
+
+52
+
+08:13  
+
+But when backed into a corner, you’re not one to back down. You fight fiercely for your loved ones and for righteousness.
+
+53
+
+08:22 
+
+You’re the first person to step in when you see a fight breaking out.
+
+54
+
+ 08:27 
+
+You’re the first person to reach for your pockets in the sight of a struggling busker.
+
+55
+
+08:32 
+
+You’re the first person your friends call when they’ve had a horrible day. You’re the one who people rely on and look up to.
+
+56
+
+08:40 
+
+{{name}}, you are the hero who will one day save the world.
+
+57
+
+08:45 
+
+But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.
+
+ {{JS:{fn:'displayImage', path:'images/love-compatibility/hero-love-compatibility.png', fadeIn: true}}}
+
+58
+
+08:53 
+
+This little chart I’ve prepared represents the archetypes that you’re most likely to end up with. Or if you’re already in a committed relationship, there’s a really good chance that your spouse is one of those archetypes.
+
+59
+
+ 09:06 
+
+{{name}}, you’re not the kind of person that has trouble when it comes to love. Love interests find themselves drawn to your strength and decisiveness. You’re sort of a rare breed when it comes to love.
+
+60
+
+09:20 
+
+You communicate better than everyone else, and you’re a thoughtful individual. The relationships that you forge with potential lovers are always profound and deep.
+
+61
+
+09:32  
+
+You become very selective with who you choose to date and who you choose to end up with – for good reason, of course. I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
+
+62
+
+09:46  
+
+{{name}}, I’m sensing that your love life isn’t going to be the smoothest – but you will find that happiness that you’re looking for soon enough.
+
+ {{JS:{fn:'displayImage', path:'images/love-compatibility/hero-love-compatibility.png', fadeOut: true}}}
+
+63
+
+ 09:56 
+
+But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life. Your spouse or partner is meant to play a supporting role in your life; not the lead.
+
+64
+
+10:08 
+
+Focus on your own personal growth, and I promise you, {{name}}, you will soon discover heavenly rewards.

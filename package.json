@@ -16,13 +16,15 @@
     "fb": "^2.0.0",
     "font-awesome": "^4.7.0",
     "ionicons": "^3.0.0",
+    "json5": "^0.5.1",
     "linkstate": "^1.0.1",
     "parse-srt": "^1.0.0-alpha",
     "preact": "^8.1.0",
     "preact-hyperscript": "^0.7.1",
     "preact-hyperscript-h": "^0.1.1",
     "preact-hyperstyler": "^0.3.0",
-    "preact-markup": "^1.6.0"
+    "preact-markup": "^1.6.0",
+    "string-template-parser": "^1.0.0-rc.1"
   },
   "devDependencies": {
     "css-loader": "^0.28.4",
