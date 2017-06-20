@@ -35,8 +35,16 @@ export default class Slider extends Component {
   playPause() {
     if (this.audioEl.paused) {
       this.audioEl.play();
+      this.setState({
+        audioPaused: false,
+        lastBackgroundChangeTime: +new Date(),
+      });
     } else {
       this.audioEl.pause();
+      this.setState({
+        audioPaused: true,
+        lastBackgroundChangeTime: +new Date(),
+      });
     }
   }
 
@@ -53,7 +61,7 @@ export default class Slider extends Component {
   }
 
   componentWillUpdate() {
-    // this.changeBackground();
+    this.changeBackground();
   }
 
   render() {
@@ -83,6 +91,7 @@ export default class Slider extends Component {
         h.img({ src: require(`../../assets/images/logos/large-text.png`) }),
       ]),
       h.div('.content', { onclick: e => this.playPause() }, [
+        h.div('.play-pause.ion-ios-arrow-dropright-circle', {class: this.state.audioPaused ? 'visible': ''}),
         h.div('.text', [this.state.currentLine
           ? h(markup, { markup: this.state.currentLine })
           // ? h.pre(JSON.stringify(this.state.currentLine, null, 2))
@@ -91,7 +100,8 @@ export default class Slider extends Component {
         h.div('.image', [
           h.div('.background', [h(fadeImage, { src: this.state.background })]),
           // h.div('.background', [h.img({ src: this.state.background })]),
-          h.div('.foreground', [this.state.img && h(fadeImage, { src: this.state.img })]),
+          // h.div('.foreground', [this.state.img && h(fadeImage, { src: this.state.img })]),
+          h.div('.foreground', [this.state.img && h.img({ src: this.state.img })]),
         ]),
         h.audio({
           // controls: true,
@@ -116,7 +126,7 @@ export default class Slider extends Component {
                       this.cueAction(key.js.fn, key.js, line);
                     }
                   }
-                  this.changeBackground();
+                  // this.changeBackground();
                   this.setState({ currentTime, currentLine })
                 }
                 break;

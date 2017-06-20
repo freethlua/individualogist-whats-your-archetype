@@ -33,8 +33,14 @@ export default class extends Component {
       this.setState(newState);
       this.ref1.onload = () => this.setState({ class1: ['visible'], class2: [] });
       this.ref2.onload = () => this.setState({ class2: ['visible'], class1: [] });
+    } else {
+
     }
   }
+
+  // shouldComponentUpdate() {
+  //   return !this.state['src' + this.state.currIndex] || (this.props.src !== this.state['src' + this.state.currIndex])
+  // }
 
   render() {
     return h.div('.container', [
