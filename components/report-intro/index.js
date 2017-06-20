@@ -4,12 +4,12 @@ import styles from './style.styl';
 
 const h = hs(styles);
 
-export default props => h.div('.container', [
+export default props =>  h.div('.wrapper', [ h.div('.container', [
   h.div('.heading', [
     h.label('Your archetype is: '),
     h.span(archetypes[props.archetype].title),
   ]),
-  h.img('.archetype', { src: require(`../../assets/images/archetypes/icons/${props.archetype}.png`) }),
+  h.img('.archetype', { src: require(`../../assets/images/archetype-icons/${props.archetype}.png`) }),
   h.p('.intro', [`Dear `, h.strong(props.archetype), `, we have so much to tell you about who you are, what you're great at, what you're not so great at... But we can't fit everything into a single page. So, we've put everything into a FREE downloadable report! We're not expecting anything in return, but it would tickle us pink if you'd be kind enough to share this quiz with your friends and family! If not, just scroll on down to gain instant access to your FREE archetype report!`]),
   h.div('.box', [
     h.p([`Everything You Need To Know About `, h.strong(archetypes[props.archetype].title), `... in One Free Report`]),
@@ -30,4 +30,4 @@ export default props => h.div('.container', [
     h.p([`Want to find out more about your archetype? Download your FREE report now! (Only One Step)`]),
     props.form,
   ]),
-]);
+])]);

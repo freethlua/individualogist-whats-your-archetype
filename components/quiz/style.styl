@@ -1,5 +1,24 @@
 @import './progress-bar.styl'
 
+
+.wrapper
+  color white
+  background-image: url('../../assets/images/backgrounds/quiz-slider-1 copy.jpg')
+  background-position: 50% 0
+  background-size: cover
+  padding-top: 50px
+  padding-bottom: 100px
+  background-attachment: fixed
+
+
+.h1
+  text-shadow: 5px 5px 5px rgb(0,0,0,.4)
+  text-align: center
+  font-size: 2em
+  font-weight: bold
+  .color
+    color: #F72BF7
+
 .container
   max-width: 900px
   margin: auto
@@ -53,6 +72,7 @@
   .input
     margin: 1em
 
+
 .ol
   // border: 2px dotted red
   position: relative
@@ -63,11 +83,13 @@
   width: 96%
   &:not(.visible)
     opacity: 0
+    visibility: hidden
   &.visible
     opacity: 1
     z-index: 2
     .answer:hover
       cursor: pointer
+      background: #FFF195
 
 .ol, .ul
   margin: 0

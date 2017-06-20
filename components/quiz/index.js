@@ -24,14 +24,21 @@ export default class Quiz extends Component {
   render() {
     const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();
 
-    return h.div('.container', [
+    return h.div('.wrapper', [h.div('.container', [
       // h.pre('.debug', { style: 'position:fixed!important;bottom:0!important;right:0!important' }, JSON.stringify(this.state.questions.map(q => q.answer), null, 2))
 
-      h.div('.intro.animated.slideInDown', [
-        h.p('.ion-ios-timer-outline', 'Takes less than 60 seconds'),
-        h.p('.ion-ios-color-wand-outline', 'Only 6 questions'),
-        h.p('.ion-ios-heart-outline', 'Honesty leads to accuracy'),
+      h.h1([
+        h.span('.color', 'Unravel The Mysteries '),
+        h.span('of Your '),
+        h.span('.color', 'True Self '),
+        h.span('By Taking This 60-Second Quiz'),
       ]),
+
+      // h.div('.intro.animated.slideInDown', [
+      //   h.p('.ion-ios-timer-outline', 'Takes less than 60 seconds'),
+      //   h.p('.ion-ios-color-wand-outline', 'Only 6 questions'),
+      //   h.p('.ion-ios-heart-outline', 'Honesty leads to accuracy'),
+      // ]),
 
       h.div('.form', [
         h.input('.progress-bar', {
@@ -98,6 +105,6 @@ export default class Quiz extends Component {
             }), a.answer])))
           ])))
       ]),
-    ]);
+    ])]);
   }
 }

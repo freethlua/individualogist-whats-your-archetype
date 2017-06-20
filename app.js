@@ -55,10 +55,10 @@ class App extends Component {
     const slider = h.div('.slider', [h(cmp.slider, this.state)]);
 
     if (!this.state.quizData) {
-      return h.div('.app', [header, quiz, cmp.comments]);
+      return h.div('.app', [quiz, cmp.comments]);
     } else {
       if (!this.state.formData) {
-        return h.div('.app', [header, reportIntro, cmp.comments]);
+        return h.div('.app', [reportIntro, cmp.comments]);
       } else {
         return h.div('.app', [slider]);
       }
