@@ -31,6 +31,7 @@
     "undb": "^0.1.0"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.16",
     "compression-webpack-plugin": "^0.4.0",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",

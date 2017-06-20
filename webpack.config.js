@@ -1,13 +1,15 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
 
 module.exports = {
   entry: './app',
   output: {
-    filename: 'build/app.js',
+    filename: 'build/app.[chunkhash].js',
     sourceMapFilename: '[file].map',
-    publicPath: isDev ? '' : '/wp-content/themes/individualogist/whats-your-archetype/'
+    publicPath: isDev ? '' : '/wp-content/themes/individualogist/whats-your-archetype/',
+    hashDigestLength: 5,
   },
   devtool: isDev ? 'cheap-module-source-map' : 'source-map',
   module: {
@@ -43,9 +45,10 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: 'build/styles.css',
+      filename: 'build/styles.[chunkhash].css',
       disable: isDev,
-    })
+    }),
+    new CleanWebpackPlugin(['build']),
   ],
   resolve: {
     alias: {
