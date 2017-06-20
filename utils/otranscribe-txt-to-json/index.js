@@ -1,8 +1,46 @@
 module.exports = parseStr;
 
 function parseStr(str) {
+  if (str.match(/[0-9]+[\n\r  ]+[0-9]+:[0-9]+:/)) {
+    return parseNumTimeType(str);
+  } else {
+    return parseNumTimeType(str, true);
+  }
+}
+
+function parseNumTimeType(str, handleVariation) {
   return str
-    .split(/[^ \n\r]*[0-9]+[ \n\r]+/g)
+    .split(/(?:^|\n)[  ]*[0-9]+[\n\r  ]+/g)
+    .map(s => s.trim())
+    .map(s => s.replace(/[\n\r]+/g, '\n'))
+    .map(s => s.split(/[\n\r]+/g))
+    .map(s => s.map(s => s.trim()))
+    .map(s => s.filter(filterEmpty))
+    .filter(filterEmpty)
+    .map(s => {
+      if (handleVariation && s[s.length - 1].match(/[0-9]+:[0-9]+/)) {
+        s.unshift(s.pop());
+      }
+      return s;
+    })
+    .map((s, i, arr) => {
+      const [time, ...text] = s;
+      return {
+        start: parseTime(time),
+        end: arr[i + 1] && parseTime(arr[i + 1][0]) || Infinity,
+        text: text.join('\n')
+      }
+    })
+  // .map(shiftOneForward)
+  // .map(s => {
+  //   const parsed = parseTranscript(s.text);
+  // })
+
+}
+
+function parseTimeNumType(str) {
+  return str
+    .split(/(^|\n)[0-9]+[\n\r  ]/g)
     .map(s => s.trim())
     .map(s => s.replace(/[\n\r]+/g, '\n'))
     .map(s => s.split(/[\n\r]+/g))
@@ -17,10 +55,10 @@ function parseStr(str) {
         text: text.join('\n')
       }
     })
-    // .map(shiftOneForward)
-    // .map(s => {
-    //   const parsed = parseTranscript(s.text);
-    // })
+  // .map(shiftOneForward)
+  // .map(s => {
+  //   const parsed = parseTranscript(s.text);
+  // })
 
 }
 

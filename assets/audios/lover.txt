@@ -1,0 +1,381 @@
+1      
+
+00:02 
+
+Hello {{name}},
+
+2      
+
+00:04 
+
+If you’ve made it here, then congratulations! Because this means that your archetype is the Lover!
+
+{{JS:{fn:'displayImage', path:'images/archetype-icons/lover.png', fadeIn: true}}}
+
+3      
+
+00:11 
+
+But what does this actually mean? Don’t worry, everything you need to know will be on this page. Stick to the end of it and I promise that you’ll experience something truly magical.
+
+{{JS:{fn:'displayImage', path:'images/archetype-icons/lover.png', fadeOut: true}}}
+
+4      
+
+00:22 
+
+The quiz that you’ve just taken is designed to identify your archetype – a personality profile that’s broken down your entire being. Your tendencies, your strengths, your past, and your future.
+
+5      
+
+00:36 
+
+Your archetype takes into account your gender, your marital status, how you answered the quiz, and how long you took to get those answers.
+
+6      
+
+00:44 
+
+That’s right, {{name}}. You can use that information to make astronomical changes in your life. You’ll be able to leverage on your strengths, improve on your weaknesses, and embark on the life that you’ve always dreamed of.
+
+7      
+
+00:58 
+
+But before we get into that, I want to share with you about your archetype, The Lover, and what it means.
+
+8      
+
+01:05 
+
+{{name}}, you  are truly a unique individual. And I genuinely believe that this world needs more people like you.
+
+9      
+
+01:14 
+
+You are a mature and deeply intelligent being – not necessarily in the sense of academics, but in terms of thinking differently.
+
+10 
+
+01:23 
+
+While the world walks in one direction, you have no qualms with going against it. That’s what makes you so special, {{name}}.
+
+11  
+
+01:31 
+
+You’re deeply sensitive. You’re able to see and feel all the pains of the world.
+
+12  
+
+01:37 
+
+That’s because as a Lover, the emotions that you feel are extreme. Your happiness is an elation beyond description, while your pain feels like it can be excruciating and crippling..
+
+13  
+
+01:50 
+
+{{name}}, you might not know it yet, but you are able to understand emotions at a level beyond others. You have an edge over everyone else when it comes to navigating your way through social situations.
+
+14  
+
+02:04 
+
+It’s no wonder that the people you encounter always feel so drawn to you.
+
+15  
+
+02:09 
+
+There is something else about you, {{name}}…
+
+{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
+
+16  
+
+02:12 
+
+You represent the empathy that the world truly needs.
+
+{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
+
+17  
+
+02:17 
+
+{{name}}, I’m getting the sense that you’re going to live a long, and happy life. And although success might not be at your feet right now, your riches and fulfilment are merely waiting for you.
+
+18  
+
+02:29 
+
+But there’s something else, {{name}}. There will be times when you feel as if you’re not enough for people.
+
+19  
+
+02:37 
+
+But that is far from the truth. In fact, you truly are a blessing to everyone who crosses your path. Your fun and jovial nature never fails to attract amazing people to be a part of your life.
+
+20 
+
+02:50 
+
+You do, however, need to pay attention to sifting out the right people from the wrong people.
+
+21  
+
+02:56 
+
+Nevertheless, {{name}}, the friendships that you forge have the deepest bonds.
+
+22  
+
+03:03 
+
+{{name}}, your enthusiasm for everything around you might be a little too much for others, but don’t let that discourage you.
+
+23  
+
+03:12 
+
+The world needs your energy and excitement. {{name}}, you possess the uncanny ability to read social cues and see right through people.
+
+24 
+
+03:22 
+
+I’m getting the sense that you can instantly tell when someone’s lying. Yet, nothing pains you more than being lied to.
+
+25  
+
+03:30 
+
+You never hesitate to jump at the opportunity to make someone’s day better. That’s because you thrive on both expressing and receiving love.
+
+26  
+
+03:40 
+
+You will, however, encounter wicked hearts and selfish people, but don’t let that lose sight of who you truly are, {{name}}.
+
+27  
+
+03:49 
+
+{{name}}, I can already tell that your friends and family really look up to you. You’re the one who they come to for detailed advice, a listening ear, or just a quick chat.
+
+28  
+
+04:01 
+
+You’re not the type of person to have huge circles of friends. You’re not someone who has trouble with making friends.
+
+29  
+
+04:10 
+
+In fact, you have no trouble at all when it comes to impressing others with your intelligence and sweet nature. But you’re extremely selective with who you choose to let into your life.
+
+30  
+
+04:21 
+
+You prefer to keep your loved ones close, and your wolf pack small.
+
+31 
+
+04:26 
+
+{{name}}, you are incredibly expressive. You’re fully connected to your emotions and you’re highly talented at the arts. You could be a masterful wordsmith or a captivating dancer.
+
+32 
+
+04:41 
+
+This makes you a natural-born artist, but not really in the sense of conventional art.
+
+33  
+
+04:46 
+
+I sense that you will find success and fulfilment as a composer, choreographer, psychologist, or a trainer of any discipline.
+
+34  
+
+04:57 
+
+You can be very protective, {{name}}. Especially as a spouse. You love your significant other more than anything in the world – whoever you end up with or have ended up with is bound to be the luckiest person in the world.
+
+35  
+
+05:15 
+
+You are willing to give and sacrifice everything that you have for them.
+
+36  
+
+05:20 
+
+{{name}}, you are going to make a lasting mark in your lifetime. You’re able to look at the world from an extremely detailed perspective.
+
+37  
+
+05:28 
+
+You see all the little imperfections in the world, and you possess the charisma and the knowledge to make it a better place.
+
+38  
+
+05:35 
+
+{{name}}, you tend to concern yourself with relationships. You’re at your happiest when you’re in a committed relationship; especially with someone who treasures you, nurtures you, and loves you for exactly who you are.
+
+39  
+
+05:50 
+
+Your faithfulness and trust are unquestionable, but if your trust is ever broken, you find it almost impossible to rebuild it.
+
+40  
+
+05:58 
+
+At times, you might even associate the successes and turmoils of your relationships with your self-worth.
+
+41  
+
+06:08 
+
+I urge you, {{name}}, your relationships do not define you. You create so much value for the people around you, and the world. You have so much to offer.
+
+42  
+
+06:19 
+
+As you can already tell, {{name}}, your relationships can make you dependent on others for your own happiness. And that is something that you need to be careful of.
+
+43  
+
+06:30 
+
+At times, it might feel as if you’re living your life for others. That’s not what you want, {{name}}. You want to live life for yourself. You want to love yourself.
+
+44  
+
+06:41 
+
+When you’re able to do that, success and the life of your dreams will follow. And that’s what Individuation aims to teach you.
+
+45  
+
+06:51 
+
+But there’s more to what I’ve learned about you, {{name}}…
+
+46  
+
+06:56 
+
+It feels to me that you’re a deeply emotional and spiritual person.
+
+{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeIn: true}}}
+
+47  
+
+07:03 
+
+You’re connected to your soul in a way that’s far more profound than others.
+
+48  
+
+07:07 
+
+Your thought process does not follow the rules and logic of the world.
+
+49  
+
+07:12 
+
+In fact, I get the sense that you have quite the imagination. Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
+
+{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
+
+50  
+
+07:26 
+
+{{name}}, you’re not someone who likes to argue. You tend to avoid conflict and you’re uncanny when it comes to devising win-win situations.
+
+51  
+
+07:36 
+
+But when you are backed into a corner, you’re not one to back down. You fight fiercely for your loved ones and for righteousness.
+
+52  
+
+07:44 
+
+You’re the first person to step in when you see a fight breaking out. You’re the first person to reach for your pockets in the sight of a struggling busker. You’re the first person your friends call when they’ve had a horrible day. You’re the one who people rely on and look up to.
+
+53 
+
+08:01 
+
+{{name}}, you are the role model of the world.
+
+54  
+
+08:06 
+
+But every lover needs a side-kick; a partner in crime who will stick by them when the going gets tough.
+
+{{JS:{fn:'displayImage', path:'images/love-compatibility/lover-love-compatibility.png', fadeIn: true}}}
+
+55  
+
+08:13 
+
+This little chart I’ve prepared represents the archetypes that you’re most likely to end up with. Or if you’re already in a committed relationship, there’s a really good chance that your spouse is one of those archetypes.
+
+56  
+
+08:26 
+
+{{name}}, you’re not the kind of person that has trouble when it comes to love. People find themselves drawn to your fun-loving nature and thoughtful tendencies.
+
+57 
+
+08:38 
+
+You’re sort of a rare breed when it comes to love. You’re fiercely faithful, thoughtful, sweet, and emotionally connected.
+
+58  
+
+08:47 
+
+The relationships that you forge with potential lovers are always profound and deep. You become very selective when it comes to who you choose to date and who you choose to end up with – for a good reason, of course.
+
+59  
+
+09:01 
+
+I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
+
+{{JS:{fn:'displayImage', path:'images/love-compatibility/lover-love-compatibility.png', fadeOut: true}}}
+
+60 
+
+09:07 
+
+But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life. Your spouse or partner is meant to play a supporting role in your life; not the lead.
+
+61 
+
+09:19 
+
+Focus on your own personal growth, and I promise you, {{name}}, you will soon discover immeasurable rewards.

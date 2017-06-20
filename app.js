@@ -2,6 +2,8 @@ import { Component, render } from 'preact';
 import parseSrt from 'parse-srt';
 import markup from 'preact-markup';
 import linkstate from 'linkstate';
+import URL from 'url';
+import localforage from 'localforage';
 import hs from 'preact-hyperstyler';
 import './handle-errors';
 import 'ionicons/dist/css/ionicons.css'
@@ -12,21 +14,43 @@ import styles from './app.styl';
 
 const h = hs(styles);
 
+const url = URL.parse(location + '', true);
+
 class App extends Component {
+  componentWillMount() {
+    if ('new' in url.query) {
+      localforage.removeItem('state');
+    } else {
+      this.setState({
+        quizData: this.props.quizData,
+        formData: this.props.formData,
+      });
+    }
+  }
   render() {
 
-    return h.div('.slider', [h(cmp.slider, {
-      formData: {
-        name: 'freeth'
-      },
-      quizData: {
-        archetype: 'hero'
+    if ('dev' in url.query) {
+      if ('slider' in url.query) {
+        return h.div('.slider', [h(cmp.slider, {
+          formData: { name: url.query.name || 'test name' },
+          quizData: { archetype: url.query.archetype || 'magician' },
+        })]);
       }
-    })]);
+    }
 
     const header = h.div('.header', [cmp.header]);
-    const form = h.div('.form', [h(cmp.form, { onSubmit: formData => this.setState({ formData }) })]);
-    const quiz = h.div('.quiz', [h(cmp.quiz, { onFinish: quizData => this.setState({ quizData }) })]);
+    const form = h.div('.form', [h(cmp.form, {
+      onSubmit: formData => {
+        this.setState({ formData });
+        localforage.setItem('state', this.state);
+      }
+    })]);
+    const quiz = h.div('.quiz', [h(cmp.quiz, {
+      onFinish: quizData => {
+        this.setState({ quizData });
+        localforage.setItem('state', this.state);
+      }
+    })]);
     const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, { form, archetype: this.state && this.state.quizData && this.state.quizData.archetype })]);
     const slider = h.div('.slider', [h(cmp.slider, this.state)]);
 
@@ -42,4 +66,7 @@ class App extends Component {
   }
 }
 
-render(h(App), document.getElementById('whats-your-archetype_app') || document.body);
+const target = document.getElementById('whats-your-archetype_app') || document.body;
+localforage.config({ version: 1, });
+localforage.getItem('state').then(data =>
+  render(h(App, data), target));

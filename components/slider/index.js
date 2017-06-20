@@ -15,13 +15,6 @@ export default class Slider extends Component {
   // }
 
   componentDidMount() {
-    // fetch('assets/understanding-numerology.srt')
-    //   .then(r => r.text())
-    //   .then(parseSrt)
-    //   .then(srt => {
-    //     // console.log(`srt:`, srt);
-    //     this.setState({ srt });
-    //   })
     this.audioEl.play()
   }
 
@@ -47,9 +40,7 @@ export default class Slider extends Component {
   }
 
   render() {
-    // console.log(`this.props:`, this.props);
-    // const archetype = this.props.quizData.archetype;
-    const archetype = 'hero';
+    const archetype = this.props.quizData.archetype;
     if (!archetype) {
       return 'Need to have an archetype before this component could be rendered';
     }
