@@ -51,7 +51,7 @@ module.exports = {
       filename: 'build/styles.css',
       disable: isDev,
     }),
-    new CleanWebpackPlugin(['build'], { watch: true }),
+    new CleanWebpackPlugin(['build']),
   ],
   resolve: {
     alias: {
