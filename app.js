@@ -71,6 +71,6 @@ localforage.config({ version: 1, });
 localforage.getItem('state').then(data => {
   render(h(App, data), target)
   const footer = document.getElementById('whats-your-archetype_footer') || document.body;
-  render(cmp.footer, target);
+  render(cmp.footer, footer);
 });
 
