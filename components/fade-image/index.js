@@ -23,7 +23,7 @@ export default class extends Component {
     const oldSrc = this.state['src' + this.state.currIndex];
     const newSrc = this.props.src;
     const same = newSrc === oldSrc
-    console.log(`${newSrc} ${same?'==':'!='} ${oldSrc}`);
+    // console.log(`${newSrc} ${same?'==':'!='} ${oldSrc}`);
     if (!same) {
       const newState = this.state;
       const oldIndex = this.state.currIndex;

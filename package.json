@@ -28,6 +28,7 @@
     "preact-hyperstyler": "^0.3.0",
     "preact-markdown": "^0.3.0",
     "preact-markup": "^1.6.0",
+    "react-youtube": "^7.4.0",
     "string-template-parser": "^1.0.0-rc.1",
     "undb": "^0.1.0"
   },
