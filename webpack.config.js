@@ -8,8 +8,8 @@ module.exports = {
   output: {
     filename: 'build/app.js',
     sourceMapFilename: '[file].map',
-    // publicPath: isDev ? '' : '/wp-content/themes/individualogist/whats-your-archetype/',
-    publicPath: isDev ? '' : '/individualogist-whats-your-archetype/',
+    publicPath: isDev ? '' : '/wp-content/themes/individualogist/whats-your-archetype/',
+    // publicPath: isDev ? '' : '/individualogist-whats-your-archetype/',
     hashDigestLength: 5,
   },
   devtool: isDev ? 'cheap-module-source-map' : 'source-map',
