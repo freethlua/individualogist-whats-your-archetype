@@ -14,10 +14,10 @@ module.exports = {
   },
   devtool: isDev ? 'cheap-module-source-map' : 'source-map',
   module: {
-    // isDev && {test:/\.js$/,use:'webpack-module-hot-accept'},
-    rules: [
-      isDev && {test:/\.js$/,use:'webpack-module-hot-accept'},
-      {
+    rules: [{
+      test: /\.js$/,
+      use: isDev ? 'webpack-module-hot-accept' : []
+    }, {
       test: /\.css$/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
@@ -44,7 +44,7 @@ module.exports = {
     }, {
       test: /\.(pug|jade)$/,
       use: 'pug-loader',
-    }].filter(Boolean),
+    }],
   },
   plugins: [
     new ExtractTextPlugin({

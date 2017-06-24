@@ -30,11 +30,14 @@ class App extends Component {
   render() {
 
     if ('dev' in url.query) {
-      if ('slider' in url.query) {
-        return h.div('.slider', [h(cmp.slider, {
-          formData: { name: url.query.name || 'test name' },
-          quizData: { archetype: url.query.archetype || 'magician' },
-        })]);
+      // console.log({ url.query });
+      if ('report' in url.query) {
+        if (url.query.report === 'free') {
+          return h.div('.reportFree', [h(cmp.reportFree, {
+            formData: { name: url.query.name || 'test name' },
+            quizData: { archetype: url.query.archetype || 'magician' },
+          })]);
+        }
       }
     }
 
@@ -52,7 +55,7 @@ class App extends Component {
       }
     })]);
     const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, { form, archetype: this.state && this.state.quizData && this.state.quizData.archetype })]);
-    const slider = h.div('.slider', [h(cmp.slider, this.state)]);
+    const reportFree = h.div('.reportFree', [h(cmp.reportFree, this.state)]);
 
     if (!this.state.quizData) {
       return h.div('.app', [quiz, cmp.comments]);
@@ -60,7 +63,7 @@ class App extends Component {
       if (!this.state.formData) {
         return h.div('.app', [reportIntro, cmp.comments]);
       } else {
-        return h.div('.app', [slider]);
+        return h.div('.app', [reportFree]);
       }
     }
   }

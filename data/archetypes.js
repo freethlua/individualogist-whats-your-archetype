@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   advocate: { title: 'The Advocate' },
   caregiver: { title: 'The Caregiver' },
   creator: { title: 'The Creator' },

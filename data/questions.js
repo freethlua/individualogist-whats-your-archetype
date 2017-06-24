@@ -1,4 +1,4 @@
-export default [{
+module.exports = [{
   question: `Let's start things off with an easy one. What's your gender?`,
   answers: [
     { answer: `I'm a man` },
