@@ -1,6 +1,6 @@
 module.exports = function calculate(questions, archetypes) {
-  // questions = JSON.parse(JSON.stringify(questions))
-  // archetypes = JSON.parse(JSON.stringify(archetypes))
+  questions = JSON.parse(JSON.stringify(questions))
+  archetypes = JSON.parse(JSON.stringify(archetypes))
   for (const question of questions) {
     if (question.answer.points) {
       for (const archetype in question.answer.points) {
