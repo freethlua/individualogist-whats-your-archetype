@@ -17,38 +17,52 @@ module.exports = [{
   answers: [{
     answer: `Leads the team`,
     points: {
-      ruler: 2,
-      hero: 1,
+      ruler: 5,
+      hero: 3,
+      caregiver: 2,
     }
   }, {
     answer: `Helps others with their tasks`,
     points: {
-      caregiver: 2,
+      caregiver: 3,
+      member: 2,
       lover: 1,
+      innocent: 1,
     }
   }, {
     answer: `Comes up with the most innovative ideas`,
     points: {
-      creator: 2,
-      magician: 1,
+      creator: 5,
+      sage: 3,
+      magician: 2,
     }
   }, {
     answer: `Helps the team stay united`,
     points: {
+      ruler: 5,
+      hero: 3,
       member: 2,
-      sage: 1,
+      lover: 1,
+      innocent: 1,
     }
   }, {
     answer: `Does what the team tells you to do`,
     points: {
-      outlaw: 2,
-      innocent: 1,
+      member: 4,
+      outlaw: -2,
+      innocent: 2,
     }
   }, {
     answer: `Jokes around all the time`,
     points: {
-      jester: 2,
+      jester: 5,
+      caregiver: 1,
+      hero: 1,
+      lover: 1,
+      outlaw: 1,
       explorer: 1,
+      innocent: 1,
+      sage: -2,
     }
   }, ],
 }, {
@@ -56,32 +70,45 @@ module.exports = [{
   answers: [{
     answer: `Inventor`,
     points: {
+      creator: 4,
       magician: 2,
-      creator: 1,
+      jester: -1,
     }
   }, {
     answer: `Counsellor`,
     points: {
-      innocent: 2,
-      caregiver: 1,
+      caregiver: 4,
+      hero: 2,
+      sage: 2,
+      innocent: 1,
+      lover: 1,
+      jester: -1,
     }
   }, {
     answer: `Police Officer`,
     points: {
-      hero: 2,
-      ruler: 1,
+      hero: 4,
+      innocent: 4,
+      jester: -1,
     }
   }, {
     answer: `Veterinarian`,
     points: {
+      caregiver: 4,
       outlaw: 2,
       innocent: 1,
+      lover: 1,
+      jester: -1,
     }
   }, {
     answer: `Lecturer`,
     points: {
-      sage: 2,
+      sage: 5,
+      hero: 2,
+      creator: 1,
+      innocent: 1,
       member: 1,
+      jester: -1,
     }
   }, {
     answer: `Copywriter`,
@@ -95,37 +122,37 @@ module.exports = [{
   answers: [{
     answer: `Original and creative`,
     points: {
-      creator: 2,
-      magician: 1,
+      creator: 5,
+      magician: 2,
     }
   }, {
     answer: `Funny and lighthearted`,
     points: {
-      jester: 2,
-      explorer: 1,
+      jester: 5,
     }
   }, {
     answer: `Action-packed and exciting`,
     points: {
-      ruler: 2,
-      hero: 1,
+      innocent: 3,
     }
   }, {
     answer: `Romantic and alluring`,
     points: {
-      caregiver: 2,
-      lover: 1,
+      lover: 3,
+      innocent: 2,
     }
   }, {
     answer: `Inspiring and profound`,
     points: {
-      member: 2,
-      sage: 1,
+      sage: 3,
+      creator: 3,
+      innocent: 2,
     }
   }, {
     answer: `Free-spirited and simple`,
     points: {
       outlaw: 2,
+      explorer: 2,
       innocent: 1,
     }
   }, ],
@@ -134,18 +161,20 @@ module.exports = [{
   answers: [{
     answer: `Thoughtful and caring`,
     points: {
+      caregiver: 4,
+      hero: 2,
       lover: 2,
-      caregiver: 1,
     }
   }, {
     answer: `Imaginative and resourceful`,
     points: {
+      creator: 3,
       magician: 2,
-      creator: 1,
     }
   }, {
     answer: `Bold and unpredictable`,
     points: {
+      outlaw: 4,
       hero: 2,
       ruler: 1,
     }
@@ -158,20 +187,20 @@ module.exports = [{
   }, {
     answer: `Wise and easy to talk to`,
     points: {
-      sage: 2,
+      sage: 4,
       member: 1,
     }
   }, {
     answer: `Stubborn and strong-willed`,
     points: {
-      outlaw: 2,
-      innocent: 1,
+      outlaw: 4,
+      ruler: 3,
     }
   }, {
     answer: `Original and creative`,
     points: {
-      creator: 2,
-      magician: 1,
+      creator: 5,
+      magician: 2,
     }
   }, ],
 }, {
@@ -185,20 +214,18 @@ module.exports = [{
   }, {
     answer: `Skydiving for the first time`,
     points: {
+      outlaw: 2,
       explorer: 2,
-      sage: 1,
     }
   }, {
     answer: `Checking out the city's museums and architecture`,
     points: {
-      magician: 2,
-      sage: 1,
+      explorer: 2,
     }
   }, {
     answer: `Talking to strangers and experiencing the place's culture firsthand`,
     points: {
       member: 2,
-      creator: 1,
     }
   }, {
     answer: `Making sure your travelling companions are safe and having fun`,
@@ -209,8 +236,9 @@ module.exports = [{
   }, {
     answer: `Wishing that you were back home already`,
     points: {
-      outlaw: 2,
-      ruler: 1,
+      member: 3,
+      innocent: 2,
+      caregiver: 2,
     }
   }, ],
 }, {
@@ -218,38 +246,40 @@ module.exports = [{
   answers: [{
     answer: `Your significant other`,
     points: {
-      lover: 2,
-      caregiver: 1,
+      lover: 3,
+      caregiver: 2,
+      innocent: 1,
     }
   }, {
     answer: `New people you've just met`,
     points: {
-      explorer: 2,
+      explorer: 3,
       member: 1,
     }
   }, {
     answer: `Your friends`,
     points: {
       innocent: 2,
-      creator: 1,
+      member: 1,
     }
   }, {
     answer: `Your family`,
     points: {
-      hero: 2,
-      ruler: 1,
+      member: 3,
+      innocent: 2,
+      hero: 1,
     }
   }, {
     answer: `Yourself`,
     points: {
+      explorer: 3,
       hero: 2,
-      ruler: 1,
     }
   }, {
     answer: `Your colleagues`,
     points: {
-      jester: 2,
-      sage: 1,
+      member: 3,
+      innocent: 2,
     }
   }, ],
 }];

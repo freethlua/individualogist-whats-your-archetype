@@ -1,0 +1,47 @@
+
+
+
+.container
+  position: relative
+
+.container .child
+  transition: opacity 2000ms
+
+.child.visible
+  opacity: 1
+.child:not(.visible)
+  opacity: 0
+  position: absolute
+  left: 0
+  top: 0
+  // z-index: 1
+
+
+.pre
+  position: fixed
+  left: 0
+  bottom: 0
+
+
+// :global
+:global .fade-wait-leave
+  opacity: 1
+
+:global .fade-wait-leave.fade-wait-leave-active
+  opacity: 0
+  transition: opacity .4s ease-in
+
+
+:global .fade-wait-enter
+  opacity: 0
+
+:global .fade-wait-enter.fade-wait-enter-active
+  opacity: 1
+  /* Delay the enter animation until the leave completes */
+  transition: opacity .4s ease-in .6s
+
+
+:global .fade-wait-height
+  transition: height .6s ease-in-out
+
+

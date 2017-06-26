@@ -1,25 +1,29 @@
 import { Component } from 'preact';
 import hs from 'preact-hyperstyler';
+import hh from 'preact-hyperscript-h';
 import linkstate from 'linkstate';
 import markup from 'preact-markup';
 import Youtube from 'react-youtube';
-import fadeImage from '../fade-image';
+import Fade from 'preact-fade';
 import styles from './style.styl';
 
 const h = hs(styles);
 
-export default class Slider extends Component {
+export default class ReportFree extends Component {
   componentWillMount() {
     this.changeBackground();
     document.body.onkeyup = e => e.keyCode === 32 && this.playPause();
+    // console.log(`this.props.class:`, !!this.props.class);
   }
   componentWillUnmount() {
     delete document.body.onkeyup;
+    // console.log(`this.props.class:`, !!this.props.class);
   }
 
   componentDidMount() {
     this.audioEl.play();
     window.scrollTo(0, 0);
+    // console.log(`this.props.class:`, !!this.props.class);
   }
 
   cueAction(action, opts, transcriptLine) {
@@ -65,9 +69,11 @@ export default class Slider extends Component {
 
   componentWillUpdate() {
     this.changeBackground();
+    // console.log(`this.props.class:`, !!this.props.class);
   }
 
   render() {
+    // console.log(`this.props.class:`, !!this.props.class);
     const archetype = this.props.quizData.archetype;
     if (!archetype) {
       return 'Need to have an archetype before this component could be rendered';
@@ -87,6 +93,7 @@ export default class Slider extends Component {
       return `Cannot load the transcript file: '${archetype}.json'`;
     }
 
+    // console.log(`this.props.class:`, !!this.props.class);
     // console.log(this.state.currentLine);
 
     return h.div('.wrapper', [h.div('.container', [
@@ -96,15 +103,25 @@ export default class Slider extends Component {
       h.div('.content', { onclick: e => this.playPause() }, [
         h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
         h.div('.text', [this.state.currentLine
-          ? h(markup, { markup: this.state.currentLine })
-          // ? h.pre(JSON.stringify(this.state.currentLine, null, 2))
+          ? hh(Fade, { changed: this.state.currentLine }, [h(markup, { markup: this.state.currentLine })])
           : h.p('Loading...'),
         ]),
         h.div('.image', [
-          h.div('.background', [h(fadeImage, { src: this.state.background })]),
-          // h.div('.background', [h.img({ src: this.state.background })]),
-          h.div('.foreground', [this.state.img && h(fadeImage, { src: this.state.img })]),
-          // h.div('.foreground', [this.state.img && h.img({ src: this.state.img })]),
+          h.div('.background', [
+            h(Fade, {
+              changed: this.state.background,
+            }, [h.img({
+              src: this.state.background,
+            })])
+          ]),
+          h.div('.foreground', [
+            this.state.img
+            && h(Fade, {
+              changed: this.state.img,
+            }, [h.img({
+              src: this.state.img,
+            })])
+          ]),
         ]),
         h.audio({
           // controls: true,
@@ -180,6 +197,7 @@ export default class Slider extends Component {
         ]),
       ]),
       // h.pre([JSON.stringify(this.state, null, 1)]),
+      // h.pre([JSON.stringify(this.state.currentLine, null, 1)]),
     ])]);
   }
 }

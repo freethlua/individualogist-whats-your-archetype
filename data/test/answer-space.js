@@ -72,11 +72,17 @@ for (const k in levelAnswers) {
 
 // console.log(sameArchetypes);
 
-require('fs').writeFileSync(__dirname + '/output.json', JSON.stringify(sameArchetypes, null, 2));
 
 const output = sameArchetypes;
-
-for(const [archetype, {length}] of Object.entries(output)) {
-  console.log(archetype.padEnd(10), length);
+let sortedSameArchetypes = []
+for (const [archetype, { length }] of Object.entries(output)) {
+  sortedSameArchetypes.push({ archetype, length })
 }
+sortedSameArchetypes = sortedSameArchetypes.sort((a, b) => b.length - a.length)
 
+sortedSameArchetypes.forEach(a => console.log(a.archetype.padEnd(10), a.length));
+
+require('fs').writeFileSync(__dirname + '/output.json',
+  JSON.stringify(sortedSameArchetypes, null, 2) + '\n'
+  + JSON.stringify(sameArchetypes, null, 2)
+);

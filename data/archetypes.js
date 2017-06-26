@@ -1,5 +1,5 @@
 module.exports = {
-  advocate: { title: 'The Advocate' },
+  // advocate: { title: 'The Advocate' },
   caregiver: { title: 'The Caregiver' },
   creator: { title: 'The Creator' },
   explorer: { title: 'The Explorer' },
