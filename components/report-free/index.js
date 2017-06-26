@@ -3,7 +3,7 @@ import hs from 'preact-hyperstyler';
 import hh from 'preact-hyperscript-h';
 import linkstate from 'linkstate';
 import markup from 'preact-markup';
-import Youtube from 'react-youtube';
+// import Youtube from 'react-youtube';
 import Fade from 'preact-fade';
 import styles from './style.styl';
 
@@ -165,7 +165,7 @@ export default class ReportFree extends Component {
         ]),
         h.div('.testimonial', [
           h.p(`“Reading it felt almost as if I was reliving my entire life. What’s even crazier is that it showed me things about myself that I didn’t even know before!”`),
-          h(Youtube, { videoId: 'jWWB3adrqro' }),
+          // h(Youtube, { videoId: 'jWWB3adrqro' }),
           // h.iframe({ src: 'https://www.youtube.com/watch?v=jWWB3adrqro', width: 420 }),
         ]),
         h.div('.action-2', [
