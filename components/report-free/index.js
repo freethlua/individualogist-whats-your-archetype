@@ -101,25 +101,24 @@ export default class ReportFree extends Component {
       h.div('.content', { onclick: e => this.playPause() }, [
         h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
         h.div('.text', [this.state.currentLine
-          ? hh(Fade, { changed: this.state.currentLine }, [h(markup, { markup: this.state.currentLine })])
+          ? h(Fade, { changed: this.state.currentLine }, [
+            h(markup, { markup: this.state.currentLine }),
+          ])
           : h.p('Loading...'),
         ]),
         h.div('.image', [
           h.div('.background', [
             h(Fade, {
               changed: this.state.background,
-            }, [h.img({
-              src: this.state.background,
-            })])
+            }, [h.img({ src: this.state.background, })])
           ]),
-          h.div('.foreground', [
-            this.state.img
-            && h(Fade, {
+          h.div('.foreground', [h.div('.foreground-container', [
+            h(Fade, {
               changed: this.state.img,
-            }, [h.img({
-              src: this.state.img,
-            })])
-          ]),
+              duration: 2000,
+              positionAbsolute: !this.state.img,
+            }, [h.img({ src: this.state.img })])
+          ])]),
         ]),
         h.audio({
           // controls: true,
@@ -194,7 +193,7 @@ export default class ReportFree extends Component {
           h.p(`I’m making this guarantee because I’m 100% certain that this report has the capacity to truly turn your life around. That’s how much I believe in the process of individuation, and that’s how much I believe you will benefit from it. So, no matter what, you’ve got the longer end of the stick. There is absolutely no risk involved, and it’s all up to you and whether you decide to take this life-changing path.`),
         ]),
       ]),
-      h.pre([JSON.stringify(this.state, null, 1)]),
+      // h.pre([JSON.stringify(this.state, null, 1)]),
       // h.pre([JSON.stringify(this.state.currentLine, null, 1)]),
     ])]);
   }
