@@ -3,7 +3,7 @@ import hs from 'preact-hyperstyler';
 import hh from 'preact-hyperscript-h';
 import linkstate from 'linkstate';
 import markup from 'preact-markup';
-// import Youtube from 'react-youtube';
+import Youtube from 'react-youtube';
 import Fade from 'preact-fade';
 import styles from './style.styl';
 

@@ -27,7 +27,7 @@
     "preact-fade": "^0.1.0",
     "preact-hyperscript": "^0.7.1",
     "preact-hyperscript-h": "^0.1.1",
-    "preact-hyperstyler": "^0.3.0",
+    "preact-hyperstyler": "^0.3.1",
     "preact-markdown": "^0.3.0",
     "preact-markup": "^1.6.0",
     "react-addons-css-transition-group": "^15.6.0",
