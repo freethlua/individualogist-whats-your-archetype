@@ -1,9 +1,18 @@
 .container
-  // position: relative
-  border: 1px dotted transparent
+  position: relative
+  // border: 1px dotted transparent
+  // border: 11px dotted yellow
+  // width: 100vw
+  // background: linear-gradient(to bottom, rgb(253, 251, 250) 0%, rgb(214, 206, 200) 40%)
 
 .header
   margin: 1em auto
+  position: absolute
+  width: 100%
+  z-index: 1
+  // border 2px dotted yellow
+  // left: 50%
+  // margin-left: -50%
   .img
     display: block
     margin: auto
@@ -13,97 +22,144 @@
       max-width: 50%
 
 .content
+  padding-top 5em
+  position: relative
+  // border: 1px dotted red
   // > *
   //   border: 1px dotted
-  height: 96vh
+  // height: 96vh
+  height: 100%
+  background-position: 50% 0
+  background-size: cover
+  // background-attachment: fixed
+  // background-image: none!important
+  margin-bottom: 10em
+
+.content:after
+  content: ' '
+  // border: 3px dotted black
+  display: block
+  // width: 100%
+  height .5em
+  background-image: linear-gradient(to right, #6A2977, #009ED5)
+  // position: absolute
+  // bottom: -10em
 
 .text
+  // border: 2px dotted yellow
+  position: absolute
+  top: 0
+
   z-index: 1
-  @media(max-width:400px)
-    margin: 3em 1em
+
+  &
+  *
+    width: 100%
+    height: 100%
+  &
+    // height: 100vh
+    height: calc(100vh - 20px)
+
+  width: 80% !important
+  margin-left: 10% !important
+
+  text-align: center
+
+  // font-size: 1em
   @media(min-width:400px)
     font-size: 2em
   @media(min-width:1200px)
     font-size: 3em
-    margin: auto 3em
-  @media(max-width:1200px)
-    max-width: 600px
-  position: absolute
-  margin-left: 1em
-  @media(min-height:500px)
-    top: 3em
-  // .text-container
-  //   position: relative
-  //   // > *
-  //   // > *:first-child
-  //   > *:nth-child(1)
-  //   > *:nth-child(2)
-  //   // > *:last-child
-  //     position: absolute
 
   color white
   text-shadow:
     0 0 10px black,
-
     3px 6px 5px black,
     0px 2px 5px black,
-
     0 0 20px white
 
-  // color rgb(240,240,240)
-  // color white
-  // text-shadow: 0 0 10px  black
-  // .text-container *:first-child
-  //   text-shadow: 0 0 20px  white
-  // .text-container *:last-child
-  //   text-shadow: 5px 5px 5px  black
+  // .markup
+  //   position: relative
+  //   width 80%
+  //   margin: auto
 
-  // color black
-  // text-shadow: 0 0 5px  white
-  // .text-container *:first-child
-  //   text-shadow: 0 0 10px  black
+  display: flex
+  flex-flow: column
+  justify-content: space-around
 
-  // color yellow
-  // text-shadow: 0 0 5px  red
-  // .text-container *:first-child
-  //   text-shadow: 0 0 10px  blue
+  .markup
+    // border: 2px dotted yellow
+    display: flex
+    flex-flow: column
+    justify-content: space-around
+
+  &.left
+    text-align: left
+  &.bottom
+    .markup
+      justify-content: flex-end
+
+  // .compatibility &
+  .compatibility & .markup
+    @media(orientation:portrait)
+      margin-top: 15vh
+    @media(orientation:landscape)
+      @media(max-height:500px)
+        font-size: .8em
+        justify-content: flex-end
+      @media(min-width:1100px)
+        margin-top: 15vh
+        // justify-content: flex-end
+      @media(max-width:1200px)
+        margin-top: 15vh
+
 
 .image
   z-index: -1
-  .background
-    z-index: -2
-    position: absolute
-    left: 0
-    top: 0
-    img
-      position: relative
-      // left: 50%
-      // display: block
-      // object-fit: contain
-      // max-width:100%
-      // max-height:100%
-      // height: 100%
-      height: 98vh
-      // width: 100%
-      // overflow: hidden
-    // filter: blur(3px)
-    width: 100%
-    height: 100%
-    // background: linead-gradient(to bottom, )
-    background: linear-gradient(to bottom, rgb(253, 251, 250) 0%, rgb(214, 206, 200) 40%);
-  // border: 2px dotted red
   .foreground
     position: relative
+    top: -80px
+    // text-align: center
     width: 100%
     height: 100%
     .foreground-container
-      position: absolute
-      display: inline-block
-      right: 5%
-      bottom: 5em
-      img
+      width: 100%
+      height: 100%
+      *
+        width: 100%
+        height: 100%
+      .img
+        // border: 2px dotted yellow
+        width: 100%
+        height: 100vh
+        background-repeat: no-repeat
         filter: drop-shadow(0 0 15px black)
-        max-width: 90%
+        background-position:center
+        background-size: contain
+        background-size: 60% auto
+        &.top
+          background-position: top
+        &.bottom
+          background-position:bottom 10px
+        &.wide
+          background-size: 100% auto
+        &.fit
+          background-size: 100% auto
+        .compatibility &
+          background-size: contain
+          background-position: 80px
+          // background-position: top 3%
+          background-position: 50% 80px
+          // background-size: cover
+          @media(max-width:800px)
+            background-size: auto 300px
+          @media(max-width:600px)
+            background-size: 150% auto
+          // background-size: 80%
+          // &:not(.top)
+          @media(orientation:portrait)
+            @media(min-height:1000px)
+              margin-top: 15vh
 
 
 
@@ -116,42 +172,19 @@
   filter: drop-shadow(0 0 3px white)
   z-index: 2
   cursor: pointer
-  width: 0;
-  height: 0;
-  border-top: 2em solid transparent;
-  border-left: 3em solid #000;
-  border-bottom: 2em solid transparent;
+  width: 0
+  height: 0
+  border-top: 2em solid transparent
+  border-left: 3em solid #000
+  border-bottom: 2em solid transparent
   &:not(.visible)
     display: none
 
-.content:after
-  content: ' '
-  display: block
-  width: 100%
-  height .5em
-  background-image: linear-gradient(to right, #6A2977, #009ED5)
-  position: absolute
-  bottom: 0
-
-
-// .container
-//   display: flex
-//   flex-flow: column
-//   align-items: center
-
-// .action-1
-//   border-radius: 50px
-//   background: linear-gradient(to right, #863981, #CA2D82)
-//   box-shadow: 1vw 2vh 4vh rgb(0,0,0,.4)
-//   width: 80%
-//   margin: auto
-//   // height 20vw
-//   display: flex
-//   align-items: flex-end
-//   font-size: 10%
-
 
 .action-1
+  // border: 1px dotted
+  // > *
+  //   border: 1px dotted
   border-radius: 50px
   background: linear-gradient(to right, #863981, #CA2D82)
   box-shadow: 20px 20px 20px rgb(0,0,0,.4)
@@ -168,33 +201,46 @@
   > .img
     width: 40%
     height: auto
+    @media(max-width:650px)
+      display: none
   > .div
     margin-left: -4em
+    margin-left: -10%
     width: 60%
-    @media(min-width:900px)
-      font-size: 2em
+    @media(max-width:650px)
+      width: 100%
+      margin-left: 0
+
+    font-size: 2em
+    @media(max-width:900px)
+      font-size: 1.8em
+
     > .p
       color white
-      // @media(max-width:600px)
-      //   text-shadow: 2px 2px 2px black
-      //   background: linear-gradient(to right, #863981, #CA2D82)
-      //   box-shadow: 2px 2px 2px rgb(0,0,0,.4)
-      //   border-radius: 2px
-    // display: block
+      text-shadow: 0 0 3px black, 0 0 5px white, 2px 2px 3px black
+      // @media(max-width:1068px)
+      //   font-size: .8em
     text-align: center
     // position: relative
     // right -25%
     // margin: 1em auto
     > .button
       cursor: pointer
+      text-shadow: 0 0 3px white
       font-size: 1.3em
       // font-size: 1.3vh
       background: linear-gradient(to right, #E4C22C, #F8B144)
       border-radius: 50px
-      box-shadow: 20px 20px 20px rgb(0,0,0,.4)
+      box-shadow: 10px 10px 10px rgb(0,0,0,.4)
       padding .5em
+      @media(max-width:1000px)
+        padding .1em
       &:active
-        box-shadow: none
+        box-shadow: 0 0 10px rgb(0,0,0,.4)
+      @media(max-width:1068px)
+        font-size: .8em
+        padding .2em .5em
+        margin-bottom: 1em
 
 
 
@@ -202,25 +248,29 @@
   // border 1px solid
   // > *
   //   border 1px solid
+  // @media(min-width:400px)
   margin: 10vh auto
   display: flex
   align-items: center
-  // justify-content: center
   justify-content: space-around
-  // @media(min-width:900px)
-  //   justify-content: space-around
   text-align: center
   > *
     width 100%
+    max-width 100% !important
   .p
     font-size: 2em
+    // @media(min-width:900px)
     @media(min-width:900px)
-      width: 30%
-    padding 1em
-  .iframe
-
+      width: 50%
+    // @media(min-width:400px)
+    //   padding 1em
+  .youtube
+    margin: 1em
+    // flex-shrink: 2
     @media(min-width:900px)
       width: 60%
+    iframe
+      max-width 100% !important
   @media(max-width:900px)
     flex-direction: column
 
@@ -254,7 +304,7 @@
     @media(min-width:900px)
       left: -40px
     border-radius: 30px
-    background: linear-gradient(to bottom, rgb(253, 251, 250) 0%, rgb(214, 206, 200) 40%);
+    background: linear-gradient(to bottom, rgb(253, 251, 250) 0%, rgb(214, 206, 200) 40%)
     text-align: center
     padding: 1.3em
     font-size: 1.4em

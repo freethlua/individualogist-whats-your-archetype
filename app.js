@@ -14,7 +14,7 @@ import styles from './app.styl';
 
 const h = hs(styles);
 
-const url = URL.parse(location + '', true);
+window.url = URL.parse(location + '', true);
 
 class App extends Component {
 

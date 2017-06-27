@@ -1,0 +1,64 @@
+[{
+  "start": 1,
+  "end": 5,
+    "text": "But every Creator needs a partner in crime who will stick by them when the going gets tough.\n",
+  "class": ["bottom-right"],
+  "keys": [{
+    "key": "name",
+    "index": 6
+  }, {
+    "js": {
+      "fn": "displayImage",
+      "fadeIn": true,
+      "path": "images/love-compatibility/creator-love-compatibility.png",
+      "class": ["top-left", "wide"]
+    },
+    "index": 101
+  }]
+}, {
+  "start": 5,
+  "end": 10,
+  "text": "5-10",
+  "keys": [{
+    "key": "name",
+    "index": 6
+  }, {
+    "js": {
+      "fn": "displayImage",
+      "path": "images/script-images/globe.png",
+      "fadeIn": true
+    },
+    "index": 101
+  }]
+}, {
+  "start": 10,
+  "end": 20,
+  "text": "10-20",
+  "keys": [{
+    "key": "name",
+    "index": 6
+  }, {
+    "js": {
+      "fn": "displayImage",
+      "path": "images/script-images/globe.png",
+      "fadeOut": true
+    },
+    "index": 101
+  }]
+}, {
+  "start": 20,
+  "end": 30,
+  "text": "20-30",
+  "class": ".bottom-right",
+  "keys": [{
+    "key": "name",
+    "index": 6
+  }, {
+    "js": {
+      "fn": "displayImage",
+      "fadeIn": true,
+      "path": "images/archetype-icons/creator.png"
+    },
+    "index": 101
+  }]
+}]
