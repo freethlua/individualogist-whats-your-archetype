@@ -146,9 +146,9 @@ export default class ReportFree extends Component {
 
     let transcript;
     try {
-      transcript = require(`../../assets/audios/${archetype}.json`);
+      transcript = require(`../../assets/audios/${archetype}`);
     } catch (error) {
-      return `Cannot load the transcript file: '${archetype}.json'`;
+      return `Cannot load the transcript file: '${archetype}'`;
     }
 
     // console.log(this.state.currentLine);
@@ -222,9 +222,6 @@ export default class ReportFree extends Component {
       h.img({ src: require(`../../assets/images/logos/large-text.png`) }),
     ]);
 
-    // console.log(`hi:`, arrify(this.state.currentLineOpts && this.state.currentLineOpts.class).concat([
-    //     'current-percent-' + this.state.currentPercent,
-    //   ]));
     const mainContentEl = h.div({
       onclick: e => this.playPause(),
       class: arrify(this.state.currentLineOpts && this.state.currentLineOpts.class).concat([

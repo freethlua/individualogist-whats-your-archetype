@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
 
@@ -52,7 +53,12 @@ module.exports = {
       disable: isDev,
     }),
     new CleanWebpackPlugin(['build']),
-  ],
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+      generateStatsFile: true,
+    }),
+  ].filter(Boolean),
   resolve: {
     alias: {
       'react': 'preact-compat',
