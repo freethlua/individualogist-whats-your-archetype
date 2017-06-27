@@ -24,7 +24,7 @@
     "mobx-localforage-store": "^0.8.0",
     "parse-srt": "^1.0.0-alpha",
     "preact": "^8.1.0",
-    "preact-fade": "^0.1.0",
+    "preact-fade": "^0.1.2",
     "preact-hyperscript": "^0.7.1",
     "preact-hyperscript-h": "^0.1.1",
     "preact-hyperstyler": "^0.3.1",

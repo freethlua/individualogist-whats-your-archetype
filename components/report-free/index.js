@@ -13,17 +13,14 @@ export default class ReportFree extends Component {
   componentWillMount() {
     this.changeBackground();
     document.body.onkeyup = e => e.keyCode === 32 && this.playPause();
-    // console.log(`this.props.class:`, !!this.props.class);
   }
   componentWillUnmount() {
     delete document.body.onkeyup;
-    // console.log(`this.props.class:`, !!this.props.class);
   }
 
   componentDidMount() {
     this.audioEl.play();
     window.scrollTo(0, 0);
-    // console.log(`this.props.class:`, !!this.props.class);
   }
 
   cueAction(action, opts, transcriptLine) {
@@ -31,11 +28,15 @@ export default class ReportFree extends Component {
   }
 
   displayImage(opts, transcriptLine) {
-    try {
-      this.setState({ img: require(`../../assets/` + opts.path) });
-    } catch (error) {
+    if (opts.fadeOut) {
       this.setState({ img: '' });
-      console.error(error);
+    } else {
+      try {
+        this.setState({ img: require(`../../assets/` + opts.path) });
+      } catch (error) {
+        this.setState({ img: '' });
+        console.error(error);
+      }
     }
   }
 
@@ -69,11 +70,9 @@ export default class ReportFree extends Component {
 
   componentWillUpdate() {
     this.changeBackground();
-    // console.log(`this.props.class:`, !!this.props.class);
   }
 
   render() {
-    // console.log(`this.props.class:`, !!this.props.class);
     const archetype = this.props.quizData.archetype;
     if (!archetype) {
       return 'Need to have an archetype before this component could be rendered';
@@ -93,7 +92,6 @@ export default class ReportFree extends Component {
       return `Cannot load the transcript file: '${archetype}.json'`;
     }
 
-    // console.log(`this.props.class:`, !!this.props.class);
     // console.log(this.state.currentLine);
 
     return h.div('.wrapper', [h.div('.container', [
@@ -165,7 +163,7 @@ export default class ReportFree extends Component {
         ]),
         h.div('.testimonial', [
           h.p(`“Reading it felt almost as if I was reliving my entire life. What’s even crazier is that it showed me things about myself that I didn’t even know before!”`),
-          // h(Youtube, { videoId: 'jWWB3adrqro' }),
+          h(Youtube, { videoId: 'jWWB3adrqro' }),
           // h.iframe({ src: 'https://www.youtube.com/watch?v=jWWB3adrqro', width: 420 }),
         ]),
         h.div('.action-2', [
@@ -196,7 +194,7 @@ export default class ReportFree extends Component {
           h.p(`I’m making this guarantee because I’m 100% certain that this report has the capacity to truly turn your life around. That’s how much I believe in the process of individuation, and that’s how much I believe you will benefit from it. So, no matter what, you’ve got the longer end of the stick. There is absolutely no risk involved, and it’s all up to you and whether you decide to take this life-changing path.`),
         ]),
       ]),
-      // h.pre([JSON.stringify(this.state, null, 1)]),
+      h.pre([JSON.stringify(this.state, null, 1)]),
       // h.pre([JSON.stringify(this.state.currentLine, null, 1)]),
     ])]);
   }
