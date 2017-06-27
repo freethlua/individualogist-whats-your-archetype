@@ -2,6 +2,8 @@ import { Component } from 'preact';
 import hs from 'preact-hyperstyler';
 import hh from 'preact-hyperscript-h';
 import linkstate from 'linkstate';
+import arrify from 'arrify';
+import filterDuplicates from 'filter-duplicates';
 import throttle from 'throttleit';
 import markup from 'preact-markup';
 import Youtube from 'react-youtube';
@@ -12,6 +14,9 @@ const h = hs(styles);
 
 export default class ReportFree extends Component {
   componentWillMount() {
+
+    // window.title = this.props.quizData.archetype
+
     this.changeBackground();
     // window.addEventListener()
     document.body.onkeydown = throttle(e => {
@@ -72,9 +77,13 @@ export default class ReportFree extends Component {
       this.hideImage();
     } else {
       try {
+        if (opts.path.match('compatibility')) {
+          opts.class = arrify(opts.class).concat(['compatibility']);
+        }
+        console.log(`opts.class:`, opts.class);
         this.setState({
           img: require(`../../assets/` + opts.path),
-          imgClass: opts.class,
+          imgClass: opts.class || this.state.imgClass,
         });
       } catch (error) {
         this.hideImage();
@@ -157,7 +166,13 @@ export default class ReportFree extends Component {
         // for (const line of transcript) {
         for (let i = 0; i < transcript.length; i++) {
           const line = transcript[i];
+          const prevLine = transcript[i - 1];
           const nextLine = transcript[i + 1];
+
+          if (!line.class && prevLine && prevLine.class) {
+            line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
+          }
+
           if (currentTime < ((line.end || Infinity) - 1)) {
             let currentLine = line.text;
             if (this.state.currentLine === currentLine) {
@@ -171,6 +186,9 @@ export default class ReportFree extends Component {
                       + currentLine.substring(key.index);
                   }
                 } else if (key.js) {
+                  if (key.js.path.match('compatibility')) {
+                    line.class = arrify(line.class).concat(['compatibility']);
+                  }
                   this.cueAction(key.js.fn, key.js, line);
                 }
               }
@@ -204,12 +222,15 @@ export default class ReportFree extends Component {
       h.img({ src: require(`../../assets/images/logos/large-text.png`) }),
     ]);
 
-    const mainContentEl = h.div('.content', {
+    // console.log(`hi:`, arrify(this.state.currentLineOpts && this.state.currentLineOpts.class).concat([
+    //     'current-percent-' + this.state.currentPercent,
+    //   ]));
+    const mainContentEl = h.div({
       onclick: e => this.playPause(),
-      class: this.state.currentLineOpts && this.state.currentLineOpts.class || [
+      class: arrify(this.state.currentLineOpts && this.state.currentLineOpts.class).concat([
+        'content',
         'current-percent-' + this.state.currentPercent,
-        // this.audioEl ? Math.round(this.audioEl.duration / this.state.currentTime) : ''
-      ],
+      ]),
       style: { backgroundImage: `url(${this.state.background})` },
       ref: ref => this.mainContentEl = ref,
     }, [

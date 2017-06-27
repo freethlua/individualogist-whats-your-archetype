@@ -9,6 +9,7 @@
   "dependencies": {
     "@font/nunito": "^1.0.3",
     "animate.css": "^3.5.2",
+    "arrify": "^1.0.1",
     "bulma": "^0.4.2",
     "case": "^1.5.2",
     "debounce": "^1.0.2",
@@ -16,6 +17,7 @@
     "facebook-plugins": "^1.0.5",
     "fade": "^0.2.0",
     "fb": "^2.0.0",
+    "filter-duplicates": "^2.0.0",
     "font-awesome": "^4.7.0",
     "ionicons": "^3.0.0",
     "jquery": "^3.2.1",
@@ -46,6 +48,7 @@
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
+    "js-beautify": "^1.6.14",
     "node-zopfli": "^2.0.2",
     "preact-compat": "^3.16.0",
     "pug": "^2.0.0-rc.2",

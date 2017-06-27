@@ -1,4 +1,6 @@
 require('../pathify-string');
+const util = require('util');
+const beautify = require('js-beautify').js_beautify;
 const fs = require('fs');
 const otranscribeTxtToJson = require('../otranscribe-txt-to-json');
 const parseTranscript = require('.');
@@ -13,5 +15,17 @@ for (let file of fs.readdirSync(dir).filter(f => f.match(/\.txt$/))) {
     const parsedTranscript = parseTranscript(t.text);
     Object.assign(t, parsedTranscript);
   });
-  fs.writeFileSync(dir.join(file.basename(file.extname)) + '.json', JSON.stringify(ojson, null, 2))
+
+  const outputFile = dir.join(file.basename(file.extname)) + '.js'
+
+  // let outputJson = JSON.stringify(ojson, null, 2)
+  let outputJson = util.inspect(ojson, { depth: 10, maxArrayLength: null })
+
+  outputJson = outputJson.replace(/},[\n ]+{/g, '},{');;
+  outputJson = beautify(outputJson, { indent_size: 2 });
+
+  fs.writeFileSync(
+    outputFile,
+    `/* auto-generated */ module.exports = ` + outputJson
+  )
 }
