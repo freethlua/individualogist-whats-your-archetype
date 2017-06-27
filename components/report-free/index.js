@@ -18,8 +18,8 @@ export default class ReportFree extends Component {
     // window.title = this.props.quizData.archetype
 
     this.changeBackground();
-    // window.addEventListener()
-    document.body.onkeydown = throttle(e => {
+
+    this.onkeydown = throttle(e => {
       if (!this.mainContentEl) return
       if (window.pageYOffset > 100) return;
       if (e.keyCode === 32) {
@@ -57,9 +57,11 @@ export default class ReportFree extends Component {
       e.preventDefault();
       return false;
     }, 200);
+
+    window.addEventListener('keydown', this.onkeydown);
   }
   componentWillUnmount() {
-    delete document.body.onkeydown;
+    window.removeEventListener('keydown', this.onkeydown);
   }
 
   componentDidMount() {

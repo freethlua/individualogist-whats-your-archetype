@@ -1,5 +1,6 @@
 import { Component, render } from 'preact';
 import hs from 'preact-hyperstyler';
+import throttle from 'throttleit';
 import archetypes from '../../data/archetypes';
 import questions from '../../data/questions';
 import styles from './style.styl';
@@ -11,6 +12,28 @@ export default class Quiz extends Component {
   componentWillMount() {
     this.setState({ archetypes, questions });
     this.refs = { li: [] };
+
+    this.onkeydown = throttle(e => {
+      if (window.pageYOffset > 500) return;
+      if (e.keyCode === 39) {
+        // right
+        this.setState({ cqi: Math.min((this.state.cqi || 0) + 1, this.state.questions.length - 1) });
+      } else if (e.keyCode === 37) {
+        // left
+        this.setState({ cqi: Math.max((this.state.cqi || 0) - 1, 0) });
+      } else {
+        return;
+      }
+      e.preventDefault();
+      return false;
+    }, 200);
+
+    window.addEventListener('keydown', this.onkeydown);
+
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.onkeydown);
   }
 
   calcCqi() {
@@ -40,7 +63,9 @@ export default class Quiz extends Component {
       //   h.p('.ion-ios-heart-outline', 'Honesty leads to accuracy'),
       // ]),
 
-      h.div('.form', [
+      h.div('.form', {
+        ref: ref => this.formEl = ref,
+      }, [
         h.input('.progress-bar', {
           type: 'range',
           max: this.state.questions.length - 1,
@@ -73,6 +98,7 @@ export default class Quiz extends Component {
               id: `q[${qi}][${ai}]`,
               name: `q[${qi}]`,
               // value: Object.keys(a.points).map(t => `${t}=${a.points[t]}`).join(';'),
+              ref: ref => ref && (cqi === qi && ai === 0) && (this.firstCheckEl = ref),
               onclick: e => {
                 if (cqi !== qi) {
                   return;
@@ -107,4 +133,14 @@ export default class Quiz extends Component {
       ]),
     ])]);
   }
+
+  componentDidUpdate() {
+    console.log(`this.firstCheckEl:`, this.firstCheckEl);
+    if (this.firstCheckEl) this.firstCheckEl.focus()
+  }
+
+  componentDidMount() {
+    if (this.firstCheckEl) this.firstCheckEl.focus()
+  }
+
 }

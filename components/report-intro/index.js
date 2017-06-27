@@ -5,7 +5,7 @@ import md from 'preact-markdown';
 
 const h = hs(styles);
 
-export default props =>  h.div('.wrapper', [ h.div('.container', [
+export default props => h.div('.wrapper', [h.div('.container', [
   h.div('.heading', [
     h.label('Your archetype is: '),
     h.span(archetypes[props.archetype].title),

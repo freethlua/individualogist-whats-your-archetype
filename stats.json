@@ -2,15 +2,15 @@
   "errors": [],
   "warnings": [],
   "version": "2.6.1",
-  "hash": "10fc5",
-  "time": 1802,
+  "hash": "18674",
+  "time": 1694,
   "publicPath": "",
   "assetsByChunkName": {
     "main": [
       "build/app.js",
-      "0.7f57b.hot-update.js",
+      "0.4c5eb.hot-update.js",
       "build/app.js.map",
-      "0.7f57b.hot-update.js.map"
+      "0.4c5eb.hot-update.js.map"
     ]
   },
   "assets": [
@@ -1044,7 +1044,7 @@
     },
     {
       "name": "build/app.js",
-      "size": 1152090,
+      "size": 1153370,
       "chunks": [
         0
       ],
@@ -1055,8 +1055,8 @@
       "isOverSizeLimit": true
     },
     {
-      "name": "0.7f57b.hot-update.js",
-      "size": 6243,
+      "name": "0.4c5eb.hot-update.js",
+      "size": 3714,
       "chunks": [
         0
       ],
@@ -1066,7 +1066,7 @@
       "emitted": true
     },
     {
-      "name": "7f57b.hot-update.json",
+      "name": "4c5eb.hot-update.json",
       "size": 28,
       "chunks": [],
       "chunkNames": [],
@@ -1074,7 +1074,7 @@
     },
     {
       "name": "build/app.js.map",
-      "size": 1395329,
+      "size": 1396604,
       "chunks": [
         0
       ],
@@ -1084,8 +1084,8 @@
       "emitted": true
     },
     {
-      "name": "0.7f57b.hot-update.js.map",
-      "size": 4491,
+      "name": "0.4c5eb.hot-update.js.map",
+      "size": 2833,
       "chunks": [
         0
       ],
@@ -1102,9 +1102,9 @@
       ],
       "assets": [
         "build/app.js",
-        "0.7f57b.hot-update.js",
+        "0.4c5eb.hot-update.js",
         "build/app.js.map",
-        "0.7f57b.hot-update.js.map"
+        "0.4c5eb.hot-update.js.map"
       ],
       "isOverSizeLimit": true
     }
@@ -1116,17 +1116,17 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 1068099,
+      "size": 1069136,
       "names": [
         "main"
       ],
       "files": [
         "build/app.js",
-        "0.7f57b.hot-update.js",
+        "0.4c5eb.hot-update.js",
         "build/app.js.map",
-        "0.7f57b.hot-update.js.map"
+        "0.4c5eb.hot-update.js.map"
       ],
-      "hash": "efe5e",
+      "hash": "b3201",
       "parents": [],
       "origins": [
         {
@@ -3001,8 +3001,8 @@
       "id": 10,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\style-loader\\lib\\addStyles.js",
       "name": "./~/style-loader/lib/addStyles.js",
-      "index": 119,
-      "index2": 115,
+      "index": 120,
+      "index2": 116,
       "size": 8704,
       "cacheable": true,
       "built": false,
@@ -3203,8 +3203,8 @@
       "id": 12,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\css-loader\\lib\\css-base.js",
       "name": "./~/css-loader/lib/css-base.js",
-      "index": 117,
-      "index2": 111,
+      "index": 118,
+      "index2": 112,
       "size": 2352,
       "cacheable": true,
       "built": false,
@@ -4388,8 +4388,8 @@
       "id": 27,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\url-loader\\index.js??ref--3!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\assets\\images\\backgrounds\\quiz-slider-1.jpg",
       "name": "./assets/images/backgrounds/quiz-slider-1.jpg",
-      "index": 118,
-      "index2": 112,
+      "index": 119,
+      "index2": 113,
       "size": 95,
       "cacheable": true,
       "built": false,
@@ -4508,7 +4508,7 @@
           "moduleName": "./components/report-free/index.js",
           "type": "cjs require",
           "userRequest": "../../assets/images/logos/large-text.png",
-          "loc": "233:19-70"
+          "loc": "235:19-70"
         }
       ],
       "usedExports": true,
@@ -6203,8 +6203,8 @@
       "id": 56,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\css-loader\\index.js?{\"modules\":true}!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\stylus-loader\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\quiz\\style.styl",
       "name": "./~/css-loader?{\"modules\":true}!./~/stylus-loader!./components/quiz/style.styl",
-      "index": 116,
-      "index2": 113,
+      "index": 117,
+      "index2": 114,
       "size": 5086,
       "cacheable": true,
       "built": false,
@@ -7145,7 +7145,7 @@
           "moduleName": "./components/report-free/index.js",
           "type": "cjs require",
           "userRequest": "../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png",
-          "loc": "275:36-118"
+          "loc": "277:36-118"
         },
         {
           "moduleId": 292,
@@ -7154,7 +7154,7 @@
           "moduleName": "./components/report-free/index.js",
           "type": "cjs require",
           "userRequest": "../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png",
-          "loc": "289:36-118"
+          "loc": "291:36-118"
         }
       ],
       "usedExports": true,
@@ -10038,9 +10038,9 @@
       "assets": [
         "build/assets/images/misc/preview-page-3a.jpg"
       ],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\report-intro\\index.js",
-      "issuerId": 293,
-      "issuerName": "./components/report-intro/index.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\assets /^\\.\\/.*$/",
+      "issuerId": 178,
+      "issuerName": "./assets ^\\.\\/.*$",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10086,9 +10086,9 @@
       "assets": [
         "build/assets/images/misc/preview-page-4a.jpg"
       ],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\report-intro\\index.js",
-      "issuerId": 293,
-      "issuerName": "./components/report-intro/index.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\assets /^\\.\\/.*$/",
+      "issuerId": 178,
+      "issuerName": "./assets ^\\.\\/.*$",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -10157,7 +10157,7 @@
           "moduleName": "./components/report-free/index.js",
           "type": "cjs require",
           "userRequest": "../../assets/images/pop-up/60-day-money-back-guarantee.png",
-          "loc": "311:21-90"
+          "loc": "313:21-90"
         }
       ],
       "usedExports": true,
@@ -10205,7 +10205,7 @@
           "moduleName": "./components/report-free/index.js",
           "type": "cjs require",
           "userRequest": "../../assets/images/pop-up/shield.png",
-          "loc": "304:25-73"
+          "loc": "306:25-73"
         }
       ],
       "usedExports": true,
@@ -10217,8 +10217,8 @@
       "id": 134,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\data\\archetypes.js",
       "name": "./data/archetypes.js",
-      "index": 113,
-      "index2": 109,
+      "index": 114,
+      "index2": 110,
       "size": 584,
       "cacheable": true,
       "built": false,
@@ -10242,7 +10242,7 @@
           "moduleName": "./components/quiz/index.js",
           "type": "harmony import",
           "userRequest": "../../data/archetypes",
-          "loc": "3:0-47"
+          "loc": "4:0-47"
         },
         {
           "moduleId": 293,
@@ -11290,9 +11290,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\report-intro\\index.js",
-      "issuerId": 293,
-      "issuerName": "./components/report-intro/index.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\footer\\index.js",
+      "issuerId": 286,
+      "issuerName": "./components/footer/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -12115,7 +12115,7 @@
       "index2": 446,
       "size": 3473,
       "cacheable": true,
-      "built": true,
+      "built": false,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -12247,7 +12247,7 @@
           "moduleName": "./components/report-free/index.js",
           "type": "cjs require context",
           "userRequest": "../../assets",
-          "loc": "89:15-51"
+          "loc": "91:15-51"
         }
       ],
       "usedExports": true,
@@ -12283,7 +12283,7 @@
           "moduleName": "./components/report-free/index.js",
           "type": "cjs require context",
           "userRequest": "../../assets/audios",
-          "loc": "153:19-62"
+          "loc": "155:19-62"
         }
       ],
       "usedExports": true,
@@ -12319,7 +12319,7 @@
           "moduleName": "./components/report-free/index.js",
           "type": "cjs require context",
           "userRequest": "../../assets/audios",
-          "loc": "146:17-64"
+          "loc": "148:17-64"
         }
       ],
       "usedExports": true,
@@ -12427,7 +12427,7 @@
           "moduleName": "./components/report-free/index.js",
           "type": "cjs require context",
           "userRequest": "../../assets/images/backgrounds",
-          "loc": "127:20-85"
+          "loc": "129:20-85"
         }
       ],
       "usedExports": true,
@@ -12633,8 +12633,8 @@
       "id": 189,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\extract-text-webpack-plugin\\loader.js??ref--2-0!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\style-loader\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\css-loader\\index.js??ref--2-2!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\stylus-loader\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\quiz\\style.styl",
       "name": "./components/quiz/style.styl",
-      "index": 115,
-      "index2": 116,
+      "index": 116,
+      "index2": 117,
       "size": 1171,
       "cacheable": true,
       "built": false,
@@ -12658,7 +12658,7 @@
           "moduleName": "./components/quiz/index.js",
           "type": "harmony import",
           "userRequest": "./style.styl",
-          "loc": "5:0-34"
+          "loc": "6:0-34"
         }
       ],
       "usedExports": [
@@ -16576,8 +16576,8 @@
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\quiz\\index.js",
       "name": "./components/quiz/index.js",
       "index": 112,
-      "index2": 117,
-      "size": 4442,
+      "index2": 118,
+      "size": 5442,
       "cacheable": true,
       "built": false,
       "optional": false,
@@ -16610,7 +16610,7 @@
         "default"
       ],
       "depth": 3,
-      "source": "import { Component, render } from 'preact';\nimport hs from 'preact-hyperstyler';\nimport archetypes from '../../data/archetypes';\nimport questions from '../../data/questions';\nimport styles from './style.styl';\n\nconst h = hs(styles);\n\nexport default class Quiz extends Component {\n\n  componentWillMount() {\n    this.setState({ archetypes, questions });\n    this.refs = { li: [] };\n  }\n\n  calcCqi() {\n    for (let i = 0; i < this.state.questions.length; i++) {\n      if (!this.state.questions[i].answer) {\n        return i;\n      }\n    }\n  }\n\n  render() {\n    const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();\n\n    return h.div('.wrapper', [h.div('.container', [\n      // h.pre('.debug', { style: 'position:fixed!important;bottom:0!important;right:0!important' }, JSON.stringify(this.state.questions.map(q => q.answer), null, 2))\n\n      h.h1([\n        h.span('.color', 'Unravel The Mysteries '),\n        h.span('of Your '),\n        h.span('.color', 'True Self '),\n        h.span('By Taking This 60-Second Quiz'),\n      ]),\n\n      // h.div('.intro.animated.slideInDown', [\n      //   h.p('.ion-ios-timer-outline', 'Takes less than 60 seconds'),\n      //   h.p('.ion-ios-color-wand-outline', 'Only 6 questions'),\n      //   h.p('.ion-ios-heart-outline', 'Honesty leads to accuracy'),\n      // ]),\n\n      h.div('.form', [\n        h.input('.progress-bar', {\n          type: 'range',\n          max: this.state.questions.length - 1,\n          step: 1,\n          value: cqi,\n          onchange: e => {\n            const cqi = parseInt(e.target.value);\n            for (let i = cqi; i < this.state.questions.length; i++) {\n              delete this.state.questions[i].answer;\n              delete this.state.questions[i].ai;\n            }\n            this.setState({ questions: this.state.questions, cqi });\n          },\n          ref: ref => this.refs.progressBar = ref,\n        }),\n        h.ol({\n          style: {\n            height: this.refs.li[cqi] ? this.refs.li[cqi].offsetHeight : '12.5em',\n          }\n        }, this.state.questions.map((q, qi) =>\n          h.li({\n            class: { visible: cqi === qi },\n            ref: ref => this.refs.li[qi] = ref,\n          }, [\n            h.label('.question', { for: `q[${qi}]` }, [h.span('.order', [`${qi+1}/${this.state.questions.length}`]), h.span('.question', [q.question])]),\n            h.div('.answers', {}, q.answers.map((a, ai) => h.label('.answer', { for: `q[${qi}][${ai}]` }, [h.input({\n              // class: { checked: this.state.questions[qi].ai === ai },\n              checked: this.state.questions[qi].ai === ai,\n              type: 'checkbox',\n              id: `q[${qi}][${ai}]`,\n              name: `q[${qi}]`,\n              // value: Object.keys(a.points).map(t => `${t}=${a.points[t]}`).join(';'),\n              onclick: e => {\n                if (cqi !== qi) {\n                  return;\n                }\n                if (!this.state.scrolled) {\n                  this.refs.progressBar.scrollIntoView({ behavior: 'smooth' });\n                  this.setState({ scrolled: true });\n                }\n                this.state.questions[qi].answer = a;\n                this.state.questions[qi].ai = ai;\n                this.setState({ qi, ai, questions: this.state.questions });\n                this.setState({ cqi: this.calcCqi() });\n                if (typeof this.state.cqi === 'undefined') {\n                  for (const question of this.state.questions) {\n                    for (const archetype in question.answer.points) {\n                      const points = question.answer.points[archetype];\n                      this.state.archetypes[archetype].points = (this.state.archetypes[archetype].points || 0) + points;\n                    }\n                  }\n                  const sortedArchetypes = Object.keys(this.state.archetypes).sort((a, b) => (this.state.archetypes[b].points || 0) - (this.state.archetypes[a].points || 0));\n                  this.setState({\n                    sortedArchetypes,\n                    archetype: sortedArchetypes[0],\n                    archetypes: this.state.archetypes,\n                  });\n                  setTimeout(() => this.props.onFinish(this.state), 333);\n                  console.log(this.state);\n                }\n              }\n            }), a.answer])))\n          ])))\n      ]),\n    ])]);\n  }\n}\n\n\nif (module.hot) {module.hot.accept(function(err) {\nif (err) {\nconsole.error(err);\n}\n});\n}\n"
+      "source": "import { Component, render } from 'preact';\nimport hs from 'preact-hyperstyler';\nimport throttle from 'throttleit';\nimport archetypes from '../../data/archetypes';\nimport questions from '../../data/questions';\nimport styles from './style.styl';\n\nconst h = hs(styles);\n\nexport default class Quiz extends Component {\n\n  componentWillMount() {\n    this.setState({ archetypes, questions });\n    this.refs = { li: [] };\n\n    this.onkeydown = throttle(e => {\n      if (window.pageYOffset > 500) return;\n      if (e.keyCode === 39) {\n        // right\n        this.setState({ cqi: Math.min((this.state.cqi || 0) + 1, this.state.questions.length - 1) });\n      } else if (e.keyCode === 37) {\n        // left\n        this.setState({ cqi: Math.max((this.state.cqi || 0) - 1, 0) });\n      } else {\n        return;\n      }\n      e.preventDefault();\n      return false;\n    }, 200);\n\n    window.addEventListener('keydown', this.onkeydown);\n\n  }\n\n  componentWillUnmount() {\n    window.removeEventListener('keydown', this.onkeydown);\n  }\n\n  calcCqi() {\n    for (let i = 0; i < this.state.questions.length; i++) {\n      if (!this.state.questions[i].answer) {\n        return i;\n      }\n    }\n  }\n\n  render() {\n    const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();\n\n    return h.div('.wrapper', [h.div('.container', [\n      // h.pre('.debug', { style: 'position:fixed!important;bottom:0!important;right:0!important' }, JSON.stringify(this.state.questions.map(q => q.answer), null, 2))\n\n      h.h1([\n        h.span('.color', 'Unravel The Mysteries '),\n        h.span('of Your '),\n        h.span('.color', 'True Self '),\n        h.span('By Taking This 60-Second Quiz'),\n      ]),\n\n      // h.div('.intro.animated.slideInDown', [\n      //   h.p('.ion-ios-timer-outline', 'Takes less than 60 seconds'),\n      //   h.p('.ion-ios-color-wand-outline', 'Only 6 questions'),\n      //   h.p('.ion-ios-heart-outline', 'Honesty leads to accuracy'),\n      // ]),\n\n      h.div('.form', {\n        ref: ref => this.formEl = ref,\n      }, [\n        h.input('.progress-bar', {\n          type: 'range',\n          max: this.state.questions.length - 1,\n          step: 1,\n          value: cqi,\n          onchange: e => {\n            const cqi = parseInt(e.target.value);\n            for (let i = cqi; i < this.state.questions.length; i++) {\n              delete this.state.questions[i].answer;\n              delete this.state.questions[i].ai;\n            }\n            this.setState({ questions: this.state.questions, cqi });\n          },\n          ref: ref => this.refs.progressBar = ref,\n        }),\n        h.ol({\n          style: {\n            height: this.refs.li[cqi] ? this.refs.li[cqi].offsetHeight : '12.5em',\n          }\n        }, this.state.questions.map((q, qi) =>\n          h.li({\n            class: { visible: cqi === qi },\n            ref: ref => this.refs.li[qi] = ref,\n          }, [\n            h.label('.question', { for: `q[${qi}]` }, [h.span('.order', [`${qi+1}/${this.state.questions.length}`]), h.span('.question', [q.question])]),\n            h.div('.answers', {}, q.answers.map((a, ai) => h.label('.answer', { for: `q[${qi}][${ai}]` }, [h.input({\n              // class: { checked: this.state.questions[qi].ai === ai },\n              checked: this.state.questions[qi].ai === ai,\n              type: 'checkbox',\n              id: `q[${qi}][${ai}]`,\n              name: `q[${qi}]`,\n              // value: Object.keys(a.points).map(t => `${t}=${a.points[t]}`).join(';'),\n              ref: ref => ref && (cqi === qi && ai === 0) && (this.firstCheckEl = ref),\n              onclick: e => {\n                if (cqi !== qi) {\n                  return;\n                }\n                if (!this.state.scrolled) {\n                  this.refs.progressBar.scrollIntoView({ behavior: 'smooth' });\n                  this.setState({ scrolled: true });\n                }\n                this.state.questions[qi].answer = a;\n                this.state.questions[qi].ai = ai;\n                this.setState({ qi, ai, questions: this.state.questions });\n                this.setState({ cqi: this.calcCqi() });\n                if (typeof this.state.cqi === 'undefined') {\n                  for (const question of this.state.questions) {\n                    for (const archetype in question.answer.points) {\n                      const points = question.answer.points[archetype];\n                      this.state.archetypes[archetype].points = (this.state.archetypes[archetype].points || 0) + points;\n                    }\n                  }\n                  const sortedArchetypes = Object.keys(this.state.archetypes).sort((a, b) => (this.state.archetypes[b].points || 0) - (this.state.archetypes[a].points || 0));\n                  this.setState({\n                    sortedArchetypes,\n                    archetype: sortedArchetypes[0],\n                    archetypes: this.state.archetypes,\n                  });\n                  setTimeout(() => this.props.onFinish(this.state), 333);\n                  console.log(this.state);\n                }\n              }\n            }), a.answer])))\n          ])))\n      ]),\n    ])]);\n  }\n\n  componentDidUpdate() {\n    console.log(`this.firstCheckEl:`, this.firstCheckEl);\n    if (this.firstCheckEl) this.firstCheckEl.focus()\n  }\n\n  componentDidMount() {\n    if (this.firstCheckEl) this.firstCheckEl.focus()\n  }\n\n}\n\n\nif (module.hot) {module.hot.accept(function(err) {\nif (err) {\nconsole.error(err);\n}\n});\n}\n"
     },
     {
       "id": 291,
@@ -16653,9 +16653,9 @@
       "id": 292,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\report-free\\index.js",
       "name": "./components/report-free/index.js",
-      "index": 121,
+      "index": 122,
       "index2": 421,
-      "size": 11165,
+      "size": 11204,
       "cacheable": true,
       "built": false,
       "optional": false,
@@ -16688,7 +16688,7 @@
         "default"
       ],
       "depth": 3,
-      "source": "import { Component } from 'preact';\nimport hs from 'preact-hyperstyler';\nimport hh from 'preact-hyperscript-h';\nimport linkstate from 'linkstate';\nimport arrify from 'arrify';\nimport filterDuplicates from 'filter-duplicates';\nimport throttle from 'throttleit';\nimport markup from 'preact-markup';\nimport Youtube from 'react-youtube';\nimport Fade from 'preact-fade';\nimport styles from './style.styl';\n\nconst h = hs(styles);\n\nexport default class ReportFree extends Component {\n  componentWillMount() {\n\n    // window.title = this.props.quizData.archetype\n\n    this.changeBackground();\n    // window.addEventListener()\n    document.body.onkeydown = throttle(e => {\n      if (!this.mainContentEl) return\n      if (window.pageYOffset > 100) return;\n      if (e.keyCode === 32) {\n        // space\n        this.playPause();\n      } else if (e.keyCode === 38 && e.ctrlKey) {\n        // ctrl + up\n        const before = this.audioEl.playbackRate;\n        let after = before * 1.2;\n        if (after > 4) after = 4;\n        if (before < 1) after = 1;\n        // console.log({ before, after });\n        this.audioEl.playbackRate = after;\n      } else if (e.keyCode === 40 && e.ctrlKey) {\n        // ctrl + down\n        const before = this.audioEl.playbackRate;\n        let after = before * .9;\n        if (after < .5) after = .5;\n        if (before > 1) after = 1;\n        // console.log({ before, after });\n        this.audioEl.playbackRate = after;\n      } else if (e.keyCode === 39) {\n        // right\n        this.audioEl.currentTime += e.shiftKey ? 20 : 5;\n      } else if (e.keyCode === 37) {\n        // left\n        this.audioEl.currentTime -= e.shiftKey ? 20 : 5;\n      } else if (e.keyCode === 190) {\n        // period\n        this.audioEl.currentTime = 0;\n        this.audioEl.pause()\n      } else {\n        return\n      }\n      e.preventDefault();\n      return false;\n    }, 200);\n  }\n  componentWillUnmount() {\n    delete document.body.onkeydown;\n  }\n\n  componentDidMount() {\n    if ('dev' in url.query) {\n      if ('seekTo' in url.query) {\n        this.audioEl.currentTime = parseInt(url.query.seekTo, 10);\n      }\n    }\n    this.playPause();\n    window.scrollTo(0, 0);\n  }\n\n  cueAction(action, opts, transcriptLine) {\n    this[action](opts, transcriptLine);\n  }\n\n  displayImage(opts, transcriptLine) {\n    if (opts.fadeOut) {\n      this.hideImage();\n    } else {\n      try {\n        if (opts.path.match('compatibility')) {\n          opts.class = arrify(opts.class).concat(['compatibility']);\n        }\n        console.log(`opts.class:`, opts.class);\n        this.setState({\n          img: require(`../../assets/` + opts.path),\n          imgClass: opts.class || this.state.imgClass,\n        });\n      } catch (error) {\n        this.hideImage();\n        console.error(error);\n      }\n    }\n  }\n  hideImage() {\n    this.setState({\n      img: '',\n      imgClass: [],\n    });\n  }\n\n\n  playPause() {\n    if (this.audioEl.paused) {\n      this.audioEl.play();\n      this.setState({\n        audioPaused: false,\n        lastBackgroundChangeTime: +new Date(),\n      });\n    } else {\n      this.audioEl.pause();\n      this.setState({\n        audioPaused: true,\n        lastBackgroundChangeTime: +new Date(),\n      });\n    }\n  }\n\n  changeBackground() {\n    if (!this.state.lastBackgroundChangeTime || (this.state.lastBackgroundChangeTime + 4000 < new Date())) {\n      const cbg = this.state.currentBackgroundIndex || 0;\n      const nbg = cbg >= 4 ? 1 : cbg + 1;\n      this.setState({\n        background: require(`../../assets/images/backgrounds/quiz-slider-${nbg}.jpg`),\n        currentBackgroundIndex: nbg,\n        lastBackgroundChangeTime: +new Date(),\n      });\n    }\n  }\n\n  componentWillUpdate() {\n    this.changeBackground();\n  }\n\n  render() {\n    const archetype = this.props.quizData.archetype;\n    if (!archetype) {\n      return 'Need to have an archetype before this component could be rendered';\n    }\n\n    let audioSrc;\n    try {\n      audioSrc = require(`../../assets/audios/${archetype}.mp3`);\n    } catch (error) {\n      return `Cannot load the audio file: '${archetype}.mp3'`;\n    }\n\n    let transcript;\n    try {\n      transcript = require(`../../assets/audios/${archetype}`);\n    } catch (error) {\n      return `Cannot load the transcript file: '${archetype}'`;\n    }\n\n    // console.log(this.state.currentLine);\n\n    const audioEl = h.audio({\n      // controls: true,\n      src: audioSrc,\n      ref: ref => this.audioEl = ref,\n      ontimeupdate: e => {\n        const currentTime = e.target.currentTime;\n        const percent = Math.round(100 * currentTime / e.target.duration);\n        // console.log(`duration   :`, e.target.duration);\n        // console.log(`currentTime:`, currentTime);\n        // console.log(`percent    :`, percent);\n        // for (const line of transcript) {\n        for (let i = 0; i < transcript.length; i++) {\n          const line = transcript[i];\n          if (currentTime < ((line.end || Infinity) - 1)) {\n\n            const prevLine = transcript[i - 1];\n            const nextLine = transcript[i + 1];\n\n            if (!line.class && prevLine && prevLine.class) {\n              line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));\n            }\n\n            if (!prevLine) {\n              this.hideImage();\n            }\n\n            let currentLine = line.text;\n            if (this.state.currentLine === currentLine) {\n\n            } else {\n              for (const key of line.keys) {\n                if (key.key) {\n                  if (this.props.formData[key.key]) {\n                    currentLine = currentLine.substring(0, key.index)\n                      + this.props.formData[key.key]\n                      + currentLine.substring(key.index);\n                  }\n                } else if (key.js) {\n                  if (key.js.path.match('compatibility')) {\n                    line.class = arrify(line.class).concat(['compatibility']);\n                  }\n                  this.cueAction(key.js.fn, key.js, line);\n                } else {\n\n                }\n              }\n              // this.changeBackground();\n              this.setState({\n                currentTime,\n                currentPercent: percent,\n                currentLine,\n                currentLineOpts: line,\n              })\n\n              // preload next image(s)\n              if (nextLine && nextLine.keys) {\n                nextLine.keys.forEach(key => {\n                  if (key.js && key.fn === 'displayImage' && key.js.path) {\n                    const image = new Image();\n                    image.src = key.js.path;\n                  }\n                })\n              }\n            }\n            break;\n          }\n        }\n      },\n    });\n\n\n\n    const headerEl = h.header([\n      h.img({ src: require(`../../assets/images/logos/large-text.png`) }),\n    ]);\n\n    const mainContentEl = h.div({\n      onclick: e => this.playPause(),\n      class: arrify(this.state.currentLineOpts && this.state.currentLineOpts.class).concat([\n        'content',\n        'current-percent-' + this.state.currentPercent,\n      ]),\n      style: { backgroundImage: `url(${this.state.background})` },\n      ref: ref => this.mainContentEl = ref,\n    }, [\n      h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),\n      h.div('.text', [this.state.currentLine\n        ? h(Fade, {\n          changed: this.state.currentLine,\n          // fadeInDuration: '2000ms',\n          // fadeOutDuration: '1000ms',\n        }, [\n          h(markup, { markup: this.state.currentLine })\n        ])\n        : h.p('Loading...'),\n      ]),\n      audioEl,\n      h.div('.image', [\n        h.div('.foreground', [h.div('.foreground-container', [\n          h(Fade, {\n            changed: this.state.img,\n            fadeInDuration: '2000ms',\n            fadeOutDuration: '1000ms',\n          }, [h.div({\n            class: ['img'].concat(this.state.imgClass || []),\n            style: {\n              backgroundImage: `url(${this.state.img})`\n            },\n          })])\n        ])]),\n      ]),\n    ]);\n\n    const restEl = h.div('.rest', [\n      h.div('.action-1', [\n        h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) }), ]),\n        h.div([\n          h.p(`Get Your Deluxe Archetype Report For Only $37.00 Now!`),\n          h.button('Click Here To Order Now'),\n        ]),\n      ]),\n      h.div('.testimonial', [\n        h.p(`“Reading it felt almost as if I was reliving my entire life. What’s even crazier is that it showed me things about myself that I didn’t even know before!”`),\n        h('div.youtube', [\n          h(Youtube, { videoId: 'jWWB3adrqro' }),\n          // h.iframe({ src: 'https://www.youtube.com/watch?v=jWWB3adrqro', width: 420 }),\n        ]),\n      ]),\n      h.div('.action-2', [\n        h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) })]),\n        h.div('.side', [\n          h.div('.heading', `Get Your Deluxe Archetype Report For Only $37.00 Now!`),\n          h.div('.delivery', [\n            h.div('.label', [\n              h.div('Delivery E-mail:'),\n              h.div('Full name:'),\n            ]),\n            h.div('.data', [\n              h.div(this.props.formData.email),\n              h.div(this.props.formData.name),\n            ])\n          ]),\n          h.button('Order Now'),\n          h.div('.shield', [\n            h.img({ src: require('../../assets/images/pop-up/shield.png') }),\n            h.p('All payments are secure'),\n          ]),\n          h.div('.footer', `Order now and you’ll receive the Deluxe Archetype Report instantly. We know for a fact that you’ll gain an enormous amount of value from this detailed report. But  if you decide that this product isn’t for you, we’ll give you a 100% refund within the next 60 days of purchase. No questions asked.`),\n        ]),\n      ]),\n      h.div('.ribbon', [\n        h.img({ src: require('../../assets/images/pop-up/60-day-money-back-guarantee.png') }),\n        h.p(`Take your time to look through your Deluxe Archetype Report and everything else that comes with it. If you decide within the next 60 days that you’re not completely satisfied with your Deluxe Archetype Report, just drop us an e-mail at contact@individualogist.com and we’ll issue you a full refund. No questions nor explanations will be necessary.`),\n        h.p(`I’m making this guarantee because I’m 100% certain that this report has the capacity to truly turn your life around. That’s how much I believe in the process of individuation, and that’s how much I believe you will benefit from it. So, no matter what, you’ve got the longer end of the stick. There is absolutely no risk involved, and it’s all up to you and whether you decide to take this life-changing path.`),\n      ]),\n    ]);\n\n    return h.div('.wrapper', [h.div('.container', [\n      headerEl,\n      mainContentEl,\n      restEl,\n      // h.pre([JSON.stringify(this.state, null, 1)]),\n      // h.pre([JSON.stringify(this.state.currentLine, null, 1)]),\n    ])]);\n  }\n}\n\n\nif (module.hot) {module.hot.accept(function(err) {\nif (err) {\nconsole.error(err);\n}\n});\n}\n"
+      "source": "import { Component } from 'preact';\nimport hs from 'preact-hyperstyler';\nimport hh from 'preact-hyperscript-h';\nimport linkstate from 'linkstate';\nimport arrify from 'arrify';\nimport filterDuplicates from 'filter-duplicates';\nimport throttle from 'throttleit';\nimport markup from 'preact-markup';\nimport Youtube from 'react-youtube';\nimport Fade from 'preact-fade';\nimport styles from './style.styl';\n\nconst h = hs(styles);\n\nexport default class ReportFree extends Component {\n  componentWillMount() {\n\n    // window.title = this.props.quizData.archetype\n\n    this.changeBackground();\n\n    this.onkeydown = throttle(e => {\n      if (!this.mainContentEl) return\n      if (window.pageYOffset > 100) return;\n      if (e.keyCode === 32) {\n        // space\n        this.playPause();\n      } else if (e.keyCode === 38 && e.ctrlKey) {\n        // ctrl + up\n        const before = this.audioEl.playbackRate;\n        let after = before * 1.2;\n        if (after > 4) after = 4;\n        if (before < 1) after = 1;\n        // console.log({ before, after });\n        this.audioEl.playbackRate = after;\n      } else if (e.keyCode === 40 && e.ctrlKey) {\n        // ctrl + down\n        const before = this.audioEl.playbackRate;\n        let after = before * .9;\n        if (after < .5) after = .5;\n        if (before > 1) after = 1;\n        // console.log({ before, after });\n        this.audioEl.playbackRate = after;\n      } else if (e.keyCode === 39) {\n        // right\n        this.audioEl.currentTime += e.shiftKey ? 20 : 5;\n      } else if (e.keyCode === 37) {\n        // left\n        this.audioEl.currentTime -= e.shiftKey ? 20 : 5;\n      } else if (e.keyCode === 190) {\n        // period\n        this.audioEl.currentTime = 0;\n        this.audioEl.pause()\n      } else {\n        return\n      }\n      e.preventDefault();\n      return false;\n    }, 200);\n\n    window.addEventListener('keydown', this.onkeydown);\n  }\n  componentWillUnmount() {\n    window.removeEventListener('keydown', this.onkeydown);\n  }\n\n  componentDidMount() {\n    if ('dev' in url.query) {\n      if ('seekTo' in url.query) {\n        this.audioEl.currentTime = parseInt(url.query.seekTo, 10);\n      }\n    }\n    this.playPause();\n    window.scrollTo(0, 0);\n  }\n\n  cueAction(action, opts, transcriptLine) {\n    this[action](opts, transcriptLine);\n  }\n\n  displayImage(opts, transcriptLine) {\n    if (opts.fadeOut) {\n      this.hideImage();\n    } else {\n      try {\n        if (opts.path.match('compatibility')) {\n          opts.class = arrify(opts.class).concat(['compatibility']);\n        }\n        console.log(`opts.class:`, opts.class);\n        this.setState({\n          img: require(`../../assets/` + opts.path),\n          imgClass: opts.class || this.state.imgClass,\n        });\n      } catch (error) {\n        this.hideImage();\n        console.error(error);\n      }\n    }\n  }\n  hideImage() {\n    this.setState({\n      img: '',\n      imgClass: [],\n    });\n  }\n\n\n  playPause() {\n    if (this.audioEl.paused) {\n      this.audioEl.play();\n      this.setState({\n        audioPaused: false,\n        lastBackgroundChangeTime: +new Date(),\n      });\n    } else {\n      this.audioEl.pause();\n      this.setState({\n        audioPaused: true,\n        lastBackgroundChangeTime: +new Date(),\n      });\n    }\n  }\n\n  changeBackground() {\n    if (!this.state.lastBackgroundChangeTime || (this.state.lastBackgroundChangeTime + 4000 < new Date())) {\n      const cbg = this.state.currentBackgroundIndex || 0;\n      const nbg = cbg >= 4 ? 1 : cbg + 1;\n      this.setState({\n        background: require(`../../assets/images/backgrounds/quiz-slider-${nbg}.jpg`),\n        currentBackgroundIndex: nbg,\n        lastBackgroundChangeTime: +new Date(),\n      });\n    }\n  }\n\n  componentWillUpdate() {\n    this.changeBackground();\n  }\n\n  render() {\n    const archetype = this.props.quizData.archetype;\n    if (!archetype) {\n      return 'Need to have an archetype before this component could be rendered';\n    }\n\n    let audioSrc;\n    try {\n      audioSrc = require(`../../assets/audios/${archetype}.mp3`);\n    } catch (error) {\n      return `Cannot load the audio file: '${archetype}.mp3'`;\n    }\n\n    let transcript;\n    try {\n      transcript = require(`../../assets/audios/${archetype}`);\n    } catch (error) {\n      return `Cannot load the transcript file: '${archetype}'`;\n    }\n\n    // console.log(this.state.currentLine);\n\n    const audioEl = h.audio({\n      // controls: true,\n      src: audioSrc,\n      ref: ref => this.audioEl = ref,\n      ontimeupdate: e => {\n        const currentTime = e.target.currentTime;\n        const percent = Math.round(100 * currentTime / e.target.duration);\n        // console.log(`duration   :`, e.target.duration);\n        // console.log(`currentTime:`, currentTime);\n        // console.log(`percent    :`, percent);\n        // for (const line of transcript) {\n        for (let i = 0; i < transcript.length; i++) {\n          const line = transcript[i];\n          if (currentTime < ((line.end || Infinity) - 1)) {\n\n            const prevLine = transcript[i - 1];\n            const nextLine = transcript[i + 1];\n\n            if (!line.class && prevLine && prevLine.class) {\n              line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));\n            }\n\n            if (!prevLine) {\n              this.hideImage();\n            }\n\n            let currentLine = line.text;\n            if (this.state.currentLine === currentLine) {\n\n            } else {\n              for (const key of line.keys) {\n                if (key.key) {\n                  if (this.props.formData[key.key]) {\n                    currentLine = currentLine.substring(0, key.index)\n                      + this.props.formData[key.key]\n                      + currentLine.substring(key.index);\n                  }\n                } else if (key.js) {\n                  if (key.js.path.match('compatibility')) {\n                    line.class = arrify(line.class).concat(['compatibility']);\n                  }\n                  this.cueAction(key.js.fn, key.js, line);\n                } else {\n\n                }\n              }\n              // this.changeBackground();\n              this.setState({\n                currentTime,\n                currentPercent: percent,\n                currentLine,\n                currentLineOpts: line,\n              })\n\n              // preload next image(s)\n              if (nextLine && nextLine.keys) {\n                nextLine.keys.forEach(key => {\n                  if (key.js && key.fn === 'displayImage' && key.js.path) {\n                    const image = new Image();\n                    image.src = key.js.path;\n                  }\n                })\n              }\n            }\n            break;\n          }\n        }\n      },\n    });\n\n\n\n    const headerEl = h.header([\n      h.img({ src: require(`../../assets/images/logos/large-text.png`) }),\n    ]);\n\n    const mainContentEl = h.div({\n      onclick: e => this.playPause(),\n      class: arrify(this.state.currentLineOpts && this.state.currentLineOpts.class).concat([\n        'content',\n        'current-percent-' + this.state.currentPercent,\n      ]),\n      style: { backgroundImage: `url(${this.state.background})` },\n      ref: ref => this.mainContentEl = ref,\n    }, [\n      h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),\n      h.div('.text', [this.state.currentLine\n        ? h(Fade, {\n          changed: this.state.currentLine,\n          // fadeInDuration: '2000ms',\n          // fadeOutDuration: '1000ms',\n        }, [\n          h(markup, { markup: this.state.currentLine })\n        ])\n        : h.p('Loading...'),\n      ]),\n      audioEl,\n      h.div('.image', [\n        h.div('.foreground', [h.div('.foreground-container', [\n          h(Fade, {\n            changed: this.state.img,\n            fadeInDuration: '2000ms',\n            fadeOutDuration: '1000ms',\n          }, [h.div({\n            class: ['img'].concat(this.state.imgClass || []),\n            style: {\n              backgroundImage: `url(${this.state.img})`\n            },\n          })])\n        ])]),\n      ]),\n    ]);\n\n    const restEl = h.div('.rest', [\n      h.div('.action-1', [\n        h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) }), ]),\n        h.div([\n          h.p(`Get Your Deluxe Archetype Report For Only $37.00 Now!`),\n          h.button('Click Here To Order Now'),\n        ]),\n      ]),\n      h.div('.testimonial', [\n        h.p(`“Reading it felt almost as if I was reliving my entire life. What’s even crazier is that it showed me things about myself that I didn’t even know before!”`),\n        h('div.youtube', [\n          h(Youtube, { videoId: 'jWWB3adrqro' }),\n          // h.iframe({ src: 'https://www.youtube.com/watch?v=jWWB3adrqro', width: 420 }),\n        ]),\n      ]),\n      h.div('.action-2', [\n        h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) })]),\n        h.div('.side', [\n          h.div('.heading', `Get Your Deluxe Archetype Report For Only $37.00 Now!`),\n          h.div('.delivery', [\n            h.div('.label', [\n              h.div('Delivery E-mail:'),\n              h.div('Full name:'),\n            ]),\n            h.div('.data', [\n              h.div(this.props.formData.email),\n              h.div(this.props.formData.name),\n            ])\n          ]),\n          h.button('Order Now'),\n          h.div('.shield', [\n            h.img({ src: require('../../assets/images/pop-up/shield.png') }),\n            h.p('All payments are secure'),\n          ]),\n          h.div('.footer', `Order now and you’ll receive the Deluxe Archetype Report instantly. We know for a fact that you’ll gain an enormous amount of value from this detailed report. But  if you decide that this product isn’t for you, we’ll give you a 100% refund within the next 60 days of purchase. No questions asked.`),\n        ]),\n      ]),\n      h.div('.ribbon', [\n        h.img({ src: require('../../assets/images/pop-up/60-day-money-back-guarantee.png') }),\n        h.p(`Take your time to look through your Deluxe Archetype Report and everything else that comes with it. If you decide within the next 60 days that you’re not completely satisfied with your Deluxe Archetype Report, just drop us an e-mail at contact@individualogist.com and we’ll issue you a full refund. No questions nor explanations will be necessary.`),\n        h.p(`I’m making this guarantee because I’m 100% certain that this report has the capacity to truly turn your life around. That’s how much I believe in the process of individuation, and that’s how much I believe you will benefit from it. So, no matter what, you’ve got the longer end of the stick. There is absolutely no risk involved, and it’s all up to you and whether you decide to take this life-changing path.`),\n      ]),\n    ]);\n\n    return h.div('.wrapper', [h.div('.container', [\n      headerEl,\n      mainContentEl,\n      restEl,\n      // h.pre([JSON.stringify(this.state, null, 1)]),\n      // h.pre([JSON.stringify(this.state.currentLine, null, 1)]),\n    ])]);\n  }\n}\n\n\nif (module.hot) {module.hot.accept(function(err) {\nif (err) {\nconsole.error(err);\n}\n});\n}\n"
     },
     {
       "id": 293,
@@ -16696,9 +16696,9 @@
       "name": "./components/report-intro/index.js",
       "index": 426,
       "index2": 429,
-      "size": 2247,
+      "size": 2245,
       "cacheable": true,
-      "built": false,
+      "built": true,
       "optional": false,
       "prefetched": false,
       "chunks": [
@@ -16729,14 +16729,14 @@
         "default"
       ],
       "depth": 3,
-      "source": "import hs from 'preact-hyperstyler';\nimport archetypes from '../../data/archetypes';\nimport styles from './style.styl';\nimport md from 'preact-markdown';\n\nconst h = hs(styles);\n\nexport default props =>  h.div('.wrapper', [ h.div('.container', [\n  h.div('.heading', [\n    h.label('Your archetype is: '),\n    h.span(archetypes[props.archetype].title),\n  ]),\n  h.img('.archetype', { src: require(`../../assets/images/archetype-icons/${props.archetype}.png`) }),\n  h.p('.intro', [md(`Dear **${props.archetype}**, we have so much to tell you about who you are, what you're great at, what you're not so great at... But we can't fit everything into a single page. So, we've put everything into a **FREE** archetype reading! We're not expecting anything in return, but it would tickle us pink if you'd be kind enough to share this quiz with your friends and family! If not, just scroll on down to gain instant access to your **FREE** archetype reading!`)]),\n  h.div('.box', [\n    h.p([md(`Everything You Need To Know About **${archetypes[props.archetype].title}**... in One Free Archetype Reading`)]),\n    h.p([md(`We've prepared a FREE detailed archetype reading telling you about your love, health, and wealth, just for you!`)]),\n    h.ul([\n      h.li(`Discover your life journey as a Lover and how you can leverage on your strengths to achieve greatness!`),\n      h.li(`Gain valuable insight into your special skills and innate abilities!`),\n      h.li(`Find out how you can use the Lover archetype to overcome anything that life throws at you!`),\n    ]),\n  ]),\n  h.div('.preview', [\n    h.div([h.img({ src: require('../../assets/images/misc/preview-page-3a.jpg') })]),\n    h.div([h.img({ src: require(`../../assets/images/archetypes/covers/${props.archetype}.jpg`) })]),\n    h.div([h.img({ src: require('../../assets/images/misc/preview-page-4a.jpg') })]),\n  ]),\n  h.div('.form-conainer', [\n    h.p([md(`Instantly Access Your Free Personalized Archetype Reading On **${archetypes[props.archetype].title}** Archetype!`)]),\n    h.p([md(`We'll send a downloadable version of your archetype reading straight to your e-mail (FREE)`)]),\n    props.form,\n  ]),\n])]);\n\n\nif (module.hot) {module.hot.accept(function(err) {\nif (err) {\nconsole.error(err);\n}\n});\n}\n"
+      "source": "import hs from 'preact-hyperstyler';\nimport archetypes from '../../data/archetypes';\nimport styles from './style.styl';\nimport md from 'preact-markdown';\n\nconst h = hs(styles);\n\nexport default props => h.div('.wrapper', [h.div('.container', [\n  h.div('.heading', [\n    h.label('Your archetype is: '),\n    h.span(archetypes[props.archetype].title),\n  ]),\n  h.img('.archetype', { src: require(`../../assets/images/archetype-icons/${props.archetype}.png`) }),\n  h.p('.intro', [md(`Dear **${props.archetype}**, we have so much to tell you about who you are, what you're great at, what you're not so great at... But we can't fit everything into a single page. So, we've put everything into a **FREE** archetype reading! We're not expecting anything in return, but it would tickle us pink if you'd be kind enough to share this quiz with your friends and family! If not, just scroll on down to gain instant access to your **FREE** archetype reading!`)]),\n  h.div('.box', [\n    h.p([md(`Everything You Need To Know About **${archetypes[props.archetype].title}**... in One Free Archetype Reading`)]),\n    h.p([md(`We've prepared a FREE detailed archetype reading telling you about your love, health, and wealth, just for you!`)]),\n    h.ul([\n      h.li(`Discover your life journey as a Lover and how you can leverage on your strengths to achieve greatness!`),\n      h.li(`Gain valuable insight into your special skills and innate abilities!`),\n      h.li(`Find out how you can use the Lover archetype to overcome anything that life throws at you!`),\n    ]),\n  ]),\n  h.div('.preview', [\n    h.div([h.img({ src: require('../../assets/images/misc/preview-page-3a.jpg') })]),\n    h.div([h.img({ src: require(`../../assets/images/archetypes/covers/${props.archetype}.jpg`) })]),\n    h.div([h.img({ src: require('../../assets/images/misc/preview-page-4a.jpg') })]),\n  ]),\n  h.div('.form-conainer', [\n    h.p([md(`Instantly Access Your Free Personalized Archetype Reading On **${archetypes[props.archetype].title}** Archetype!`)]),\n    h.p([md(`We'll send a downloadable version of your archetype reading straight to your e-mail (FREE)`)]),\n    props.form,\n  ]),\n])]);\n\n\nif (module.hot) {module.hot.accept(function(err) {\nif (err) {\nconsole.error(err);\n}\n});\n}\n"
     },
     {
       "id": 294,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\data\\questions.js",
       "name": "./data/questions.js",
-      "index": 114,
-      "index2": 110,
+      "index": 115,
+      "index2": 111,
       "size": 5528,
       "cacheable": true,
       "built": false,
@@ -16760,7 +16760,7 @@
           "moduleName": "./components/quiz/index.js",
           "type": "harmony import",
           "userRequest": "../../data/questions",
-          "loc": "4:0-45"
+          "loc": "5:0-45"
         }
       ],
       "usedExports": [
@@ -16922,8 +16922,8 @@
       "id": 299,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\arrify\\index.js",
       "name": "./~/arrify/index.js",
-      "index": 122,
-      "index2": 118,
+      "index": 123,
+      "index2": 119,
       "size": 244,
       "cacheable": true,
       "built": false,
@@ -18293,8 +18293,8 @@
       "id": 336,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\filter-duplicates\\index.js",
       "name": "./~/filter-duplicates/index.js",
-      "index": 123,
-      "index2": 119,
+      "index": 124,
+      "index2": 120,
       "size": 371,
       "cacheable": true,
       "built": false,
@@ -21911,8 +21911,8 @@
       "id": 433,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\style-loader\\lib\\urls.js",
       "name": "./~/style-loader/lib/urls.js",
-      "index": 120,
-      "index2": 114,
+      "index": 121,
+      "index2": 115,
       "size": 3100,
       "cacheable": true,
       "built": false,
@@ -21948,8 +21948,8 @@
       "id": 434,
       "identifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\throttleit\\index.js",
       "name": "./~/throttleit/index.js",
-      "index": 124,
-      "index2": 120,
+      "index": 113,
+      "index2": 109,
       "size": 912,
       "cacheable": true,
       "built": false,
@@ -21959,13 +21959,22 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\report-free\\index.js",
-      "issuerId": 292,
-      "issuerName": "./components/report-free/index.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\quiz\\index.js",
+      "issuerId": 290,
+      "issuerName": "./components/quiz/index.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
       "reasons": [
+        {
+          "moduleId": 290,
+          "moduleIdentifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\quiz\\index.js",
+          "module": "./components/quiz/index.js",
+          "moduleName": "./components/quiz/index.js",
+          "type": "harmony import",
+          "userRequest": "throttleit",
+          "loc": "3:0-34"
+        },
         {
           "moduleId": 292,
           "moduleIdentifier": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\webpack-module-hot-accept\\index.js!C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\components\\report-free\\index.js",
