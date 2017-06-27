@@ -36,6 +36,7 @@
     "react-addons-css-transition-group": "^15.6.0",
     "react-css-transition-replace": "^2.2.1",
     "react-youtube": "^7.4.0",
+    "reset-css": "^2.2.0",
     "simple-fade": "^1.0.0",
     "string-template-parser": "^1.0.0-rc.1",
     "swiped": "^0.1.4",

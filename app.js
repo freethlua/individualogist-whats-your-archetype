@@ -6,9 +6,10 @@ import URL from 'url';
 import localforage from 'localforage';
 import hs from 'preact-hyperstyler';
 import './handle-errors';
-import 'ionicons/dist/css/ionicons.css'
-import 'animate.css';
-import '@font/nunito/light.css';
+// import 'ionicons/dist/css/ionicons.css'
+// import 'animate.css';
+// import 'reset-css/reset.css';
+// import '@font/nunito/light.css';
 import * as cmp from './components';
 import styles from './app.styl';
 

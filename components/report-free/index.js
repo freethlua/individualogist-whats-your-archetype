@@ -47,6 +47,10 @@ export default class ReportFree extends Component {
       } else if (e.keyCode === 37) {
         // left
         this.audioEl.currentTime -= e.shiftKey ? 20 : 5;
+      } else if (e.keyCode === 190) {
+        // period
+        this.audioEl.currentTime = 0;
+        this.audioEl.pause()
       } else {
         return
       }
@@ -166,14 +170,19 @@ export default class ReportFree extends Component {
         // for (const line of transcript) {
         for (let i = 0; i < transcript.length; i++) {
           const line = transcript[i];
-          const prevLine = transcript[i - 1];
-          const nextLine = transcript[i + 1];
-
-          if (!line.class && prevLine && prevLine.class) {
-            line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
-          }
-
           if (currentTime < ((line.end || Infinity) - 1)) {
+
+            const prevLine = transcript[i - 1];
+            const nextLine = transcript[i + 1];
+
+            if (!line.class && prevLine && prevLine.class) {
+              line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
+            }
+
+            if (!prevLine) {
+              this.hideImage();
+            }
+
             let currentLine = line.text;
             if (this.state.currentLine === currentLine) {
 
@@ -190,6 +199,8 @@ export default class ReportFree extends Component {
                     line.class = arrify(line.class).concat(['compatibility']);
                   }
                   this.cueAction(key.js.fn, key.js, line);
+                } else {
+
                 }
               }
               // this.changeBackground();

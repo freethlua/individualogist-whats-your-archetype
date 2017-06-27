@@ -65,6 +65,8 @@ for currentPercent in (1..100)
   top: 0
 
   z-index: 1
+  // .compatibility &
+  //   z-index: initial
 
   &
   *
@@ -97,15 +99,15 @@ for currentPercent in (1..100)
   //   width 80%
   //   margin: auto
 
-  display: flex
-  flex-flow: column
-  justify-content: space-around
+  // display: flex
+  // flex-flow: column
+  // justify-content: space-around
 
   .markup
     // border: 2px dotted yellow
     display: flex
     flex-flow: column
-    justify-content: space-around
+    justify-content: center
 
   &.left
     text-align: left
@@ -116,14 +118,17 @@ for currentPercent in (1..100)
   // .compatibility &
   .compatibility & .markup
     @media(orientation:portrait)
-      margin-top: 15vh
+      // margin-top: 15vh
+      justify-content: flex-end
+      margin-top: -10vh
     @media(orientation:landscape)
       @media(max-height:500px)
         font-size: .8em
         justify-content: flex-end
       @media(min-width:1100px)
-        margin-top: 20vh
-        // justify-content: flex-end
+        // margin-top: 20vh
+        justify-content: flex-end
+        margin-top: -10vh
       @media(max-width:1200px)
         margin-top: 20vh
 
