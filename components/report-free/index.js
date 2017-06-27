@@ -2,6 +2,7 @@ import { Component } from 'preact';
 import hs from 'preact-hyperstyler';
 import hh from 'preact-hyperscript-h';
 import linkstate from 'linkstate';
+import throttle from 'throttleit';
 import markup from 'preact-markup';
 import Youtube from 'react-youtube';
 import Fade from 'preact-fade';
@@ -12,15 +13,51 @@ const h = hs(styles);
 export default class ReportFree extends Component {
   componentWillMount() {
     this.changeBackground();
-    document.body.onkeyup = e => e.keyCode === 32 && this.playPause();
+    // window.addEventListener()
+    document.body.onkeydown = throttle(e => {
+      if (!this.mainContentEl) return
+      if (window.pageYOffset > 100) return;
+      if (e.keyCode === 32) {
+        // space
+        this.playPause();
+      } else if (e.keyCode === 38 && e.ctrlKey) {
+        // ctrl + up
+        const before = this.audioEl.playbackRate;
+        let after = before * 1.2;
+        if (after > 4) after = 4;
+        if (before < 1) after = 1;
+        // console.log({ before, after });
+        this.audioEl.playbackRate = after;
+      } else if (e.keyCode === 40 && e.ctrlKey) {
+        // ctrl + down
+        const before = this.audioEl.playbackRate;
+        let after = before * .9;
+        if (after < .5) after = .5;
+        if (before > 1) after = 1;
+        // console.log({ before, after });
+        this.audioEl.playbackRate = after;
+      } else if (e.keyCode === 39) {
+        // right
+        this.audioEl.currentTime += e.shiftKey ? 20 : 5;
+      } else if (e.keyCode === 37) {
+        // left
+        this.audioEl.currentTime -= e.shiftKey ? 20 : 5;
+      } else {
+        return
+      }
+      e.preventDefault();
+      return false;
+    }, 200);
   }
   componentWillUnmount() {
-    delete document.body.onkeyup;
+    delete document.body.onkeydown;
   }
 
   componentDidMount() {
-    if ('seekTo' in url.query) {
-      this.audioEl.currentTime = parseInt(url.query.seekTo, 10);
+    if ('dev' in url.query) {
+      if ('seekTo' in url.query) {
+        this.audioEl.currentTime = parseInt(url.query.seekTo, 10);
+      }
     }
     this.playPause();
     window.scrollTo(0, 0);
@@ -113,6 +150,10 @@ export default class ReportFree extends Component {
       ref: ref => this.audioEl = ref,
       ontimeupdate: e => {
         const currentTime = e.target.currentTime;
+        const percent = Math.round(100 * currentTime / e.target.duration);
+        // console.log(`duration   :`, e.target.duration);
+        // console.log(`currentTime:`, currentTime);
+        // console.log(`percent    :`, percent);
         // for (const line of transcript) {
         for (let i = 0; i < transcript.length; i++) {
           const line = transcript[i];
@@ -134,7 +175,12 @@ export default class ReportFree extends Component {
                 }
               }
               // this.changeBackground();
-              this.setState({ currentTime, currentLine, currentLineOpts: line })
+              this.setState({
+                currentTime,
+                currentPercent: percent,
+                currentLine,
+                currentLineOpts: line,
+              })
 
               // preload next image(s)
               if (nextLine && nextLine.keys) {
@@ -160,8 +206,12 @@ export default class ReportFree extends Component {
 
     const mainContentEl = h.div('.content', {
       onclick: e => this.playPause(),
-      class: this.state.currentLineOpts && this.state.currentLineOpts.class || [],
-      style: { backgroundImage: `url(${this.state.background})` }
+      class: this.state.currentLineOpts && this.state.currentLineOpts.class || [
+        'current-percent-' + this.state.currentPercent,
+        // this.audioEl ? Math.round(this.audioEl.duration / this.state.currentTime) : ''
+      ],
+      style: { backgroundImage: `url(${this.state.background})` },
+      ref: ref => this.mainContentEl = ref,
     }, [
       h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
       h.div('.text', [this.state.currentLine

@@ -39,10 +39,8 @@ class App extends Component {
       // console.log({ url.query });
       if ('report' in url.query) {
         if (url.query.report === 'free') {
-          return h.div('.reportFree', [h(cmp.reportFree, {
-            formData: { name: url.query.name || 'test name' },
-            quizData: { archetype: url.query.archetype || 'magician' },
-          })]);
+          this.state.formData = { name: url.query.name || 'test name' };
+          this.state.quizData = { archetype: url.query.archetype || 'magician' };
         }
       }
     }

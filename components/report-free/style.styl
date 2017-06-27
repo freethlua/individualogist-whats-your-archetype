@@ -45,6 +45,20 @@
   // position: absolute
   // bottom: -10em
 
+for currentPercent in (1..100)
+  .current-percent-{currentPercent}:before
+    transition: 1000ms
+    content ' '
+    // border 2px dotted yellow
+    width: 1% * currentPercent
+    display: block
+    height 2px
+    background: white
+    // background-image: linear-gradient(to right, #6A2977, #009ED5)
+    position: absolute
+    top: 0
+    // bottom: -10em
+
 .text
   // border: 2px dotted yellow
   position: absolute

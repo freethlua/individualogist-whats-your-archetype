@@ -37,6 +37,7 @@
     "simple-fade": "^1.0.0",
     "string-template-parser": "^1.0.0-rc.1",
     "swiped": "^0.1.4",
+    "throttleit": "^1.0.0",
     "undb": "^0.1.0"
   },
   "devDependencies": {
