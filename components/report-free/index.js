@@ -117,7 +117,7 @@ export default class ReportFree extends Component {
         for (let i = 0; i < transcript.length; i++) {
           const line = transcript[i];
           const nextLine = transcript[i + 1];
-          if (currentTime < (line.end - 1)) {
+          if (currentTime < ((line.end || Infinity) - 1)) {
             let currentLine = line.text;
             if (this.state.currentLine === currentLine) {
 
