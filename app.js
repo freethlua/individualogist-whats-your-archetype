@@ -2,9 +2,9 @@ import { version } from './package.json';
 import { Component, render } from 'preact';
 import quickHash from 'quick-hash';
 import URL from 'url';
-import store from './store';
 import hs from 'preact-hyperstyler';
 import './handle-errors';
+import store from './store';
 // import 'ionicons/dist/css/ionicons.css'
 // import 'animate.css';
 // import 'reset-css/reset.css';
@@ -57,7 +57,7 @@ class App extends Component {
         this.setState({
           aweberSuccess: url.query.aweberSuccess
         });
-        store.save(this.state)
+        store.save(this.state);
       } else {
         console.log(`Couldn't authenticate...`);
         console.log({ formData: this.state.formData, aweberSuccess: url.query.aweberSuccess });
@@ -104,7 +104,7 @@ class App extends Component {
 const target = document.getElementById('whats-your-archetype_app') || document.body;
 store.ready.then(data => {
   // data = {}
-  render(h(App, data), target)
+  const rendered = render(h(App, data), target);
   const footer = document.getElementById('whats-your-archetype_footer') || document.body;
   render(cmp.footer, footer);
 });
