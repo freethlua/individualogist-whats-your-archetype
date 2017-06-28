@@ -5,7 +5,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
 
 module.exports = {
-  entry: './app',
+  entry: ['whatwg-fetch', './app'],
   output: {
     filename: 'build/app.js',
     sourceMapFilename: '[file].map',

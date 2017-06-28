@@ -33,6 +33,7 @@
     "preact-hyperstyler": "^0.3.1",
     "preact-markdown": "^0.3.0",
     "preact-markup": "^1.6.0",
+    "quick-hash": "^1.0.4",
     "react-addons-css-transition-group": "^15.6.0",
     "react-css-transition-replace": "^2.2.1",
     "react-youtube": "^7.4.0",
@@ -41,7 +42,8 @@
     "string-template-parser": "^1.0.0-rc.1",
     "swiped": "^0.1.4",
     "throttleit": "^1.0.0",
-    "undb": "^0.1.0"
+    "undb": "^0.1.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.16",

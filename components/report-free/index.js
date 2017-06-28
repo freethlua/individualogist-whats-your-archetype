@@ -1,5 +1,7 @@
 import { Component } from 'preact';
+import URL from 'url';
 import hs from 'preact-hyperstyler';
+import quickHash from 'quick-hash';
 import hh from 'preact-hyperscript-h';
 import linkstate from 'linkstate';
 import arrify from 'arrify';
@@ -25,6 +27,10 @@ export default class ReportFree extends Component {
       if (e.keyCode === 32) {
         // space
         this.playPause();
+        if (window.pageYOffset < 10 && this.audioEl.paused && !this.spacePausedScrolledOnce) {
+          this.spacePausedScrolledOnce = true;
+          return;
+        }
       } else if (e.keyCode === 38 && e.ctrlKey) {
         // ctrl + up
         const before = this.audioEl.playbackRate;
@@ -86,7 +92,7 @@ export default class ReportFree extends Component {
         if (opts.path.match('compatibility')) {
           opts.class = arrify(opts.class).concat(['compatibility']);
         }
-        console.log(`opts.class:`, opts.class);
+        // console.log(`opts.class:`, opts.class);
         this.setState({
           img: require(`../../assets/` + opts.path),
           imgClass: opts.class || this.state.imgClass,
@@ -272,12 +278,28 @@ export default class ReportFree extends Component {
       ]),
     ]);
 
-    const restEl = h.div('.rest', [
+    const currentUrl = URL.parse(String(location), true);
+    currentUrl.query.aweberSucccess = quickHash(this.props.formData.name + this.props.formData.email);
+    delete currentUrl.search;
+    const redirectUrl = URL.format(currentUrl);
+
+
+    const restEl = h.form('.rest', {
+      action: 'https://www.aweber.com/scripts/addlead.pl',
+      method: 'POST',
+    }, [
+      h.input({ type: 'hidden', name: 'meta_web_form_id', value: '293430144' }),
+      h.input({ type: 'hidden', name: 'listname', value: 'awlist4378395' }),
+      h.input({ type: 'hidden', name: 'meta_adtracking', value: 'Ruler_Quiz_Opt_In' }),
+      h.input({ type: 'hidden', name: 'name', value: this.props.formData.name }),
+      h.input({ type: 'hidden', name: 'email', value: this.props.formData.email }),
+      h.input({ type: 'hidden', name: 'redirect', value: redirectUrl }),
+
       h.div('.action-1', [
         h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) }), ]),
         h.div([
           h.p(`Get Your Deluxe Archetype Report For Only $37.00 Now!`),
-          h.button('Click Here To Order Now'),
+          h.button(['Click Here To Order Now']),
         ]),
       ]),
       h.div('.testimonial', [
@@ -301,7 +323,7 @@ export default class ReportFree extends Component {
               h.div(this.props.formData.name),
             ])
           ]),
-          h.button('Order Now'),
+          h.button(['Order Now']),
           h.div('.shield', [
             h.img({ src: require('../../assets/images/pop-up/shield.png') }),
             h.p('All payments are secure'),
@@ -324,4 +346,5 @@ export default class ReportFree extends Component {
       // h.pre([JSON.stringify(this.state.currentLine, null, 1)]),
     ])]);
   }
+
 }

@@ -1,7 +1,5 @@
 import { Component, render } from 'preact';
-import parseSrt from 'parse-srt';
-import markup from 'preact-markup';
-import linkstate from 'linkstate';
+import quickHash from 'quick-hash';
 import URL from 'url';
 import localforage from 'localforage';
 import hs from 'preact-hyperstyler';
@@ -23,10 +21,41 @@ class App extends Component {
     if ('new' in url.query) {
       localforage.removeItem('state');
     }
+
     this.setState({
       quizData: this.props.quizData,
       formData: this.props.formData,
     });
+
+    if ('dev' in url.query) {
+      // console.log({ url.query });
+      if ('report' in url.query) {
+        if (url.query.report === 'free') {
+          this.setState({
+            formData: {
+              name: url.query.name || 'Testname',
+              email: url.query.email || 'test@test.com',
+            },
+            quizData: {
+              archetype: url.query.archetype || 'magician',
+            }
+          });
+        }
+      }
+    }
+
+    if ('aweberSucccess' in url.query && this.state.formData) {
+      const hash = quickHash(this.state.formData.name + this.state.formData.email);
+      if (url.query.aweberSucccess === hash) {
+        console.log(`authenticated!`);
+        this.setState({
+          aweberSucccess: url.query.aweberSucccess
+        });
+      } else {
+        console.log(`Couldn't authenticate...`);
+      }
+    }
+
   }
 
   componentWillUpdate() {
@@ -35,20 +64,6 @@ class App extends Component {
 
   render() {
     // console.log(`this.state.class:`, !!this.state.class);
-
-    if ('dev' in url.query) {
-      // console.log({ url.query });
-      if ('report' in url.query) {
-        if (url.query.report === 'free') {
-          this.state.formData = {
-            name: url.query.name || 'Testname'
-          };
-          this.state.quizData = {
-            archetype: url.query.archetype || 'magician'
-          };
-        }
-      }
-    }
 
     const header = h.div('.header', [cmp.header]);
 
