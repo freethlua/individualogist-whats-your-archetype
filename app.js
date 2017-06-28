@@ -88,6 +88,7 @@ class App extends Component {
 
     // console.log(`this.state.class:`, !!this.state.class);
     const form = h.div('.form', [h(cmp.form, {
+      quizData: this.state.quizData,
       onSubmit: formData => {
         delete this.state.class;
         this.setState({ formData, class: null });
