@@ -54,7 +54,7 @@ class App extends Component {
         });
       } else {
         console.log(`Couldn't authenticate...`);
-        console.log({ hash });
+        console.log({ formData: this.state.formData, hash });
       }
     }
 
