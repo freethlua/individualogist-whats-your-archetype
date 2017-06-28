@@ -3,17 +3,16 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
-
-console.log(`process.argv:`, process.argv);
-process.exit()
+const forGithub = process.argv.includes('github');
 
 module.exports = {
   entry: ['whatwg-fetch', './app'],
   output: {
     filename: 'build/app.js',
     sourceMapFilename: '[file].map',
-    publicPath: isDev ? '' : '/wp-content/themes/individualogist/whats-your-archetype/',
-    // publicPath: isDev ? '' : '/individualogist-whats-your-archetype/',
+    publicPath: isDev ? ''
+      : forGithub ? '/individualogist-whats-your-archetype/'
+      : '/wp-content/themes/individualogist/whats-your-archetype/',
     hashDigestLength: 5,
   },
   devtool: isDev ? 'cheap-module-source-map' : 'source-map',

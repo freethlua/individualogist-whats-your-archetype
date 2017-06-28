@@ -22,7 +22,13 @@ export default class Form extends Component {
   render() {
     return h.div('.container', [
       h.form({
-        onSubmit: e => this.props.onSubmit(this.state),
+        onSubmit: e => {
+          this.props.onSubmit(this.state);
+          if (url.hostname.includes('github.io')) {
+            e.preventDefault();
+            window.location = this.redirectUrl;
+          }
+        },
         action: 'https://www.aweber.com/scripts/addlead.pl',
         method: 'POST',
       }, [
