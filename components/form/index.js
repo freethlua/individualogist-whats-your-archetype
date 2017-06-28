@@ -22,10 +22,7 @@ export default class Form extends Component {
   render() {
     return h.div('.container', [
       h.form({
-        onSubmit: e => {
-          this.props.onSubmit(this.state);
-          console.log(`hash created:`, { hash }, this.state);
-        },
+        onSubmit: e => this.props.onSubmit(this.state),
         action: 'https://www.aweber.com/scripts/addlead.pl',
         method: 'POST',
       }, [
@@ -38,7 +35,6 @@ export default class Form extends Component {
           name: 'name',
           placeholder: 'Name',
           onchange: linkstate(this, 'name'),
-          // value: this.state.name,
           required: true,
         }),
         h.input({
@@ -46,7 +42,6 @@ export default class Form extends Component {
           name: 'email',
           placeholder: 'Email',
           onchange: linkstate(this, 'email'),
-          // value: this.state.email,
           required: true,
         }),
         h.button('Start My Free Reading!'),
