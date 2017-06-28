@@ -49,6 +49,7 @@ class App extends Component {
     }
 
     if ('aweberSucccess' in url.query && this.state.formData) {
+      window.history.replaceState({}, 'page2', cleanUrl);
       const hash = quickHash(this.state.formData.name + this.state.formData.email);
       if (url.query.aweberSucccess === hash) {
         console.log(`authenticated!`);
@@ -57,7 +58,7 @@ class App extends Component {
         });
       } else {
         console.log(`Couldn't authenticate...`);
-        console.log({ formData: this.state.formData, hash });
+        console.log({ formData: this.state.formData, hash, aweberSucccess: url.query.aweberSucccess });
       }
     }
 
