@@ -29,7 +29,10 @@ module.exports = {
         use: [{
           loader: 'css-loader',
           options: { modules: true },
-        }, 'stylus-loader']
+        }, {
+          loader: 'stylus-loader',
+          options: { preferPathResolver: 'webpack' },
+        }]
       })
     }, {
       test: /\.(png|jpe?g|woff|woff2|eot|ttf|svg|pdf|mp3|docx|txt)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -49,8 +52,7 @@ module.exports = {
     new ExtractTextPlugin({
       filename: 'build/styles.css',
       disable: isDev,
-    }),
-    !isDev && new CleanWebpackPlugin(['build']),
+    }), !isDev && new CleanWebpackPlugin(['build']),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
