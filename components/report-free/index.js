@@ -278,28 +278,28 @@ export default class ReportFree extends Component {
       ]),
     ]);
 
-    const currentUrl = URL.parse(String(location), true);
-    currentUrl.query.aweberSucccess = quickHash(this.props.formData.name + this.props.formData.email);
-    delete currentUrl.search;
-    const redirectUrl = URL.format(currentUrl);
+    // const currentUrl = URL.parse(String(location), true);
+    // currentUrl.query.aweberSucccess = quickHash(this.props.formData.name + this.props.formData.email);
+    // delete currentUrl.search;
+    // const redirectUrl = URL.format(currentUrl);
 
 
-    const restEl = h.form('.rest', {
-      action: 'https://www.aweber.com/scripts/addlead.pl',
-      method: 'POST',
+    const restEl = h.div('.rest', {
+      // action: 'https://www.aweber.com/scripts/addlead.pl',
+      // method: 'POST',
     }, [
-      h.input({ type: 'hidden', name: 'meta_web_form_id', value: '293430144' }),
-      h.input({ type: 'hidden', name: 'listname', value: 'awlist4378395' }),
-      h.input({ type: 'hidden', name: 'meta_adtracking', value: 'Ruler_Quiz_Opt_In' }),
-      h.input({ type: 'hidden', name: 'name', value: this.props.formData.name }),
-      h.input({ type: 'hidden', name: 'email', value: this.props.formData.email }),
-      h.input({ type: 'hidden', name: 'redirect', value: redirectUrl }),
+      // h.input({ type: 'hidden', name: 'meta_web_form_id', value: '293430144' }),
+      // h.input({ type: 'hidden', name: 'listname', value: 'awlist4378395' }),
+      // h.input({ type: 'hidden', name: 'meta_adtracking', value: 'Ruler_Quiz_Opt_In' }),
+      // h.input({ type: 'hidden', name: 'name', value: this.props.formData.name }),
+      // h.input({ type: 'hidden', name: 'email', value: this.props.formData.email }),
+      // h.input({ type: 'hidden', name: 'redirect', value: redirectUrl }),
 
       h.div('.action-1', [
         h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) }), ]),
         h.div([
           h.p(`Get Your Deluxe Archetype Report For Only $37.00 Now!`),
-          h.button(['Click Here To Order Now']),
+          h.a({ href: 'http://dar-rul.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28795' }, [h.button(['Click Here To Order Now'])]),
         ]),
       ]),
       h.div('.testimonial', [
@@ -323,7 +323,7 @@ export default class ReportFree extends Component {
               h.div(this.props.formData.name),
             ])
           ]),
-          h.button(['Order Now']),
+          h.a({ href: 'http://dar-rul.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28795' }, [h.button(['Order Now'])]),
           h.div('.shield', [
             h.img({ src: require('../../assets/images/pop-up/shield.png') }),
             h.p('All payments are secure'),

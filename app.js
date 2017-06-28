@@ -32,6 +32,7 @@ class App extends Component {
       if ('report' in url.query) {
         if (url.query.report === 'free') {
           this.setState({
+            aweberSucccess: 'testoverride',
             formData: {
               name: url.query.name || 'Testname',
               email: url.query.email || 'test@test.com',
@@ -99,7 +100,7 @@ class App extends Component {
       // console.log(`this.state.class:`, !!this.state.class);
       return h.div('.app', [quiz, cmp.comments]);
     } else {
-      if (!this.state.formData) {
+      if (!this.state.formData || !this.state.aweberSucccess) {
         return h.div('.app', [reportIntro, cmp.comments]);
       } else {
         return h.div('.app', [reportFree]);
