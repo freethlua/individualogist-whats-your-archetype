@@ -2,8 +2,8 @@
   "errors": [],
   "warnings": [],
   "version": "2.6.1",
-  "hash": "a6c05",
-  "time": 31199,
+  "hash": "1f8fa",
+  "time": 22234,
   "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
   "assetsByChunkName": {
     "main": [
@@ -1044,7 +1044,7 @@
     },
     {
       "name": "build/app.js",
-      "size": 792688,
+      "size": 792750,
       "chunks": [
         0
       ],
@@ -1067,7 +1067,7 @@
     },
     {
       "name": "build/app.js.map",
-      "size": 976851,
+      "size": 976932,
       "chunks": [
         0
       ],
@@ -1109,7 +1109,7 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 740601,
+      "size": 740663,
       "names": [
         "main"
       ],
@@ -1119,7 +1119,7 @@
         "build/app.js.map",
         "build/styles.css.map"
       ],
-      "hash": "b4924",
+      "hash": "ddb0e",
       "parents": [],
       "origins": [
         {
@@ -4112,9 +4112,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithThrowingShims.js",
-      "issuerId": 261,
-      "issuerName": "./~/prop-types/factoryWithThrowingShims.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithTypeCheckers.js",
+      "issuerId": 262,
+      "issuerName": "./~/prop-types/factoryWithTypeCheckers.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4167,9 +4167,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithThrowingShims.js",
-      "issuerId": 261,
-      "issuerName": "./~/prop-types/factoryWithThrowingShims.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithTypeCheckers.js",
+      "issuerId": 262,
+      "issuerName": "./~/prop-types/factoryWithTypeCheckers.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4277,9 +4277,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithThrowingShims.js",
-      "issuerId": 261,
-      "issuerName": "./~/prop-types/factoryWithThrowingShims.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithTypeCheckers.js",
+      "issuerId": 262,
+      "issuerName": "./~/prop-types/factoryWithTypeCheckers.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -9450,7 +9450,7 @@
       "name": "./components/form/index.js",
       "index": 358,
       "index2": 357,
-      "size": 1587,
+      "size": 1649,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -9483,7 +9483,7 @@
         "default"
       ],
       "depth": 3,
-      "source": "import { Component } from 'preact';\nimport URL from 'url';\nimport quickHash from 'quick-hash';\nimport hs from 'preact-hyperstyler';\nimport linkstate from 'linkstate';\nimport styles from './style.styl';\n\nconst h = hs(styles);\n\nexport default class Form extends Component {\n  render() {\n\n    const currentUrl = URL.parse(String(location), true);\n    const hash = quickHash(this.state.name + this.state.email);\n    currentUrl.query.aweberSucccess = hash;\n    delete currentUrl.search;\n    const redirectUrl = URL.format(currentUrl);\n\n    return h.div('.container', [\n      h.form({\n        onSubmit: e => {\n          this.props.onSubmit(this.state);\n        },\n        action: 'https://www.aweber.com/scripts/addlead.pl',\n        method: 'POST',\n      }, [\n        h.input({ type: 'hidden', name: 'meta_web_form_id', value: '293430144' }),\n        h.input({ type: 'hidden', name: 'listname', value: 'awlist4378395' }),\n        h.input({ type: 'hidden', name: 'meta_adtracking', value: 'Ruler_Quiz_Opt_In' }),\n        h.input({ type: 'hidden', name: 'redirect', value: redirectUrl }),\n        h.input({\n          type: 'name',\n          name: 'name',\n          placeholder: 'Name',\n          onchange: linkstate(this, 'name'),\n          // value: this.state.name,\n          required: true,\n        }),\n        h.input({\n          type: 'email',\n          name: 'email',\n          placeholder: 'Email',\n          onchange: linkstate(this, 'email'),\n          // value: this.state.email,\n          required: true,\n        }),\n        h.button('Start My Free Reading!'),\n      ])\n    ]);\n  }\n}\n"
+      "source": "import { Component } from 'preact';\nimport URL from 'url';\nimport quickHash from 'quick-hash';\nimport hs from 'preact-hyperstyler';\nimport linkstate from 'linkstate';\nimport styles from './style.styl';\n\nconst h = hs(styles);\n\nexport default class Form extends Component {\n  render() {\n\n    const currentUrl = URL.parse(String(location), true);\n    const hash = quickHash(this.state.name + this.state.email);\n    currentUrl.query.aweberSucccess = hash;\n    delete currentUrl.search;\n    const redirectUrl = URL.format(currentUrl);\n\n    return h.div('.container', [\n      h.form({\n        onSubmit: e => {\n          this.props.onSubmit(this.state);\n          console.log(`hash created:`, { hash }, this.state);\n        },\n        action: 'https://www.aweber.com/scripts/addlead.pl',\n        method: 'POST',\n      }, [\n        h.input({ type: 'hidden', name: 'meta_web_form_id', value: '293430144' }),\n        h.input({ type: 'hidden', name: 'listname', value: 'awlist4378395' }),\n        h.input({ type: 'hidden', name: 'meta_adtracking', value: 'Ruler_Quiz_Opt_In' }),\n        h.input({ type: 'hidden', name: 'redirect', value: redirectUrl }),\n        h.input({\n          type: 'name',\n          name: 'name',\n          placeholder: 'Name',\n          onchange: linkstate(this, 'name'),\n          // value: this.state.name,\n          required: true,\n        }),\n        h.input({\n          type: 'email',\n          name: 'email',\n          placeholder: 'Email',\n          onchange: linkstate(this, 'email'),\n          // value: this.state.email,\n          required: true,\n        }),\n        h.button('Start My Free Reading!'),\n      ])\n    ]);\n  }\n}\n"
     },
     {
       "id": 156,

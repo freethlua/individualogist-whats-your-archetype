@@ -20,6 +20,7 @@ export default class Form extends Component {
       h.form({
         onSubmit: e => {
           this.props.onSubmit(this.state);
+          console.log(`hash created:`, { hash }, this.state);
         },
         action: 'https://www.aweber.com/scripts/addlead.pl',
         method: 'POST',
