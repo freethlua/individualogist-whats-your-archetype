@@ -6,13 +6,13 @@ const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
 const forGithub = process.argv.includes('github');
 
 module.exports = {
-  entry: ['whatwg-fetch', './app'],
+  entry: ['./webpack.init', 'whatwg-fetch', './app'],
   output: {
     filename: 'build/app.js',
     sourceMapFilename: '[file].map',
-    publicPath: isDev ? ''
-      : forGithub ? '/individualogist-whats-your-archetype/'
-      : '/wp-content/themes/individualogist/whats-your-archetype/',
+    // publicPath: isDev ? ''
+    //   : forGithub ? '/individualogist-whats-your-archetype/'
+    //   : '/wp-content/themes/individualogist/whats-your-archetype/',
     hashDigestLength: 5,
   },
   devtool: isDev ? 'cheap-module-source-map' : 'source-map',
