@@ -2,9 +2,9 @@
   "errors": [],
   "warnings": [],
   "version": "2.6.1",
-  "hash": "f4234",
-  "time": 22488,
-  "publicPath": "/individualogist-whats-your-archetype/",
+  "hash": "1c83c",
+  "time": 23658,
+  "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
   "assetsByChunkName": {
     "main": [
       "build/app.js",
@@ -1044,7 +1044,7 @@
     },
     {
       "name": "build/app.js",
-      "size": 792570,
+      "size": 792588,
       "chunks": [
         0
       ],
@@ -1056,7 +1056,7 @@
     },
     {
       "name": "build/styles.css",
-      "size": 37013,
+      "size": 37049,
       "chunks": [
         0
       ],
@@ -1067,7 +1067,7 @@
     },
     {
       "name": "build/app.js.map",
-      "size": 976703,
+      "size": 976721,
       "chunks": [
         0
       ],
@@ -1119,7 +1119,7 @@
         "build/app.js.map",
         "build/styles.css.map"
       ],
-      "hash": "204af",
+      "hash": "ff5c1",
       "parents": [],
       "origins": [
         {
@@ -17708,7 +17708,7 @@
     {
       "errors": [],
       "warnings": [],
-      "publicPath": "/individualogist-whats-your-archetype/",
+      "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
       "assetsByChunkName": {},
       "assets": [],
       "entrypoints": {
@@ -17733,7 +17733,7 @@
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "e8bc3",
+          "hash": "ece3e",
           "parents": [],
           "origins": [
             {
@@ -17820,7 +17820,7 @@
     {
       "errors": [],
       "warnings": [],
-      "publicPath": "/individualogist-whats-your-archetype/",
+      "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
       "assetsByChunkName": {},
       "assets": [],
       "entrypoints": {
@@ -17845,7 +17845,7 @@
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "0f132",
+          "hash": "a120e",
           "parents": [],
           "origins": [
             {
@@ -17932,7 +17932,7 @@
     {
       "errors": [],
       "warnings": [],
-      "publicPath": "/individualogist-whats-your-archetype/",
+      "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
       "assetsByChunkName": {},
       "assets": [],
       "entrypoints": {
@@ -17957,7 +17957,7 @@
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "b0272",
+          "hash": "7a97a",
           "parents": [],
           "origins": [
             {
@@ -18044,7 +18044,7 @@
     {
       "errors": [],
       "warnings": [],
-      "publicPath": "/individualogist-whats-your-archetype/",
+      "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
       "assetsByChunkName": {},
       "assets": [],
       "entrypoints": {
@@ -18069,7 +18069,7 @@
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "a14a5",
+          "hash": "1fb85",
           "parents": [],
           "origins": [
             {
@@ -18156,7 +18156,7 @@
     {
       "errors": [],
       "warnings": [],
-      "publicPath": "/individualogist-whats-your-archetype/",
+      "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
       "assetsByChunkName": {},
       "assets": [],
       "entrypoints": {
@@ -18181,7 +18181,7 @@
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "19cfd",
+          "hash": "54dc6",
           "parents": [],
           "origins": [
             {
@@ -18268,7 +18268,7 @@
     {
       "errors": [],
       "warnings": [],
-      "publicPath": "/individualogist-whats-your-archetype/",
+      "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
       "assetsByChunkName": {},
       "assets": [],
       "entrypoints": {
@@ -18293,7 +18293,7 @@
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "df8bf",
+          "hash": "6fd69",
           "parents": [],
           "origins": [
             {
@@ -18380,7 +18380,7 @@
     {
       "errors": [],
       "warnings": [],
-      "publicPath": "/individualogist-whats-your-archetype/",
+      "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
       "assetsByChunkName": {},
       "assets": [
         {
@@ -18412,7 +18412,7 @@
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "9e9ca",
+          "hash": "186bd",
           "parents": [],
           "origins": [
             {
@@ -18538,7 +18538,7 @@
     {
       "errors": [],
       "warnings": [],
-      "publicPath": "/individualogist-whats-your-archetype/",
+      "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
       "assetsByChunkName": {},
       "assets": [
         {
@@ -18570,7 +18570,7 @@
           "files": [
             "extract-text-webpack-plugin-output-filename"
           ],
-          "hash": "25e68",
+          "hash": "e4c2a",
           "parents": [],
           "origins": [
             {
