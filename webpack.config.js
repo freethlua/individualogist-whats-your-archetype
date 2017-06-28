@@ -1,7 +1,5 @@
-const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const stylusLoader = require('stylus-loader');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
@@ -39,7 +37,7 @@ module.exports = {
         loader: 'url-loader',
         query: {
           limit: 1000,
-          name: '/build/[path][name].[ext]',
+          name: 'build/[path][name].[ext]',
         },
       },
     }, {
@@ -48,24 +46,10 @@ module.exports = {
     }],
   },
   plugins: [!isDev && new CleanWebpackPlugin(['build']),
-    new webpack.LoaderOptionsPlugin({
-      test: /\.styl$/,
-      stylus: {
-        preferPathResolver: 'webpack',
-        default: {
-          preferPathResolver: 'webpack',
-        }
-      },
-    }),
-    new stylusLoader.OptionsPlugin({
-      preferPathResolver: 'webpack',
-      default: {
-        preferPathResolver: 'webpack',
-      },
-    }),
     new ExtractTextPlugin({
       filename: 'build/styles.css',
-      disable: isDev,
+      // disable: isDev,
+      disable: true,
     }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
