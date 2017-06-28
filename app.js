@@ -37,11 +37,13 @@ class App extends Component {
       // console.log({ url.query });
       if ('report' in url.query) {
         if (url.query.report === 'free') {
+          const aweberSuccess = 'test-override';
           this.setState({
-            aweberSucccess: 'testoverride',
+            aweberSuccess,
             formData: {
               name: url.query.name || 'Testname',
               email: url.query.email || 'test@test.com',
+              aweberRedirectHash: aweberSuccess,
             },
             quizData: {
               archetype: url.query.archetype || 'magician',
@@ -51,16 +53,16 @@ class App extends Component {
       }
     }
 
-    if ('aweberSucccess' in url.query && this.state.formData) {
+    if ('aweberSuccess' in url.query && this.state.formData) {
       window.history.replaceState({}, 'page2', cleanUrl);
-      if (url.query.aweberSucccess === this.state.formData.aweberRedirectHash) {
+      if (url.query.aweberSuccess === this.state.formData.aweberRedirectHash) {
         console.log(`authenticated!`);
         this.setState({
-          aweberSucccess: url.query.aweberSucccess
+          aweberSuccess: url.query.aweberSuccess
         });
       } else {
         console.log(`Couldn't authenticate...`);
-        console.log({ formData: this.state.formData, aweberSucccess: url.query.aweberSucccess });
+        console.log({ formData: this.state.formData, aweberSuccess: url.query.aweberSuccess });
       }
     }
 
@@ -107,7 +109,7 @@ class App extends Component {
       // console.log(`this.state.class:`, !!this.state.class);
       return h.div('.app', [quiz, cmp.comments]);
     } else {
-      if (!this.state.formData || !this.state.aweberSucccess) {
+      if (!this.state.formData || !this.state.aweberSuccess) {
         return h.div('.app', [reportIntro, cmp.comments]);
       } else {
         return h.div('.app', [reportFree]);
