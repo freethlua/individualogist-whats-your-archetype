@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const stylusLoader = require('stylus-loader');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
@@ -50,9 +51,16 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       test: /\.styl$/,
       stylus: {
+        preferPathResolver: 'webpack',
         default: {
           preferPathResolver: 'webpack',
         }
+      },
+    }),
+    new stylusLoader.OptionsPlugin({
+      preferPathResolver: 'webpack',
+      default: {
+        preferPathResolver: 'webpack',
       },
     }),
     new ExtractTextPlugin({
