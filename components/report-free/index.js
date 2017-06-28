@@ -23,7 +23,7 @@ export default class ReportFree extends Component {
 
     this.onkeydown = throttle(e => {
       if (!this.mainContentEl) return
-      if (window.pageYOffset > 100) return;
+      if (window.pageYOffset > 500) return;
       if (e.keyCode === 32) {
         // space
         this.playPause();
