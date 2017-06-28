@@ -20,12 +20,12 @@ class App extends Component {
   componentWillMount() {
     if ('new' in url.query) {
       localforage.removeItem('state');
+    } else {
+      this.setState({
+        quizData: this.props.quizData,
+        formData: this.props.formData,
+      });
     }
-
-    this.setState({
-      quizData: this.props.quizData,
-      formData: this.props.formData,
-    });
 
     if ('dev' in url.query) {
       // console.log({ url.query });
