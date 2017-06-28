@@ -323,7 +323,7 @@ export default class ReportFree extends Component {
               h.div(this.props.formData.name),
             ])
           ]),
-          h.a({ href: 'http://dar-rul.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28795' }, [h.button(['Order Now'])]),
+          h.a({ href: `http://dar-${this.props.quizData.archetype.substr(0,3)}.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28795` }, [h.button(['Order Now'])]),
           h.div('.shield', [
             h.img({ src: require('../../assets/images/pop-up/shield.png') }),
             h.p('All payments are secure'),
