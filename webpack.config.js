@@ -39,7 +39,7 @@ module.exports = {
         loader: 'url-loader',
         query: {
           limit: 1000,
-          name: 'build/[path][name].[ext]',
+          name: '/build/[path][name].[ext]',
         },
       },
     }, {
