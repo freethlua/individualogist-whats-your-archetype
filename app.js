@@ -1,3 +1,4 @@
+import pkgJson from './package.json';
 import { Component, render } from 'preact';
 import quickHash from 'quick-hash';
 import URL from 'url';
@@ -12,6 +13,8 @@ import * as cmp from './components';
 import styles from './app.styl';
 
 const h = hs(styles);
+
+console.log(`pkgJson.name  v${pkgJson.version}`);
 
 window.url = URL.parse(location + '', true);
 window.cleanUrl = URL.format(Object.assign({}, url, { query: {}, search: null }));
