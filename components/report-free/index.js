@@ -299,7 +299,7 @@ export default class ReportFree extends Component {
         h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) }), ]),
         h.div([
           h.p(`Get Your Deluxe Archetype Report For Only $37.00 Now!`),
-          h.a({ href: 'http://dar-rul.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28795' }, [h.button(['Click Here To Order Now'])]),
+          h.a({ href: `http://dar-${this.props.quizData.archetype.substr(0,3)}.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28795` }, [h.button(['Click Here To Order Now'])]),
         ]),
       ]),
       h.div('.testimonial', [
