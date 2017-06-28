@@ -47,9 +47,7 @@ export default class Quiz extends Component {
   render() {
     const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();
 
-    return h.div('.wrapper', {
-      // style: { backgroundImage: require('../../assets/images/backgrounds/quiz-slider-1.jpg') },
-    }, [h.div('.container', [
+    return h.div('.wrapper', [h.div('.container', [
       // h.pre('.debug', { style: 'position:fixed!important;bottom:0!important;right:0!important' }, JSON.stringify(this.state.questions.map(q => q.answer), null, 2))
 
       h.h1([

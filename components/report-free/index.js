@@ -128,7 +128,6 @@ export default class ReportFree extends Component {
   }
 
   changeBackground() {
-    return;
     if (!this.state.lastBackgroundChangeTime || (this.state.lastBackgroundChangeTime + 4000 < new Date())) {
       const cbg = this.state.currentBackgroundIndex || 0;
       const nbg = cbg >= 4 ? 1 : cbg + 1;
