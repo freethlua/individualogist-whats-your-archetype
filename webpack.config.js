@@ -3,7 +3,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
-const forGithub = process.argv.includes('github');
 
 module.exports = {
   entry: ['./webpack.init', 'whatwg-fetch', './app'],
@@ -54,7 +53,7 @@ module.exports = {
       filename: 'build/styles.css',
       disable: isDev,
     }),
-    new CleanWebpackPlugin(['build']),
+    !isDev && new CleanWebpackPlugin(['build']),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
