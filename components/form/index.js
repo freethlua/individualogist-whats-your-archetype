@@ -24,7 +24,7 @@ export default class Form extends Component {
       h.form({
         onSubmit: e => {
           this.props.onSubmit(this.state);
-          if (url.hostname.includes('github.io')) {
+          if (url.hostname.match(/github.io|localhost/)) {
             e.preventDefault();
             window.location = this.redirectUrl;
           }

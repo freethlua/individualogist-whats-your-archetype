@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -29,10 +30,7 @@ module.exports = {
         use: [{
           loader: 'css-loader',
           options: { modules: true },
-        }, {
-          loader: 'stylus-loader',
-          options: { preferPathResolver: 'webpack' },
-        }]
+        }, 'stylus-loader']
       })
     }, {
       test: /\.(png|jpe?g|woff|woff2|eot|ttf|svg|pdf|mp3|docx|txt)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -48,11 +46,19 @@ module.exports = {
       use: 'pug-loader',
     }],
   },
-  plugins: [
+  plugins: [!isDev && new CleanWebpackPlugin(['build']),
+    new webpack.LoaderOptionsPlugin({
+      test: /\.styl$/,
+      stylus: {
+        default: {
+          preferPathResolver: 'webpack',
+        }
+      },
+    }),
     new ExtractTextPlugin({
       filename: 'build/styles.css',
       disable: isDev,
-    }), !isDev && new CleanWebpackPlugin(['build']),
+    }),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
