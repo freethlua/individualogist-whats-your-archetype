@@ -2,8 +2,8 @@
   "errors": [],
   "warnings": [],
   "version": "2.6.1",
-  "hash": "898d0",
-  "time": 21448,
+  "hash": "a6c05",
+  "time": 31199,
   "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
   "assetsByChunkName": {
     "main": [
@@ -1044,7 +1044,7 @@
     },
     {
       "name": "build/app.js",
-      "size": 792670,
+      "size": 792688,
       "chunks": [
         0
       ],
@@ -1067,7 +1067,7 @@
     },
     {
       "name": "build/app.js.map",
-      "size": 976833,
+      "size": 976851,
       "chunks": [
         0
       ],
@@ -1109,7 +1109,7 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 740583,
+      "size": 740601,
       "names": [
         "main"
       ],
@@ -1119,7 +1119,7 @@
         "build/app.js.map",
         "build/styles.css.map"
       ],
-      "hash": "172b9",
+      "hash": "b4924",
       "parents": [],
       "origins": [
         {
@@ -1150,9 +1150,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\core-js\\library\\modules\\es6.promise.js",
-      "issuerId": 197,
-      "issuerName": "./~/core-js/library/modules/es6.promise.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\core-js\\library\\modules\\web.dom.iterable.js",
+      "issuerId": 199,
+      "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -1277,9 +1277,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\core-js\\library\\modules\\es6.promise.js",
-      "issuerId": 197,
-      "issuerName": "./~/core-js/library/modules/es6.promise.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\core-js\\library\\modules\\web.dom.iterable.js",
+      "issuerId": 199,
+      "issuerName": "./~/core-js/library/modules/web.dom.iterable.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -2025,9 +2025,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\core-js\\library\\modules\\_set-species.js",
-      "issuerId": 188,
-      "issuerName": "./~/core-js/library/modules/_set-species.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\core-js\\library\\modules\\_hide.js",
+      "issuerId": 6,
+      "issuerName": "./~/core-js/library/modules/_hide.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -3469,9 +3469,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\core-js\\library\\modules\\_set-to-string-tag.js",
-      "issuerId": 38,
-      "issuerName": "./~/core-js/library/modules/_set-to-string-tag.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\core-js\\library\\modules\\_hide.js",
+      "issuerId": 6,
+      "issuerName": "./~/core-js/library/modules/_hide.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4112,9 +4112,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithTypeCheckers.js",
-      "issuerId": 262,
-      "issuerName": "./~/prop-types/factoryWithTypeCheckers.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithThrowingShims.js",
+      "issuerId": 261,
+      "issuerName": "./~/prop-types/factoryWithThrowingShims.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4167,9 +4167,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithTypeCheckers.js",
-      "issuerId": 262,
-      "issuerName": "./~/prop-types/factoryWithTypeCheckers.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithThrowingShims.js",
+      "issuerId": 261,
+      "issuerName": "./~/prop-types/factoryWithThrowingShims.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -4277,9 +4277,9 @@
         0
       ],
       "assets": [],
-      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithTypeCheckers.js",
-      "issuerId": 262,
-      "issuerName": "./~/prop-types/factoryWithTypeCheckers.js",
+      "issuer": "C:\\Users\\x\\Documents\\Work\\AaronL\\projects\\whats-your-archetype\\node_modules\\prop-types\\factoryWithThrowingShims.js",
+      "issuerId": 261,
+      "issuerName": "./~/prop-types/factoryWithThrowingShims.js",
       "failed": false,
       "errors": 0,
       "warnings": 0,
@@ -8669,7 +8669,7 @@
       "name": "./app.js",
       "index": 2,
       "index2": 371,
-      "size": 3956,
+      "size": 3968,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -8698,7 +8698,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 1,
-      "source": "import { Component, render } from 'preact';\nimport quickHash from 'quick-hash';\nimport URL from 'url';\nimport localforage from 'localforage';\nimport hs from 'preact-hyperstyler';\nimport './handle-errors';\n// import 'ionicons/dist/css/ionicons.css'\n// import 'animate.css';\n// import 'reset-css/reset.css';\n// import '@font/nunito/light.css';\nimport * as cmp from './components';\nimport styles from './app.styl';\n\nconst h = hs(styles);\n\nwindow.url = URL.parse(location + '', true);\n\nclass App extends Component {\n\n  componentWillMount() {\n    if ('new' in url.query) {\n      localforage.removeItem('state');\n    } else {\n      this.setState({\n        quizData: this.props.quizData,\n        formData: this.props.formData,\n      });\n    }\n\n    if ('dev' in url.query) {\n      // console.log({ url.query });\n      if ('report' in url.query) {\n        if (url.query.report === 'free') {\n          this.setState({\n            aweberSucccess: 'testoverride',\n            formData: {\n              name: url.query.name || 'Testname',\n              email: url.query.email || 'test@test.com',\n            },\n            quizData: {\n              archetype: url.query.archetype || 'magician',\n            }\n          });\n        }\n      }\n    }\n\n    if ('aweberSucccess' in url.query && this.state.formData) {\n      const hash = quickHash(this.state.formData.name + this.state.formData.email);\n      if (url.query.aweberSucccess === hash) {\n        console.log(`authenticated!`);\n        this.setState({\n          aweberSucccess: url.query.aweberSucccess\n        });\n      } else {\n        console.log(`Couldn't authenticate...`);\n        console.log({ formData: this.state.formData, hash });\n      }\n    }\n\n  }\n\n  componentWillUpdate() {\n    // console.log(`this.state.class:`, !!this.state.class);\n  }\n\n  render() {\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    const header = h.div('.header', [cmp.header]);\n\n    // console.log(`this.state.class:`, !!this.state.class);\n    const quiz = h.div('.quiz', [h(cmp.quiz, {\n      onFinish: quizData => {\n        delete this.state.class;\n        // console.log(`this.state.class:`, !!this.state.class);\n        // console.log(`this.state:`, this.state);\n        this.setState({ quizData, class: null });\n        // console.log(`this.state:`, this.state);\n        localforage.setItem('state', this.state);\n      }\n    })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    // console.log(`this.state.class:`, !!this.state.class);\n    const form = h.div('.form', [h(cmp.form, {\n      onSubmit: formData => {\n        delete this.state.class;\n        this.setState({ formData, class: null });\n        localforage.setItem('state', this.state);\n      }\n    })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, { form, archetype: this.state && this.state.quizData && this.state.quizData.archetype })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n    const reportFree = h.div('.reportFree', [h(cmp.reportFree, Object.assign({}, this.state))]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    if (!this.state.quizData) {\n      // console.log(`this.state.class:`, !!this.state.class);\n      return h.div('.app', [quiz, cmp.comments]);\n    } else {\n      if (!this.state.formData || !this.state.aweberSucccess) {\n        return h.div('.app', [reportIntro, cmp.comments]);\n      } else {\n        return h.div('.app', [reportFree]);\n      }\n    }\n  }\n}\n\nconst target = document.getElementById('whats-your-archetype_app') || document.body;\nlocalforage.config({ name: 'app-v2v1211' });\nlocalforage.getItem('state').then(data => {\n  // data = {}\n  console.log(`data:`, data);\n  // render(h(App, data), target)\n  render(h(App, Object.assign({}, data)), target)\n  const footer = document.getElementById('whats-your-archetype_footer') || document.body;\n  render(cmp.footer, footer);\n});\n"
+      "source": "import { Component, render } from 'preact';\nimport quickHash from 'quick-hash';\nimport URL from 'url';\nimport localforage from 'localforage';\nimport hs from 'preact-hyperstyler';\nimport './handle-errors';\n// import 'ionicons/dist/css/ionicons.css'\n// import 'animate.css';\n// import 'reset-css/reset.css';\n// import '@font/nunito/light.css';\nimport * as cmp from './components';\nimport styles from './app.styl';\n\nconst h = hs(styles);\n\nwindow.url = URL.parse(location + '', true);\n\nclass App extends Component {\n\n  componentWillMount() {\n    if ('new' in url.query) {\n      localforage.removeItem('state');\n    } else {\n      this.setState({\n        quizData: this.props.quizData,\n        formData: this.props.formData,\n      });\n    }\n\n    if ('dev' in url.query) {\n      // console.log({ url.query });\n      if ('report' in url.query) {\n        if (url.query.report === 'free') {\n          this.setState({\n            aweberSucccess: 'testoverride',\n            formData: {\n              name: url.query.name || 'Testname',\n              email: url.query.email || 'test@test.com',\n            },\n            quizData: {\n              archetype: url.query.archetype || 'magician',\n            }\n          });\n        }\n      }\n    }\n\n    if ('aweberSucccess' in url.query && this.state.formData) {\n      const hash = quickHash(this.state.formData.name + this.state.formData.email);\n      if (url.query.aweberSucccess === hash) {\n        console.log(`authenticated!`);\n        this.setState({\n          aweberSucccess: url.query.aweberSucccess\n        });\n      } else {\n        console.log(`Couldn't authenticate...`);\n        console.log({ formData: this.state.formData, hash });\n      }\n    }\n\n  }\n\n  componentWillUpdate() {\n    // console.log(`this.state.class:`, !!this.state.class);\n  }\n\n  render() {\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    const header = h.div('.header', [cmp.header]);\n\n    // console.log(`this.state.class:`, !!this.state.class);\n    const quiz = h.div('.quiz', [h(cmp.quiz, {\n      onFinish: quizData => {\n        delete this.state.class;\n        // console.log(`this.state.class:`, !!this.state.class);\n        // console.log(`this.state:`, this.state);\n        this.setState({ quizData, class: null });\n        // console.log(`this.state:`, this.state);\n        localforage.setItem('state', this.state);\n      }\n    })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    // console.log(`this.state.class:`, !!this.state.class);\n    const form = h.div('.form', [h(cmp.form, {\n      onSubmit: formData => {\n        delete this.state.class;\n        this.setState({ formData, class: null });\n        localforage.setItem('state', this.state);\n      }\n    })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, { form, archetype: this.state && this.state.quizData && this.state.quizData.archetype })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n    const reportFree = h.div('.reportFree', [h(cmp.reportFree, Object.assign({}, this.state))]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    if (!this.state.quizData) {\n      // console.log(`this.state.class:`, !!this.state.class);\n      return h.div('.app', [quiz, cmp.comments]);\n    } else {\n      if (!this.state.formData || !this.state.aweberSucccess) {\n        return h.div('.app', [reportIntro, cmp.comments]);\n      } else {\n        return h.div('.app', [reportFree]);\n      }\n    }\n  }\n}\n\nconst target = document.getElementById('whats-your-archetype_app') || document.body;\nlocalforage.config({ name: 'app-v2v1211' });\nlocalforage.getItem('state').then(data => {\n  // data = {}\n  console.log(`localforage data:`, data);\n  // render(h(App, data), target)\n  render(h(App, Object.assign({}, data)), target)\n  const footer = document.getElementById('whats-your-archetype_footer') || document.body;\n  render(cmp.footer, footer);\n});\n"
     },
     {
       "id": 135,
@@ -9586,7 +9586,7 @@
       "name": "./components/quiz/index.js",
       "index": 34,
       "index2": 40,
-      "size": 5350,
+      "size": 5356,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -9619,7 +9619,7 @@
         "default"
       ],
       "depth": 3,
-      "source": "import { Component, render } from 'preact';\nimport hs from 'preact-hyperstyler';\nimport throttle from 'throttleit';\nimport archetypes from '../../data/archetypes';\nimport questions from '../../data/questions';\nimport styles from './style.styl';\n\nconst h = hs(styles);\n\nexport default class Quiz extends Component {\n\n  componentWillMount() {\n    this.setState({ archetypes, questions });\n    this.refs = { li: [] };\n\n    this.onkeydown = throttle(e => {\n      if (window.pageYOffset > 500) return;\n      if (e.keyCode === 39) {\n        // right\n        this.setState({ cqi: Math.min((this.state.cqi || 0) + 1, this.state.questions.length - 1) });\n      } else if (e.keyCode === 37) {\n        // left\n        this.setState({ cqi: Math.max((this.state.cqi || 0) - 1, 0) });\n      } else {\n        return;\n      }\n      e.preventDefault();\n      return false;\n    }, 200);\n\n    window.addEventListener('keydown', this.onkeydown);\n\n  }\n\n  componentWillUnmount() {\n    window.removeEventListener('keydown', this.onkeydown);\n  }\n\n  calcCqi() {\n    for (let i = 0; i < this.state.questions.length; i++) {\n      if (!this.state.questions[i].answer) {\n        return i;\n      }\n    }\n  }\n\n  render() {\n    const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();\n\n    return h.div('.wrapper', [h.div('.container', [\n      // h.pre('.debug', { style: 'position:fixed!important;bottom:0!important;right:0!important' }, JSON.stringify(this.state.questions.map(q => q.answer), null, 2))\n\n      h.h1([\n        h.span('.color', 'Unravel The Mysteries '),\n        h.span('of Your '),\n        h.span('.color', 'True Self '),\n        h.span('By Taking This 60-Second Quiz'),\n      ]),\n\n      // h.div('.intro.animated.slideInDown', [\n      //   h.p('.ion-ios-timer-outline', 'Takes less than 60 seconds'),\n      //   h.p('.ion-ios-color-wand-outline', 'Only 6 questions'),\n      //   h.p('.ion-ios-heart-outline', 'Honesty leads to accuracy'),\n      // ]),\n\n      h.div('.form', {\n        ref: ref => this.formEl = ref,\n      }, [\n        h.input('.progress-bar', {\n          type: 'range',\n          max: this.state.questions.length - 1,\n          step: 1,\n          value: cqi,\n          onchange: e => {\n            const cqi = parseInt(e.target.value);\n            for (let i = cqi; i < this.state.questions.length; i++) {\n              delete this.state.questions[i].answer;\n              delete this.state.questions[i].ai;\n            }\n            this.setState({ questions: this.state.questions, cqi });\n          },\n          ref: ref => this.refs.progressBar = ref,\n        }),\n        h.ol({\n          style: {\n            height: this.refs.li[cqi] ? this.refs.li[cqi].offsetHeight : '12.5em',\n          }\n        }, this.state.questions.map((q, qi) =>\n          h.li({\n            class: { visible: cqi === qi },\n            ref: ref => this.refs.li[qi] = ref,\n          }, [\n            h.label('.question', { for: `q[${qi}]` }, [h.span('.order', [`${qi+1}/${this.state.questions.length}`]), h.span('.question', [q.question])]),\n            h.div('.answers', {}, q.answers.map((a, ai) => h.label('.answer', { for: `q[${qi}][${ai}]` }, [h.input({\n              // class: { checked: this.state.questions[qi].ai === ai },\n              checked: this.state.questions[qi].ai === ai,\n              type: 'checkbox',\n              id: `q[${qi}][${ai}]`,\n              name: `q[${qi}]`,\n              // value: Object.keys(a.points).map(t => `${t}=${a.points[t]}`).join(';'),\n              ref: ref => ref && (cqi === qi && ai === 0) && (this.firstCheckEl = ref),\n              onclick: e => {\n                if (cqi !== qi) {\n                  return;\n                }\n                if (!this.state.scrolled) {\n                  this.refs.progressBar.scrollIntoView({ behavior: 'smooth' });\n                  this.setState({ scrolled: true });\n                }\n                this.state.questions[qi].answer = a;\n                this.state.questions[qi].ai = ai;\n                this.setState({ qi, ai, questions: this.state.questions });\n                this.setState({ cqi: this.calcCqi() });\n                if (typeof this.state.cqi === 'undefined') {\n                  for (const question of this.state.questions) {\n                    for (const archetype in question.answer.points) {\n                      const points = question.answer.points[archetype];\n                      this.state.archetypes[archetype].points = (this.state.archetypes[archetype].points || 0) + points;\n                    }\n                  }\n                  const sortedArchetypes = Object.keys(this.state.archetypes).sort((a, b) => (this.state.archetypes[b].points || 0) - (this.state.archetypes[a].points || 0));\n                  this.setState({\n                    sortedArchetypes,\n                    archetype: sortedArchetypes[0],\n                    archetypes: this.state.archetypes,\n                  });\n                  setTimeout(() => this.props.onFinish(this.state), 333);\n                  console.log(this.state);\n                }\n              }\n            }), a.answer])))\n          ])))\n      ]),\n    ])]);\n  }\n\n  componentDidUpdate() {\n    console.log(`this.firstCheckEl:`, this.firstCheckEl);\n    if (this.firstCheckEl) this.firstCheckEl.focus()\n  }\n\n  componentDidMount() {\n    if (this.firstCheckEl) this.firstCheckEl.focus()\n  }\n\n}\n"
+      "source": "import { Component, render } from 'preact';\nimport hs from 'preact-hyperstyler';\nimport throttle from 'throttleit';\nimport archetypes from '../../data/archetypes';\nimport questions from '../../data/questions';\nimport styles from './style.styl';\n\nconst h = hs(styles);\n\nexport default class Quiz extends Component {\n\n  componentWillMount() {\n    this.setState({ archetypes, questions });\n    this.refs = { li: [] };\n\n    this.onkeydown = throttle(e => {\n      if (window.pageYOffset > 500) return;\n      if (e.keyCode === 39) {\n        // right\n        this.setState({ cqi: Math.min((this.state.cqi || 0) + 1, this.state.questions.length - 1) });\n      } else if (e.keyCode === 37) {\n        // left\n        this.setState({ cqi: Math.max((this.state.cqi || 0) - 1, 0) });\n      } else {\n        return;\n      }\n      e.preventDefault();\n      return false;\n    }, 200);\n\n    window.addEventListener('keydown', this.onkeydown);\n\n  }\n\n  componentWillUnmount() {\n    window.removeEventListener('keydown', this.onkeydown);\n  }\n\n  calcCqi() {\n    for (let i = 0; i < this.state.questions.length; i++) {\n      if (!this.state.questions[i].answer) {\n        return i;\n      }\n    }\n  }\n\n  render() {\n    const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();\n\n    return h.div('.wrapper', [h.div('.container', [\n      // h.pre('.debug', { style: 'position:fixed!important;bottom:0!important;right:0!important' }, JSON.stringify(this.state.questions.map(q => q.answer), null, 2))\n\n      h.h1([\n        h.span('.color', 'Unravel The Mysteries '),\n        h.span('of Your '),\n        h.span('.color', 'True Self '),\n        h.span('By Taking This 60-Second Quiz'),\n      ]),\n\n      // h.div('.intro.animated.slideInDown', [\n      //   h.p('.ion-ios-timer-outline', 'Takes less than 60 seconds'),\n      //   h.p('.ion-ios-color-wand-outline', 'Only 6 questions'),\n      //   h.p('.ion-ios-heart-outline', 'Honesty leads to accuracy'),\n      // ]),\n\n      h.div('.form', {\n        ref: ref => this.formEl = ref,\n      }, [\n        h.input('.progress-bar', {\n          type: 'range',\n          max: this.state.questions.length - 1,\n          step: 1,\n          value: cqi,\n          onchange: e => {\n            const cqi = parseInt(e.target.value);\n            for (let i = cqi; i < this.state.questions.length; i++) {\n              delete this.state.questions[i].answer;\n              delete this.state.questions[i].ai;\n            }\n            this.setState({ questions: this.state.questions, cqi });\n          },\n          ref: ref => this.refs.progressBar = ref,\n        }),\n        h.ol({\n          style: {\n            height: this.refs.li[cqi] ? this.refs.li[cqi].offsetHeight : '12.5em',\n          }\n        }, this.state.questions.map((q, qi) =>\n          h.li({\n            class: { visible: cqi === qi },\n            ref: ref => this.refs.li[qi] = ref,\n          }, [\n            h.label('.question', { for: `q[${qi}]` }, [h.span('.order', [`${qi+1}/${this.state.questions.length}`]), h.span('.question', [q.question])]),\n            h.div('.answers', {}, q.answers.map((a, ai) => h.label('.answer', { for: `q[${qi}][${ai}]` }, [h.input({\n              // class: { checked: this.state.questions[qi].ai === ai },\n              checked: this.state.questions[qi].ai === ai,\n              type: 'checkbox',\n              id: `q[${qi}][${ai}]`,\n              name: `q[${qi}]`,\n              // value: Object.keys(a.points).map(t => `${t}=${a.points[t]}`).join(';'),\n              ref: ref => ref && (cqi === qi && ai === 0) && (this.firstCheckEl = ref),\n              onclick: e => {\n                if (cqi !== qi) {\n                  return;\n                }\n                if (!this.state.scrolled) {\n                  this.refs.progressBar.scrollIntoView({ behavior: 'smooth' });\n                  this.setState({ scrolled: true });\n                }\n                this.state.questions[qi].answer = a;\n                this.state.questions[qi].ai = ai;\n                this.setState({ qi, ai, questions: this.state.questions });\n                this.setState({ cqi: this.calcCqi() });\n                if (typeof this.state.cqi === 'undefined') {\n                  for (const question of this.state.questions) {\n                    for (const archetype in question.answer.points) {\n                      const points = question.answer.points[archetype];\n                      this.state.archetypes[archetype].points = (this.state.archetypes[archetype].points || 0) + points;\n                    }\n                  }\n                  const sortedArchetypes = Object.keys(this.state.archetypes).sort((a, b) => (this.state.archetypes[b].points || 0) - (this.state.archetypes[a].points || 0));\n                  this.setState({\n                    sortedArchetypes,\n                    archetype: sortedArchetypes[0],\n                    archetypes: this.state.archetypes,\n                  });\n                  setTimeout(() => this.props.onFinish(this.state), 333);\n                  // console.log(this.state);\n                }\n              }\n            }), a.answer])))\n          ])))\n      ]),\n    ])]);\n  }\n\n  componentDidUpdate() {\n    // console.log(`this.firstCheckEl:`, this.firstCheckEl);\n    if (this.firstCheckEl) this.firstCheckEl.focus()\n  }\n\n  componentDidMount() {\n    if (this.firstCheckEl) this.firstCheckEl.focus()\n  }\n\n}\n"
     },
     {
       "id": 159,

@@ -114,7 +114,7 @@ const target = document.getElementById('whats-your-archetype_app') || document.b
 localforage.config({ name: 'app-v2v1211' });
 localforage.getItem('state').then(data => {
   // data = {}
-  console.log(`data:`, data);
+  console.log(`localforage data:`, data);
   // render(h(App, data), target)
   render(h(App, Object.assign({}, data)), target)
   const footer = document.getElementById('whats-your-archetype_footer') || document.body;

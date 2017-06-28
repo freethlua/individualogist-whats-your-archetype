@@ -125,7 +125,7 @@ export default class Quiz extends Component {
                     archetypes: this.state.archetypes,
                   });
                   setTimeout(() => this.props.onFinish(this.state), 333);
-                  console.log(this.state);
+                  // console.log(this.state);
                 }
               }
             }), a.answer])))
@@ -135,7 +135,7 @@ export default class Quiz extends Component {
   }
 
   componentDidUpdate() {
-    console.log(`this.firstCheckEl:`, this.firstCheckEl);
+    // console.log(`this.firstCheckEl:`, this.firstCheckEl);
     if (this.firstCheckEl) this.firstCheckEl.focus()
   }
 
