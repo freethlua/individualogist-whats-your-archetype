@@ -14,11 +14,13 @@ import styles from './app.styl';
 const h = hs(styles);
 
 window.url = URL.parse(location + '', true);
+window.cleanUrl = URL.format(Object.assign({}, url, { query: {}, search: null }));
 
 class App extends Component {
 
   componentWillMount() {
     if ('new' in url.query) {
+      window.history.replaceState({}, 'page2', cleanUrl);
       localforage.removeItem('state');
     } else {
       this.setState({
@@ -28,6 +30,7 @@ class App extends Component {
     }
 
     if ('dev' in url.query) {
+      window.history.replaceState({}, 'page2', cleanUrl);
       // console.log({ url.query });
       if ('report' in url.query) {
         if (url.query.report === 'free') {

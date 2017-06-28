@@ -2,8 +2,8 @@
   "errors": [],
   "warnings": [],
   "version": "2.6.1",
-  "hash": "b1a61",
-  "time": 24529,
+  "hash": "74db9",
+  "time": 24072,
   "publicPath": "/wp-content/themes/individualogist/whats-your-archetype/",
   "assetsByChunkName": {
     "main": [
@@ -1044,7 +1044,7 @@
     },
     {
       "name": "build/app.js",
-      "size": 792762,
+      "size": 793001,
       "chunks": [
         0
       ],
@@ -1067,7 +1067,7 @@
     },
     {
       "name": "build/app.js.map",
-      "size": 976944,
+      "size": 977202,
       "chunks": [
         0
       ],
@@ -1109,7 +1109,7 @@
       "initial": true,
       "entry": true,
       "extraAsync": false,
-      "size": 740675,
+      "size": 740874,
       "names": [
         "main"
       ],
@@ -1119,7 +1119,7 @@
         "build/app.js.map",
         "build/styles.css.map"
       ],
-      "hash": "c71b8",
+      "hash": "ed119",
       "parents": [],
       "origins": [
         {
@@ -8669,7 +8669,7 @@
       "name": "./app.js",
       "index": 2,
       "index2": 371,
-      "size": 3968,
+      "size": 4167,
       "cacheable": true,
       "built": true,
       "optional": false,
@@ -8698,7 +8698,7 @@
       "usedExports": true,
       "providedExports": null,
       "depth": 1,
-      "source": "import { Component, render } from 'preact';\nimport quickHash from 'quick-hash';\nimport URL from 'url';\nimport localforage from 'localforage';\nimport hs from 'preact-hyperstyler';\nimport './handle-errors';\n// import 'ionicons/dist/css/ionicons.css'\n// import 'animate.css';\n// import 'reset-css/reset.css';\n// import '@font/nunito/light.css';\nimport * as cmp from './components';\nimport styles from './app.styl';\n\nconst h = hs(styles);\n\nwindow.url = URL.parse(location + '', true);\n\nclass App extends Component {\n\n  componentWillMount() {\n    if ('new' in url.query) {\n      localforage.removeItem('state');\n    } else {\n      this.setState({\n        quizData: this.props.quizData,\n        formData: this.props.formData,\n      });\n    }\n\n    if ('dev' in url.query) {\n      // console.log({ url.query });\n      if ('report' in url.query) {\n        if (url.query.report === 'free') {\n          this.setState({\n            aweberSucccess: 'testoverride',\n            formData: {\n              name: url.query.name || 'Testname',\n              email: url.query.email || 'test@test.com',\n            },\n            quizData: {\n              archetype: url.query.archetype || 'magician',\n            }\n          });\n        }\n      }\n    }\n\n    if ('aweberSucccess' in url.query && this.state.formData) {\n      const hash = quickHash(this.state.formData.name + this.state.formData.email);\n      if (url.query.aweberSucccess === hash) {\n        console.log(`authenticated!`);\n        this.setState({\n          aweberSucccess: url.query.aweberSucccess\n        });\n      } else {\n        console.log(`Couldn't authenticate...`);\n        console.log({ formData: this.state.formData, hash });\n      }\n    }\n\n  }\n\n  componentWillUpdate() {\n    // console.log(`this.state.class:`, !!this.state.class);\n  }\n\n  render() {\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    const header = h.div('.header', [cmp.header]);\n\n    // console.log(`this.state.class:`, !!this.state.class);\n    const quiz = h.div('.quiz', [h(cmp.quiz, {\n      onFinish: quizData => {\n        delete this.state.class;\n        // console.log(`this.state.class:`, !!this.state.class);\n        // console.log(`this.state:`, this.state);\n        this.setState({ quizData, class: null });\n        // console.log(`this.state:`, this.state);\n        localforage.setItem('state', this.state);\n      }\n    })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    // console.log(`this.state.class:`, !!this.state.class);\n    const form = h.div('.form', [h(cmp.form, {\n      onSubmit: formData => {\n        delete this.state.class;\n        this.setState({ formData, class: null });\n        localforage.setItem('state', this.state);\n      }\n    })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, { form, archetype: this.state && this.state.quizData && this.state.quizData.archetype })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n    const reportFree = h.div('.reportFree', [h(cmp.reportFree, Object.assign({}, this.state))]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    if (!this.state.quizData) {\n      // console.log(`this.state.class:`, !!this.state.class);\n      return h.div('.app', [quiz, cmp.comments]);\n    } else {\n      if (!this.state.formData || !this.state.aweberSucccess) {\n        return h.div('.app', [reportIntro, cmp.comments]);\n      } else {\n        return h.div('.app', [reportFree]);\n      }\n    }\n  }\n}\n\nconst target = document.getElementById('whats-your-archetype_app') || document.body;\nlocalforage.config({ name: 'app-v2v1211' });\nlocalforage.getItem('state').then(data => {\n  // data = {}\n  console.log(`localforage data:`, data);\n  // render(h(App, data), target)\n  render(h(App, Object.assign({}, data)), target)\n  const footer = document.getElementById('whats-your-archetype_footer') || document.body;\n  render(cmp.footer, footer);\n});\n"
+      "source": "import { Component, render } from 'preact';\nimport quickHash from 'quick-hash';\nimport URL from 'url';\nimport localforage from 'localforage';\nimport hs from 'preact-hyperstyler';\nimport './handle-errors';\n// import 'ionicons/dist/css/ionicons.css'\n// import 'animate.css';\n// import 'reset-css/reset.css';\n// import '@font/nunito/light.css';\nimport * as cmp from './components';\nimport styles from './app.styl';\n\nconst h = hs(styles);\n\nwindow.url = URL.parse(location + '', true);\nwindow.cleanUrl = URL.format(Object.assign({}, url, { query: {}, search: null }));\n\nclass App extends Component {\n\n  componentWillMount() {\n    if ('new' in url.query) {\n      window.history.replaceState({}, 'page2', cleanUrl);\n      localforage.removeItem('state');\n    } else {\n      this.setState({\n        quizData: this.props.quizData,\n        formData: this.props.formData,\n      });\n    }\n\n    if ('dev' in url.query) {\n      window.history.replaceState({}, 'page2', cleanUrl);\n      // console.log({ url.query });\n      if ('report' in url.query) {\n        if (url.query.report === 'free') {\n          this.setState({\n            aweberSucccess: 'testoverride',\n            formData: {\n              name: url.query.name || 'Testname',\n              email: url.query.email || 'test@test.com',\n            },\n            quizData: {\n              archetype: url.query.archetype || 'magician',\n            }\n          });\n        }\n      }\n    }\n\n    if ('aweberSucccess' in url.query && this.state.formData) {\n      const hash = quickHash(this.state.formData.name + this.state.formData.email);\n      if (url.query.aweberSucccess === hash) {\n        console.log(`authenticated!`);\n        this.setState({\n          aweberSucccess: url.query.aweberSucccess\n        });\n      } else {\n        console.log(`Couldn't authenticate...`);\n        console.log({ formData: this.state.formData, hash });\n      }\n    }\n\n  }\n\n  componentWillUpdate() {\n    // console.log(`this.state.class:`, !!this.state.class);\n  }\n\n  render() {\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    const header = h.div('.header', [cmp.header]);\n\n    // console.log(`this.state.class:`, !!this.state.class);\n    const quiz = h.div('.quiz', [h(cmp.quiz, {\n      onFinish: quizData => {\n        delete this.state.class;\n        // console.log(`this.state.class:`, !!this.state.class);\n        // console.log(`this.state:`, this.state);\n        this.setState({ quizData, class: null });\n        // console.log(`this.state:`, this.state);\n        localforage.setItem('state', this.state);\n      }\n    })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    // console.log(`this.state.class:`, !!this.state.class);\n    const form = h.div('.form', [h(cmp.form, {\n      onSubmit: formData => {\n        delete this.state.class;\n        this.setState({ formData, class: null });\n        localforage.setItem('state', this.state);\n      }\n    })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, { form, archetype: this.state && this.state.quizData && this.state.quizData.archetype })]);\n    // console.log(`this.state.class:`, !!this.state.class);\n    const reportFree = h.div('.reportFree', [h(cmp.reportFree, Object.assign({}, this.state))]);\n    // console.log(`this.state.class:`, !!this.state.class);\n\n    if (!this.state.quizData) {\n      // console.log(`this.state.class:`, !!this.state.class);\n      return h.div('.app', [quiz, cmp.comments]);\n    } else {\n      if (!this.state.formData || !this.state.aweberSucccess) {\n        return h.div('.app', [reportIntro, cmp.comments]);\n      } else {\n        return h.div('.app', [reportFree]);\n      }\n    }\n  }\n}\n\nconst target = document.getElementById('whats-your-archetype_app') || document.body;\nlocalforage.config({ name: 'app-v2v1211' });\nlocalforage.getItem('state').then(data => {\n  // data = {}\n  console.log(`localforage data:`, data);\n  // render(h(App, data), target)\n  render(h(App, Object.assign({}, data)), target)\n  const footer = document.getElementById('whats-your-archetype_footer') || document.body;\n  render(cmp.footer, footer);\n});\n"
     },
     {
       "id": 135,
