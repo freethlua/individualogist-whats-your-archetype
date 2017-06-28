@@ -50,15 +50,14 @@ class App extends Component {
 
     if ('aweberSucccess' in url.query && this.state.formData) {
       window.history.replaceState({}, 'page2', cleanUrl);
-      const hash = quickHash(this.state.formData.name + this.state.formData.email);
-      if (url.query.aweberSucccess === hash) {
+      if (url.query.aweberSucccess === this.state.formData.aweberRedirectHash) {
         console.log(`authenticated!`);
         this.setState({
           aweberSucccess: url.query.aweberSucccess
         });
       } else {
         console.log(`Couldn't authenticate...`);
-        console.log({ formData: this.state.formData, hash, aweberSucccess: url.query.aweberSucccess });
+        console.log({ formData: this.state.formData, aweberSucccess: url.query.aweberSucccess });
       }
     }
 
@@ -90,7 +89,6 @@ class App extends Component {
     const form = h.div('.form', [h(cmp.form, {
       quizData: this.state.quizData,
       onSubmit: formData => {
-        delete this.state.class;
         this.setState({ formData, class: null });
         localforage.setItem('state', this.state);
       }

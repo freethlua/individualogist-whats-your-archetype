@@ -9,14 +9,17 @@ import styles from './style.styl';
 const h = hs(styles);
 
 export default class Form extends Component {
-  render() {
 
+  componentWillMount() {
     const currentUrl = URL.parse(String(location), true);
-    const hash = quickHash(this.state.name + this.state.email);
-    currentUrl.query.aweberSucccess = hash;
+    const aweberRedirectHash = quickHash(String(new Date()), +new Date());
+    this.setState({ aweberRedirectHash });
+    currentUrl.query.aweberSuccess = aweberRedirectHash;
     delete currentUrl.search;
-    const redirectUrl = URL.format(currentUrl);
+    this.redirectUrl = URL.format(currentUrl);
+  }
 
+  render() {
     return h.div('.container', [
       h.form({
         onSubmit: e => {
@@ -29,7 +32,7 @@ export default class Form extends Component {
         h.input({ type: 'hidden', name: 'meta_web_form_id', value: archetypes[this.props.quizData.archetype].aweber['meta_web_form_id'] }),
         h.input({ type: 'hidden', name: 'listname', value: archetypes[this.props.quizData.archetype].aweber['listname'] }),
         h.input({ type: 'hidden', name: 'meta_adtracking', value: archetypes[this.props.quizData.archetype].aweber['meta_adtracking'] }),
-        h.input({ type: 'hidden', name: 'redirect', value: redirectUrl }),
+        h.input({ type: 'hidden', name: 'redirect', value: this.redirectUrl }),
         h.input({
           type: 'name',
           name: 'name',
