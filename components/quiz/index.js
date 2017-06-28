@@ -144,3 +144,14 @@ export default class Quiz extends Component {
   }
 
 }
+
+
+// make "enter" check the checkbox
+document.addEventListener('keypress', e => {
+  if (e.target.nodeName.toLowerCase() === 'input' && e.target.getAttribute('type').toLowerCase() === 'checkbox') {
+    if (e.keyCode === 13) {
+      e.target.click();
+      // e.preventDefault();
+    }
+  }
+});
