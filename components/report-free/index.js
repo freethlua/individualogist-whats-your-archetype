@@ -40,9 +40,9 @@ export default class ReportFree extends Component {
 
     this.changeBackground();
 
-    this.onkeydown = throttle(this.onkeydown, 200);
+    this.onkeydown = throttle(this.onkeydown, 200).bind(this);
 
-    window.addEventListener('keydown', this.onkeydown);
+    window.addEventListener('keydown', this.onkeydown.bind(this));
   }
   componentWillUnmount() {
     window.removeEventListener('keydown', this.onkeydown);
@@ -66,10 +66,6 @@ export default class ReportFree extends Component {
     if (e.keyCode === 32) {
       // space
       this.playPause();
-      // if (window.pageYOffset < 10 && this.audioEl.paused && !this.spacePausedScrolledOnce) {
-      //   this.spacePausedScrolledOnce = true;
-      //   return;
-      // }
     } else if (e.keyCode === 38 && e.ctrlKey) {
       // ctrl + up
       const before = this.audioEl.playbackRate;
