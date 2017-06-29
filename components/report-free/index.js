@@ -55,7 +55,6 @@ export default class ReportFree extends Component {
       }
     }
     this.ontimeupdate({ target: this.audioEl });
-    // this.playPause(false);
     this.playPause();
     window.scrollTo(0, 0);
   }
@@ -72,7 +71,6 @@ export default class ReportFree extends Component {
       let after = before * 1.2;
       if (after > 4) after = 4;
       if (before < 1) after = 1;
-      // console.log({ before, after });
       this.audioEl.playbackRate = after;
     } else if (e.keyCode === 40 && e.ctrlKey) {
       // ctrl + down
@@ -80,7 +78,6 @@ export default class ReportFree extends Component {
       let after = before * .9;
       if (after < .5) after = .5;
       if (before > 1) after = 1;
-      // console.log({ before, after });
       this.audioEl.playbackRate = after;
     } else if (e.keyCode === 39) {
       // right
@@ -111,7 +108,6 @@ export default class ReportFree extends Component {
         if (opts.path.match('compatibility')) {
           opts.class = arrify(opts.class).concat(['compatibility']);
         }
-        // console.log(`opts.class:`, opts.class);
         this.setState({
           img: require(`../../assets/` + opts.path),
           imgClass: opts.class || this.state.imgClass,
@@ -231,8 +227,6 @@ export default class ReportFree extends Component {
 
     if (this.error) return h.pre(this.error);
 
-    // console.log(this.state.currentLine);
-
     const audioEl = h.audio({
       // controls: true,
       src: audioSrc,
@@ -257,7 +251,6 @@ export default class ReportFree extends Component {
     }, [
       h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
       h.div('.text', [this.state.currentLine
-        // ? this.state.currentLine
         ? h(Fade, { changed: this.state.currentLine }, [h(markup, { markup: this.state.currentLine })])
         : h.p('Loading...'),
       ]),
