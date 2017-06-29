@@ -10,6 +10,7 @@ import throttle from 'throttleit';
 import markup from 'preact-markup';
 import Youtube from 'react-youtube';
 import Fade from 'preact-fade';
+import archetypes from '../../data/archetypes';
 import styles from './style.styl';
 
 const h = hs(styles);
@@ -23,6 +24,7 @@ export default class ReportFree extends Component {
     if (!this.archetype) {
       return this.error = 'Need to have an archetype before this component could be rendered';
     }
+    this.archetypeDetails = archetypes[this.archetype];
 
     try {
       this.audioSrc = require(`../../assets/audios/${this.archetype}.mp3`);
@@ -294,7 +296,7 @@ export default class ReportFree extends Component {
         h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) }), ]),
         h.div([
           h.p(`Get Your Deluxe Archetype Report For Only $37.00 Now!`),
-          h.a({ href: `http://dar-${this.props.quizData.archetype.substr(0,3)}.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28795` }, [h.button(['Click Here To Order Now'])]),
+          h.a({ href: this.archetypeDetails.clickbank.link }, [h.button(['Click Here To Order Now'])]),
         ]),
       ]),
       h.div('.testimonial', [
@@ -318,7 +320,7 @@ export default class ReportFree extends Component {
               h.div(this.props.formData.name),
             ])
           ]),
-          h.a({ href: `http://dar-${this.props.quizData.archetype.substr(0,3)}.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28795` }, [h.button(['Order Now'])]),
+          h.a({ href: this.archetypeDetails.clickbank.link }, [h.button(['Order Now'])]),
           h.div('.shield', [
             h.img({ src: require('../../assets/images/pop-up/shield.png') }),
             h.p('All payments are secure'),
