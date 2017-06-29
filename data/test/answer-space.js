@@ -45,8 +45,6 @@ function rec(space, ...levels) {
 console.log('Generating answers');
 rec(questionSpace);
 
-// console.log(JSON.stringify(allLevels, null, 2));
-
 console.log('Calculating answers');
 const levelAnswers = {};
 for (const level of allLevels) {

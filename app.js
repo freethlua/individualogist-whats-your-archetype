@@ -30,7 +30,7 @@ class App extends Component {
     }
 
     if ('dev' in url.query) {
-      window.history.replaceState({}, 'page2', cleanUrl);
+      // window.history.replaceState({}, 'page2', cleanUrl);
       // console.log({ url.query });
       if ('report' in url.query) {
         if (url.query.report === 'free') {
