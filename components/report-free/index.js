@@ -190,6 +190,7 @@ export default class ReportFree extends Component {
 
             }
           }
+          currentLine = currentLine.replace(/\. /g, '.<br />');
           // this.changeBackground();
           this.setState({
             currentTime,
