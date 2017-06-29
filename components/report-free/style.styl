@@ -20,6 +20,10 @@
     max-width: 90%
     @media(max-width:400px)
       max-width: 50%
+  .compatibility &
+    top calc(100vh - 100px)
+    // position: relative
+
 
 .content
   padding-top 5em
@@ -81,11 +85,11 @@ for currentPercent in (1..100)
 
   text-align: center
 
-  // font-size: 1em
-  @media(min-width:400px)
-    font-size: 2em
-  @media(min-width:1200px)
-    font-size: 3em
+  // // font-size: 1em
+  // @media(min-width:400px)
+  //   font-size: 2em
+  // @media(min-width:1200px)
+  //   font-size: 3em
 
   color white
   text-shadow:
@@ -115,22 +119,22 @@ for currentPercent in (1..100)
     .markup
       justify-content: flex-end
 
-  // .compatibility &
-  .compatibility & .markup
-    @media(orientation:portrait)
-      // margin-top: 15vh
-      justify-content: flex-end
-      margin-top: -10vh
-    @media(orientation:landscape)
-      @media(max-height:500px)
-        font-size: .8em
-        justify-content: flex-end
-      @media(min-width:1100px)
-        // margin-top: 20vh
-        justify-content: flex-end
-        margin-top: -10vh
-      @media(max-width:1200px)
-        margin-top: 20vh
+  // // .compatibility &
+  // .compatibility & .markup
+  //   // @media(orientation:portrait)
+  //   //   // margin-top: 15vh
+  //   //   justify-content: flex-end
+  //   //   // margin-top: -10vh
+  //   @media(orientation:landscape)
+  //     @media(max-height:500px)
+  //       font-size: .8em
+  //       // justify-content: flex-end
+  //     @media(min-width:1100px)
+  //       // margin-top: 20vh
+  //       justify-content: flex-end
+  //       // margin-top: -10vh
+  //     // @media(max-width:1200px)
+  //     //   margin-top: 20vh
 
 
 .image
@@ -138,6 +142,7 @@ for currentPercent in (1..100)
   .foreground
     position: relative
     top: -80px
+    opacity: .7
     // text-align: center
     width: 100%
     height: 100%
@@ -169,9 +174,11 @@ for currentPercent in (1..100)
           background-size: 100% auto
         .compatibility &
           background-size: contain
-          background-position: 80px
+          // background-position: 80px
+          background-position: top
           // background-position: top 3%
-          background-position: 50% 80px
+          // background-position: 50%
+          // background-position: 50% 80px
           // background-size: cover
           @media(max-width:800px)
             background-size: auto 300px
@@ -179,9 +186,9 @@ for currentPercent in (1..100)
             background-size: 150% auto
           // background-size: 80%
           // &:not(.top)
-          @media(orientation:portrait)
-            @media(min-height:1000px)
-              margin-top: 15vh
+          // @media(orientation:portrait)
+          //   @media(min-height:1000px)
+          //     margin-top: 15vh
 
 
 

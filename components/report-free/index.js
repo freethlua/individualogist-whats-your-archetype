@@ -247,10 +247,10 @@ export default class ReportFree extends Component {
 
     const mainContentEl = h.div({
       onclick: e => this.playPause(),
-      class: arrify(this.state.currentLineOpts && this.state.currentLineOpts.class).concat([
+      class: [
         'content',
         'current-percent-' + this.state.currentPercent,
-      ]),
+      ],
       style: { backgroundImage: `url(${this.state.background})` },
       ref: ref => this.mainContentEl = ref,
     }, [
@@ -342,13 +342,16 @@ export default class ReportFree extends Component {
       ]),
     ]);
 
-    return h.div('.wrapper', [h.div('.container', [
-      headerEl,
-      mainContentEl,
-      restEl,
-      // h.pre([JSON.stringify(this.state, null, 1)]),
-      // h.pre([JSON.stringify(this.state.currentLine, null, 1)]),
-    ])]);
-  }
+    return h.div('.wrapper', [h.div({
+        class: ['container'].concat(arrify(this.state.currentLineOpts && this.state.currentLineOpts.class)),
+        },
+        [
+          headerEl,
+          mainContentEl,
+          restEl,
+          // h.pre([JSON.stringify(this.state, null, 1)]),
+          // h.pre([JSON.stringify(this.state.currentLine, null, 1)]),
+        ])]);
+    }
 
-}
+  }

@@ -64,4 +64,8 @@ module.exports = {
       'create-react-class': 'preact-compat/lib/create-react-class'
     }
   },
+  devServer: {
+    host: '0.0.0.0',
+    disableHostCheck: true,
+  }
 };
