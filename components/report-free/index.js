@@ -19,50 +19,26 @@ export default class ReportFree extends Component {
 
     // window.title = this.props.quizData.archetype
 
+    this.archetype = this.props.quizData.archetype;
+    if (!this.archetype) {
+      return this.error = 'Need to have an archetype before this component could be rendered';
+    }
+
+    try {
+      this.audioSrc = require(`../../assets/audios/${this.archetype}.mp3`);
+    } catch (error) {
+      return this.error = `Cannot load the audio file: '${this.archetype}.mp3'`;
+    }
+
+    try {
+      this.transcript = require(`../../assets/audios/${this.archetype}`);
+    } catch (error) {
+      return this.error = `Cannot load the transcript file: '${this.archetype}'`;
+    }
+
     this.changeBackground();
 
-    this.onkeydown = throttle(e => {
-      if (!this.mainContentEl) return
-      if (window.pageYOffset > 500) return;
-      if (e.keyCode === 32) {
-        // space
-        this.playPause();
-        // if (window.pageYOffset < 10 && this.audioEl.paused && !this.spacePausedScrolledOnce) {
-        //   this.spacePausedScrolledOnce = true;
-        //   return;
-        // }
-      } else if (e.keyCode === 38 && e.ctrlKey) {
-        // ctrl + up
-        const before = this.audioEl.playbackRate;
-        let after = before * 1.2;
-        if (after > 4) after = 4;
-        if (before < 1) after = 1;
-        // console.log({ before, after });
-        this.audioEl.playbackRate = after;
-      } else if (e.keyCode === 40 && e.ctrlKey) {
-        // ctrl + down
-        const before = this.audioEl.playbackRate;
-        let after = before * .9;
-        if (after < .5) after = .5;
-        if (before > 1) after = 1;
-        // console.log({ before, after });
-        this.audioEl.playbackRate = after;
-      } else if (e.keyCode === 39) {
-        // right
-        this.audioEl.currentTime += e.shiftKey ? 20 : 5;
-      } else if (e.keyCode === 37) {
-        // left
-        this.audioEl.currentTime -= e.shiftKey ? 20 : 5;
-      } else if (e.keyCode === 190) {
-        // period
-        this.audioEl.currentTime = 0;
-        this.audioEl.pause()
-      } else {
-        return
-      }
-      e.preventDefault();
-      return false;
-    }, 200);
+    this.onkeydown = throttle(this.onkeydown, 200);
 
     window.addEventListener('keydown', this.onkeydown);
   }
@@ -76,8 +52,53 @@ export default class ReportFree extends Component {
         this.audioEl.currentTime = parseInt(url.query.seekTo, 10);
       }
     }
+    this.ontimeupdate({ target: this.audioEl });
+    // this.playPause(false);
     this.playPause();
     window.scrollTo(0, 0);
+  }
+
+  onkeydown(e) {
+    if (!this.mainContentEl) return
+    if (window.pageYOffset > 500) return;
+    if (e.keyCode === 32) {
+      // space
+      this.playPause();
+      // if (window.pageYOffset < 10 && this.audioEl.paused && !this.spacePausedScrolledOnce) {
+      //   this.spacePausedScrolledOnce = true;
+      //   return;
+      // }
+    } else if (e.keyCode === 38 && e.ctrlKey) {
+      // ctrl + up
+      const before = this.audioEl.playbackRate;
+      let after = before * 1.2;
+      if (after > 4) after = 4;
+      if (before < 1) after = 1;
+      // console.log({ before, after });
+      this.audioEl.playbackRate = after;
+    } else if (e.keyCode === 40 && e.ctrlKey) {
+      // ctrl + down
+      const before = this.audioEl.playbackRate;
+      let after = before * .9;
+      if (after < .5) after = .5;
+      if (before > 1) after = 1;
+      // console.log({ before, after });
+      this.audioEl.playbackRate = after;
+    } else if (e.keyCode === 39) {
+      // right
+      this.audioEl.currentTime += e.shiftKey ? 20 : 5;
+    } else if (e.keyCode === 37) {
+      // left
+      this.audioEl.currentTime -= e.shiftKey ? 20 : 5;
+    } else if (e.keyCode === 190) {
+      // period
+      this.audioEl.currentTime = 0;
+      this.audioEl.pause()
+    } else {
+      return
+    }
+    e.preventDefault();
+    return false;
   }
 
   cueAction(action, opts, transcriptLine) {
@@ -111,19 +132,86 @@ export default class ReportFree extends Component {
   }
 
 
-  playPause() {
-    if (this.audioEl.paused) {
-      this.audioEl.play();
-      this.setState({
-        audioPaused: false,
-        lastBackgroundChangeTime: +new Date(),
-      });
-    } else {
-      this.audioEl.pause();
-      this.setState({
-        audioPaused: true,
-        lastBackgroundChangeTime: +new Date(),
-      });
+  playPause(playPause = true) {
+    const oldState = this.audioEl.paused;
+    if (playPause) {
+      if (oldState) {
+        this.audioEl.play();
+      } else {
+        this.audioEl.pause();
+      }
+    }
+    const newState = this.audioEl.paused;
+    this.setState({ audioPaused: newState });
+    this.setState({ lastBackgroundChangeTime: +new Date() });
+  }
+
+  ontimeupdate(e = { target: {} }) {
+    const currentTime = e.target.currentTime || 0;
+    const percent = Math.round(100 * currentTime / e.target.duration || Infinity);
+    // console.log(`duration   :`, e.target.duration);
+    // console.log(`currentTime:`, currentTime);
+    // console.log(`percent    :`, percent);
+    // for (const line of this.transcript) {
+    for (let i = 0; i < this.transcript.length; i++) {
+      const line = this.transcript[i];
+      if (currentTime < ((line.end || Infinity) - 1)) {
+
+        const prevLine = this.transcript[i - 1];
+        const nextLine = this.transcript[i + 1];
+
+        if (!line.class && prevLine && prevLine.class) {
+          line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
+        }
+
+        if (!prevLine) {
+          this.hideImage();
+        }
+
+        let currentLine = line.text;
+        if (this.state.currentLine === currentLine) {
+
+        } else {
+          let lastReplacement;
+          for (const key of line.keys) {
+            if (key.key) {
+              const replacement = this.props.formData[key.key];
+              if (replacement) {
+                const index = key.index + (lastReplacement ? lastReplacement.length : 0);
+                currentLine = currentLine.substring(0, index)
+                  + replacement
+                  + currentLine.substring(index);
+              }
+              lastReplacement = replacement;
+            } else if (key.js) {
+              if (key.js.path.match('compatibility')) {
+                line.class = arrify(line.class).concat(['compatibility']);
+              }
+              this.cueAction(key.js.fn, key.js, line);
+            } else {
+
+            }
+          }
+          // this.changeBackground();
+          this.setState({
+            currentTime,
+            currentPercent: percent,
+            currentLine,
+            currentLineOpts: line,
+          })
+
+          // preload next image(s)
+          if (nextLine && nextLine.keys) {
+            nextLine.keys.forEach(key => {
+              if (key.js && key.fn === 'displayImage' && key.js.path) {
+                const image = new Image();
+                image.src = key.js.path;
+              }
+            })
+          }
+        }
+        break;
+      }
     }
   }
 
@@ -144,24 +232,9 @@ export default class ReportFree extends Component {
   }
 
   render() {
-    const archetype = this.props.quizData.archetype;
-    if (!archetype) {
-      return 'Need to have an archetype before this component could be rendered';
-    }
+    const { archetype, audioSrc, transcript } = this;
 
-    let audioSrc;
-    try {
-      audioSrc = require(`../../assets/audios/${archetype}.mp3`);
-    } catch (error) {
-      return `Cannot load the audio file: '${archetype}.mp3'`;
-    }
-
-    let transcript;
-    try {
-      transcript = require(`../../assets/audios/${archetype}`);
-    } catch (error) {
-      return `Cannot load the transcript file: '${archetype}'`;
-    }
+    if (this.error) return h.pre(this.error);
 
     // console.log(this.state.currentLine);
 
@@ -169,74 +242,7 @@ export default class ReportFree extends Component {
       // controls: true,
       src: audioSrc,
       ref: ref => this.audioEl = ref,
-      ontimeupdate: e => {
-        const currentTime = e.target.currentTime;
-        const percent = Math.round(100 * currentTime / e.target.duration);
-        // console.log(`duration   :`, e.target.duration);
-        // console.log(`currentTime:`, currentTime);
-        // console.log(`percent    :`, percent);
-        // for (const line of transcript) {
-        for (let i = 0; i < transcript.length; i++) {
-          const line = transcript[i];
-          if (currentTime < ((line.end || Infinity) - 1)) {
-
-            const prevLine = transcript[i - 1];
-            const nextLine = transcript[i + 1];
-
-            if (!line.class && prevLine && prevLine.class) {
-              line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
-            }
-
-            if (!prevLine) {
-              this.hideImage();
-            }
-
-            let currentLine = line.text;
-            if (this.state.currentLine === currentLine) {
-
-            } else {
-              let lastReplacement;
-              for (const key of line.keys) {
-                if (key.key) {
-                  const replacement = this.props.formData[key.key];
-                  if (replacement) {
-                    const index = key.index + (lastReplacement ? lastReplacement.length : 0);
-                    currentLine = currentLine.substring(0, index)
-                      + replacement
-                      + currentLine.substring(index);
-                  }
-                  lastReplacement = replacement;
-                } else if (key.js) {
-                  if (key.js.path.match('compatibility')) {
-                    line.class = arrify(line.class).concat(['compatibility']);
-                  }
-                  this.cueAction(key.js.fn, key.js, line);
-                } else {
-
-                }
-              }
-              // this.changeBackground();
-              this.setState({
-                currentTime,
-                currentPercent: percent,
-                currentLine,
-                currentLineOpts: line,
-              })
-
-              // preload next image(s)
-              if (nextLine && nextLine.keys) {
-                nextLine.keys.forEach(key => {
-                  if (key.js && key.fn === 'displayImage' && key.js.path) {
-                    const image = new Image();
-                    image.src = key.js.path;
-                  }
-                })
-              }
-            }
-            break;
-          }
-        }
-      },
+      ontimeupdate: e => this.ontimeupdate(e),
     });
 
 
@@ -256,13 +262,8 @@ export default class ReportFree extends Component {
     }, [
       h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
       h.div('.text', [this.state.currentLine
-        ? h(Fade, {
-          changed: this.state.currentLine,
-          // fadeInDuration: '2000ms',
-          // fadeOutDuration: '1000ms',
-        }, [
-          h(markup, { markup: this.state.currentLine })
-        ])
+        // ? this.state.currentLine
+        ? h(Fade, { changed: this.state.currentLine }, [h(markup, { markup: this.state.currentLine })])
         : h.p('Loading...'),
       ]),
       audioEl,
@@ -288,17 +289,7 @@ export default class ReportFree extends Component {
     // const redirectUrl = URL.format(currentUrl);
 
 
-    const restEl = h.div('.rest', {
-      // action: 'https://www.aweber.com/scripts/addlead.pl',
-      // method: 'POST',
-    }, [
-      // h.input({ type: 'hidden', name: 'meta_web_form_id', value: '293430144' }),
-      // h.input({ type: 'hidden', name: 'listname', value: 'awlist4378395' }),
-      // h.input({ type: 'hidden', name: 'meta_adtracking', value: 'Ruler_Quiz_Opt_In' }),
-      // h.input({ type: 'hidden', name: 'name', value: this.props.formData.name }),
-      // h.input({ type: 'hidden', name: 'email', value: this.props.formData.email }),
-      // h.input({ type: 'hidden', name: 'redirect', value: redirectUrl }),
-
+    const restEl = h.div('.rest', [
       h.div('.action-1', [
         h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) }), ]),
         h.div([
@@ -343,15 +334,14 @@ export default class ReportFree extends Component {
     ]);
 
     return h.div('.wrapper', [h.div({
-        class: ['container'].concat(arrify(this.state.currentLineOpts && this.state.currentLineOpts.class)),
-        },
-        [
-          headerEl,
-          mainContentEl,
-          restEl,
-          // h.pre([JSON.stringify(this.state, null, 1)]),
-          // h.pre([JSON.stringify(this.state.currentLine, null, 1)]),
-        ])]);
-    }
-
+      class: ['container'].concat(arrify(this.state.currentLineOpts && this.state.currentLineOpts.class)),
+    }, [
+      headerEl,
+      mainContentEl,
+      restEl,
+      // h.pre([JSON.stringify(this.state, null, 1)]),
+      // h.pre([JSON.stringify(this.state.currentLine, null, 1)]),
+    ])]);
   }
+
+}
