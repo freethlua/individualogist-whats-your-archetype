@@ -147,10 +147,6 @@ export default class ReportFree extends Component {
   ontimeupdate(e = { target: {} }) {
     const currentTime = e.target.currentTime || 0;
     const percent = Math.round(100 * currentTime / e.target.duration || Infinity);
-    // console.log(`duration   :`, e.target.duration);
-    // console.log(`currentTime:`, currentTime);
-    // console.log(`percent    :`, percent);
-    // for (const line of this.transcript) {
     for (let i = 0; i < this.transcript.length; i++) {
       const line = this.transcript[i];
       if (currentTime < ((line.end || Infinity) - 1)) {
@@ -282,12 +278,6 @@ export default class ReportFree extends Component {
       ]),
     ]);
 
-    // const currentUrl = URL.parse(String(location), true);
-    // currentUrl.query.aweberSucccess = quickHash(this.props.formData.name + this.props.formData.email);
-    // delete currentUrl.search;
-    // const redirectUrl = URL.format(currentUrl);
-
-
     const restEl = h.div('.rest', [
       h.div('.action-1', [
         h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) }), ]),
@@ -339,7 +329,6 @@ export default class ReportFree extends Component {
       mainContentEl,
       restEl,
       // h.pre([JSON.stringify(this.state, null, 1)]),
-      // h.pre([JSON.stringify(this.state.currentLine, null, 1)]),
     ])]);
   }
 
