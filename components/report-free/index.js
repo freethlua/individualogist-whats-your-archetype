@@ -195,13 +195,17 @@ export default class ReportFree extends Component {
             if (this.state.currentLine === currentLine) {
 
             } else {
+              let lastReplacement;
               for (const key of line.keys) {
                 if (key.key) {
-                  if (this.props.formData[key.key]) {
-                    currentLine = currentLine.substring(0, key.index)
-                      + this.props.formData[key.key]
-                      + currentLine.substring(key.index);
+                  const replacement = this.props.formData[key.key];
+                  if (replacement) {
+                    const index = key.index + (lastReplacement ? lastReplacement.length : 0);
+                    currentLine = currentLine.substring(0, index)
+                      + replacement
+                      + currentLine.substring(index);
                   }
+                  lastReplacement = replacement;
                 } else if (key.js) {
                   if (key.js.path.match('compatibility')) {
                     line.class = arrify(line.class).concat(['compatibility']);
