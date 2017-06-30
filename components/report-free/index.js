@@ -246,6 +246,7 @@ export default class ReportFree extends Component {
     const mainContentEl = h.div({
       onclick: e => this.playPause(),
       class: [
+        'slider',
         'content',
         'current-percent-' + this.state.currentPercent,
       ],
@@ -259,17 +260,20 @@ export default class ReportFree extends Component {
       ]),
       audioEl,
       h.div('.image', [
-        h.div('.foreground', [h.div('.foreground-container', [
-          h(Fade, {
-            changed: this.state.img,
-            fadeInDuration: '2000ms',
-            fadeOutDuration: '1000ms',
-          }, [h.div({
-            class: ['img'].concat(this.state.imgClass || []),
-            style: {
-              backgroundImage: `url(${this.state.img})`
-            },
-          })])
+        h.div('.foreground', [h(Fade, {
+          changed: this.state.img,
+          fadeInDuration: '2000ms',
+          fadeOutDuration: '1000ms',
+        }, [
+          h.div('.foreground-container', [
+            // h.div({
+            //   class: ['img'].concat(this.state.imgClass || []),
+            //   style: {
+            //     backgroundImage: `url(${this.state.img})`
+            //   },
+            // })
+            h.img({ src: this.state.img })
+          ])
         ])]),
       ]),
     ]);
