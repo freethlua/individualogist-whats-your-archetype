@@ -12,6 +12,10 @@ for (let file of fs.readdirSync(dir).filter(f => f.match(/\.txt$/))) {
   const ojson = otranscribeTxtToJson(str);
   // console.log({ ojson, str });
   ojson.forEach(t => {
+    if (!t.text) {
+      console.error({t, file});
+      throw new Error(`t.text doesn't exist`);
+    }
     const parsedTranscript = parseTranscript(t.text);
     Object.assign(t, parsedTranscript);
   });

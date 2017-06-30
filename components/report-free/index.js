@@ -145,7 +145,9 @@ export default class ReportFree extends Component {
     const percent = Math.round(100 * currentTime / e.target.duration || Infinity);
     for (let i = 0; i < this.transcript.length; i++) {
       const line = this.transcript[i];
-      if (currentTime < ((line.end || Infinity) - 1)) {
+      const nextLine = this.transcript[i + 1];
+      const currentTimeEnd = line.end || nextLine && nextLine.start || Infinity;
+      if (currentTime < (currentTimeEnd - 1)) {
 
         const prevLine = this.transcript[i - 1];
         const nextLine = this.transcript[i + 1];
@@ -186,6 +188,7 @@ export default class ReportFree extends Component {
           // this.changeBackground();
           this.setState({
             currentTime,
+            currentTimeEnd,
             currentPercent: percent,
             currentLine,
             currentLineOpts: line,
@@ -321,7 +324,7 @@ export default class ReportFree extends Component {
       headerEl,
       mainContentEl,
       restEl,
-      // h.pre([JSON.stringify(this.state, null, 1)]),
+      h.pre([JSON.stringify(this.state, null, 1)]),
     ])]);
   }
 

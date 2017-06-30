@@ -1,14 +1,44 @@
 module.exports = parseStr;
 
-function parseStr(str) {
-  if (str.match(/[0-9]+[\n\r  ]+[0-9]+:[0-9]+:/)) {
-    return parseNumTimeType(str);
-  } else {
-    return parseNumTimeType(str, true);
-  }
-}
+// function parseStr(str) {
+//   if (str.match(/[0-9]+[\n\r  ]+[0-9]+:[0-9]+:/)) {
+//     return parseNumTimeType(str);
+//   } else {
+//     return parseNumTimeType(str, true);
+//   }
+// }
 
-function parseNumTimeType(str, handleVariation) {
+function parseStr(str) {
+  const array = str.split(/(?:^|\n)[  ]*[0-9]+[\n\r  ]+/g)
+    .map(s => s.trim())
+    .map(s => s.replace(/[\n\r]+/g, '\n'))
+    .map(s => s.split(/[\n\r]+/g))
+    .map(s => s.map(s => s.trim()))
+    .map(s => s.filter(filterEmpty))
+    .filter(filterEmpty)
+
+  const newArr = []
+
+  for (let il = 0; il < array.length; il++) {
+    const line = array[il];
+    const obj = { index: newArr.length };
+    for (let ii = 0; ii < line.length; ii++) {
+      const item = line[ii];
+      if (item.match(/[0-9]+\:[0-9]+/) && (ii === 0 || ii === line.length - 1)) {
+        if (obj.text) {
+          obj.end = parseTime(item);
+        } else {
+          obj.start = parseTime(item);
+        }
+      } else {
+        obj.text = (obj.text || '') + item;
+      }
+    }
+    newArr.push(obj);
+  }
+
+  return newArr
+
   return str
     .split(/(?:^|\n)[  ]*[0-9]+[\n\r  ]+/g)
     .map(s => s.trim())
@@ -25,10 +55,18 @@ function parseNumTimeType(str, handleVariation) {
     })
     .map((s, i, arr) => {
       const [time, ...text] = s;
-      return {
-        start: parseTime(time),
-        end: arr[i + 1] && parseTime(arr[i + 1][0]) || Infinity,
-        text: text.join('\n')
+      if (handleVariation) {
+        return {
+          start: arr[i - 1] && parseTime(arr[i - 1][0]) || 0,
+          end: parseTime(time),
+          text: text.join('\n')
+        }
+      } else {
+        return {
+          start: parseTime(time),
+          end: arr[i + 1] && parseTime(arr[i + 1][0]) || Infinity,
+          text: text.join('\n')
+        }
       }
     })
   // .map(shiftOneForward)

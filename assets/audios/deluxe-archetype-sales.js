@@ -1,394 +1,394 @@
-/* auto-generated */  module.exports = [{
-  start: 5,
-  end: 15,
+/* auto-generated */ module.exports = [{
+  index: 0,
   text: 'Okay, … That’s all I can share with you for now…',
+  end: 5,
   keys: [{
     key: 'name',
     index: 6
   }]
 }, {
-  start: 15,
-  end: 25,
+  index: 1,
   text: 'But , if you’ve gained something valuable from this free archetype reading, I want you to know that there is so much more that I can tell you about your archetype.',
+  end: 15,
   keys: [{
     key: 'name',
     index: 4
   }]
 }, {
-  start: 25,
-  end: 31,
+  index: 2,
   text: 'This free reading is merely scraping the surface. I haven’t told you about your Shadow, your Anima or Animus, your Ego, and your life path.',
+  end: 25,
   keys: []
 }, {
-  start: 31,
-  end: 39,
+  index: 3,
   text: 'Your Shadow is the dark side of your personality where all of your suppressed thoughts and desires are stored.',
+  end: 31,
   keys: []
 }, {
-  start: 39,
-  end: 45,
+  index: 4,
   text: 'Your Anima and Animus represents the imbalance between masculinity and femininity in your character.',
+  end: 39,
   keys: []
 }, {
-  start: 45,
-  end: 54,
+  index: 5,
   text: 'Your Ego is the centre of your consciousness that needs to be controlled in order to find true joy.',
+  end: 45,
   keys: []
 }, {
-  start: 54,
-  end: 71,
+  index: 6,
   text: 'The Deluxe Archetype Report tells you everything that you need to know about all of that, and more. It tells you about…',
+  end: 54,
   keys: []
 }, {
-  start: 71,
-  end: 83,
-  text: 'The choices that you’ve made and why you made them\nYour ideal life partner or companion\nYour path towards unlocking enormous amounts of success\nThe challenges that lie ahead of you\nYour path towards finding fulfilment in this lifetime',
+  index: 7,
+  text: 'The choices that you’ve made and why you made themYour ideal life partner or companionYour path towards unlocking enormous amounts of successThe challenges that lie ahead of youYour path towards finding fulfilment in this lifetime',
+  end: 71,
   keys: []
 }, {
-  start: 83,
-  end: 89,
+  index: 8,
   text: 'The Deluxe Archetype Report is a reading that’s far more detailed, and far more intimate. If you thought that this free archetype report was accurate, you’re about to have your mind blown.',
+  end: 83,
   keys: []
 }, {
-  start: 89,
-  end: 99,
+  index: 9,
   text: 'In this reading, you will discover who you are. Yes, who you REALLY are.',
+  end: 89,
   keys: []
 }, {
-  start: 99,
-  end: 104,
+  index: 10,
   text: 'It’s going to be a completely raw and uncensored look into your personality. All of this information will be presented to you in excruciating detail.',
+  end: 99,
   keys: []
 }, {
-  start: 104,
-  end: 111,
+  index: 11,
   text: 'If you’re like most people, you’ll find that it’s an extremely emotional read.',
+  end: 104,
   keys: []
 }, {
-  start: 111,
-  end: 121,
+  index: 12,
   text: 'Imagine the most emotional film you’ve ever seen, and multiply that emotion by ten times.',
+  end: 111,
   keys: []
 }, {
-  start: 121,
-  end: 125,
+  index: 13,
   text: 'You’ll find yourself identifying with every single characteristic of your personality. These are things that not even your closest friends or family know about you.',
+  end: 121,
   keys: []
 }, {
-  start: 125,
-  end: 131,
+  index: 14,
   text: 'You might not even have realized some of these things yourself.',
+  end: 125,
   keys: []
 }, {
-  start: 131,
-  end: 136,
+  index: 15,
   text: 'You will get emotional when you discover the reason for the trials and misfortunes that you’ve been through.',
+  end: 131,
   keys: []
 }, {
-  start: 136,
-  end: 142,
+  index: 16,
   text: 'You will confront the struggles that you’ve been in constant battle with.',
+  end: 136,
   keys: []
 }, {
-  start: 142,
-  end: 150,
+  index: 17,
   text: 'You will get emotional when you learn about the amazing, wonderful gifts that life has in store for you.',
+  end: 142,
   keys: []
 }, {
-  start: 150,
-  end: 160,
+  index: 18,
   text: 'You will pick up, examine, and embrace every single piece of your character, personality, and entire being.',
+  end: 150,
   keys: []
 }, {
-  start: 160,
-  end: 165,
-  text: 'You will place everything back together and witness the beauty that it all forms.\nYou will master your weaknesses and learn how to improve them.',
+  index: 19,
+  text: 'You will place everything back together and witness the beauty that it all forms.You will master your weaknesses and learn how to improve them.',
+  end: 160,
   keys: []
 }, {
-  start: 165,
-  end: 171,
+  index: 20,
   text: 'You will learn about your strengths and discover how to leverage on them.',
+  end: 165,
   keys: []
 }, {
-  start: 171,
-  end: 184,
-  text: 'At the end of this detailed report, you’ll take everything that you’ve experienced\nand take advantage of them.',
+  index: 21,
+  text: 'At the end of this detailed report, you’ll take everything that you’ve experiencedand take advantage of them.',
+  end: 171,
   keys: []
 }, {
-  start: 184,
-  end: 192,
+  index: 22,
   text: 'The answers to all of your life’s questions, to all of your life’s complications, to all of your life’s encounters, failures, and successes, are waiting for you in your Deluxe Archetype Report.',
+  end: 184,
   keys: []
 }, {
-  start: 192,
-  end: 199,
+  index: 23,
   text: 'If you’re unsure of the path that you’re currently on, this report will tell you everything you need to know about where to go NEXT.',
+  end: 192,
   keys: []
 }, {
-  start: 199,
-  end: 205,
+  index: 24,
   text: 'If you’re wondering whether your actions are right or wrong, this report will grant you unquestionable direction.',
+  end: 199,
   keys: []
 }, {
-  start: 205,
-  end: 214,
+  index: 25,
   text: 'If the people around you are holding you back, this report will give you all the clarity you need.',
+  end: 205,
   keys: []
 }, {
-  start: 214,
-  end: 220,
+  index: 26,
   text: 'Everything I’ve just talked about is just waiting for you. And the only thing standing between you and the life you’ve always dreamed of is YOURSELF.',
+  end: 214,
   keys: []
 }, {
-  start: 220,
-  end: 223,
+  index: 27,
   text: 'Tell me, do you want to be so successful that you won’t have to worry about money any more?',
+  end: 220,
   keys: []
 }, {
-  start: 223,
-  end: 227,
+  index: 28,
   text: 'Do you want to make the most meaningful relationships?',
+  end: 223,
   keys: []
 }, {
-  start: 227,
-  end: 232,
+  index: 29,
   text: 'Do you want to have good fortune in everything that you do?',
+  end: 227,
   keys: []
 }, {
-  start: 232,
-  end: 237,
+  index: 30,
   text: 'Most importantly, do you want to live the life that you’ve always dreamed of?',
+  end: 232,
   keys: []
 }, {
-  start: 237,
-  end: 243,
+  index: 31,
   text: 'The Deluxe Archetype Report WILL give you all of that on a silver platter.',
+  end: 237,
   keys: []
 }, {
-  start: 243,
-  end: 247,
+  index: 32,
   text: 'Unfortunately, I can’t lead you through this journey if you don’t let me. You need to take that first step.',
+  end: 243,
   keys: []
 }, {
-  start: 247,
-  end: 253,
+  index: 33,
   text: 'You need to trust your instincts and take that leap of faith…',
+  end: 247,
   keys: []
 }, {
-  start: 253,
-  end: 260,
+  index: 34,
   text: 'If you’re worrying about your career, your relationships, your health, your finances…',
+  end: 253,
   keys: []
 }, {
-  start: 260,
-  end: 263,
+  index: 35,
   text: 'If you haven’t the slightest clue of where you’re going to be 10, 5, 3 or even 1 year from now…',
+  end: 260,
   keys: []
 }, {
-  start: 263,
-  end: 272,
+  index: 36,
   text: 'If you want to become a better version of yourself…',
+  end: 263,
   keys: []
 }, {
-  start: 272,
-  end: 283,
-  text: 'If you want to take back the reigns and choose the direction of your life…\n…All of the answers are waiting for you in your Deluxe Archetype Report.',
+  index: 37,
+  text: 'If you want to take back the reigns and choose the direction of your life……All of the answers are waiting for you in your Deluxe Archetype Report.',
+  end: 272,
   keys: []
 }, {
-  start: 283,
-  end: 293,
+  index: 38,
   text: 'To make things a little easier for you, I’ve simplified everything for you to make the right choice. Here’s what the Deluxe Archetype Report will almost instantly accomplish for you:',
+  end: 283,
   keys: []
 }, {
-  start: 293,
-  end: 297,
+  index: 39,
   text: 'You’ll unlock the deepest desires of your heart and soul; desires that you would never expect, and exactly how you can go about achieving them.',
+  end: 293,
   keys: []
 }, {
-  start: 297,
-  end: 305,
+  index: 40,
   text: 'You’ll realize opportunities before they’ve even presented themselves.',
+  end: 297,
   keys: []
 }, {
-  start: 305,
-  end: 311,
+  index: 41,
   text: 'You’ll recognize potential pitfalls from miles away and learn how you can protect yourself or even avoid them completely.',
+  end: 305,
   keys: []
 }, {
-  start: 311,
-  end: 321,
+  index: 42,
   text: 'You’ll be spoon-fed the necessary knowledge and tools to achieve what you truly want.',
+  end: 311,
   keys: []
 }, {
-  start: 321,
-  end: 324,
+  index: 43,
   text: 'You’ll achieve the life that you’ve always wanted; the life that you’ve wanted for the longest time. And finally, you’ll learn how you can make the absolute best of it!',
+  end: 321,
   keys: []
 }, {
-  start: 324,
-  end: 332,
+  index: 44,
   text: 'But that’s not even the half of it.',
+  end: 324,
   keys: []
 }, {
-  start: 332,
-  end: 339,
+  index: 45,
   text: 'In just a minute, I’m going to share with you even more amazing ways that will help you achieve the life that you truly want.',
+  end: 332,
   keys: []
 }, {
-  start: 339,
-  end: 345,
+  index: 46,
   text: 'Before we get into that, allow me to share this important secret with you. Now, pay close attention.',
+  end: 339,
   keys: []
 }, {
-  start: 345,
-  end: 352,
+  index: 47,
   text: 'Individuation is based on thousands of years of in-depth analysis and research.',
+  end: 345,
   keys: []
 }, {
-  start: 352,
-  end: 362,
+  index: 48,
   text: 'Famous philosophers and psychologists have improved and enhanced the principles of individuation for that long.',
+  end: 352,
   keys: []
 }, {
-  start: 362,
-  end: 373,
+  index: 49,
   text: 'You need specifics? Individuation has been present during the Renaissance, during the Medieval era, and dates all the way back to 350BC (Aristotle).',
+  end: 362,
   keys: []
 }, {
-  start: 373,
-  end: 379,
+  index: 50,
   text: 'And because of the technology that we have access to today, we can achieve the same success that TENS OF THOUSANDS of ordinary people have experienced with individuation.',
+  end: 373,
   keys: []
 }, {
-  start: 379,
-  end: 385,
+  index: 51,
   text: 'The best part? You can uncover these hidden secrets with a simple click of a button.',
+  end: 379,
   keys: []
 }, {
-  start: 385,
-  end: 396,
+  index: 52,
   text: 'I’ve dedicated more than 10 years of my life towards researching and studying individuation.',
+  end: 385,
   keys: []
 }, {
-  start: 396,
-  end: 406,
+  index: 53,
   text: 'And I can guarantee that’s what I’ll be doing for the rest of my life. That’s a fact. And here’s something else that’s going to blow your mind… Are you ready for this?',
+  end: 396,
   keys: []
 }, {
-  start: 406,
-  end: 416,
+  index: 54,
   text: 'The Deluxe Archetype Report is EASILY the most DETAILED, ACCURATE, and REVEALING individuation report in the ENTIRE WORLD.',
+  end: 406,
   keys: []
 }, {
-  start: 416,
-  end: 428,
+  index: 55,
   text: 'We have dedicated decades, including 10 years from myself, to creating a report that’s as detailed and accurate as the Deluxe Archetype Report.',
+  end: 416,
   keys: []
 }, {
-  start: 428,
-  end: 443,
+  index: 56,
   text: 'Every single word has been handwritten, edited, and re-edited, to ensure that this report contains ZERO FLUFF and only the MOST BENEFICIAL information about you.',
+  end: 428,
   keys: []
 }, {
-  start: 443,
-  end: 448,
+  index: 57,
   text: 'Years of thought have gone into every single sentence. Years of constant editing and corrections have gone into perfecting each paragraph. Years of research have gone into the contents of this report.',
+  end: 443,
   keys: []
 }, {
-  start: 448,
-  end: 453,
+  index: 58,
   text: 'It’s been completely personalized for you, and only you, .',
+  end: 448,
   keys: [{
     key: 'name',
     index: 57
   }]
 }, {
-  start: 453,
-  end: 461,
+  index: 59,
   text: 'No one else in the world can pick it up and benefit from it in the same way that you will.',
+  end: 453,
   keys: []
 }, {
-  start: 461,
-  end: 473,
+  index: 60,
   text: 'Embarking on this journey WILL open doors for you that you would have never discovered without taking this first step.',
+  end: 461,
   keys: []
 }, {
-  start: 473,
-  end: 478,
+  index: 61,
   text: 'It’s an eye-opening experience like no other. The contents of this report can never be found anywhere else. It hasn’t been published or even copied. NOT ONCE.',
+  end: 473,
   keys: []
 }, {
-  start: 478,
-  end: 483,
+  index: 62,
   text: ', this is the one and only place you’ll be able to get your hands on it.',
+  end: 478,
   keys: [{
     key: 'name',
     index: 0
   }]
 }, {
-  start: 483,
-  end: 493,
+  index: 63,
   text: 'Everything that you read from this report is completely tailored to your main archetype.',
+  end: 483,
   keys: []
 }, {
-  start: 493,
-  end: 501,
+  index: 64,
   text: 'It will give you the EXACT system that over 70,000 ordinary people, including myself, have used to completely CHANGE OUR LIVES.',
+  end: 493,
   keys: []
 }, {
-  start: 501,
-  end: 509,
+  index: 65,
   text: 'It’s entirely unique to you. And that’s what individuation is all about – discovering your true self.',
+  end: 501,
   keys: []
 }, {
-  start: 509,
-  end: 514,
+  index: 66,
   text: 'I have no doubt in my mind that you will be absolutely stunned as you read about your past, your present, and your future.',
+  end: 509,
   keys: []
 }, {
-  start: 514,
-  end: 524,
+  index: 67,
   text: 'And at the end of it all, you will be RAVING about its degree of ACCURACY.',
+  end: 514,
   keys: []
 }, {
-  start: 524,
-  end: 532,
+  index: 68,
   text: 'But more importantly, you will experience significant improvements in your daily life after you apply the techniques and the knowledge that you learn from this report.',
+  end: 524,
   keys: []
 }, {
-  start: 532,
-  end: 544,
+  index: 69,
   text: 'Personally, I get emails every single day from people sharing their successes after receiving their Deluxe Archetype Report from me.',
+  end: 532,
   keys: []
 }, {
-  start: 544,
-  end: 553,
+  index: 70,
   text: 'But I’m not done just yet. I’m extremely passionate about individuation. And that’s precisely why I want you to experience the real value of individuation.',
+  end: 544,
   keys: []
 }, {
-  start: 553,
-  end: 557,
-  text: 'To ensure that you gain the maximum value from this report, I’ll be sending you\nTHREE additional FREE reports along with it…',
+  index: 71,
+  text: 'To ensure that you gain the maximum value from this report, I’ll be sending youTHREE additional FREE reports along with it…',
+  end: 553,
   keys: []
 }, {
-  start: 557,
-  end: 560,
+  index: 72,
   text: '…All of this on top of your Deluxe Archetype Report.',
+  end: 557,
   keys: []
 }, {
-  start: 560,
-  end: 567,
+  index: 73,
   text: 'That’s how much I believe in this product.',
+  end: 560,
   keys: []
 }, {
-  start: 567,
-  end: 569,
+  index: 74,
   text: 'Like your Deluxe Archetype Report, these additional reports are easy to understand and extremely valuable.',
+  end: 567,
   keys: []
 }, {
-  start: 569,
-  end: 579,
-  text: ', You will receive:\n',
+  index: 75,
+  text: ', You will receive:',
+  end: 569,
   keys: [{
     key: 'name',
     index: 0
@@ -398,441 +398,440 @@
       path: 'images/pop-up/dar-priceless.png',
       fadeIn: true
     },
-    index: 20
+    index: 19
   }]
 }, {
-  start: 579,
-  end: 592,
+  index: 76,
   text: 'The Exploring Your Birthdate with The Chinese Zodiac eBook, The Discovering Your Aura eBook, and The Beginners Guide to the Fengshui Paradigm eBook',
+  end: 579,
   keys: []
 }, {
-  start: 592,
-  end: 599,
-  text: 'I’ll be completely honest with you. The total value of all of these products is at least $244.00, and that’s practically pennies compared to how much value you’ll receive from them!\n',
+  index: 77,
+  text: 'I’ll be completely honest with you. The total value of all of these products is at least $244.00, and that’s practically pennies compared to how much value you’ll receive from them!',
+  end: 592,
   keys: [{
     js: {
       fn: 'displayImage',
       path: 'images/pop-up/dar-priceless.png',
       fadeOut: true
     },
-    index: 182
+    index: 181
   }]
 }, {
-  start: 599,
-  end: 609,
+  index: 78,
   text: 'After all, you can’t put a dollar figure on improving your life – because such a gift would be practically priceless.',
+  end: 599,
   keys: []
 }, {
-  start: 609,
-  end: 612,
+  index: 79,
   text: 'Money can always be earned, but there’s only so much time we have left to live. But no , I’m NOT going to ask you for that amount of money.',
+  end: 609,
   keys: [{
     key: 'name',
     index: 87
   }]
 }, {
-  start: 612,
-  end: 616,
+  index: 80,
   text: 'I’m not even going to ask you for $200\\.',
+  end: 612,
   keys: []
 }, {
-  start: 616,
-  end: 620,
+  index: 81,
   text: 'Well, what about $100? Nope…',
+  end: 616,
   keys: []
 }, {
-  start: 620,
-  end: 623,
+  index: 82,
   text: 'Well, but what about $50? That seems like a pretty fair price.',
+  end: 620,
   keys: []
 }, {
-  start: 623,
-  end: 629,
+  index: 83,
   text: 'But no, I’m not even going to ask you for that much.',
+  end: 623,
   keys: []
 }, {
-  start: 629,
+  index: 84,
+  text: 'So, here’s what we’re going to do. I’m going to cut you an exclusive, one-time deal.',
+  end: 629,
+  keys: [{
+    js: {
+      fn: 'displayImage',
+      path: 'images/pop-up/new-deluxe-archetype-report-with-bonuses.png',
+      fadeIn: true
+    },
+    index: 84
+  }]
+}, {
+  index: 85,
+  text: 'You’ll get the full package, including the Deluxe Archetype Report, for only $37.// (POP UP HERE)',
   end: 635,
-  text: 'So, here’s what we’re going to do. I’m going to cut you an exclusive, one-time deal.\n',
-  keys: [{
-    js: {
-      fn: 'displayImage',
-      path: 'images/pop-up/new-deluxe-archetype-report-with-bonuses.png',
-      fadeIn: true
-    },
-    index: 85
-  }]
-}, {
-  start: 635,
-  end: 637,
-  text: 'You’ll get the full package, including the Deluxe Archetype Report, for only $37.\n// (POP UP HERE)',
   keys: []
 }, {
-  start: 637,
-  end: 648,
+  index: 86,
   text: 'That’s it.',
+  end: 637,
   keys: []
 }, {
-  start: 648,
-  end: 655,
+  index: 87,
   text: 'But I want you to share with me your success story. I read every single one of my emails and respond to them personally, and I want to read about your experiences too.',
+  end: 648,
   keys: []
 }, {
-  start: 655,
-  end: 660,
+  index: 88,
   text: 'We need the feedback to keep on improving our products, and it definitely encourages us to keep doing what we do.',
+  end: 655,
   keys: []
 }, {
-  start: 660,
-  end: 673,
-  text: 'The Deluxe Archetype Report is all yours for just $37.\n',
+  index: 89,
+  text: 'The Deluxe Archetype Report is all yours for just $37.',
+  end: 660,
   keys: [{
     js: {
       fn: 'displayImage',
       path: 'images/pop-up/new-deluxe-archetype-report-with-bonuses.png',
       fadeOut: true
     },
-    index: 55
+    index: 54
   }]
 }, {
-  start: 673,
-  end: 687,
+  index: 90,
   text: 'Now, you have two options. You can continue on the life path that you’re on right now and stay exactly the way that you are, unaware of your life’s purpose, your calling, and your true personality.',
+  end: 673,
   keys: []
 }, {
-  start: 687,
-  end: 696,
+  index: 91,
   text: 'Or, you can have your life’s purpose, your calling, your true personality, and your life’s direction revealed to you AND experience an abundance of love, health, and wealth in your life.',
+  end: 687,
   keys: []
 }, {
-  start: 696,
-  end: 701,
+  index: 92,
   text: 'All you have to do is click the button below and your Deluxe Archetype Report, and all 3 FREE bonus reports, will be sent to you INSTANTLY.',
+  end: 696,
   keys: []
 }, {
-  start: 701,
-  end: 710,
+  index: 93,
   text: 'But that’s not the best that I can do. I know I can do better than that.',
+  end: 701,
   keys: []
 }, {
-  start: 710,
-  end: 715,
-  text: 'On top of giving away the whole package for just $37, I’m also going to make the following guarantee for your own personal protection:\n',
+  index: 94,
+  text: 'On top of giving away the whole package for just $37, I’m also going to make the following guarantee for your own personal protection:',
+  end: 710,
   keys: [{
     js: {
       fn: 'displayImage',
       path: 'images/pop-up/60-day-money-back-guarantee.png',
       fadeIn: true
     },
-    index: 135
+    index: 134
   }]
 }, {
-  start: 715,
-  end: 733,
+  index: 95,
   text: ',take your time to look through your Deluxe Archetype Report and everything else that comes with it.',
+  end: 715,
   keys: [{
     key: 'name',
     index: 0
   }]
 }, {
-  start: 733,
-  end: 742,
+  index: 96,
   text: 'If you decide within the next 60 days that you’re not completely satisfied with your Deluxe Archetype Report, just drop us an e-mail at individualogist.com and we’ll issue you a full refund. No questions and no explanations will be necessary.',
+  end: 733,
   keys: []
 }, {
-  start: 742,
-  end: 749,
+  index: 97,
   text: 'I’m making this guarantee because I’m 100% certain that this report has the capacity to truly turn your life around.',
+  end: 742,
   keys: []
 }, {
-  start: 749,
-  end: 760,
-  text: 'That’s how much I believe in the process of individuation, and that’s how much I believe you will benefit from it.\n',
+  index: 98,
+  text: 'That’s how much I believe in the process of individuation, and that’s how much I believe you will benefit from it.',
+  end: 749,
   keys: [{
     js: {
       fn: 'displayImage',
       path: 'images/pop-up/60-day-money-back-guarantee.png',
       fadeOut: true
     },
-    index: 115
+    index: 114
   }]
 }, {
-  start: 760,
-  end: 774,
+  index: 99,
   text: ', so, no matter what, you’ve got the longer end of the stick. There is absolutely no risk involved, and that’s all up to you and whether you decide to take this life-changing path.',
+  end: 760,
   keys: [{
     key: 'name',
     index: 0
   }]
 }, {
-  start: 774,
-  end: 779,
+  index: 100,
   text: 'When you click on the button shortly, you’ll be taken to a 100% secure order page. After filling out a few questions, you’ll have the Deluxe Archetype Report and the rest of the reports sent directly to you instantly.',
+  end: 774,
   keys: []
 }, {
-  start: 779,
-  end: 787,
+  index: 101,
   text: 'You won’t have to wait a second longer to begin your individuation journey.',
+  end: 779,
   keys: []
 }, {
-  start: 787,
-  end: 798,
+  index: 102,
   text: 'There’s not much time left, because this unique offer is only going to be extended to you just once and, only once.',
+  end: 787,
   keys: []
 }, {
-  start: 798,
-  end: 803,
+  index: 103,
   text: 'To receive your Deluxe Archetype Report, and the 3 additional bonuses, at the once in a life time price of only $37, you need to act right now.',
+  end: 798,
   keys: []
 }, {
-  start: 803,
-  end: 809,
+  index: 104,
   text: 'Just click the button below to experience a real change in your life.',
+  end: 803,
   keys: []
 }, {
-  start: 809,
-  end: 821,
+  index: 105,
   text: 'I’m offering it to you right now for just $37, but , you need to make the decision NOW.',
+  end: 809,
   keys: [{
     key: 'name',
     index: 51
   }]
 }, {
-  start: 821,
-  end: 832,
+  index: 106,
   text: 'People approach me constantly with concerns about their careers, and I’ve used the same information and techniques in this package to help them SKYROCKET their SUCCESS by TEN FOLDS.',
+  end: 821,
   keys: []
 }, {
-  start: 832,
-  end: 846,
+  index: 107,
   text: 'Married couples on the verge of separation have approached me for the secrets of individuation as well, and guess what? They’re now enjoying the most rewarding relationships.',
+  end: 832,
   keys: []
 }, {
-  start: 846,
-  end: 853,
-  text: 'All of this is made possible because of this EXCLUSIVE Deluxe Archetype Report Package.\nI can go on for days about all of the success stories that others have experienced after receiving the Deluxe Archetype Report.',
+  index: 108,
+  text: 'All of this is made possible because of this EXCLUSIVE Deluxe Archetype Report Package.I can go on for days about all of the success stories that others have experienced after receiving the Deluxe Archetype Report.',
+  end: 846,
   keys: []
 }, {
-  start: 853,
-  end: 860,
+  index: 109,
   text: 'But the truth is, I honestly want you, , to be one of the success stories that I share with people.',
+  end: 853,
   keys: [{
     key: 'name',
     index: 39
   }]
 }, {
-  start: 860,
-  end: 870,
+  index: 110,
   text: 'When I embarked on this journey, there was no one around to help me. In fact, we didn’t even have the Internet back then.',
+  end: 860,
   keys: []
 }, {
-  start: 870,
-  end: 882,
+  index: 111,
   text: 'The only thing I could do was sit in that library for hours and hours every single day, finding every book that I could about individuation.',
+  end: 870,
   keys: []
 }, {
-  start: 882,
-  end: 891,
+  index: 112,
   text: 'I read every page and every word. To date, I’ve probably gone through over hundreds of thousands of pages and thousands of books and materials on individuation.',
+  end: 882,
   keys: []
 }, {
-  start: 891,
-  end: 896,
+  index: 113,
   text: 'I’m that passionate about it, and that’s why I want to share this gift with you now. Applying individuation is what truly saved me.',
+  end: 891,
   keys: []
 }, {
-  start: 896,
-  end: 903,
+  index: 114,
   text: 'It’s what turned my life around, and it’s what helped me to find joy.',
+  end: 896,
   keys: []
 }, {
-  start: 903,
-  end: 910,
+  index: 115,
   text: 'Not many of us are lucky enough to have experienced true joy, but that’s what I’m going to help you find.',
+  end: 903,
   keys: []
 }, {
-  start: 910,
-  end: 915,
+  index: 116,
   text: 'Today, you’ve stumbled upon the rare opportunity. The opportunity for you to completely change your life.',
+  end: 910,
   keys: []
 }, {
-  start: 915,
-  end: 923,
+  index: 117,
   text: 'This might be the one and only time that life hands you a reset button.',
+  end: 915,
   keys: []
 }, {
-  start: 923,
-  end: 931,
+  index: 118,
   text: 'This is your chance to discover your true self and unlock a massive amount of benefits that will change your life for the better.',
+  end: 923,
   keys: []
 }, {
-  start: 931,
-  end: 940,
+  index: 119,
   text: 'I’m more than happy to make this one-time offer to you, but just like you, I only have 24 hours in a day.',
+  end: 931,
   keys: []
 }, {
-  start: 940,
-  end: 950,
+  index: 120,
   text: 'If you don’t respond now, I’ll have no choice but to invest my time in people who have already taken advantage of this once in a lifetime opportunity.',
+  end: 940,
   keys: []
 }, {
-  start: 950,
-  end: 954,
+  index: 121,
   text: 'And sadly enough, your opportunity would have been lost. Not many people in the world will have the opportunity that you have right now,.',
+  end: 950,
   keys: [{
     key: 'name',
     index: 136
   }]
 }, {
-  start: 954,
-  end: 960,
+  index: 122,
   text: 'This is the opportunity where your life can REALLY turn around.',
+  end: 954,
   keys: []
 }, {
-  start: 960,
-  end: 970,
+  index: 123,
   text: ', this is your time to shine and make the decision that will align your direction with your destiny.',
+  end: 960,
   keys: [{
     key: 'name',
     index: 0
   }]
 }, {
-  start: 970,
-  end: 977,
+  index: 124,
   text: 'The thing is, you could probably find a book about Individuation from a local book store, which will contain a chapter or a couple of pages about your archetype.',
+  end: 970,
   keys: []
 }, {
-  start: 977,
-  end: 991,
+  index: 125,
   text: 'But that single chapter or couple of pages isn’t going to be very helpful. So, here’s the truth.',
+  end: 977,
   keys: []
 }, {
-  start: 991,
-  end: 1003,
+  index: 126,
   text: ', The Deluxe Archetype Report is an excruciatingly detailed report about your archetype, containing 200 highly informative pages of actionable and thought-provoking strategies and methodologies.',
+  end: 991,
   keys: [{
     key: 'name',
     index: 0
   }]
 }, {
-  start: 1003,
-  end: 1009,
+  index: 127,
   text: 'Once again, all of the information is customized to your specific archetype. It breaks down an in-depth outlook of your life journey and all of its obstacles.',
+  end: 1003,
   keys: []
 }, {
-  start: 1009,
-  end: 1019,
+  index: 128,
   text: 'There is no other product that comes as close in terms of detail and information.',
+  end: 1009,
   keys: []
 }, {
-  start: 1019,
-  end: 1024,
+  index: 129,
   text: 'The Deluxe Archetype Report is 100% owned and authored by us. , this is the only place where you’re able to get it, or anything like it.',
+  end: 1019,
   keys: [{
     key: 'name',
     index: 62
   }]
 }, {
-  start: 1024,
-  end: 1030,
+  index: 130,
   text: 'And if you’ve tried similar products that didn’t help before, here’s the difference.',
+  end: 1024,
   keys: []
 }, {
-  start: 1030,
-  end: 1034,
+  index: 131,
   text: ', other products assume that everyone functions and processes information in the same way.',
+  end: 1030,
   keys: [{
     key: 'name',
     index: 0
   }]
 }, {
-  start: 1034,
-  end: 1039,
+  index: 132,
   text: 'The law of attraction assumes that everyone is built with the same framework.',
+  end: 1034,
   keys: []
 }, {
-  start: 1039,
-  end: 1045,
+  index: 133,
   text: 'Manifestation programs assume that everyone will respond the same way.',
+  end: 1039,
   keys: []
 }, {
-  start: 1045,
-  end: 1056,
+  index: 134,
   text: 'Meditation methods assume that everyone experiences calmness similarly.',
+  end: 1045,
   keys: []
 }, {
-  start: 1056,
-  end: 1069,
+  index: 135,
   text: 'None of that can be true, because, we are all different individuals. We have different fears, different circumstances, and different life experiences.',
+  end: 1056,
   keys: []
 }, {
-  start: 1069,
-  end: 1073,
+  index: 136,
   text: 'Individuation and archetypes take that into account. Our readings are specifically catered to your archetype to provide you with actionable steps that you can take towards making a true change in your life.',
+  end: 1069,
   keys: []
 }, {
-  start: 1073,
-  end: 1088,
+  index: 137,
   text: 'It reveals callings and directions that are specific to you.',
+  end: 1073,
   keys: []
 }, {
-  start: 1088,
-  end: 1094,
+  index: 138,
   text: 'That’s why it’s going to work. This product seeks to bring the term “personal” back into personal development; an industry littered with impersonal products that have strayed away from what personal development is meant to be.',
+  end: 1088,
   keys: []
 }, {
-  start: 1094,
-  end: 1102,
+  index: 139,
   text: 'But beyond that, the Deluxe Archetype Report is proven and supported by science.',
+  end: 1094,
   keys: []
 }, {
-  start: 1102,
-  end: 1109,
+  index: 140,
   text: 'Individuation is a psychological process that was created by thought leaders in the psychological world decades ago.',
+  end: 1102,
   keys: []
 }, {
-  start: 1109,
-  end: 1116,
+  index: 141,
   text: 'In fact, principles of Individuation can be traced all the way back to the days of Aristotle.',
+  end: 1109,
   keys: []
 }, {
-  start: 1116,
-  end: 1124,
+  index: 142,
   text: 'This means that Individuation has stood the test of time to be a proven personal development process.',
+  end: 1116,
   keys: []
 }, {
-  start: 1124,
-  end: 1133,
-  text: 'There have also been numerous conclusive scientific studies about analytical psychology and individuation across the globe.\n',
+  index: 143,
+  text: 'There have also been numerous conclusive scientific studies about analytical psychology and individuation across the globe.',
+  end: 1124,
   keys: [{
     js: {
       fn: 'displayImage',
       path: 'images/pop-up/new-deluxe-archetype-report-with-bonuses.png',
       fadeIn: true
     },
-    index: 124
+    index: 123
   }]
 }, {
-  start: 1133,
-  end: 1140,
+  index: 144,
   text: 'Unlock your Deluxe Archetype Report and the full package of 3 FREE reports now, before they’re no longer available to you!',
+  end: 1133,
   keys: []
 }, {
-  start: 1140,
-  end: 1146,
+  index: 145,
   text: 'All you have to do is click the button below , and you’ll receive the entire Deluxe Archetype Report package immediately.',
+  end: 1140,
   keys: [{
     key: 'name',
     index: 45
   }]
 }, {
-  start: 1146,
-  end: Infinity,
+  index: 146,
   text: 'The time has come for you to take action. Now, let’s get this show on the road.',
+  end: 1146,
   keys: []
 }, {
-  start: NaN,
-  end: Infinity,
-  text: '',
+  index: 147,
+  text: 'We’ll speak again soon, and that’s a promise.',
   keys: []
 }]
