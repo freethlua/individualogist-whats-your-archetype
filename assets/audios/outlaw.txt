@@ -1,495 +1,825 @@
-1
-
 00:02 
+
+1
 
 Hello {{name}},
 
-2
-
 00:04 
 
-If you’ve made it here, then congratulations! Because this means that your archetype is the Outlaw! But what does this actually mean?
+2
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/outlaw.png', fadeIn: true}}}
+If you’ve made it here..
+
+00:07 
 
 3
 
-00:14 
+Then congratulations!
 
-Don’t worry, everything you need to know will be on this page. Stick to the end of it and I promise that you’ll experience something truly magical.
+00:08 
 
 4
 
-00:24 
+Because this means that your archetype is the Outlaw!
 
-The quiz that you’ve just taken is designed to identify your archetype – a personality profile that’s broken down your entire being.
-
-{{JS:{fn:'displayImage', path:'images/archetype-icons/outlaw.png', fadeOut: true}}}
+00:12 
 
 5
 
-00:35 
+What does this actually mean?
 
-Your tendencies, your strengths, your past, and your future.
+{{JS:{fn:'displayImage', path:'images/archetype-icons/outlaw.png', fadeIn: true}}}
+
+00:14 
 
 6
 
-00:39 
+Don’t worry, everything you need to know will be on this page.
 
-Your archetype takes into account your gender, your marital status, how you answered the quiz, and how long you took to get those answers.
+00:18 
 
 7
 
-00:48 
+Stick to the end of it...
 
-That’s right, {{name}}. You can use that information to make astronomical changes in your life.
+00:19 
 
 8
 
-00:57 
+And I promise that you’ll experience something truly magical.
 
-You’ll be able to leverage on your strengths, improve on your weaknesses, and embark on the life that you’ve always dreamed of.
+00:25 
 
 9
 
-01:05 
+The quiz that you’ve just taken is designed to identify your archetype...
 
-But before we get to that, I want to share with you about your archetype, The Outlaw, and what it means.
+00:30 
 
 10
 
-01:13 
+A personality profile that’s broken down your entire being...
 
-{{name}}, you truly are a unique individual. And I genuinely believe that this world needs more people like you.
+{{JS:{fn:'displayImage', path:'images/archetype-icons/outlaw.png', fadeOut: true}}}
+
+00:34 
 
 11
 
-01:25 
+Your tendencies, your strengths, your past, and your future.
 
-You are a free-minded and free-spirited individual. Nothing stands in your way and nothing controls your desires.
+00:39 
 
 12
 
-01:33 
+Your archetype takes into account your gender, your marital status...
 
-You are the true representation of what it really means to be the captain of your own ship. You are different in that way, {{name}}.
+00:43 
 
 13
 
-01:41 
+How you answered the quiz, and how long you took to get those answers.
 
-While the world walks in one direction, you have no qualms with going against it. That’s what makes you so special, {{name}}.
+00:49 
 
 14
 
-01:50 
+That’s right, {{name}}.
 
-You’re deeply sensitive when it comes to the social and environmental issues of the world. You’re able to empathize with anyone and everyone.
+00:52 
 
 15
 
-02:01 
+You can use the information to make astronomical changes in your life.
 
-That’s because as an Outlaw, you are highly compassionate.
+00:56 
 
 16
 
-02:05 
+You’ll be able to leverage on your strengths, improve on your weaknesses...
 
-You put the needs of others before your own, and you’re able to connect with strangers just as well as you’re able to connect with your closest loved ones.
+01:01 
 
 17
 
-02:14 
+And embark on the life that you’ve always dreamed of.
 
-{{name}}, you may not know it yet, but you are more morally and ethically upright than others.
+01:05 
 
 18
 
-02:23 
+But before we get to that...
 
-You hold your values and principles close to your heart, and you’re always ready to stick to your guns.
-
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
+01:06 
 
 19
 
-02:30 
+I want to share with you about your archetype, The Outlaw, and what it means.
 
-There is something else about you, {{name}}… You are the one who will ignite massive change in the world.
-
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
+01:14 
 
 20
 
-02:40 
+{{name}}, you truly are a unique individual.
 
-{{name}}, I’m getting the sense that you’re going to live a long, and happy life.
+01:19 
 
 21
 
-02:48 
+And I genuinely believe that this world needs more people like you.
 
-Although success might not be at your feet right now, your riches and fulfilment are merely waiting for you.
+01:24 
 
 22
 
-02:55 
+You are a free-minded and free-spirited individual.
 
-But there’s something else, {{name}}. Even though you will triumph, your path to success will not come easy.
+01:28 
 
 23
 
-03:07 
+Nothing stands in your way and nothing controls your desires.
 
-You must challenge yourself with trusting people.
+01:32 
 
 24
 
-03:10 
+You are the true representation of what it really means to be the captain of your own ship.
 
-Being vulnerable can be an incredibly scary thought for you, but it’s important to take small steps towards the direction, and make a few minor mistakes along the way.
+01:39 
 
 25
 
-03:22 
+You are different in that way, {{name}}.
 
-This can be applied to both your personal and work relationships.
+01:42 
 
 26
 
-03:27 
+While the world walks in one direction, you have no qualms with going against it.
 
-{{name}}, don’t let that discourage you.
+01:47 
 
 27
 
-03:31 
+That’s what makes you so special, {{name}}.
 
-It never hurts to open up once in a while to a loved one, such as family or close friends.
+01:52 
 
 28
 
-03:38 
+You’re deeply sensitive when it comes to the social and environmental issues of the world.
 
-The world can be a vicious place if you’re standing alone; even if that thought doesn’t scare you, it should definitely be something worth pondering about.
+01:57 
 
 29
 
-03:48 
+You’re able to empathize with anyone and everyone.
 
-The world needs people like you to be in positions of power.
+02:01 
 
-30
+ 30
 
-03:53 
+That’s because as an Outlaw, you are highly compassionate.
 
-You are the one who keeps the world grounded.
+02:05 
 
 31
 
-03:56 
+You put the needs of others before your own...
 
-You do, however, need to understand that it’s important for you to combat your cynicism by being more emotionally connected.
+02:08 
 
 32
 
-04:05 
+And you’re able to connect with strangers just as well as...
 
-That way, you’ll be able to build trust and create even more fruitful interactions.
+02:11 
 
 33
 
-04:11 
+you’re able to connect with your closest loved ones.
 
-After all, {{name}}, the path to enlightenment and fulfilment lies within your hands.
+02:16 
 
 34
 
-04:22 
+{{name}}, you may not know it yet...
 
-{{name}}, I can already tell that your friends and family really look up to you.
+02:20 
 
 35
 
-04:29 
+But you are more morally and ethically upright than others.
 
-You’re always ready to stand up for those in need, even if it means that you will be persecuted for your actions.
+02:23 
 
 36
 
-04:37 
+You hold your values and principles close to your heart...
 
-You’re not the type of person to have huge circles of friends, but you’re not someone who has trouble with making friends.
+02:26 
 
 37
 
-04:47 
+And you’re always ready to stick to your guns.
 
-In fact, you have no trouble at all when it comes to impressing others with your intelligence and passionate nature.
+{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
+
+02:30 
 
 38
 
-04:54 
+There is something else about you, {{name}}…
 
-You are extremely selective with who you choose to let into your life. You prefer to keep your loved ones close, and your wolf pack small.
+02:35 
 
 39
 
-05:04 
+You are the one who will ignite massive change in the world.
 
-{{name}}, you are incredibly brave and find comfort in chaos.
+{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
+
+02:40 
 
 40
 
-05:13 
+{{name}}, I’m getting the sense that you’re going to live a long, and happy life.
 
-You tend to struggle with being understood, but you know deep down in your heart that your intentions are always centred around the greater good – even if your strategies and mannerisms speak otherwise.
+02:48 
 
 41
 
-05:26 
+Although success might not be at your feet right now,
 
-{{name}}, you are a natural-born leader. I sense that you will find success and fulfilment as an entrepreneur, an activist, or a philanthropist.
+02:51 
 
 42
 
-05:41 
+your riches and fulfilment are merely waiting for you.
 
-You can be very authoritative, {{name}}. You tend to want things done your way, on your time, even if your demands are exceedingly difficult to fulfil.
+02:57 
 
 43
 
-05:54 
+But there’s something else, {{name}}.
 
-Nevertheless, {{name}}, you are going to make a lasting mark in your lifetime. You’re able to look at the world from a broad and altruistic perspective.
+03:01 
 
 44
 
-06:06 
+Even though you will triumph, your path to success will not come easy.
 
-You see the big picture, and you have what it takes to make this world a better place.
+03:07 
 
 45
 
-06:13 
+You must challenge yourself with trusting people.
 
-{{name}}, I sense that you despise systems and everything that comes with it, which is why you’re constantly rebelling against authority.
+03:10 
 
-46
+ 46
 
-06:23 
+Being vulnerable can be an incredibly scary thought for you,
 
-You would do anything and everything you can to promote your own ways and your own beliefs, which becomes clearly evident in your slightly destructive nature.
+03:14 
 
 47
 
-06:35 
+but it’s important to take small steps towards the direction...
 
-Ultimately, {{name}}, you are a visionary.
+03:19 
 
 48
 
-06:42 
+And make a few minor mistakes along the way.
 
-You have a clear idea of how you want to be in the world.
+03:22 
 
 49
 
-06:45 
+This can be applied to both your personal and work relationships.
 
-You do, however, tend to have difficulty discerning right from wrong.
+03:27 
 
 50
 
-06:50 
+{{name}}, don’t let that discourage you.
 
-I’m getting the sense that you’re not too concerned about monetary riches, although you do wish you had more wealth.
+03:31 
 
 51
 
-06:58 
+It never hurts to open up once in a while to a loved one, such as family or close friends.
 
-There is, however, a greater purpose for you in this lifetime, {{name}}.
+03:38 
 
 52
 
-07:03 
+The world can be a vicious place if you’re standing alone; even if that thought doesn’t scare you,
 
-However, {{name}}, that can make you dependent on others for your own happiness. And that is something that you need to be careful of.
+03:45 
 
 53
 
-07:16 
+it should definitely be something worth pondering about.
 
-At times, it might feel as if you’re living your life for others. That’s not what you want, {{name}}.
+03:48 
 
 54
 
-07:25 
+The world needs people like you to be in positions of power.
 
-You want to live life for yourself. You want to love yourself.
+ 03:53 
 
 55
 
-07:30 
+You are the one who keeps the world grounded.
 
-When you’re able to do that, success and the life of your dreams will follow.
+03:56 
 
 56
 
-07:35 
+You do, however, need to understand that it’s important for you...
 
-And that’s what Individuation aims to teach you.
+04:00 
 
 57
 
-07:38 
+To combat your cynicism by being more emotionally connected.
+
+04:05 
+
+58
+
+That way, you’ll be able to build trust and create even more fruitful interactions.
+
+04:12 
+
+59
+
+After all, {{name}}, the path to enlightenment and fulfilment lies within your hands.
+
+04:23 
+
+60
+
+{{name}}, I can already tell that your friends and family really look up to you.
+
+04:29 
+
+61
+
+You’re always ready to stand up for those in need, even if it means that...
+
+04:35 
+
+62
+
+You will be persecuted for your actions.
+
+04:40 
+
+63
+
+You’re not the type of person to have huge circles of friends...
+
+04:43 
+
+64
+
+But you’re not someone who has trouble with making friends.
+
+04:47 
+
+65
+
+In fact, you have no trouble at all when it comes to...
+
+04:50  
+
+66
+
+impressing others with your intelligence and passionate nature.
+
+04:54 
+
+67
+
+You are extremely selective with who you choose to let into your life.
+
+04:59 
+
+68
+
+You prefer to keep your loved ones close, and your wolf pack small.
+
+05:06 
+
+69
+
+{{name}}, you are incredibly brave and find comfort in chaos.
+
+05:13 
+
+70
+
+You tend to struggle with being understood...
+
+05:16 
+
+71
+
+But you know deep down in your heart that your intentions are always centred...
+
+05:20 
+
+72
+
+Around the greater good – even if your strategies and mannerisms speak otherwise.
+
+05:28 
+
+73
+
+{{name}}, you are a natural-born leader.
+
+05:33 
+
+74
+
+I sense that you will find success and fulfilment as an entrepreneur, an activist, or a philanthropist.
+
+05:41 
+
+75
+
+You can be very authoritative, {{name}}.
+
+05:46 
+
+76
+
+You tend to want things done your way, on your time...
+
+05:50 
+
+77
+
+Even if your demands are exceedingly difficult to fulfil.
+
+05:54 
+
+78
+
+Nevertheless, {{name}}, you are going to make a lasting mark in your lifetime.
+
+06:02 
+
+79
+
+You’re able to look at the world from a broad and altruistic perspective.
+
+06:06 
+
+80
+
+You see the big picture, and you have what it takes to make this world a better place.
+
+06:14 
+
+81
+
+{{name}}, I sense that you despise systems and everything that comes with it...
+
+06:20 
+
+82
+
+Which is why you’re constantly rebelling against authority.
+
+06:23 
+
+83
+
+You would do anything and everything you can to promote your own ways...
+
+06:29 
+
+84
+
+And your own beliefs, which becomes clearly evident in your slightly destructive nature.
+
+06:37 
+
+85
+
+Ultimately, {{name}}, you are a visionary.
+
+06:42 
+
+86
+
+You have a clear idea of how you want to be in the world.
+
+06:45 
+
+87
+
+You do, however, tend to have difficulty discerning right from wrong.
+
+06:50 
+
+88
+
+I’m getting the sense that you’re not too concerned about monetary riches...
+
+06:55 
+
+89
+
+Although you do wish you had more wealth.
+
+06:58 
+
+90
+
+There is, however, a greater purpose for you in this lifetime, {{name}}.
+
+07:05 
+
+91
+
+However, {{name}}, that can make you dependent on others for your own happiness.
+
+07:13 
+
+92
+
+That is something that you need to be careful of.
+
+07:17 
+
+93
+
+At times, it might feel as if you’re living your life for others.
+
+07:22 
+
+94
+
+That’s not what you want, {{name}}.
+
+07:26 
+
+95
+
+You want to live life for yourself. You want to love yourself.
+
+07:30 
+
+96
+
+When you’re able to do that, success and the life of your dreams will follow.
+
+07:35 
+
+97
+
+And that’s what Individuation aims to teach you.
+
+07:39 
+
+98
 
 But there’s more to what I’ve learned about you, {{name}}…
 
 {{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeIn: true}}}
 
-58
-
 07:43 
+
+99
 
 It feels to me that you’re a deeply emotional and spiritual person.
 
-59
-
 07:49 
+
+100
 
 You’re connected to your soul in a way that’s far more profound than others.
 
-60
-
 07:54 
+
+101
 
 Your thought process does not follow the rules and logic of the world.
 
-61
-
 07:58 
 
-In fact, I get the sense that you have quite the imagination. Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
+102
+
+In fact, I get the sense that you have quite the imagination.
+
+08:03 
+
+103
+
+Your thoughts and dreams are vivid, colourful...
+
+08:06 
+
+104
+
+And symbolic of who you are as an individual.
 
 {{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
 
-62
-
 08:12 
+
+105
 
 {{name}}, you’re not someone who likes to argue.
 
-63
-
 08:17 
+
+106
 
 You tend to avoid conflict and you’re uncanny when it comes to devising win-win situations.
 
-64
+08:23 
 
-08:24 
+107
 
-But when backed into a corner, you’re not one to back down. You fight fiercely for your loved ones and for righteousness.
+But when backed into a corner, you’re not one to back down.
 
-65
+08:28 
 
-08:32 
+108
+
+You fight fiercely for your loved ones and for righteousness.
+
+08:34 
+
+109
 
 You’re the first person to step in when you see a fight breaking out.
 
-66
-
 08:39 
+
+110
 
 You’re the first person to reach for your pockets in the sight of a struggling busker.
 
-67
-
 08:44 
+
+111
 
 You’re the first person your friends call when they’ve had a horrible day.
 
-68
-
 08:49 
 
-You’re the one who people rely on and look up to. {{name}}, you are the role model for the world.
+112
 
-69
+You’re the one who people rely on and look up to. 
 
-08:57 
+08:53 
 
-But every superhero needs a side-kick; a partner in crime. One who will stick by them when the going gets tough. And the outlaw is no exception.
+113
+
+{{name}}, you are the role model for the world.
+
+08:58 
+
+114
+
+But every superhero needs a side-kick; a partner in crime.
+
+09:04 
+
+115
+
+One who will stick by them when the going gets tough. And the outlaw is no exception.
 
 {{JS:{fn:'displayImage', path:'images/love-compatibility/outlaw-love-compatibility.png', fadeIn: true}}}
 
-70
-
 09:10 
+
+116
 
 This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
 
-71
-
 09:16 
 
-Or if you’re already in a committed relationship, there’s a real good chance that your spouse is one of those archetypes.
+117
 
-72
+Or if you’re already in a committed relationship...
 
-09:24 
+09:19 
 
-{{name}}, you’re not the kind of person that has trouble when it comes to love. People find themselves drawn to your charisma and kind nature.
+118
 
-73
+There’s a real good chance that your spouse is one of those archetypes.
+
+09:25 
+
+119
+
+{{name}}, you’re not the kind of person that has trouble when it comes to love.
+
+09:31 
+
+120
+
+People find themselves drawn to your charisma and kind nature.
 
 09:36 
 
-You’re sort of a rare breed when it comes to love. You communicate better than anyone else, and you’re an incredibly thoughtful individual.
+121
 
-74
+You’re sort of a rare breed when it comes to love.
+
+09:39 
+
+122
+
+You communicate better than anyone else...
+
+09:42 
+
+123
+
+And you’re an incredibly thoughtful individual.
 
 09:45 
 
-The relationships that you forge with potential lovers are always profound and deep.
+124
 
-75
+The relationships that you forge with potential lovers are always profound and deep.
 
 09:53 
 
-You become very selective with those who you choose to date and who you choose to end up with – for good reason, of course.
+125
 
-76
+You become very selective with those who you choose to date...
+
+09:58 
+
+126
+
+And who you choose to end up with – for good reason, of course.
 
 10:03 
 
-I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
+127
 
-77
+I sense that in the coming years...
 
-10:11 
+10:05 
 
-{{name}}, I’m sensing that your love life isn’t going to be the smoothest – but you will find that happiness that you’re looking for soon enough.
+128
+
+You will be the happiest you’ve ever been in that regard.
+
+10:12 
+
+129
+
+{{name}}, I’m sensing that your love life isn’t going to be the smoothest...
+
+10:16 
+
+130
+
+But you will find that happiness that you’re looking for soon enough.
 
 {{JS:{fn:'displayImage', path:'images/love-compatibility/outlaw-love-compatibility.png', fadeOut: true}}}
 
-78
+10:23 
 
-10:21 
+131
 
 But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life.
 
-79
-
 10:30 
+
+132
 
 Your spouse or partner is meant to play a supporting role in your life; not the lead.
 
-80
-
 10:38 
 
-Focus on your own personal growth, and I promise you, {{name}}, you will soon discover heavenly rewards.
+133
+
+Focus on your own personal growth...
+
+10:40 
+
+134
+
+And I promise you, {{name}}...
+
+10:43 
+
+135
+
+You will soon discover heavenly rewards.

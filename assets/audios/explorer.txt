@@ -1,4 +1,4 @@
-1
+1 
 
 00:06 
 
@@ -6,283 +6,703 @@ Hello {{name}},
 
 2
 
-00:11 
+00:10 
 
-If you’ve made it here, then congratulations! Because this means that your archetype is the Explorer!
-
-{{JS:{fn:'displayImage', path:'images/archetype-icons/explorer.png', fadeIn: true}}}
+If you’ve made it here, then congratulations!
 
 3
 
-00:17 
+00:13 
 
-But what does this actually mean? Don’t worry, everything you need to know will be on this page. Stick to the end of it and I promise that you’ll experience something truly magical.
+Because this means that your archetype is the Explorer!
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/explorer.png', fadeOut: true}}}
+{{JS:{fn:'displayImage', path:'images/archetype-icons/explorer.png', fadeIn: true}}}
 
 4
 
-00:31 
+00:18 
 
-The quiz that you’ve just taken is designed to identify your archetype – a personality profile that’s broken down your entire being. Your tendencies, your strengths, your past, and your future.
+But what does this actually mean?
 
 5
 
-00:44 
+00:20 
 
-Your archetype takes into account your gender, your marital status, how you answered the quiz, and how long you took to get those answers.
+Don’t worry, everything you need to know will be on this page.
 
 6
 
-00:54 
+00:25 
 
-That’s right, {{name}}. You can use that information to make astronomical changes in your life. You’ll be able to leverage on your strengths, improve on your weaknesses, and embark on the life that you’ve always dreamed of.
+Stick to the end of it and I promise that you’ll experience something truly magical.
+
+{{JS:{fn:'displayImage', path:'images/archetype-icons/explorer.png', fadeOut: true}}}
 
 7
 
-01:09 
+00:30 
 
-But before we get into that, I want to share with you about your archetype, The Explorer, and what it means.
+The quiz that you’ve just taken is designed to identify your archetype...
 
 8
 
-01:17 
+00:36 
 
-{{name}}, you truly are a unique individual. And I genuinely believe that this world needs more people like you. You are a mature and a truly unconventional being.
+A personality profile that’s broken down your entire being.
 
 9
 
-01:28 
+00:40 
 
-I think the best way to describe you is “an adventurer”. Yes, you are an adventurer looking to make your mark on the world.
+Your tendencies, your strengths, your past, and your future.
 
 10
 
-01:37 
+00:45 
 
-To discover new lands, new opportunities, and new experiences. You’re different that way, {{name}}. While the world walks in one direction, you have no qualms with going against it. That’s what makes you so special, {{name}}.
+Your archetype takes into account your gender, your marital status...
 
 11
 
-01:52 
+00:49 
 
-Your biggest value is freedom. Sitting still for even just a second can make you feel jittery, uneasy, restless, and just completely uncomfortable. That’s because as an Explorer, you are highly energetic.
+How you answered the quiz, and how long you took to get those answers.
 
 12
 
-02:10 
+00:54 
 
-While others struggle to feel comfortable in unfamiliar places, you just seem to feel at home in the most distant of lands.
+That’s right, {{name}}.
 
 13
 
-02:19 
+00:56 
 
-That’s because you envision the world as a singular place – and you understand that each and everyone of us belong to the same home.
+You can use that information to make astronomical changes in your life.
 
 14
 
-02:28 
+01:01 
 
-{{name}}, you might not know it yet, but you are more morally and ethically upright than others. You hold your values and principles close to your heart, and you’re always ready to stick to your guns.
+You’ll be able to leverage on your strengths...
 
 15
 
-02:41 
+01:04 
+
+Improve on your weaknesses...
+
+16
+
+01:06 
+
+And embark on the life that you’ve always dreamed of.
+
+17
+
+01:09 
+
+But before we get into that...
+
+18
+
+01:11 
+
+I want to share with you about your archetype, The Explorer, and what it means.
+
+19
+
+01:17 
+
+{{name}}, you truly are a unique individual.
+
+20
+
+01:21 
+
+And I genuinely believe that this world needs more people like you.
+
+21
+
+01:25 
+
+You are a mature and a truly unconventional being.
+
+22
+
+01:28 
+
+I think the best way to describe you is “an adventurer”.
+
+23
+
+01:32 
+
+Yes, you are an adventurer looking to make your mark on the world.
+
+24
+
+01:37  
+
+To discover new lands, new opportunities, and new experiences.
+
+25
+
+01:42 
+
+You’re different that way, {{name}}.
+
+26
+
+01:44 
+
+While the world walks in one direction…
+
+27
+
+01:47
+
+You have no qualms with going against it.
+
+28
+
+01:50 
+
+That’s what makes you so special, {{name}}.
+
+29
+
+01:53 
+
+Your biggest value is freedom.
+
+30
+
+01:56 
+
+Sitting still for even just a second can make you feel jittery…
+
+31
+
+02:01 
+
+...Uneasy, restless, and just completely uncomfortable.
+
+32
+
+02:05 
+
+That’s because as an Explorer, you are highly energetic.
+
+33
+
+02:10 
+
+While others struggle to feel comfortable in unfamiliar places...
+
+34
+
+02:15 
+
+You just seem to feel at home in the most distant of lands.
+
+35
+
+02:18 
+
+That’s because you envision the world as a singular place…
+
+36
+
+02:23 
+
+And you understand that each and everyone of us belong to the same home.
+
+37
+
+02:28 
+
+{{name}}, you might not know it yet...
+
+38
+
+02:30 
+
+But you are more morally and ethically upright than others.
+
+39
+
+02:34 
+
+You hold your values and principles close to your heart...
+
+40
+
+02:38 
+
+And you’re always ready to stick to your guns.
+
+41
+
+02:41  
 
 There is something else about you, {{name}}…
 
 {{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
 
-16
+42
 
-02:43 
+02:44 
 
-You form the foundation of the world. You play the leading role in uncovering new discoveries.
+You form the foundation of the world.
 
 {{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
 
-17
+43
 
- 02:50 
+02:46 
 
-{{name}}, I’m getting the sense that you’re going to live a long, and fruitful life. And although success might not be at your feet right now, your riches and fulfilment are merely waiting for you.
+You play the leading role in uncovering new discoveries.
 
-18
+44
+
+02:51 
+
+{{name}}, I’m getting the sense that you’re going to live a long, and fruitful life.
+
+45
+
+02:56 
+
+And although success might not be at your feet right now...
+
+46
+
+02:59 
+
+Your riches and fulfilment are merely waiting for you.
+
+47
 
 03:03 
 
-But there’s something else, {{name}}. Even though you will triumph, your path to success will not come easy. Talking to people is never a problem for you, but I’m getting the sense that you tend to struggle when it comes to maintaining healthy relationships.
+But there’s something else, {{name}}.
 
-19
+48
+
+03:05 
+
+Even though you will triumph, your path to success will not come easy.
+
+49
+
+03:11 
+
+Talking to people is never a problem for you...
+
+50
+
+03:13 
+
+But I’m getting the sense that you tend to struggle when it comes to...
+
+51
+
+03:17 
+
+Maintaining healthy relationships.
+
+52
 
 03:19 
 
-Your nature revolves so much around meeting new people and learning about new cultures that you tend to forget about the people closest to you.
+Your nature revolves so much around meeting new people and...
 
-20
+53
+
+03:23 
+
+Learning about new cultures that you tend to…
+
+54
+
+03:25 
+
+Forget about the people closest to you.
+
+55
 
 03:28 
 
-{{name}}, don’t let that discourage you. The world needs your ambition and unquenchable curiosity.
+{{name}}, don’t let that discourage you.
 
-21
+56
+
+03:31 
+
+The world needs your ambition and unquenchable curiosity.
+
+57
 
 03:35 
 
-The world needs people like you to be in positions of power. You are the one who keeps the world moving forward and making progress.
+The world needs people like you to be in positions of power.
 
-22
+58
+
+03:40 
+
+You are the one who keeps the world moving forward and making progress.
+
+59
 
 03:44 
 
-You do, however, need to be less critical about yourself. You’re constantly pushing yourself to climb new heights and explore the world, but you must understand that growth takes time.
+You do, however, need to be less critical about yourself.
 
-23
+60
+
+03:49 
+
+You’re constantly pushing yourself to climb new heights and explore the world...
+
+61
+
+03:54 
+
+But you must understand that growth takes time.
+
+62
 
 03:57 
 
 That way, you’ll be able to be more patient with both yourself, and others.
 
-24
+63
 
 04:03 
 
-After all, {{name}}, growth is a product of both effort and time, and exercising patience will lead you towards the fulfilment that you seek.
+After all, {{name}}, growth is a product of both effort and time...
 
-25
+64
+
+04:08 
+
+And exercising patience will lead you towards the fulfilment that you seek.
+
+65
 
 04:14 
 
-{{name}}, I can already tell that your friends and family really look up to you. You’re the one who they come to when they’re in need, when they need someone to talk to, or even just for a quick chat.
+{{name}}, I can already tell that your friends and family really look up to you.
 
-26
+66
 
-04:26 
+04:19 
 
-You’re not the type of person to have huge circles of friends, although you’re not someone who has trouble with making friends either.
+You’re the one who they come to when they’re in need...
 
-27
+67
+
+04:22 
+
+When they need someone to talk to...
+
+68
+
+04:24 
+
+Or even just for a quick chat.
+
+69
+
+04:27 
+
+You’re not the type of person to have huge circles of friends...
+
+70
+
+04:30  
+
+Although you’re not someone who has trouble with making friends either.
+
+71
 
 04:34 
 
-In fact, you have no trouble at all when it comes to impressing others with your worldly knowledge and accepting heart.
+In fact, you have no trouble at all when it comes to impressing others with...
 
-28
+72
+
+04:39 
+
+Your worldly knowledge and accepting heart.
+
+73
 
 04:41 
 
-But you’re extremely selective with who you choose to let into your life. You prefer to keep your loved ones close, and your wolf pack small.
+But you’re extremely selective with who you choose to let into your life.
 
-29
+74
+
+04:46 
+
+You prefer to keep your loved ones close, and your wolf pack small.
+
+75
 
 04:50 
 
-{{name}}, you are incredibly curious, which keeps conversations centered around others rather than yourself. You possess the unique ability to connect with others and blend into any social group.
+{{name}}, you are incredibly curious...
 
-30
+76
+
+04:53 
+
+Which keeps conversations centered around others rather than yourself.
+
+77
+
+04:57 
+
+You possess the unique ability to connect with others and blend into any social group.
+
+78
 
 05:03 
 
-You have a great deal to offer to this world. {{name}}, you are a natural-born learner, which makes you an excellent teacher.
+You have a great deal to offer to this world.
 
-31
+79
+
+05:06 
+
+{{name}}, you are a natural-born learner, which makes you an excellent teacher.
+
+80
 
 05:12 
 
-I sense that you will find success and fulfilment as an instructor, a philanthropist, a CEO, or a public relations manager.
+I sense that you will find success and fulfilment as...
 
-32
+81
+
+05:16 
+
+An instructor, a philanthropist, a CEO, or a public relations manager.
+
+82
 
 05:21 
 
-Even though you appear to be laid back and easy-going, you can also be very protective, {{name}}. Especially as a parent.
+Even though you appear to be laid back and easy going…
 
-33
+83
+
+05:25 
+
+You can also be very protective, {{name}}.
+
+84
+
+05:28 
+
+Especially as a parent.
+
+85
 
 05:30 
 
-You love your children, friends, and family fiercely. You are willing to give and sacrifice everything that you have for them.
+You love your children, friends, and family fiercely.
 
-34
+86
 
-05:39 
+05:34 
 
-{{name}}, you are going to make a lasting mark in your lifetime. You’re able to look at the world from a broad and altruistic perspective.
+You are willing to give and sacrifice everything that you have for them.
 
-35
+87
+
+05:38 
+
+{{name}}, you are going to make a lasting mark in your lifetime.
+
+88
+
+05:43 
+
+You’re able to look at the world from a broad and altruistic perspective.
+
+89
 
 05:48 
 
 You see the big picture, and you have what it takes to make this world more connected.
 
-36
+90
 
 05:54 
 
-Your deep understanding of human nature and culture as a whole gives you extraordinary insight into how you can bring the world closer together.
+Your deep understanding of human nature and culture as a whole...
 
-37
+91
+
+05:58 
+
+Gives you extraordinary insight into how you can bring the world closer together.
+
+92
 
 06:04 
 
-{{name}}, you are practically a chameleon – possessing the uncanny ability to make yourself at home within any social group or social setting.
+{{name}}, you are practically a chameleon...
 
-38
+93
+
+06:07 
+
+Possessing the uncanny ability to make yourself at home....
+
+94
+
+06:11 
+
+Within any social group or social setting.
+
+95
 
 06:14 
 
-You excel at one-on-one interactions, and never fail to make an excellent impression on larger groups of people. Your charisma and eloquence intrigues those who are fortunate enough to have crossed paths with you.
+You excel at one-on-one interactions...
 
-39
+96
+
+06:17 
+
+And never fail to make an excellent impression on larger groups of people.
+
+97
+
+06:22 
+
+Your charisma and eloquence intrigues those who are fortunate enough...
+
+98
+
+06:27 
+
+...To have crossed paths with you.
+
+99
 
 06:29 
 
-Ultimately, {{name}}, you are a dreamer. You have a strong sense of ambition, and you’re willing to do whatever it takes to achieve your dreams.
+Ultimately, {{name}}, you are a dreamer.
 
-40
+100
+
+06:32 
+
+You have a strong sense of ambition...
+
+101
+
+06:35 
+
+And you’re willing to do whatever it takes to achieve your dreams.
+
+102
 
 06:38 
 
-I’m getting the sense that you’re not too concerned about monetary riches, although you do wish you had more wealth. There is, however, a greater purpose for you in this lifetime, {{name}}.
+I’m getting the sense that you’re not too concerned about monetary riches...
 
-41
+103
 
-06:50 
+06:43 
 
-{{name}}, I understand that you tend to struggle with commitments. And that is something that you need to be careful of.
+Although you do wish you had more wealth.
 
-42
+104
+
+06:45 
+
+There is, however, a greater purpose for you in this lifetime, {{name}}.
+
+105
+
+06:51 
+
+{{name}}, I understand that you tend to struggle with commitments.
+
+106
+
+06:56 
+
+And that is something that you need to be careful of.
+
+107
 
 06:59 
 
-At times, it might feel as if you’re being trapped and having your freedom taken away. But that’s quite the contrary.
+At times, it might feel as if you’re being trapped...
 
-43
+108
+
+07:03 
+
+And having your freedom taken away. But that’s quite the contrary.
+
+109
 
 07:07 
 
-Fulfilment ultimately comes from forging valuable relationships – with others, and yourself. And that requires commitment.
+Fulfilment ultimately comes from forging valuable relationships...
 
-44
+110
+
+07:12 
+
+With others, and yourself. And that requires commitment.
+
+111
 
 07:16 
 
-That’s what you seek, {{name}}. You want to live life for yourself, without appearing selfish. You want to love yourself, while keeping the relationships you’ve forged close to your heart.
+That’s what you seek, {{name}}.
 
-45
+112
+
+07:19 
+
+You want to live life for yourself, without appearing selfish.
+
+113
+
+07:23 
+
+You want to love yourself, while keeping the relationships you’ve forged close to your heart.
+
+114
 
 07:29 
 
-When you’re able to do that, success and the life of your dreams will follow. And that’s what Individuation aims to teach you.
+When you’re able to do that, success and the life of your dreams will follow.
 
-46
+115
+
+07:34 
+
+And that’s what Individuation aims to teach you.
+
+116
 
 07:38 
 
 But there’s more to what I’ve learned about you, {{name}}…
 
-47
+117
 
 07:41 
 
@@ -290,98 +710,236 @@ It feels to me that you’re a deeply emotional and spiritual person.
 
 {{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeIn: true}}}
 
-48
+118
 
 07:46 
 
-You’re connected to your soul in a way that’s far more profound than others. Your thought process does not follow the rules and logic of the world.
+You’re connected to your soul in a way that’s far more profound than others.
 
-49
+119
+
+07:51 
+
+Your thought process does not follow the rules and logic of the world.
+
+120
 
 07:55 
 
-In fact, I get the sense that you have quite the imagination. Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
+In fact, I get the sense that you have quite the imagination.
+
+121
+
+07:59 
+
+Your thoughts and dreams are vivid, colourful...
+
+122
+
+08:02 
+
+And symbolic of who you are as an individual.
 
 {{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
 
-50
+123
 
 08:05 
 
-{{name}}, you’re not someone who likes to argue. You tend to avoid conflict and you’re uncanny when it comes to devising win-win situations.
+{{name}}, you’re not someone who likes to argue.
 
-51
+124
+
+08:09 
+
+You tend to avoid conflict and you’re uncanny when it comes to devising win-win situations.
+
+125
 
 08:15 
 
-But when backed into a corner, you’re not one to back down. You fight fiercely for your loved ones and for righteousness.
+But when backed into a corner, you’re not one to back down.
 
-52
+126
+
+08:19 
+
+You fight fiercely for your loved ones and for righteousness.
+
+127
 
 08:23 
 
-You’re the first person to volunteer in the sight of disaster. You’re the first person to donate your last dime to someone who needs it more. You’re the first person to impact and change the lives of those who are less fortunate.
+You’re the first person to volunteer in the sight of disaster.
 
-53
+128
+
+08:27 
+
+You’re the first person to donate your last dime to someone who needs it more.
+
+129
+
+08:32 
+
+You’re the first person to impact and change the lives of those who are less fortunate.
+
+130
 
 08:38 
 
-You’re the one who people rely on and look up to. {{name}}, you are the catalyst of change in humanity.
+You’re the one who people rely on and look up to.
 
-54
+131
+
+08:42 
+
+{{name}}, you are the catalyst of change in humanity.
+
+132
 
 08:46 
 
-But every explorer needs someone to accompany them on their adventures; a partner-in-crime who will stick by them when the going gets tough.
+But every explorer needs someone to accompany them on their adventures...
+
+133
+
+08:51 
+
+A partner-in-crime who will stick by them when the going gets tough.
 
 {{JS:{fn:'displayImage', path:'images/love-compatibility/explorer-love-compatibility.png', fadeIn: true}}}
 
-55
+134
 
 08:55 
 
 This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
 
-56
+135
 
 09:02 
 
-Or if you’re already in a committed relationship, there’s a really good chance that your spouse is one of those archetypes.
+Or if you’re already in a committed relationship...
 
-57
+136
+
+09:04 
+
+There’s a really good chance that your spouse is one of those archetypes.
+
+137
 
 09:09 
 
-{{name}}, you’re not the kind of person that has trouble when it comes to love. Love interests find themselves drawn to your charisma and kind nature. You’re sort of a rare breed when it comes to love.
+{{name}}, you’re not the kind of person that has trouble when it comes to love.
 
-58
+138
+
+09:14 
+
+Love interests find themselves drawn to your charisma and kind nature.
+
+139
+
+09:20 
+
+You’re sort of a rare breed when it comes to love.
+
+140
 
 09:23 
 
-You communicate better than everyone else, and you’re a thoughtful individual. The relationships that you forge with potential lovers are always profound and deep.
+You communicate better than everyone else, and you’re a thoughtful individual.
 
-59
+141
+
+09:28 
+
+The relationships that you forge with potential lovers are always profound and deep.
+
+142
 
 09:33 
 
-You become very selective with who you choose to date and who you choose to end up with – for good reason, of course. I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
+You become very selective with who you choose to date...
 
-60
+143
+
+09:37 
+
+And who you choose to end up with.
+
+144
+
+09:39 
+
+For good reason, of course.
+
+145
+
+09:41 
+
+I sense that in the coming years...
+
+146
+
+09:43 
+
+You will be the happiest you’ve ever been in that regard.
+
+147
 
 09:47 
 
-{{name}}, I’m sensing that your love life isn’t going to be the smoothest – but you will find that happiness that you’re looking for soon enough.
+{{name}}, I’m sensing that your love life isn’t going to be the smoothest...
+
+148
+
+09:52 
+
+But you will find that happiness that you’re looking for soon enough.
 
 {{JS:{fn:'displayImage', path:'images/love-compatibility/explorer-love-compatibility.png', fadeOut: true}}}
 
-61
+148
 
 09:56 
 
-But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life. Your spouse or partner is meant to play a supporting role in your life; not the lead.
+But don’t forget, {{name}}...
 
-62
+149
 
-10:08 
+09:57 
 
-Focus on your own personal growth, and I promise you, {{name}}, you will soon discover heavenly rewards.
+How you perceive yourself should not be determined by your love life.
+
+150
+
+10:02 
+
+Your spouse or partner is meant to play a supporting role in your life...
+
+151
+
+10:06 
+
+Not the lead.
+
+152
+
+10:07 
+
+Focus on your own personal growth...
+
+153
+
+10:10 
+
+And I promise you {{name}}...
+
+154
+
+10:12 
+
+You will soon discover heavenly rewards.

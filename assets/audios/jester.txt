@@ -1,4 +1,4 @@
-1     
+1      
 
 00:01 
 
@@ -6,388 +6,862 @@ Hello {{name}},
 
 2
 
-00:03 
+00:04 
 
-If you’ve made it here, then congratulations! Because this means that your archetype is the Jester!
+If you’ve made it here, then congratulations!
+
+3
+
+00:07 
+
+Because this means that your archetype is the Jester!
 
 {{JS:{fn:'displayImage', path:'images/archetype-icons/jester.png', fadeIn: true}}}
 
-3      
+4
 
 00:10 
 
-But what does this actually mean? Don’t worry, everything you need to know will be on this page. Stick to the end of it and I promise that you’ll experience something truly magical.
+But what does this actually mean?
+
+5
+
+00:13 
+
+Don’t worry, everything you need to know will be on this page.
+
+6
+
+00:16 
+
+Stick to the end of it and I promise that you’ll experience something truly magical.
 
 {{JS:{fn:'displayImage', path:'images/archetype-icons/jester.png', fadeOut: true}}}
 
-4      
+7
 
 00:22 
 
-The quiz you’ve just taken is designed to identify your archetype – a personality profile that’s broken down your entire being. Your tendencies, your strengths, your past, and your future.
+The quiz you’ve just taken is designed to identify your archetype…
 
-5      
+8
+
+00:27 
+
+A personality profile that’s broken down your entire being.
+
+9
+
+00:31 
+
+Your tendencies, your strengths, your past, and your future.
+
+10
 
 00:37 
 
-Your archetype takes into account your gender, your marital status, how you answered the quiz, and how long you took to get those answers.
+Your archetype takes into account your gender, your marital status…
 
-6      
+11
+
+00:42 
+
+How you answered the quiz, and how long you took to get those answers.
+
+12
 
 00:46 
 
-That’s right, {{name}}. You can use that information to make astronomical changes in your life. You’ll be able to leverage on your strengths, improve on your weaknesses, and embark on the life that you’ve always dreamed of.
+That’s right, {{name}}.
 
-7      
+13
+
+00:48 
+
+You can use that information to make astronomical changes in your life.
+
+14
+
+00:54 
+
+You’ll be able to leverage on your strengths, improve on your weaknesses…
+
+15
+
+00:58 
+
+And embark on the life that you’ve always dreamed of.
+
+16
 
 01:02 
 
-But before we get into that, I want to share with you about your archetype, The Jester, and what it means.
+But before we get into that, I want to share with you about your archetype…
 
-8      
+17
 
-01:09 
+01:07 
 
-{{name}}, you are truly a unique individual. And I genuinely believe that this world needs more people like you.
+The Jester, and what it means.
 
-9      
+18
+
+01:10 
+
+{{name}}, you are truly a unique individual.
+
+19
+
+01:13 
+
+And I genuinely believe that this world needs more people like you.
+
+20
 
 01:18 
 
-You are an incredibly sharp and deeply intelligent being – not necessarily in the sense of academics, but in terms of approaching various topics from a myriad of perspectives.
+You are an incredibly sharp and deeply intelligent being…
 
-10  
+21
 
-01:29 
+01:22 
+
+Not necessarily in the sense of academics…
+
+22
+
+01:24 
+
+But in terms of approaching various topics from a myriad of perspectives.
+
+23
+
+01:30 
 
 You’re different that way, {{name}}.
 
-11 
+24
 
 01:33 
 
-While the world walks in one direction, you have no qualms with going against it. That’s what makes you so special, {{name}}.
+While the world walks in one direction, you have no qualms with going against it.
 
-12  
+25
 
-01:41 
+01:38 
 
-You seem to be able to breeze your way through life, with your bright thoughts and your hilarious interpretations. That’s because as a Jester, you are highly intuitive.
+That’s what makes you so special, {{name}}.
 
-13  
+26
+
+01:42 
+
+You seem to be able to breeze your way through life…
+
+27
+
+01:46 
+
+With your bright thoughts and your hilarious interpretations.
+
+28
+
+01:50 
+
+That’s because as a Jester, you are highly intuitive.
+
+29
 
 01:54 
 
 Your sense of humour is constructed with creativity, and seasoned with your charisma.
 
-14  
+30 
 
 02:00 
 
-{{name}}, you might not know it yet, but you can be extremely charismatic, and people fall in love with the conversations that they have with you.
+{{name}}, you might not know it yet…
 
-15  
+31
+
+02:03 
+
+But you can be extremely charismatic…
+
+32
+
+02:06 
+
+And people fall in love with the conversations that they have with you.
+
+33
 
 02:10 
 
-You appear to be a natural-born performer, and you’re always happy to be in the limelight and the life of the party.
+You appear to be a natural-born performer…
 
-16 
+34
 
-02:17 
+02:13 
+
+And you’re always happy to be in the limelight and the life of the party.
+
+35
+
+02:18 
 
 There is something else about you, {{name}}…
 
 {{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
 
-17  
+36
 
 02:21 
 
 You put the smile in happiness.
 
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
-
-18  
+37
 
 02:25 
 
-{{name}}, I’m getting the sense that you’re going to live a long, and happy life. And although success might not be at your feet right now, your riches and fulfilment are merely waiting for you.
+{{name}}, I’m getting the sense that you’re going to live a long, and happy life.
 
-19 
+38
+
+02:31 
+
+And although success might not be at your feet right now...
+
+39
+
+02:34 
+
+Your riches and fulfilment are merely waiting for you.
+
+{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
+
+40
 
 02:39 
 
-But there’s something else, {{name}}. Even though you will triumph, your path to success will not come easy.
+But there’s something else, {{name}}.
 
-20  
+41
+
+02:42 
+
+Even though you will triumph, your path to success will not come easy.
+
+42
 
 02:47 
 
-Talking to people is never a problem for you, and I’m getting the sense that you tend to struggle when it comes to holding serious conversations.
+Talking to people is never a problem for you…
 
-21  
+43
+
+02:51 
+
+And I’m getting the sense that you tend to struggle...
+
+44
+
+02:53 
+
+When it comes to holding serious conversations.
+
+45
 
 02:57 
 
-Your nature revolves so much around light-hearted jokes and innocent conversations that touching on serious topics becomes a chore.
+Your nature revolves so much around light-hearted jokes and innocent conversations…
 
-22  
+46
 
-03:06 
+03:03 
 
-{{name}}, don’t let that discourage you. The world needs your light-hearted and comical nature. The world needs people like you to be in positions of power.
+That touching on serious topics becomes a chore.
 
-23  
+47
+
+03:07 
+
+{{name}}, don’t let that discourage you.
+
+48
+
+03:10 
+
+The world needs your light-hearted and comical nature.
+
+49
+
+03:13 
+
+The world needs people like you to be in positions of power.
+
+50
 
 03:18 
 
-You are what keeps the world grounded. It has been said, that even kings take the advice of their jesters.
+You are what keeps the world grounded.
 
-24  
+51
+
+03:21 
+
+It has been said, that even kings take the advice of their jesters.
+
+52
 
 03:25 
 
-You do, however, need to understand that it’s important for you to become more in touch with your inner self and inner emotions.
+You do, however, need to understand that it’s important for you…
 
-25  
+53
+
+03:29  
+
+To become more in touch with your inner self and inner emotions.
+
+54
 
 03:33 
 
-That way, you’ll be able to discover the deeper meanings behind your personality and your purpose in this lifetime.
+That way, you’ll be able to discover the deeper meanings…
 
-26  
+55
 
-03:41 
+03:37 
 
-After all, {{name}}, you have the capacity to bring happiness – not just to those around you, but to the world. And I believe that’s where you will find fulfilment.
+Behind your personality and your purpose in this lifetime.
 
-27  
+56
 
-03:55 
+03:43 
 
-{{name}}, I can already tell that your friends and family really adore being around you. You’re the one who they come to for a wonderful time, a light-hearted conversation, or just for a quick chat.
+After all, {{name}}, you have the capacity to bring happiness…
 
-28  
+57
 
-04:11 
+03:48 
 
-You’re not the type of person to have huge circles of friends. You’re not someone who has trouble with making friends.
+Not just to those around you, but to the world.
 
-29  
+58
+
+03:52 
+
+And I believe that’s where you will find fulfilment.
+
+59
+
+03:56 
+
+{{name}}, I can already tell that your friends and family really adore being around you.
+
+60
+
+04:03 
+
+You’re the one who they come to for a wonderful time…
+
+61
+
+04:05 
+
+A light-hearted conversation, or just for a quick chat.
+
+62
+
+04:12 
+
+You’re not the type of person to have huge circles of friends.
+
+63
+
+04:16 
+
+You’re not someone who has trouble with making friends.
+
+64
 
 04:20 
 
-In fact, you have no trouble at all when it comes to impressing others with your charisma and easy-going nature. But you’re extremely selective when it comes to who you choose to let into your life.
+In fact, you have no trouble at all when it comes to…
 
-30  
+65
+
+04:24 
+
+Impressing others with your charisma and easy-going nature.
+
+66
+
+04:28 
+
+But you’re extremely selective when it comes to who you choose to let into your life.
+
+67
 
 04:33 
 
 You prefer to keep your loved ones close, and your wolf pack small.
 
-31  
+68
 
 04:38 
 
-{{name}}, you are incredibly impressionable. You possess the unique ability to impress others and blend into any social group.
+{{name}}, you are incredibly impressionable.
 
-32  
+69
+
+04:42 
+
+You possess the unique ability to impress others and blend into any social group.
+
+70
 
 04:48 
 
-While others struggle to have their names remembered, you seem to be the type of person who everyone knows. You have a great deal to offer to this world.
+While others struggle to have their names remembered…
 
-33  
+71
+
+04:52 
+
+You seem to be the type of person who everyone knows.
+
+72
+
+04:55 
+
+You have a great deal to offer to this world.
+
+73
 
 04:58 
 
 {{name}}, you are capable of bringing smiles to the darkest of times.
 
-34  
+74
 
 05:04 
 
-I sense that you will find success and fulfilment as an entertainer, a performer, a salesman, or a writer.
+I sense that you will find success and fulfilment as…
 
-35  
+75
 
-05:14 
+05:08 
 
-I can tell that you’re not the protective type, {{name}}. Even as a parent. You prefer to give others the freedom and room that they need to grow on their own.
+An entertainer, a performer, a salesman, or a writer.
 
-36  
+76
 
-05:27 
+05:17 
 
-However, you must remember to be nurturing and present in the lives of your loved ones. You are willing to give and sacrifice everything that you have for the people closest to you.
+I can tell that you’re not the protective type, {{name}}.
 
-37  
+77
 
-05:40 
+05:20 
 
-{{name}}, you are going to make a lasting mark in your lifetime. You’re able to create hope from desolation. Your unique ability to create happiness makes you an excellent catalyst of change.
+Even as a parent.
 
-38  
+78
+
+05:23 
+
+You prefer to give others the freedom and room that they need to grow on their own.
+
+79
+
+05:28 
+
+However, you must remember to be nurturing and present in the lives of your loved ones.
+
+80
+
+05:33 
+
+You are willing to give and sacrifice everything that you have for the people closest to you.
+
+81
+
+05:39 
+
+{{name}}, you are going to make a lasting mark in your lifetime.
+
+82
+
+05:45 
+
+You’re able to create hope from desolation.
+
+83
+
+05:48 
+
+Your unique ability to create happiness makes you an excellent catalyst of change.
+
+84
 
 05:54 
 
-You see the big picture, and you have what it takes to make this world a happier place – one smile at a time.
+You see the big picture, and you have what it takes to make this world a happier place…
 
-39  
+85
 
-06:02 
+06:00 
 
-{{name}}, you are an enthusiastic and humorous being. Like a fairy godmother with the touch of your wand, you’re able to spark laughter and smiles from all sorts of people.
+One smile at a time.
 
-40  
+86
+
+06:03 
+
+{{name}}, you are an enthusiastic and humorous being.
+
+87
+
+06:06 
+
+Like a fairy godmother with the touch of your wand…
+
+88
+
+06:09 
+
+You’re able to spark laughter and smiles from all sorts of people.
+
+89
 
 06:14 
 
-You excel at interactions with both individuals and groups, and never fail to make an excellent impression on others. Your charisma and eloquence intrigues people.
+You excel at interactions with both individuals and groups…  
 
-41 
+90
+
+06:19 
+
+And never fail to make an excellent impression on others.
+
+91
+
+06:23 
+
+Your charisma and eloquence intrigues people.
+
+92
 
 06:27 
 
-Ultimately, {{name}}, you are a realist. You understand the importance of money, but I’m getting the sense that you’re not too concerned about monetary riches.
+Ultimately, {{name}}, you are a realist.
 
-42  
+93
+
+06:31 
+
+You understand the importance of money…
+
+94
+
+06:33 
+
+But I’m getting the sense that you’re not too concerned about monetary riches.
+
+95
 
 06:36 
 
-Although you do often wish that you had more wealth. There is, however, a greater purpose for you in this lifetime, {{name}}.
+Although you do often wish that you had more wealth.
 
-43  
+96
 
-06:43 
+06:40 
 
-Of course, {{name}}, you can at times be dependent on your ability to make others laugh for your own happiness. And that is something you need to be careful of.
+There is, however, a greater purpose for you in this lifetime, {{name}}.
 
-44 
+97
+
+06:44 
+
+Of course, {{name}}, you can at times be dependent on your ability to…
+
+98
+
+06:49 
+
+Make others laugh for your own happiness. And that is something you need to be careful of.
+
+99
 
 06:54 
 
-At times, you might feel as if you’re living your life for others. That’s not what you want, {{name}}. You want to live life for yourself. You want to love yourself.
+At times, you might feel as if you’re living your life for others.
 
-45 
+100
+
+06:58 
+
+That’s not what you want, {{name}}.
+
+101
+
+07:01 
+
+You want to live life for yourself.
+
+102
+
+07:03 
+
+You want to love yourself.
+
+103
 
 07:04 
 
-When you’re able to do that, success and the life of your dreams will follow. And that’s what Individuation aims to teach you.
+When you’re able to do that, success and the life of your dreams will follow.
 
-46  
+104
+
+07:10 
+
+And that’s what Individuation aims to teach you.
+
+105
 
 07:13 
 
 But there’s more to what I’ve learned about you, {{name}}…
 
-47  
+106
 
-07:18 
+07:19 
 
 It feels to me that you might not be the most emotional and spiritual person.
 
 {{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeIn: true}}}
 
-48  
+107
 
 07:25 
 
-But you’re intimately connected to your soul in a way that’s far more profound than others. Your thought process does not follow the rules and logic of the world.
-
-49 
-
-07:34 
-
-In fact, I get the sense that you have quite the imagination. Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
+But you’re intimately connected to your soul in a way that’s far more profound than others.
 
 {{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
 
-50  
+108
+
+07:30 
+
+Your thought process does not follow the rules and logic of the world.
+
+109
+
+07:34 
+
+In fact, I get the sense that you have quite the imagination.
+
+110
+
+07:39 
+
+Your thoughts and dreams are vivid, colourful…
+
+111
+
+07:43 
+
+And symbolic of who you are as an individual.
+
+112
 
 07:46 
 
 {{name}}, you’re not someone who likes to argue.
 
-51  
+113
 
 07:49 
 
 You tend to avoid conflict and you’re uncanny when it comes to devising win-win situations.
 
-52  
+114
 
 07:56 
 
-But when backed into a corner, you’re not one to back down. You fight fiercely for your loved ones and for righteousness.
+But when backed into a corner, you’re not one to back down.
 
-53  
+115
 
-08:05 
+08:00 
 
-You’re the first person to step in when you see a fight breaking out. You’re the first person to reach for your pockets in the sight of a struggling busker. You’re the first person your friends call when they’ve had a horrible day. You’re the one who people rely on and look up to.
+You fight fiercely for your loved ones and for righteousness.
 
-54  
+116
+
+08:06 
+
+You’re the first person to step in when you see a fight breaking out.
+
+117
+
+08:11 
+
+You’re the first person to reach for your pockets in the sight of a struggling busker.
+
+118
+
+08:15 
+
+You’re the first person your friends call when they’ve had a horrible day.
+
+119
+
+08:19 
+
+You’re the one who people rely on and look up to.
+
+120
 
 08:23 
 
 {{name}}, you are the light of hope and happiness of the world.
 
-55  
+121
 
-08:27 
+08:28 
 
-But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.
+But every superhero needs a side-kick…
+
+122
+
+08:31 
+
+A partner in crime who will stick by them when the going gets tough.
 
 {{JS:{fn:'displayImage', path:'images/love-compatibility/jester-love-compatibility.png', fadeIn: true}}}
 
-56  
+123
 
 08:36 
 
-This little chart I’ve prepared represents the archetypes that you’re most likely to end up with. Or if you’re already in a committed relationship, there’s a really good chance that your spouse is one of those archetypes.
+This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
 
-57  
+124
+
+08:41 
+
+Or if you’re already in a committed relationship…
+
+125
+
+08:44 
+
+There’s a really good chance that your spouse is one of those archetypes.
+
+126
 
 08:48 
 
-{{name}}, you’re not the kind of person that has trouble when it comes to love. People find themselves drawn to your charisma and kind nature.
+{{name}}, you’re not the kind of person that has trouble when it comes to love.
 
-58  
+127
+
+08:54 
+
+People find themselves drawn to your charisma and kind nature.
+
+128
 
 08:58 
 
-You’re sort of a rare breed when it comes to love. You communicate better than anyone else, you’re an incredibly thoughtful individual.
+You’re sort of a rare breed when it comes to love.
 
-59  
+129
+
+09:02 
+
+You communicate better than anyone else. You’re an incredibly thoughtful individual.
+
+130
 
 09:07 
 
 The relationships that you forge with potential lovers are always profound and deep.
 
-60  
+131
 
-09:14 
+09:16 
 
-You become very selective when it comes to who you choose to date and who you choose to end up with – for a good reason, of course. I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
+You become very selective when it comes to who you choose to date…
 
-61  
+132
+
+09:20 
+
+And who you choose to end up with…
+
+133
+
+09:22 
+
+For a good reason, of course.
+
+134
+
+09:24 
+
+I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
+
+135
 
 09:31 
 
-{{name}}, I’m sensing that your love life isn’t going to be the smoothest – but you will find happiness that you’re looking for soon enough.
+{{name}}, I’m sensing that your love life isn’t going to be the smoothest…
+
+136
+
+09:36 
+
+But you will find the happiness that you’re looking for soon enough.
 
 {{JS:{fn:'displayImage', path:'images/love-compatibility/jester-love-compatibility.png', fadeIn: true}}}
 
-62  
+137
 
-09:40 
+09:43 
 
-But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life. Your spouse or partner is meant to play a supporting role in your life; not the lead.
+But don’t forget, {{name}}…
 
-63  
+138
+
+09:45 
+
+How you perceive yourself should not be determined by your love life.
+
+139
+
+09:50 
+
+Your spouse or partner is meant to play a supporting role in your life…
+
+140
+
+09:54 
+
+Not the lead.
+
+141
 
 09:56 
 
-Focus on your own personal growth, and I promise you, {{name}}, you will soon discover heavenly rewards.
+Focus on your own personal growth, and I promise you, {{name}}…
+
+142
+
+10:00 
+
+You will soon discover heavenly rewards.

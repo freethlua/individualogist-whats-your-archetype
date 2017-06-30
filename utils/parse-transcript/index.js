@@ -11,6 +11,7 @@ module.exports = parse;
 
 function parse(str) {
   // console.log(`str:`, str);
+  if (!str) return '';
   const keys = extractKeys(str);
   let final = '';
   const finalKeys = []

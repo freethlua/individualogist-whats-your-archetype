@@ -1,381 +1,883 @@
-1      
-
 00:03 
+
+1
 
 Hello {{name}},
 
-2      
+00:05 
 
-00:06 
+2   
 
-If you’ve made it here, then congratulations! Because this means that your archetype is the Member!
+If you’ve made it here,
+
+00:07 
+
+3
+
+then congratulations!
+
+00:09 
+
+4
+
+Because this means that your archetype is the Member!
 
 {{JS:{fn:'displayImage', path:'images/archetype-icons/member.png', fadeIn: true}}}
 
-3      
-
 00:12 
 
-But what does this actually mean? Don’t worry, everything you need to know will be on this page. Stick to the end of it and I promise that you’ll experience something truly magical.
+5
+
+But what does this actually mean?
+
+00:15 
+
+6
+
+Don’t worry {{name}} !
+
+00:16 
+
+7
+
+Everything you need to know will be on this page.
+
+00:19 
+
+8
+
+Stick to the end of it
+
+00:20 
+
+9
+
+and I promise that you’ll experience something truly magical.
 
 {{JS:{fn:'displayImage', path:'images/archetype-icons/member.png', fadeOut: true}}}
 
-4     
-
 00:24 
 
-The quiz that you’ve just taken is designed to identify your archetype – a personality profile that’s broken down your entire being. Your tendencies, your strengths, your past, and your future.
+10
 
-5      
+The quiz that you’ve just taken is designed to identify your archetype
 
-00:37 
+00:29 
 
-Your archetype takes into account your gender, your marital status, how you answered the quiz, and how long you took to get those answers.
+11
 
-6      
+– a personality profile that’s broken down your entire being.
+
+00:33 
+
+12
+
+Your tendencies, your strengths, your past, and your future.
+
+00:38 
+
+13
+
+Your archetype takes into account your gender,
+
+00:40 
+
+14
+
+your marital status, how you answered the quiz,
+
+00:44 
+
+15
+
+and how long you took to get those answers.
 
 00:46 
 
-That’s right, {{name}}. You can use that information to make astronomical changes in your life. You’ll be able to leverage on your strengths, improve on your weaknesses, and embark on the life that you’ve always dreamed of.
+16
 
-7      
+That’s right, {{name}}.
+
+00:48 
+
+17
+
+You can use that information to make astronomical changes in your life.
+
+00:53 
+
+18
+
+You’ll be able to leverage on your strengths,
+
+00:56 
+
+19
+
+improve on your weaknesses,
+
+00:57 
+
+20
+
+and embark on the life that you’ve always dreamed of.
 
 01:01 
 
-But before we get into that, I want to share with you about your archetype, The Member, and what it means.
+21
 
-8     
+But before we get into that, I want to share with you about your archetype,
+
+01:05 
+
+22
+
+The Member, and what it means.
 
 01:08 
 
-{{name}}, you are truly a unique individual. And I genuinely believe that this world needs more people like you.
+23{{name}}, you are truly a unique individual.
 
-9      
+01:12 
+
+24
+
+And I genuinely believe that this world needs more people like you.
 
 01:16 
 
-You are a mature and deeply intellectual being – not necessarily in the sense of academics, but in terms of connecting with people and building rapport with people from all sorts of backgrounds.
+25
 
-10  
+You are a mature and deeply intellectual being
+
+01:19 
+
+26
+
+– not necessarily in the sense of academics,
+
+01:22  
+
+27
+
+but in terms of connecting with people and building rapport with people from all sorts of backgrounds.
 
 01:28 
 
-You’re different that way, {{name}}..
+28
 
-11  
+You’re different that way, {{name}}..
 
 01:30 
 
-While the world walks in one direction, you have no qualms with going against it. That’s what makes you so special, {{name}}.
+29
 
-12  
+While the world walks in one direction,
 
-01:38 
+01:33 
 
-You’re deeply sensitive. You’re able to empathize with anyone and everyone.
+30
 
-13  
+you have no qualms with going against it.
+
+01:36 
+
+31
+
+That’s what makes you so special, {{name}}.
+
+01:39 
+
+32
+
+You’re deeply sensitive.
+
+01:41 
+
+33
+
+You’re able to empathize with anyone and everyone.
 
 01:45 
 
-That’s because as a Member, you are highly compassionate. You put the needs of others before your own, and you’re able to connect with strangers just as well as you’re able to connect with your closest loved ones.
+34
 
-14 
+That’s because as a Member, you are highly compassionate.
+
+01:49 
+
+35
+
+You put the needs of others before your own,
+
+01:51 
+
+36
+
+and you’re able to connect with strangers just as well
+
+01:54 
+
+37
+
+as you’re able to connect with your closest loved ones.
 
 01:57 
 
-{{name}}, you might not know it yet, but you are more morally and ethically upright than others.
+38
 
-15  
+{{name}}, you might not know it yet,
+
+02:00 
+
+39
+
+but you are more morally and ethically upright than others.
 
 02:03 
 
-You hold your values and principles close to your heart, and you’re always ready to stick to your guns.
+40
 
-16  
+You hold your values and principles close to your heart,
+
+02:07 
+
+41
+
+and you’re always ready to stick to your guns.
 
 02:10 
+
+42
 
 There is something else about you, {{name}}…
 
 {{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
 
-17 
-
 02:13 
+
+43
 
 You form the foundation of the world.
 
 {{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
 
-18  
-
 02:16 
 
-{{name}}, I’m getting the sense that you’re going to live a long, and happy life. And although success might not be at your feet right now, your riches and fulfilment are merely waiting for you.
+44
 
-19  
+{{name}}, I’m getting the sense that you’re going to live a long, and happy life.
+
+02:20 
+
+45
+
+And although success might not be at your feet right now,
+
+02:24 
+
+46
+
+your riches and fulfilment are merely waiting for you.
 
 02:28 
 
-But there’s something else, {{name}}. Even though you will triumph, your path to success will not come easy.
+47
 
-20  
+But there’s something else, {{name}}.
+
+02:30 
+
+48
+
+Even though you will triumph, your path to success will not come easy.
 
 02:35 
 
-Talking to people is never a problem for you, but I’m getting the sense that you tend to struggle when it comes to talking about yourself.
+49
 
-21 
+Talking to people is never a problem for you,
+
+02:38 
+
+50
+
+but I’m getting the sense that you tend to struggle when it comes to talking about yourself.
 
 02:42 
 
-Your nature revolves so much around listening to people that you find it difficult to talk about yourself and share your own experience.
+51
 
-22 
+Your nature revolves so much around listening to people
+
+02:46 
+
+52
+
+that you find it difficult to talk about yourself and share your own experience.
 
 02:50 
 
-{{name}}, don’t let that discourage you. The world needs your selflessness and kindness. The world needs people like you to be in positions of power.
+53
 
-23  
+{{name}}, don’t let that discourage you.
+
+02:53 
+
+54
+
+The world needs your selflessness and kindness.
+
+02:57 
+
+55
+
+The world needs people like you to be in positions of power.
 
 03:01 
 
-You are the one who keeps the world grounded. You do, however, need to understand that it’s important for you to openly and willingly share your story with others.
+56
 
-24
+You are the one who keeps the world grounded.
+
+03:04 
+
+57
+
+You do, however, need to understand that it’s important for you to
+
+03:08 
+
+58
+
+openly and willingly share your story with others.
 
 03:11 
 
-That way, you’ll be able to build trust with the people around you and create even more fruitful interactions.
+59
 
-25  
+That way, you’ll be able to build trust with the people around you
+
+03:15 
+
+60
+
+and create even more fruitful interactions.
 
 03:18 
 
-After all, {{name}}, conversation is your forte. And conversation needs more than one person to be involved.
+61
 
-26  
+After all, {{name}}, conversation is your forte.
+
+03:23 
+
+62
+
+And conversation needs more than one person to be involved.
 
 03:26 
 
-{{name}}, I can already tell that your friends and family really look up to you. You’re the one who they come to for detailed advice, a listening ear, or just for a quick chat.
+63
 
-27  
+{{name}}, I can already tell that your friends and family really look up to you.
+
+03:31 
+
+64
+
+You’re the one who they come to for detailed advice,
+
+03:35 
+
+65
+
+a listening ear, or just for a quick chat.
 
 03:38 
 
-You’re not the type of person to have huge circles of friends. You’re not someone who has trouble with making friends.
+66
 
-28 
+You’re not the type of person to have a huge circles of friends.
+
+03:42 
+
+67
+
+You’re not someone who has trouble with making friends.
 
 03:45 
 
-In fact, you have no trouble at all when it comes to impressing others with your intelligence and sweet nature. But you’re extremely selective with who you choose to let into your life.
+68
 
-29  
+In fact, you have no trouble at all when it comes to impressing others
+
+03:48 
+
+69
+
+with your intelligence and sweet nature.
+
+03:51 
+
+70
+
+But you’re extremely selective with who you choose to let into your life.
 
 03:55 
 
-You prefer to keep your loved ones close, and your wolf pack small.
+71
 
-30  
+You prefer to keep your loved ones close, and your wolf pack small.
 
 03:59 
 
-{{name}}, you are incredibly nurturing. You possess the unique ability to connect with others and blend into any social group.
+72
 
-31  
+{{name}}, you are incredibly nurturing.
+
+04:02 
+
+73
+
+You possess the unique ability to connect with others and blend into any social group.
 
 04:07 
 
-You have a great deal to offer to this world. And I’m getting the sense that you are a natural-born leader.
+74
 
-32  
+You have a great deal to offer to this world.
 
-04:13 
+04:09 
 
-You will find success and fulfilment as an entrepreneur, a politician, a public relations manager, or a salesman.
+75
 
-33  
+And I’m getting the sense that you are a natural-born leader.
+
+04:14 
+
+76
+
+You will find success and fulfilment as an entrepreneur, a politician,
+
+04:18 
+
+77
+
+a public relations manager, or a salesman.
 
 04:21 
 
-You can be very protective, {{name}}. Especially as a parent. You love your children, friends, and family fiercely. You are willing to give and sacrifice everything that you have for them.
+78
 
-34  
+You can be very protective, {{name}}.
+
+04:23 
+
+79
+
+Especially as a parent.
+
+04:26 
+
+80
+
+You love your children, friends, and family fiercely.
+
+04:30 
+
+81
+
+You are willing to give and sacrifice everything that you have for them.
 
 04:34 
 
-{{name}}, you are going to make a lasting mark in your lifetime. You’re able to look at the world from a broad and profound perspective. You see the big picture, and you have what it takes to make this world more connected.
+82
 
-35  
+{{name}}, you are going to make a lasting mark in your lifetime.
 
-04:48 
+04:39 
 
-Each archetype has a calling in life. A calling that will lead you to joy and fulfilment. {{name}} I’d like to share with you what I’ve discovered about your calling.
+83
 
-36  
+You’re able to look at the world from a broad and profound perspective.
+
+04:43 
+
+84
+
+You see the big picture, and you have what it takes to make this world more connected.
+
+04:49 
+
+85
+
+Each archetype has a calling in life.
+
+04:51 
+
+86
+
+A calling that will lead you to joy and fulfilment.
+
+04:55 
+
+87
+
+{{name}}, I’d like to share with you what I’ve discovered about your calling.
 
 05:00 
 
-{{name}}, you are practically a chameleon – possessing the uncanny ability to make yourself at home within any social group or social setting.
+88
 
-37  
+{{name}}, you are practically a chameleon
+
+05:02 
+
+89
+
+– possessing the uncanny ability to make yourself at home
+
+05:06 
+
+90
+
+within any social group or social setting.
 
 05:09 
 
-You excel at one-on-one interactions, and never fail to make an excellent impression on others. Your charisma and eloquence intrigues people.
+91
 
-38  
+You excel at one-on-one interactions,
+
+05:12 
+
+92
+
+and never fail to make an excellent impression on others.
+
+05:16 
+
+93
+
+Your charisma and eloquence intrigues people.
 
 05:19 
 
-Ultimately, {{name}}, you are a realist. You have a clear conscience. Discerning right from wrong has never been a difficult task for you.
+94
 
-39 
+Ultimately, {{name}}, you are a realist.
+
+05:23 
+
+95
+
+You have a clear conscience.
+
+05:25 
+
+96
+
+Discerning right from wrong has never been a difficult task for you.
 
 05:29 
 
-I’m getting the sense that you’re not too concerned about monetary riches, although you do wish you had more wealth.
+97
 
-40  
+I’m getting the sense that you’re not too concerned about monetary riches,
+
+05:33 
+
+98
+
+although you do wish you had more wealth.
 
 05:36 
 
-There is, however, a greater purpose for you in this lifetime, {{name}}. A purpose that will reveal itself to you very soon.
+99
 
-41 
+There is, however, a greater purpose for you in this lifetime, {{name}}.
+
+05:40 
+
+100
+
+A purpose that will reveal itself to you very soon.
 
 05:44 
 
-However, {{name}}, you do tend to do things for the sake of others.
+101
 
-42  
+However, {{name}}, you do tend to do things for the sake of others.
 
 05:49 
 
-Your kind and giving nature can make you dependent on others for your own happiness. And that is something that you need to be careful of.
+102
 
-43  
+Your kind and giving nature can make you dependent on others for your own happiness.
+
+05:54 
+
+103
+
+And that is something that you need to be careful of.
 
 05:56 
 
-At times, it might feel like you’re living your life for others. That’s not what you want, {{name}}. You want to live life for yourself. You want to love yourself.
+104
 
-44  
+At times, it might feel like you’re living your life for others.
+
+06:00 
+
+105
+
+That’s not what you want, {{name}}.
+
+06:02 
+
+106
+
+You want to live life for yourself.
+
+06:05 
+
+107
+
+You want to love yourself.
 
 06:06 
 
-When you’re able to do that, success and the life of your dreams will follow. And that’s what Individuation aims to teach you.
+108
 
-45  
+When you’re able to do that, success and the life of your dreams will follow.
 
-06:14 
+06:11 
+
+109
+
+And that’s what Individuation aims to teach you.
+
+06:15 
+
+110
 
 But there’s more to what I’ve learned about you, {{name}}…
 
-46  
+06:18 
 
-06:17 
+111
 
 It feels to me that you’re a deeply emotional and spiritual person.
 
 {{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeIn: true}}}
 
-47  
-
 06:22 
 
-You’re connected to your soul in a way that’s far more profound than others. Your thought process does not follow the rules of logic of the world.
+112
 
-48  
+You’re connected to your soul in a way that’s far more profound than others.
+
+06:27 
+
+113
+
+Your thought process does not follow the rules of logic of the world.
 
 06:31 
 
-In fact, I get the sense that you have quite the imagination. Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
+114
+
+In fact, I get the sense that you have quite the imagination.
+
+06:35 
+
+115
+
+Your thoughts and dreams are vivid, colourful,
+
+06:38 
+
+116
+
+and symbolic of who you are as an individual.
 
 {{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
 
-49  
+06:41 
 
-06:42 
+117
 
-{{name}}, you’re not someone who likes to argue. You tend to avoid conflict and you’re uncanny when it comes to devising win-win situations.
+{{name}}, you’re not someone who likes to argue.
 
-50  
+06:44 
 
- 06:50 
+118
 
-But when backed into a corner, you’re not one to back down. You fight fiercely for your loved ones and for righteousness.
+You tend to avoid conflict and you’re uncanny
 
-51  
+06:47 
+
+119
+
+when it comes to devising win-win situations.
+
+06:50 
+
+120
+
+But when backed into a corner, you’re not one to back down.
+
+06:54 
+
+121
+
+You fight fiercely for your loved ones and for righteousness.
 
 06:58 
 
-You’re the first person to step in when you see a fight breaking out. You’re the first person to reach out to the quietest person in the room. You’re the first person to extend help and guidance to the weak and the bullied. People look up to you and rely on you.
+122
 
-52  
+You’re the first person to step in when you see a fight breaking out.
+
+07:02 
+
+123
+
+You’re the first person to reach out to the quietest person in the room.
+
+07:06 
+
+124
+
+You’re the first person to extend help and guidance to the weak and the bullied.
+
+07:12 
+
+125
+
+People look up to you and rely on you.
 
 07:14 
 
-{{name}}, you bring understanding to the misunderstood.
+126
 
-53  
+{{name}}, you bring understanding to the misunderstood.
 
 07:18 
 
-But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.
+127
+
+But every superhero needs a side-kick;
+
+07:21 
+
+128
+
+a partner in crime who will stick by them when the going gets tough.
 
 {{JS:{fn:'displayImage', path:'images/love-compatibility/member-love-compatibility.png', fadeIn: true}}}
 
-54  
-
 07:25 
 
-This little chart I’ve prepared represents the archetypes that you’re most likely to end up with. Or if you’re already in a committed relationship, there’s a really good chance that your spouse is one of those archetypes.
+129
 
-55  
+This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
+
+07:31 
+
+130
+
+Or if you’re already in a committed relationship,
+
+07:34 
+
+131
+
+there’s a really good chance that your spouse is one of those archetypes.
 
 07:38 
 
-{{name}}., you’re not the kind of person that has trouble when it comes to love. Love interests find themselves drawn to your charisma and kind nature.
+132
 
-56  
+{{name}}., you’re not the kind of person that has trouble when it comes to love.
+
+07:43 
+
+133
+
+Love interests find themselves drawn to your charisma and kind nature.
 
 07:47 
 
-You’re sort of a rare breed when it comes to love. You communicate better than anyone else, and you’re an incredibly thoughtful individual.
+134
 
-57  
+You’re sort of a rare breed when it comes to love.
+
+07:50 
+
+135
+
+You communicate better than anyone else,
+
+07:53 
+
+136
+
+and you’re an incredibly thoughtful individual.
 
 07:56 
 
-The relationships that you forge with potential lovers are always profound and deep.
+137
 
-58  
+The relationships that you forge with potential lovers are always profound and deep.
 
 08:01 
 
-You become very selective with who you choose to date and who you choose to end up with – for good reason, of course. I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
+138
 
-59  
+You become very selective with who you choose to date and who you choose to end up with – for good reason, of course.
+
+08:09 
+
+139
+
+I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
 
 08:14 
 
-{{name}}, I’m sensing that your love life isn’t going to be the smoothest – but you will find that happiness that you’re looking for soon enough.
+140
+
+{{name}}, I’m sensing that your love life isn’t going to be the smoothest
+
+08:18 
+
+141
+
+– but you will find that happiness that you’re looking for soon enough.
 
 {{JS:{fn:'displayImage', path:'images/love-compatibility/member-love-compatibility.png', fadeOut: true}}}
 
-60  
+08:22 
 
-08:23 
+142
 
-But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life. Your spouse or partner is meant to play a supporting role in your life; not to lead.
+But don’t forget, {{name}},
 
-61  
+08:24 
+
+143
+
+how you perceive yourself should not be determined by your love life.
+
+08:28 
+
+144
+
+Your spouse or partner is meant to play a supporting role in your life; not to lead.
 
 08:34 
+
+145
 
 Focus on your own personal growth, and I promise you, {{name}}, you will soon discover heavenly rewards.

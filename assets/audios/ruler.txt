@@ -1,92 +1,220 @@
+00:02 
+
 1
 
 Hello {{name}},
 
-00:04 
+00:03 
 
 2
 
-If you’ve made it here, then congratulations! Because this means that your archetype is the Ruler!
+If you’ve made it here,
+
+00:05 
+
+3
+
+then congratulations!
+
+00:07 
+
+4
+
+Because this means that your archetype is the Ruler!
 
 {{JS:{fn:'displayImage', path:'images/archetype-icons/ruler.png', fadeIn: true}}}
 
 00:10 
 
-3
+5
 
-But what does this actually mean? Don’t worry, everything you need to know will be on this page. Stick to the end of it and I promise that you’ll experience something truly magical.
+But what does this actually mean?
+
+00:13 
+
+6
+
+Don’t worry, everything you need to know will be on this page.
+
+00:18 
+
+7
+
+Stick to the end of it and I promise that you’ll experience something truly magical.
 
 {{JS:{fn:'displayImage', path:'images/archetype-icons/ruler.png', fadeOut: true}}}
 
 00:23 
 
-4
-
-The quiz that you’ve just taken is designed to identify your archetype – a personality profile that’s broken down your entire being. Your tendencies, your strengths, your past, and your future.
-
-00:38 
-
-5
-
-Your archetype takes into account your gender, your marital status, how you answered the quiz, and how long you took to get those answers.
-
-00:48 
-
-6
-
-That’s right, {{name}}. You can use that information to make astronomical changes in your life. You’ll be able to leverage on your strengths, improve on your weaknesses, and embark on the life that you’ve always dreamed of.
-
-01:03 
-
-7
-
-But before we get into that, I want to share with you about your archetype, The Ruler, and what it means.
-
-01:10 
-
 8
 
-{{name}}, you truly are a unique individual. And I genuinely believe that this world needs more people like you.
+The quiz that you’ve just taken is designed to identify your archetype
 
-01:20 
+00:29 
 
 9
 
-You are a natural-born leader, and people constantly look to you for direction and advice. While others tend to avoid playing the role of a leader, you feel absolutely comfortable with volunteering to take charge.
+– a personality profile that’s broken down your entire being.
 
-01:33 
+00:33 
 
 10
 
-You’re different that way, {{name}}. While the world walks in one direction, you have no qualms with going against it.
+Your tendencies, your strengths, your past, and your future.
 
-01:41 
+00:38 
 
 11
 
-That’s what makes you so special, {{name}}.
+Your archetype takes into account your gender, your marital status,
 
-01:45 
+00:43 
 
 12
 
-You’re always impartial, fair, and just. You’re able to empathize with anyone and everyone. That’s because as a Ruler, you are highly compassionate, and extremely decisive.
+how you answered the quiz,
 
-01:58 
+00:45 
 
 13
 
-However, you are also able to make the most difficult decisions, even at the expense of others for the greater good.
+and how long you took to get those answers.
 
-02:06 
+00:48 
 
 14
 
-{{name}}, you might not know it yet, but you are more morally and ethically upright than others. You hold your values and principles close to your heart, and you’re always ready to stick to your guns.
+That’s right, {{name}}.
 
-02:18 
+00:51 
 
 15
+
+You can use that information to make astronomical changes in your life.
+
+00:55 
+
+16
+
+You’ll be able to leverage on your strengths, improve on your weaknesses,
+
+01:00 
+
+17
+
+and embark on the life that you’ve always dreamed of.
+
+01:03 
+
+18
+
+But before we get into that,
+
+01:06 
+
+19
+
+I want to share with you about your archetype, The Ruler, and what it means.
+
+01:10 
+
+20
+
+{{name}}, you truly are a unique individual.
+
+01:15 
+
+21
+
+And I genuinely believe that this world needs more people like you.
+
+01:20 
+
+22
+
+You are a natural-born leader, and people constantly look to you for direction and advice.
+
+01:25 
+
+23
+
+While others tend to avoid playing the role of a leader,
+
+01:29 
+
+24
+
+you feel absolutely comfortable with volunteering to take charge.
+
+01:33 
+
+25
+
+You’re different that way, {{name}}.
+
+01:36 
+
+26
+
+While the world walks in one direction, you have no qualms with going against it.
+
+01:41 
+
+27
+
+That’s what makes you so special, {{name}}.
+
+01:44 
+
+28
+
+You’re always impartial, fair, and just.
+
+01:49 
+
+29
+
+You’re able to empathize with anyone and everyone.
+
+01:53 
+
+30
+
+That’s because as a Ruler, you are highly compassionate, and extremely decisive.
+
+01:58 
+
+31
+
+However, you are also able to make the most difficult decisions,
+
+02:03 
+
+32
+
+even at the expense of others for the greater good.
+
+02:06 
+
+33
+
+{{name}}, you might not know it yet, but you are more morally and ethically upright than others.
+
+02:13 
+
+34
+
+You hold your values and principles close to your heart,
+
+02:16 
+
+35
+
+and you’re always ready to stick to your guns.
+
+02:19 
+
+36
 
 There is something else about you, {{name}}…
 
@@ -94,7 +222,7 @@ There is something else about you, {{name}}…
 
 02:22 
 
-16
+37
 
 You will be the one to lead enormous change in the world.
 
@@ -102,187 +230,313 @@ You will be the one to lead enormous change in the world.
 
 02:25 
 
-17
+38
 
 {{name}}, I’m getting the sense that you’re going to live a long, and happy life.
 
-02:31 
+02:30 
 
-18
+39
 
-And although success might not be at your feet right now, your riches and fulfilment are merely waiting for you.
+And although success might not be at your feet right now,
+
+02:34 
+
+40
+
+your riches and fulfilment are merely waiting for you.
 
 02:38 
 
-19
+41
 
-But there’s something else, {{name}}. Even though you will triumph, your path to success will not come easy.
+But there’s something else, {{name}}.
 
-02:45 
+02:40 
 
-20
+42
 
-You will one day have to face the risk of losing all of your control or power. The sheer thought of becoming a follower rather than a leader scares you to death.
+Even though you will triumph, your path to success will not come easy.
 
-02:55 
+02:46 
 
-21
+43
 
-{{name}}, don’t let that discourage you. The world needs your wisdom and guidance. The world needs people like you to be in positions of power.
+You will one day have to face the risk of losing all of your control or power.
+
+02:51 
+
+44
+
+The sheer thought of becoming a follower rather than a leader scares you to death.
+
+02:56 
+
+45
+
+{{name}}, don’t let that discourage you.
+
+02:59 
+
+46
+
+The world needs your wisdom and guidance.
+
+03:02 
+
+47
+
+The world needs people like you to be in positions of power.
 
 03:06 
 
-22
+48
 
 You are what keeps the world grounded.
 
-03:09 
+03:10 
 
-23
+49
 
-You do, however, need to understand that it’s important for you not to overburden yourself with the issues of others, and always remember not to spread yourself too thinly.
+You do, however, need to understand that it’s important for you not to overburden yourself with the issues of others,
+
+03:16 
+
+50
+
+and always remember not to spread yourself too thinly.
 
 03:19 
 
-24
+51
 
 After all, {{name}}, your greatest challenge will be overcoming yourself.
 
 03:25 
 
-25
+52
 
-But I noticed that you are willing to do everything and anything it takes, and I have complete faith in your abilities.
+But I noticed that you are willing to do everything and anything it takes,
+
+03:29 
+
+53
+
+and I have complete faith in your abilities.
 
 03:31 
 
-26
+54
 
 {{name}}, I can already tell that your friends and family really look up to you.
 
 03:38 
 
-27
+55
 
 You’re the one who they come to for detailed advice, guidance, or solutions to their dilemmas and problems.
 
 03:45 
 
-28
+56
 
-You’re not the type of person to have huge circles of friends. You’re not someone who has trouble with making friends.
+You’re not the type of person to have huge circles of friends.
+
+03:49 
+
+57
+
+You’re not someone who has trouble with making friends.
 
 03:52 
 
-29
+58
 
-In fact, you have no trouble at all when it comes to impressing others with your leadership and knowledge. But you’re extremely selective with who you choose to let into your life.
+In fact, you have no trouble at all when it comes to impressing others with your leadership and knowledge.
 
-04:02 
+03:57 
 
-30
+59
+
+But you’re extremely selective with who you choose to let into your life.
+
+04:01 
+
+60
 
 You prefer to keep your loved ones close, and your wolf pack small.
 
 04:06 
 
-31
+61
 
-{{name}}, you are incredibly nurturing. You possess the unique ability to connect with others and earn their trust.
+{{name}}, you are incredibly nurturing.
+
+04:10 
+
+62
+
+You possess the unique ability to connect with others and earn their trust.
 
 04:15 
 
-32
+63
 
-Your thirst for power and control constantly pushes you to new heights, but you must never lose sight of yourself; both as a person, and a leader.
+Your thirst for power and control constantly pushes you to new heights,
+
+04:19 
+
+64
+
+but you must never lose sight of yourself; both as a person, and a leader.
 
 04:24 
 
-33
+65
 
-You have a great deal to offer to this world. {{name}}, you are a responsible and reliable individual, and people see those qualities within you.
+You have a great deal to offer to this world. {{name}},
+
+04:28 
+
+66
+
+you are a responsible and reliable individual, and people see those qualities within you.
 
 04:34 
 
-34
+67
 
 I sense that you will find success and fulfilment as an entrepreneur, a governor, a lawyer, or a manager.
 
 04:41 
 
-35
+68
 
-You can be very charismatic, {{name}}. You don’t seem to have any trouble when it comes to establishing the right connections and meeting the right people.
+You can be very charismatic, {{name}}.
+
+04:44 
+
+69
+
+You don’t seem to have any trouble when it comes to establishing the right connections and meeting the right people.
 
 04:51 
 
-36
+70
 
-{{name}}, you are going to make a lasting mark in your lifetime. You’re able to look at the world from a broad and altruistic perspective.
+{{name}}, you are going to make a lasting mark in your lifetime.
+
+04:56 
+
+71
+
+You’re able to look at the world from a broad and altruistic perspective.
 
 05:00 
 
-37
+72
 
 You see the big picture, and you have what it takes to lead this world to a better future.
 
 05:06 
 
-38
+73
 
-{{name}}, you are an excellent mediator when it comes to managing expectations – those from yourself, and from others.
+{{name}}, you are an excellent mediator when it comes to managing expectations
 
-05:14 
+05:12 
 
-39
+74
+
+– those from yourself, and from others.
+
+05:15 
+
+75
 
 You’re always able to maintain order through your unique sense of understanding what people want.
 
-05:21 
+05:20 
 
-40
+76
 
-Ultimately, {{name}}, you are a visionary. You dream of an empire that has a throne with your name on it. Discerning right from wrong has never been a difficult task for you.
+Ultimately, {{name}}, you are a visionary.
+
+05:25 
+
+77
+
+You dream of an empire that has a throne with your name on it.
+
+05:28 
+
+78
+
+Discerning right from wrong has never been a difficult task for you.
 
 05:32 
 
-41
+79
 
-I’m getting the sense that you’re not too concerned about monetary riches, although you do wish you had more wealth.
+I’m getting the sense that you’re not too concerned about monetary riches,
+
+05:36 
+
+80
+
+although you do wish you had more wealth.
 
 05:39 
 
-42
+81
 
 There is, however, a greater purpose for you in this lifetime, {{name}}.
 
 05:43 
 
-43
+82
 
 However, {{name}}, you must remember that your self-worth is not directly related to your ability to rule.
 
 05:51 
 
-44
+83
 
 It can feel that way at times, and that is something that you need to be careful of.
 
-05:56 
+05:56  
 
-45
+84
 
-In fact, it might feel as if you’re living your life for others. That’s not what you want, {{name}}. You want to live life for yourself. You want to love yourself. When you’re able to do that, success and the life of your dreams will follow.
+In fact, it might feel as if you’re living your life for others.
+
+06:00 
+
+85
+
+That’s not what you want, {{name}}.
+
+06:02 
+
+86
+
+You want to live life for yourself. You want to love yourself.
+
+06:07 
+
+87
+
+When you’re able to do that, success and the life of your dreams will follow.
 
 06:12 
 
-46
+88
 
 And that’s what Individuation aims to teach you.
 
 06:15 
 
-47
+89
 
 But there’s more to what I’ve learned about you, {{name}}…
 
@@ -290,51 +544,93 @@ But there’s more to what I’ve learned about you, {{name}}…
 
 06:19 
 
-48
+90
 
-It feels to me that you’re a deeply emotional and spiritual person. You’re connected to your soul in a way that’s far more profound than others.
+It feels to me that you’re a deeply emotional and spiritual person.
+
+06:24 
+
+91
+
+You’re connected to your soul in a way that’s far more profound than others.
 
 06:28 
 
-49
+92
 
 Your thought process does not follow the rules and logic of the world.
 
 06:32 
 
-50
+93
 
-In fact, I get the sense that you have quite the imagination. Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
+In fact, I get the sense that you have quite the imagination.
+
+06:37 
+
+94
+
+Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
 
 {{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
 
-06:42 
+06:43 
 
-51
+95
 
-{{name}}, you’re not someone who likes to argue. You tend to avoid conflict and you’re uncanny when it comes to devising win-win situations.
+{{name}}, you’re not someone who likes to argue.
 
-06:52 
+06:47 
 
-52
+96
 
-But when backed into a corner, you’re not one to back down. You fight fiercely for your loved ones and for righteousness.
+You tend to avoid conflict and you’re uncanny when it comes to devising win-win situations.
 
-07:00 
+06:53 
 
-53
+97
 
-You’re the first person to step in when you see a fight breaking out. You’re the first person to reach for your pockets in the sight of a struggling busker. You’re the first person your friends call when they’ve had a horrible day. You’re the one who people rely on and look up to.
+But when backed into a corner, you’re not one to back down.
+
+06:57 
+
+98
+
+You fight fiercely for your loved ones and for righteousness.
+
+07:01 
+
+99
+
+You’re the first person to step in when you see a fight breaking out.
+
+07:05 
+
+100
+
+You’re the first person to reach for your pockets in the sight of a struggling busker.
+
+07:10 
+
+101
+
+You’re the first person your friends call when they’ve had a horrible day.
+
+07:13 
+
+102
+
+You’re the one who people rely on and look up to.
 
 07:17 
 
-54
+103
 
 {{name}}, you are the leader and protector of the world.
 
 07:21 
 
-55
+104
 
 But every pilot needs a co-pilot; a partner in crime who will stick by them when the going gets tough.
 
@@ -342,56 +638,98 @@ But every pilot needs a co-pilot; a partner in crime who will stick by them when
 
 07:29 
 
-56
+105
 
 This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
 
-07:34 
+07:35 
 
-57
+106
 
 Or if you’re already in a committed relationship, there’s a really good chance that your spouse is one of those archetypes.
 
 07:40 
 
-58
+107
 
-{{name}}, you’re not the kind of person that has trouble when it comes to love. People find themselves drawn to your charisma and kind nature.
+{{name}}, you’re not the kind of person that has trouble when it comes to love.
+
+07:46 
+
+108
+
+People find themselves drawn to your charisma and kind nature.
 
 07:49 
 
-59
+109
 
 You’re sort of a rare breed when it comes to love.
 
 07:52 
 
-60
+110
 
-You communicate better than anyone else, and you’re an incredibly thoughtful individual. The relationships that you forge with potential lovers are always profound and deep.
+You communicate better than anyone else, and you’re an incredibly thoughtful individual.
 
-08:02 
+07:57 
 
-61
+111
 
-You become very selectively with who you choose to date and who you choose to end up with – for good reason, of course. I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
+The relationships that you forge with potential lovers are always profound and deep.
+
+08:03 
+
+112
+
+You become very selectively with who you choose to date and who you choose to end up with – for good reason, of course.
+
+08:10 
+
+113
+
+I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
 
 08:15 
 
-62
+114
 
-{{name}}, I’m sensing that your love life isn’t going to be the smoothest – but you will find that happiness that you’re looking for soon enough.
+{{name}}, I’m sensing that your love life isn’t going to be the smoothest
+
+08:19 
+
+115
+
+– but you will find that happiness that you’re looking for soon enough.
 
 {{JS:{fn:'displayImage', path:'images/love-compatibility/ruler-love-compatibility.png', fadeOut: true}}}
 
 08:22 
 
-63
+116
 
-But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life. Your spouse or partner is meant to play a supporting role in your life; not the lead.
+But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life.
+
+08:29 
+
+117
+
+Your spouse or partner is meant to play a supporting role in your life; not the lead.
 
 08:34 
 
-64
+118
 
-Focus on your own personal growth, and I promise you, {{name}}, you will soon discover heavenly rewards.
+Focus on your own personal growth,
+
+08:37 
+
+119
+
+and I promise you, {{name}},
+
+08:39 
+
+120
+
+you will soon discover heavenly rewards.
