@@ -253,6 +253,7 @@ export default class ReportFree extends Component {
       style: { backgroundImage: `url(${this.state.background})` },
       ref: ref => this.mainContentEl = ref,
     }, [
+      headerEl,
       h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
       h.div('.text', [this.state.currentLine
         ? h(Fade, { changed: this.state.currentLine }, [h(markup, { markup: this.state.currentLine })])
@@ -325,7 +326,6 @@ export default class ReportFree extends Component {
     return h.div('.wrapper', [h.div({
       class: ['container'].concat(arrify(this.state.currentLineOpts && this.state.currentLineOpts.class)),
     }, [
-      headerEl,
       mainContentEl,
       restEl,
       // h.pre([JSON.stringify(this.state, null, 1)]),
