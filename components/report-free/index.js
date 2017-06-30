@@ -324,7 +324,7 @@ export default class ReportFree extends Component {
       headerEl,
       mainContentEl,
       restEl,
-      h.pre([JSON.stringify(this.state, null, 1)]),
+      // h.pre([JSON.stringify(this.state, null, 1)]),
     ])]);
   }
 
