@@ -174,7 +174,7 @@ for currentPercent in (1..100)
   // .compatibility &
   //   top: -80px
   .foreground
-    // border: 2px dotted red
+    // border: 5px dotted red
     // position: relative
     // top: -80px
     opacity: .7
@@ -183,8 +183,15 @@ for currentPercent in (1..100)
     height: 100%
     .compatibility &
       height: auto
+    :global .preact-fade-container > *
+      width: 100%
+      height: 100%
+      .compatibility &
+        // width: 100%
+        height: auto
+
     .foreground-container
-      // border: 2px dotted blue
+      // border: 5px dotted blue
       width: 100%
       height: 100%
       .compatibility &
@@ -201,7 +208,7 @@ for currentPercent in (1..100)
       // flex-grow: 10
 
       .img
-        // border: 2px dotted yellow
+        // border: 5px dotted yellow
         max-width: 100%
         .compatibility &
           max-width: 100%
@@ -449,4 +456,6 @@ a.button
   width: 50%
   overflow: hidden
 
-
+:global .preact-fade-container
+  some:null
+  // border: 5px dotted green

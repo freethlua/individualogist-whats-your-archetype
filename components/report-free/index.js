@@ -105,12 +105,12 @@ export default class ReportFree extends Component {
       this.hideImage();
     } else {
       try {
-        if (opts.path.match('compatibility')) {
-          opts.class = arrify(opts.class).concat(['compatibility']);
-        }
+        // if (opts.path.match('compatibility')) {
+        //   opts.class = arrify(opts.class).concat(['compatibility']);
+        // }
         this.setState({
           img: require(`../../assets/` + opts.path),
-          imgClass: opts.class || this.state.imgClass,
+          // imgClass: opts.class || this.state.imgClass,
         });
       } catch (error) {
         this.hideImage();
@@ -140,15 +140,18 @@ export default class ReportFree extends Component {
     this.setState({ lastBackgroundChangeTime: +new Date() });
   }
 
-  ontimeupdate(e = { target: {} }) {
-    const currentTime = e.target.currentTime || 0;
-    const percent = Math.round(100 * currentTime / e.target.duration || Infinity);
+  ontimeupdate() {
+    const currentTime = this.audioEl.currentTime || 0;
+    const percent = Math.round(100 * currentTime / this.audioEl.duration || Infinity);
+    if (this.audioEl.ended) {
+      return this.playPause(false);
+    }
+
     for (let i = 0; i < this.transcript.length; i++) {
       const line = this.transcript[i];
       const nextLine = this.transcript[i + 1];
       const currentTimeEnd = line.end || nextLine && nextLine.start || Infinity;
-      if (currentTime < (currentTimeEnd - 1)) {
-
+      if (currentTime < (currentTimeEnd)) {
         const prevLine = this.transcript[i - 1];
         const nextLine = this.transcript[i + 1];
 
@@ -176,7 +179,11 @@ export default class ReportFree extends Component {
               }
               lastReplacement = replacement;
             } else if (key.js) {
-              if (key.js.path.match('compatibility')) {
+              if (
+                key.js.path.match('compatibility')
+                && (!line.class || !line.class.includes('compatibility'))
+                && key.js.fadeIn
+              ) {
                 line.class = arrify(line.class).concat(['compatibility']);
               }
               this.cueAction(key.js.fn, key.js, line);
@@ -328,7 +335,7 @@ export default class ReportFree extends Component {
     }, [
       mainContentEl,
       restEl,
-      // h.pre([JSON.stringify(this.state, null, 1)]),
+      isLocalhost && h.pre([JSON.stringify(this.state, null, 1)]),
     ])]);
   }
 
