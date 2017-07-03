@@ -162,10 +162,7 @@ export default class ReportFree extends Component {
       this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
       this.transcript = require('../../assets/audios/deluxe-archetype-sales');
       this.audioEl.play();
-      console.log('this.transcript:', this.transcript);
-      // this.ontimeupdate();
-      // this.playPause();
-      // return;
+      return;
     }
 
     const currentTime = this.audioEl.currentTime || 0;
@@ -175,15 +172,13 @@ export default class ReportFree extends Component {
     this.transcript.find((_line, i) => {
       line = _line;
       nextLine = this.transcript[i + 1];
-      currentTimeEnd = line.end || nextLine && (nextLine.start || nextLine.end) || Infinity;
+      currentTimeEnd = line.end || nextLine && nextLine.start;
       return currentTime < currentTimeEnd;
     });
 
     if (!line) {
       return;
     }
-
-    // console.log({line, prevLine, nextLine, currentTimeEnd});
 
     if (!line.class && prevLine && prevLine.class) {
       line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
@@ -194,7 +189,7 @@ export default class ReportFree extends Component {
     }
 
     let currentLine = line.text;
-    console.log('currentLine:', currentLine);
+
     if (this.state.currentLine === currentLine) {
 
     } else {
