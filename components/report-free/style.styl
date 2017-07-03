@@ -1,18 +1,11 @@
 .container
   position: relative
-  // border: 1px dotted transparent
-  // border: 11px dotted yellow
-  // width: 100vw
-  // background: linear-gradient(to bottom, rgb(253, 251, 250) 0%, rgb(214, 206, 200) 40%)
 
 .header
   margin: .5em auto
   position: absolute
   width: 100%
   z-index: 2
-  // border 2px dotted yellow
-  // left: 50%
-  // margin-left: -50%
   .img
     display: block
     margin: auto
@@ -22,38 +15,22 @@
       max-width: 50%
   .compatibility &
     bottom 0
-    // top calc(100vh - 100px)
-    // position: relative
-
 
 .content
-  // padding-top 5em
   position: relative
-  // border: 1px dotted red
-  // > *
-  //   border: 1px dotted
-  // height: 96vh
   height: 100%
   background-position: 50% 0
   background-size: cover
-  // background-attachment: fixed
-  // background-image: none!important
   margin-bottom: 10em
 
 .content:after
   content: ' '
-  // border: 3px dotted black
   display: block
   width: 100%
   height .5em
   background-image: linear-gradient(to right, #6A2977, #009ED5)
   position: absolute
-  // bottom: 10em
-  // position: relative
   bottom: 0px
-  // z-index: 1
-  // .compatibility &
-  //   top: -80px
 
 for currentPercent in (1..100)
   .current-percent-currentPercent:before
@@ -71,36 +48,26 @@ for currentPercent in (1..100)
     // bottom: -10em
 
 .slider
-  // border: 2px dotted yellow
-  // > *
-  //   border: 2px dotted yellow
   display: flex
   flex-direction: column
   .image
     order: -1
 
 .text
-  // border: 2px dotted yellow
   position: absolute
   top: 0
-
-  .compatibility &
-    position: relative
-    // top: -80px
-    @media(max-width:500px)
-      top: 10vh
-
   z-index: 1
+
   // .compatibility &
-  //   z-index: initial
+  //   position: relative
+  //   // top: -80px
+  //   @media(max-width:500px)
+  //     top: 10vh
 
   &
   *
     width: 100%
     height: 100%
-  // &
-  //   // height: 100vh
-  //   height: calc(100vh - 20px)
 
   width: 80% !important
   margin-left: 10% !important
@@ -112,11 +79,6 @@ for currentPercent in (1..100)
   font-size: 1.2em
   line-height: 1.5em
 
-  // @media(min-width:400px)
-  //   font-size: 2em
-  // @media(min-width:1200px)
-  //   font-size: 3em
-
   color white
   text-shadow:
     0 0 10px black,
@@ -124,61 +86,17 @@ for currentPercent in (1..100)
     0px 2px 5px black,
     0 0 20px white
 
-  // .markup
-  //   position: relative
-  //   width 80%
-  //   margin: auto
-
-  // display: flex
-  // flex-flow: column
-  // justify-content: space-around
-
   .markup
-    // border: 2px dotted yellow
     display: flex
     flex-flow: column
     justify-content: center
     .compatibility &
       justify-content: flex-start
 
-
-  &.left
-    text-align: left
-  &.bottom
-    .markup
-      justify-content: flex-end
-
-  // // .compatibility &
-  // .compatibility & .markup
-  //   // @media(orientation:portrait)
-  //   //   // margin-top: 15vh
-  //   //   justify-content: flex-end
-  //   //   // margin-top: -10vh
-  //   @media(orientation:landscape)
-  //     @media(max-height:500px)
-  //       font-size: .8em
-  //       // justify-content: flex-end
-  //     @media(min-width:1100px)
-  //       // margin-top: 20vh
-  //       justify-content: flex-end
-  //       // margin-top: -10vh
-  //     // @media(max-width:1200px)
-  //     //   margin-top: 20vh
-
-
 .image
-  // border: 2px dotted black
-  // opacity: .7
-  // z-index: -1
   position: relative
-  // .compatibility &
-  //   top: -80px
   .foreground
-    // border: 5px dotted red
-    // position: relative
-    // top: -80px
     opacity: .7
-    text-align: center
     width: 100%
     height: 100%
     .compatibility &
@@ -187,72 +105,56 @@ for currentPercent in (1..100)
       width: 100%
       height: 100%
       .compatibility &
-        // width: 100%
         height: auto
 
+    display: flex
+    justify-content: center
+    align-items: center
+    .compatibility &
+      align-items: flex-start
+
+    .img
+      max-width: 100%
+      .compatibility &
+        max-width: 100%
+        @media(max-width:800px)
+          max-width: 800px
+        @media(max-width:500px)
+          max-width: 150%
+
+      background-repeat: no-repeat
+      filter: drop-shadow(0 0 15px black)
+      background-position:center
+      background-size: contain
+      @media(orientation:portrait)
+        background-size: 60% auto
+      @media(orientation:landscape)
+        background-size: auto 60%
+      &.top
+        background-position: top
+      &.bottom
+        background-position:bottom 10px
+      &.wide
+        background-size: 100% auto
+      &.fit
+        background-size: 100% auto
+      .compatibility &
+        background-size: contain
+        background-position: top
+        @media(max-width:800px)
+          background-size: auto 300px
+        @media(max-width:600px)
+          background-size: 150% auto
     .foreground-container
-      // border: 5px dotted blue
       width: 100%
       height: 100%
       .compatibility &
         height: auto
-      // *
-      //   width: 100%
-      //   height: 100%
       display: flex
       justify-content: center
       align-items: center
       .compatibility &
         align-items: flex-start
-
-      // flex-grow: 10
-
-      .img
-        // border: 5px dotted yellow
-        max-width: 100%
-        .compatibility &
-          max-width: 100%
-          @media(max-width:800px)
-            max-width: 800px
-          @media(max-width:500px)
-            max-width: 150%
-
-        // width: 100%
-        // height: 100vh
-        background-repeat: no-repeat
-        filter: drop-shadow(0 0 15px black)
-        background-position:center
-        background-size: contain
-        @media(orientation:portrait)
-          background-size: 60% auto
-        @media(orientation:landscape)
-          background-size: auto 60%
-        &.top
-          background-position: top
-        &.bottom
-          background-position:bottom 10px
-        &.wide
-          background-size: 100% auto
-        &.fit
-          background-size: 100% auto
-        .compatibility &
-          background-size: contain
-          // background-position: 80px
-          background-position: top
-          // background-position: top 3%
-          // background-position: 50%
-          // background-position: 50% 80px
-          // background-size: cover
-          @media(max-width:800px)
-            background-size: auto 300px
-          @media(max-width:600px)
-            background-size: 150% auto
-          // background-size: 80%
-          // &:not(.top)
-          // @media(orientation:portrait)
-          //   @media(min-height:1000px)
-          //     margin-top: 15vh
-
 
 
 .play-pause
@@ -277,9 +179,6 @@ a.button
   text-decoration: none
 
 .action-1
-  // border: 1px dotted
-  // > *
-  //   border: 1px dotted
   border-radius: 50px
   background: linear-gradient(to right, #863981, #CA2D82)
   box-shadow: 20px 20px 20px rgb(0,0,0,.4)
@@ -292,7 +191,6 @@ a.button
   display: flex
   position: relative
   padding: 1em
-  // padding: 1vw
   > .img
     width: 40%
     height: auto
@@ -313,12 +211,7 @@ a.button
     > .p
       color white
       text-shadow: 0 0 3px black, 0 0 5px white, 2px 2px 3px black
-      // @media(max-width:1068px)
-      //   font-size: .8em
     text-align: center
-    // position: relative
-    // right -25%
-    // margin: 1em auto
     > a .button
       cursor: pointer
       text-shadow: 0 0 3px white
@@ -340,10 +233,6 @@ a.button
 
 
 .testimonial
-  // border 1px solid
-  // > *
-  //   border 1px solid
-  // @media(min-width:400px)
   margin: 10vh auto
   display: flex
   align-items: center
