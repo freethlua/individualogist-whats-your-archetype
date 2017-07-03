@@ -1,15 +1,10 @@
-import { Component, render } from 'preact';
 import URL from 'url';
+import { Component, render } from 'preact';
 import hs from 'preact-hyperstyler';
 import { version } from './package.json';
 import './handle-errors';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
 import store from './store';
-
-// import 'ionicons/dist/css/ionicons.css'
-// import 'animate.css';
-// import 'reset-css/reset.css';
-// import '@font/nunito/light.css';
 import * as cmp from './components';
 import styles from './app.styl';
 

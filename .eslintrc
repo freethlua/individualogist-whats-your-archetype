@@ -4,3 +4,4 @@ rules:
   global-require: 0
   import/no-dynamic-require: 0
   import/max-dependencies: 0
+  import/no-unassigned-import: 0
