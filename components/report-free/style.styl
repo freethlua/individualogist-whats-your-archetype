@@ -54,15 +54,10 @@ for currentPercent in (1..100)
     order: -1
 
 .text
+  border: 3px dotted yellow
   position: absolute
   top: 0
   z-index: 1
-
-  // .compatibility &
-  //   position: relative
-  //   // top: -80px
-  //   @media(max-width:500px)
-  //     top: 10vh
 
   &
   *
@@ -90,28 +85,37 @@ for currentPercent in (1..100)
     display: flex
     flex-flow: column
     justify-content: center
-    .compatibility &
+
+
+  .compatibility &
+    position: relative
+    .markup
       justify-content: flex-start
+    @media(min-width:800px)
+      @media(max-aspect-ratio:16/10)
+        position: absolute
+        .markup
+          justify-content: center
+
+
+
 
 .image
   position: relative
+  text-align: center
   .foreground
     opacity: .7
     width: 100%
     height: 100%
     .compatibility &
       height: auto
-    :global .preact-fade-container > *
-      width: 100%
-      height: 100%
-      .compatibility &
-        height: auto
 
     display: flex
+    flex-flow: column
     justify-content: center
     align-items: center
-    .compatibility &
-      align-items: flex-start
+    // .compatibility &
+    //   align-items: flex-start
 
     .img
       max-width: 100%
@@ -121,40 +125,7 @@ for currentPercent in (1..100)
           max-width: 800px
         @media(max-width:500px)
           max-width: 150%
-
-      background-repeat: no-repeat
-      filter: drop-shadow(0 0 15px black)
-      background-position:center
-      background-size: contain
-      @media(orientation:portrait)
-        background-size: 60% auto
-      @media(orientation:landscape)
-        background-size: auto 60%
-      &.top
-        background-position: top
-      &.bottom
-        background-position:bottom 10px
-      &.wide
-        background-size: 100% auto
-      &.fit
-        background-size: 100% auto
-      .compatibility &
-        background-size: contain
-        background-position: top
-        @media(max-width:800px)
-          background-size: auto 300px
-        @media(max-width:600px)
-          background-size: 150% auto
-    .foreground-container
-      width: 100%
-      height: 100%
-      .compatibility &
-        height: auto
-      display: flex
-      justify-content: center
-      align-items: center
-      .compatibility &
-        align-items: flex-start
+          margin-left: -25%
 
 
 .play-pause
