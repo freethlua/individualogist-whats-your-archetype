@@ -158,7 +158,7 @@ export default class ReportFree extends Component {
 
   ontimeupdate() {
     if (this.audioEl.ended) {
-      // return this.playPause(false);
+      this.hideImage();
       this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
       this.transcript = require('../../assets/audios/deluxe-archetype-sales');
       this.audioEl.play();
@@ -172,6 +172,7 @@ export default class ReportFree extends Component {
     this.transcript.find((_line, i) => {
       line = _line;
       nextLine = this.transcript[i + 1];
+      prevLine = this.transcript[i - 1];
       currentTimeEnd = line.end || nextLine && nextLine.start;
       return currentTime < currentTimeEnd;
     });
@@ -183,6 +184,7 @@ export default class ReportFree extends Component {
     if (!line.class && prevLine && prevLine.class) {
       line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
     }
+    console.log('line.class:', line.class);
 
     if (!prevLine) {
       this.hideImage();
