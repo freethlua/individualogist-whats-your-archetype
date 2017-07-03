@@ -51,6 +51,12 @@ export default class ReportFree extends Component {
     if ('dev' in url.query) {
       if ('seekTo' in url.query) {
         this.audioEl.currentTime = parseInt(url.query.seekTo, 10);
+      } else if ('seekToIndex' in url.query) {
+        const index = parseInt(url.query.seekToIndex, 10);
+        let line;
+        if (index && (line = this.transcript[index])) {
+          this.audioEl.currentTime = line.start;
+        }
       }
     }
     this.ontimeupdate();
@@ -151,78 +157,99 @@ export default class ReportFree extends Component {
   }
 
   ontimeupdate() {
+    if (this.audioEl.ended) {
+      // return this.playPause(false);
+      this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
+      this.transcript = require('../../assets/audios/deluxe-archetype-sales');
+      this.audioEl.play();
+      console.log('this.transcript:', this.transcript);
+      // this.ontimeupdate();
+      // this.playPause();
+      // return;
+    }
+
     const currentTime = this.audioEl.currentTime || 0;
     const percent = Math.round(100 * currentTime / this.audioEl.duration || Infinity);
-    if (this.audioEl.ended) {
-      return this.playPause(false);
+
+    let line, prevLine, nextLine, currentTimeEnd;
+    this.transcript.find((_line, i) => {
+      line = _line;
+      nextLine = this.transcript[i + 1];
+      currentTimeEnd = line.end || nextLine && (nextLine.start || nextLine.end) || Infinity;
+      return currentTime < currentTimeEnd;
+    });
+
+    if (!line) {
+      return;
     }
+
+    // console.log({line, prevLine, nextLine, currentTimeEnd});
+
+    if (!line.class && prevLine && prevLine.class) {
+      line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
+    }
+
+    if (!prevLine) {
+      this.hideImage();
+    }
+
+    let currentLine = line.text;
+    console.log('currentLine:', currentLine);
+    if (this.state.currentLine === currentLine) {
+
+    } else {
+      let lastReplacement;
+      for (const key of line.keys || []) {
+        if (key.key) {
+          const replacement = this.props.formData[key.key];
+          if (replacement) {
+            const index = key.index + (lastReplacement ? lastReplacement.length : 0);
+            currentLine = currentLine.substring(0, index) +
+              replacement +
+              currentLine.substring(index);
+          }
+          lastReplacement = replacement;
+        } else if (key.js) {
+          if (
+            key.js.path.match('compatibility') &&
+            (!line.class || !line.class.includes('compatibility')) &&
+            key.js.fadeIn
+          ) {
+            line.class = arrify(line.class).concat(['compatibility']);
+          }
+          this.cueAction(key.js.fn, key.js, line);
+        } else {
+
+        }
+      }
+      // currentLine = currentLine.replace(/([.?!]) /g, '$1<br />');
+      // this.changeBackground();
+      this.setState({
+        currentTime,
+        currentTimeEnd,
+        currentPercent: percent,
+        currentLine,
+        currentLineOpts: line,
+      });
+
+      // preload next image(s)
+      if (nextLine && nextLine.keys) {
+        nextLine.keys.forEach(key => {
+          if (key.js && key.fn === 'displayImage' && key.js.path) {
+            const image = new Image();
+            image.src = key.js.path;
+          }
+        });
+      }
+    }
+    // break;
 
     for (let i = 0; i < this.transcript.length; i++) {
       const line = this.transcript[i];
+      // console.log('line:', line);
       const nextLine = this.transcript[i + 1];
       const currentTimeEnd = line.end || nextLine && nextLine.start || Infinity;
-      if (currentTime < currentTimeEnd) {
-        const prevLine = this.transcript[i - 1];
-        const nextLine = this.transcript[i + 1];
-
-        if (!line.class && prevLine && prevLine.class) {
-          line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
-        }
-
-        if (!prevLine) {
-          this.hideImage();
-        }
-
-        let currentLine = line.text;
-        if (this.state.currentLine === currentLine) {
-
-        } else {
-          let lastReplacement;
-          for (const key of line.keys) {
-            if (key.key) {
-              const replacement = this.props.formData[key.key];
-              if (replacement) {
-                const index = key.index + (lastReplacement ? lastReplacement.length : 0);
-                currentLine = currentLine.substring(0, index) +
-                  replacement +
-                  currentLine.substring(index);
-              }
-              lastReplacement = replacement;
-            } else if (key.js) {
-              if (
-                key.js.path.match('compatibility') &&
-                (!line.class || !line.class.includes('compatibility')) &&
-                key.js.fadeIn
-              ) {
-                line.class = arrify(line.class).concat(['compatibility']);
-              }
-              this.cueAction(key.js.fn, key.js, line);
-            } else {
-
-            }
-          }
-          // currentLine = currentLine.replace(/([.?!]) /g, '$1<br />');
-          // this.changeBackground();
-          this.setState({
-            currentTime,
-            currentTimeEnd,
-            currentPercent: percent,
-            currentLine,
-            currentLineOpts: line,
-          });
-
-          // preload next image(s)
-          if (nextLine && nextLine.keys) {
-            nextLine.keys.forEach(key => {
-              if (key.js && key.fn === 'displayImage' && key.js.path) {
-                const image = new Image();
-                image.src = key.js.path;
-              }
-            });
-          }
-        }
-        break;
-      }
+      if (currentTime < currentTimeEnd) {}
     }
   }
 
