@@ -80,6 +80,9 @@ for currentPercent in (1..100)
   top: 0
   z-index: 1
 
+  // .free-reading-ended &
+  //   pointer-events: none
+
   &
   *
     width: 100%
@@ -175,11 +178,18 @@ a.button
   text-decoration: none
 
 .rest
-  margin-top: 10em
+  margin-top: -20vh
+  // margin-top: -50vh
+
+// .free-reading-ended .content
+//   pointer-events: none
+
 
 .action-1
   border-radius: 50px
   background: linear-gradient(to right, #863981, #CA2D82)
+  // background: linear-gradient(to right, rgba(134,57,129, .8), rgba(202,45,130,.9))
+  // background: linear-gradient(to right, #111, #fff)
   box-shadow: 20px 20px 20px rgb(0,0,0,.4)
   width: 80%
   max-width: 1000px
@@ -341,8 +351,4 @@ a.button
   bottom: 0
   width: 50%
   overflow: hidden
-
-
-:global
-  .fb-comments
-    border 3ps dotted yellow
+  pointer-events: none

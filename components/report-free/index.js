@@ -355,7 +355,9 @@ export default class ReportFree extends Component {
     ]);
 
     return h.div('.wrapper', [h.div({
-      class: ['container'].concat(arrify(this.state.currentLineOpts && this.state.currentLineOpts.class)),
+      class: ['container']
+        .concat(arrify(this.state.currentLineOpts && this.state.currentLineOpts.class))
+        .concat([this.state.freeReadingEnded && 'free-reading-ended'].filter(Boolean))
     }, [
       mainContentEl,
       this.state.freeReadingEnded && restEl,

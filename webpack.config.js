@@ -28,7 +28,12 @@ module.exports = {
         fallback: 'style-loader',
         use: [{
           loader: 'css-loader',
-          options: { modules: true, camelCase: true },
+          options: {
+            modules: true,
+            localIdentName: '[hash:base64:5]',
+            // localIdentName: isDev ? '[path][name]' : '[hash:base64:5]',
+            camelCase: true,
+          },
         }, 'stylus-loader']
       })
     }, {
