@@ -225,32 +225,30 @@ a.button
 
 
 .testimonial
+  // border: 3px dotted blue
+  // > *
+  //   border: 3px dotted blue
   margin: 10vh auto
   display: flex
   align-items: center
-  justify-content: space-around
-  text-align: center
-  > *
-    width 100%
-    max-width 100% !important
+  justify-content: center
+  // @media(min-width:1366px)
+
+  @media(max-width:1068px)
+    flex-flow: column
   .p
-    font-size: 2em
-    // @media(min-width:900px)
-    @media(min-width:900px)
-      width: 50%
-    // @media(min-width:400px)
-    //   padding 1em
+    text-align: center
+    max-width: 600px
+    @media(min-width:1068px)
+      margin-left: 10vw
+      margin-right: 5vw
+    @media(max-width:1068px)
+      margin-bottom: 5vw
   .youtube
-    margin: 1em
-    // flex-shrink: 2
-    @media(min-width:900px)
-      width: 60%
     iframe
       max-width 100% !important
-  @media(max-width:900px)
-    flex-direction: column
-
-
+    @media(min-width:1068px)
+      margin-right: 10vw
 
 .action-2
   // border: 2px dotted
