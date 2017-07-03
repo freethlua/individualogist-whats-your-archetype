@@ -52,7 +52,10 @@ export default class ReportFree extends Component {
       if ('seekTo' in url.query) {
         this.audioEl.currentTime = parseInt(url.query.seekTo, 10);
       } else if ('seekToIndex' in url.query) {
-        const index = parseInt(url.query.seekToIndex, 10);
+        let index = parseInt(url.query.seekToIndex, 10);
+        if (index < 0) {
+          index += this.transcript.length;
+        }
         let line;
         if (index && (line = this.transcript[index])) {
           this.audioEl.currentTime = line.start;
