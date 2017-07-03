@@ -165,6 +165,7 @@ export default class ReportFree extends Component {
       this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
       this.transcript = require('../../assets/audios/deluxe-archetype-sales');
       this.audioEl.play();
+      this.setState({ freeReadingEnded: true });
       return;
     }
 
@@ -357,7 +358,7 @@ export default class ReportFree extends Component {
       class: ['container'].concat(arrify(this.state.currentLineOpts && this.state.currentLineOpts.class)),
     }, [
       mainContentEl,
-      restEl,
+      this.state.freeReadingEnded && restEl,
       isLocalhost && h.pre([JSON.stringify(this.state, null, 1)]),
     ])]);
   }
