@@ -5,7 +5,7 @@ import filterDuplicates from 'filter-duplicates';
 import throttle from 'throttleit';
 import markup from 'preact-markup';
 import Youtube from 'react-youtube';
-import Fade from 'preact-fade';
+import Fade from '../fade';
 import archetypes from '../../data/archetypes';
 import styles from './style.styl';
 
@@ -271,27 +271,14 @@ export default class ReportFree extends Component {
     }, [
       headerEl,
       h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
-      h.div('.text', [this.state.currentLine ?
-        h(Fade, { changed: this.state.currentLine }, [h(markup, { markup: this.state.currentLine })]) :
-        h.p('Loading...'),
+      h.div('.text', [
+        Fade(h(markup, { markup: this.state.currentLine || 'Loading...', key: this.state.currentLine }))
       ]),
       audioEl,
       h.div('.image', [
-        h.div('.foreground', [h(Fade, {
-          changed: this.state.img,
-          fadeInDuration: '2000ms',
-          fadeOutDuration: '1000ms',
-        }, [
-          h.div('.foreground-container', [
-            // h.div({
-            //   class: ['img'].concat(this.state.imgClass || []),
-            //   style: {
-            //     backgroundImage: `url(${this.state.img})`
-            //   },
-            // })
-            h.img({ src: this.state.img })
-          ])
-        ])]),
+        h.div('.foreground', [
+          Fade(h.img({ src: this.state.img, key: this.state.img }))
+        ]),
       ]),
     ]);
 

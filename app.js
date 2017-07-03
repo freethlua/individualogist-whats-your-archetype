@@ -1,8 +1,7 @@
-import {Component, render} from 'preact';
-import quickHash from 'quick-hash';
+import { Component, render } from 'preact';
 import URL from 'url';
 import hs from 'preact-hyperstyler';
-import {version} from './package.json';
+import { version } from './package.json';
 import './handle-errors';
 import store from './store';
 
@@ -18,11 +17,13 @@ const h = hs(styles);
 console.log('v' + version);
 
 window.url = URL.parse(String(location), true);
-window.cleanUrl = URL.format(Object.assign({}, url, {query: {},
-search: null}));
+window.cleanUrl = URL.format(Object.assign({}, url, {
+  query: {},
+  search: null
+}));
 
 class App extends Component {
-  componentWillMount () {
+  componentWillMount() {
     if ('new' in url.query) {
       window.history.replaceState({}, 'page2', cleanUrl);
       store.clear();
@@ -62,20 +63,22 @@ class App extends Component {
         store.save(this.state);
       } else {
         console.log('Couldn\'t authenticate...');
-        console.log({formData: this.state.formData,
-aweberSuccess: url.query.aweberSuccess});
+        console.log({
+          formData: this.state.formData,
+          aweberSuccess: url.query.aweberSuccess
+        });
       }
     }
   }
 
-  render () {
+  render() {
     console.log(this.state);
 
     const header = h.div('.header', [cmp.header]);
 
     const quiz = h.div('.quiz', [h(cmp.quiz, {
       onFinish: (quizData) => {
-        this.setState({quizData});
+        this.setState({ quizData });
         store.save(this.state);
       }
     })]);
@@ -83,22 +86,24 @@ aweberSuccess: url.query.aweberSuccess});
     const form = h.div('.form', [h(cmp.form, {
       quizData: this.state.quizData,
       onSubmit: (formData) => {
-        this.setState({formData});
+        this.setState({ formData });
         store.save(this.state);
       }
     })]);
 
-    const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, {form,
-archetype: this.state && this.state.quizData && this.state.quizData.archetype})]);
+    const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, {
+      form,
+      archetype: this.state && this.state.quizData && this.state.quizData.archetype
+    })]);
     const reportFree = h.div('.reportFree', [h(cmp.reportFree, Object.assign({}, this.state))]);
 
     if (!this.state.quizData) {
       return h.div('.app', [quiz, cmp.comments]);
     } else if (!this.state.formData || !this.state.aweberSuccess) {
-        return h.div('.app', [reportIntro, cmp.comments]);
-      } else {
-        return h.div('.app', [reportFree]);
-      }
+      return h.div('.app', [reportIntro, cmp.comments]);
+    } else {
+      return h.div('.app', [reportFree]);
+    }
   }
 }
 

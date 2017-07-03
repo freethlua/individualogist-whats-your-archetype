@@ -28,7 +28,7 @@ module.exports = {
         fallback: 'style-loader',
         use: [{
           loader: 'css-loader',
-          options: { modules: true },
+          options: { modules: true, camelCase: true },
         }, 'stylus-loader']
       })
     }, {
@@ -59,7 +59,7 @@ module.exports = {
   ].filter(Boolean),
   resolve: {
     alias: {
-      'react': 'preact-compat',
+      react: 'preact-compat',
       'react-dom': 'preact-compat',
       'create-react-class': 'preact-compat/lib/create-react-class'
     }
