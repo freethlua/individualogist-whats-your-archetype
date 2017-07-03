@@ -54,7 +54,7 @@ for currentPercent in (1..100)
     order: -1
 
 .text
-  border: 3px dotted yellow
+  // border: 3px dotted yellow
   position: absolute
   top: 0
   z-index: 1
@@ -71,8 +71,9 @@ for currentPercent in (1..100)
 
   text-align: center
 
-  font-size: 1.2em
-  line-height: 1.5em
+  // font-size: 3vw
+  font-size: 2em
+  // line-height: 1.5em
 
   color white
   text-shadow:
@@ -91,11 +92,11 @@ for currentPercent in (1..100)
     position: relative
     .markup
       justify-content: flex-start
-    @media(min-width:800px)
-      @media(max-aspect-ratio:16/10)
-        position: absolute
-        .markup
-          justify-content: center
+    // @media(min-width:800px)
+    @media(max-aspect-ratio:16/10)
+      position: absolute
+      .markup
+        justify-content: center
 
 
 
