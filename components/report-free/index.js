@@ -184,7 +184,6 @@ export default class ReportFree extends Component {
     if (!line.class && prevLine && prevLine.class) {
       line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
     }
-    console.log('line.class:', line.class);
 
     if (!prevLine) {
       this.hideImage();
@@ -243,7 +242,6 @@ export default class ReportFree extends Component {
 
     for (let i = 0; i < this.transcript.length; i++) {
       const line = this.transcript[i];
-      // console.log('line:', line);
       const nextLine = this.transcript[i + 1];
       const currentTimeEnd = line.end || nextLine && nextLine.start || Infinity;
       if (currentTime < currentTimeEnd) {}
