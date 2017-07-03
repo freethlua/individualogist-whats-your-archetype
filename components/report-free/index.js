@@ -4,6 +4,7 @@ import arrify from 'arrify';
 import filterDuplicates from 'filter-duplicates';
 import throttle from 'throttleit';
 import markup from 'preact-markup';
+import markdown from 'preact-markdown';
 import Youtube from 'react-youtube';
 import Fade from '../fade';
 import archetypes from '../../data/archetypes';
@@ -270,6 +271,7 @@ export default class ReportFree extends Component {
       ref: ref => this.mainContentEl = ref,
     }, [
       headerEl,
+      h.h1([markdown(`**${this.props.formData.name}'s** Archetype Reading`)]),
       h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
       h.div('.text', [
         Fade(h(markup, { markup: this.state.currentLine || 'Loading...', key: this.state.currentLine }))

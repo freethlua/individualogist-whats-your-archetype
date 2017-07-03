@@ -1,4 +1,4 @@
-import ReactCSSTransitionReplace from 'react-css-transition-replace';
+// import ReactCSSTransitionReplace from 'react-css-transition-replace';
 import { CSSTransitionGroup } from 'react-transition-group';
 import styles from './style.styl';
 import hs from 'preact-hyperstyler';

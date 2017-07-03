@@ -3,6 +3,7 @@ import URL from 'url';
 import hs from 'preact-hyperstyler';
 import { version } from './package.json';
 import './handle-errors';
+import 'roboto-fontface/css/roboto/roboto-fontface.css';
 import store from './store';
 
 // import 'ionicons/dist/css/ionicons.css'

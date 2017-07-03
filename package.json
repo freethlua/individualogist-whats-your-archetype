@@ -28,6 +28,7 @@
     "quick-hash": "^1.0.4",
     "react-transition-group": "^1.2.0",
     "react-youtube": "^7.4.0",
+    "roboto-fontface": "^0.7.0",
     "throttleit": "^1.0.0"
   },
   "devDependencies": {

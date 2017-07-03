@@ -47,6 +47,26 @@ for currentPercent in (1..100)
     top: 0
     // bottom: -10em
 
+.h1
+  // border: 3px dotted yellow
+  z-index: 1
+  font-size: 2em
+  font-weight: lighter
+  font-stretch: ultra-condensed
+  letter-spacing: .09em
+  word-spacing: .1em
+  text-align: center
+  color white
+  margin-top: 1em
+  position: absolute
+  width: 100%
+  text-shadow:
+    3px 3px 10px black
+  .compatibility &
+    display: none
+
+
+
 .slider
   display: flex
   flex-direction: column
@@ -54,7 +74,6 @@ for currentPercent in (1..100)
     order: -1
 
 .text
-  // border: 3px dotted yellow
   position: absolute
   top: 0
   z-index: 1
@@ -72,14 +91,15 @@ for currentPercent in (1..100)
   text-align: center
 
   // font-size: 3vw
-  font-size: 2em
+  font-size: 2.5em
   // line-height: 1.5em
+  font-weight: 300
 
   color white
   text-shadow:
     0 0 10px black,
-    3px 6px 5px black,
-    0px 2px 5px black,
+    3px 6px 8px black,
+    1px 2px 5px black,
     0 0 20px white
 
   .markup
