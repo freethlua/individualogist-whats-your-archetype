@@ -26,8 +26,8 @@
     "preact-markdown": "^0.3.0",
     "preact-markup": "^1.6.0",
     "quick-hash": "^1.0.4",
-    "react-transition-group": "^1.2.0",
     "react-css-transition-replace": "^2.2.1",
+    "react-transition-group": "^1.2.0",
     "react-youtube": "^7.4.0",
     "throttleit": "^1.0.0"
   },
@@ -35,6 +35,8 @@
     "clean-webpack-plugin": "^0.1.16",
     "compression-webpack-plugin": "^0.4.0",
     "css-loader": "^0.28.4",
+    "eslint": "^4.1.1",
+    "eslint-config-practical": "^0.1.0",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "js-beautify": "^1.6.14",

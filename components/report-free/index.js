@@ -1,9 +1,5 @@
 import { Component } from 'preact';
-import URL from 'url';
 import hs from 'preact-hyperstyler';
-import quickHash from 'quick-hash';
-import hh from 'preact-hyperscript-h';
-import linkstate from 'linkstate';
 import arrify from 'arrify';
 import filterDuplicates from 'filter-duplicates';
 import throttle from 'throttleit';
@@ -17,25 +13,27 @@ const h = hs(styles);
 
 export default class ReportFree extends Component {
   componentWillMount() {
-
     // window.title = this.props.quizData.archetype
 
     this.archetype = this.props.quizData.archetype;
     if (!this.archetype) {
-      return this.error = 'Need to have an archetype before this component could be rendered';
+      this.error = 'Need to have an archetype before this component could be rendered';
+      return;
     }
     this.archetypeDetails = archetypes[this.archetype];
 
     try {
       this.audioSrc = require(`../../assets/audios/${this.archetype}.mp3`);
     } catch (error) {
-      return this.error = `Cannot load the audio file: '${this.archetype}.mp3'`;
+      this.error = `Cannot load the audio file: '${this.archetype}.mp3'`;
+      return;
     }
 
     try {
       this.transcript = require(`../../assets/audios/${this.archetype}`);
     } catch (error) {
-      return this.error = `Cannot load the transcript file: '${this.archetype}'`;
+      this.error = `Cannot load the transcript file: '${this.archetype}'`;
+      return;
     }
 
     this.changeBackground();
@@ -54,14 +52,18 @@ export default class ReportFree extends Component {
         this.audioEl.currentTime = parseInt(url.query.seekTo, 10);
       }
     }
-    this.ontimeupdate({ target: this.audioEl });
+    this.ontimeupdate();
     this.playPause();
     window.scrollTo(0, 0);
   }
 
   onkeydown(e) {
-    if (!this.mainContentEl) return
-    if (window.pageYOffset > 500) return;
+    if (!this.mainContentEl) {
+      return;
+    }
+    if (window.pageYOffset > 500) {
+      return;
+    }
     if (e.keyCode === 32) {
       // space
       this.playPause();
@@ -69,15 +71,23 @@ export default class ReportFree extends Component {
       // ctrl + up
       const before = this.audioEl.playbackRate;
       let after = before * 1.2;
-      if (after > 4) after = 4;
-      if (before < 1) after = 1;
+      if (after > 4) {
+        after = 4;
+      }
+      if (before < 1) {
+        after = 1;
+      }
       this.audioEl.playbackRate = after;
     } else if (e.keyCode === 40 && e.ctrlKey) {
       // ctrl + down
       const before = this.audioEl.playbackRate;
-      let after = before * .9;
-      if (after < .5) after = .5;
-      if (before > 1) after = 1;
+      let after = before * 0.9;
+      if (after < 0.5) {
+        after = 0.5;
+      }
+      if (before > 1) {
+        after = 1;
+      }
       this.audioEl.playbackRate = after;
     } else if (e.keyCode === 39) {
       // right
@@ -88,9 +98,9 @@ export default class ReportFree extends Component {
     } else if (e.keyCode === 190) {
       // period
       this.audioEl.currentTime = 0;
-      this.audioEl.pause()
+      this.audioEl.pause();
     } else {
-      return
+      return;
     }
     e.preventDefault();
     return false;
@@ -109,7 +119,7 @@ export default class ReportFree extends Component {
         //   opts.class = arrify(opts.class).concat(['compatibility']);
         // }
         this.setState({
-          img: require(`../../assets/` + opts.path),
+          img: require('../../assets/' + opts.path),
           // imgClass: opts.class || this.state.imgClass,
         });
       } catch (error) {
@@ -125,7 +135,6 @@ export default class ReportFree extends Component {
     });
   }
 
-
   playPause(playPause = true) {
     const oldState = this.audioEl.paused;
     if (playPause) {
@@ -137,7 +146,7 @@ export default class ReportFree extends Component {
     }
     const newState = this.audioEl.paused;
     this.setState({ audioPaused: newState });
-    this.setState({ lastBackgroundChangeTime: +new Date() });
+    this.setState({ lastBackgroundChangeTime: Number(new Date()) });
   }
 
   ontimeupdate() {
@@ -151,7 +160,7 @@ export default class ReportFree extends Component {
       const line = this.transcript[i];
       const nextLine = this.transcript[i + 1];
       const currentTimeEnd = line.end || nextLine && nextLine.start || Infinity;
-      if (currentTime < (currentTimeEnd)) {
+      if (currentTime < currentTimeEnd) {
         const prevLine = this.transcript[i - 1];
         const nextLine = this.transcript[i + 1];
 
@@ -173,16 +182,16 @@ export default class ReportFree extends Component {
               const replacement = this.props.formData[key.key];
               if (replacement) {
                 const index = key.index + (lastReplacement ? lastReplacement.length : 0);
-                currentLine = currentLine.substring(0, index)
-                  + replacement
-                  + currentLine.substring(index);
+                currentLine = currentLine.substring(0, index) +
+                  replacement +
+                  currentLine.substring(index);
               }
               lastReplacement = replacement;
             } else if (key.js) {
               if (
-                key.js.path.match('compatibility')
-                && (!line.class || !line.class.includes('compatibility'))
-                && key.js.fadeIn
+                key.js.path.match('compatibility') &&
+                (!line.class || !line.class.includes('compatibility')) &&
+                key.js.fadeIn
               ) {
                 line.class = arrify(line.class).concat(['compatibility']);
               }
@@ -199,7 +208,7 @@ export default class ReportFree extends Component {
             currentPercent: percent,
             currentLine,
             currentLineOpts: line,
-          })
+          });
 
           // preload next image(s)
           if (nextLine && nextLine.keys) {
@@ -208,7 +217,7 @@ export default class ReportFree extends Component {
                 const image = new Image();
                 image.src = key.js.path;
               }
-            })
+            });
           }
         }
         break;
@@ -217,13 +226,13 @@ export default class ReportFree extends Component {
   }
 
   changeBackground() {
-    if (!this.state.lastBackgroundChangeTime || (this.state.lastBackgroundChangeTime + 4000 < new Date())) {
+    if (!this.state.lastBackgroundChangeTime || this.state.lastBackgroundChangeTime + 4000 < new Date()) {
       const cbg = this.state.currentBackgroundIndex || 0;
       const nbg = cbg >= 4 ? 1 : cbg + 1;
       this.setState({
         background: require(`../../assets/images/backgrounds/quiz-slider-${nbg}.jpg`),
         currentBackgroundIndex: nbg,
-        lastBackgroundChangeTime: +new Date(),
+        lastBackgroundChangeTime: Number(new Date()),
       });
     }
   }
@@ -235,19 +244,19 @@ export default class ReportFree extends Component {
   render() {
     const { archetype, audioSrc, transcript } = this;
 
-    if (this.error) return h.pre(this.error);
+    if (this.error) {
+      return h.pre(this.error);
+    }
 
     const audioEl = h.audio({
       // controls: true,
       src: audioSrc,
       ref: ref => this.audioEl = ref,
-      ontimeupdate: e => this.ontimeupdate(e),
+      ontimeupdate: e => this.ontimeupdate(),
     });
 
-
-
     const headerEl = h.header([
-      h.img({ src: require(`../../assets/images/logos/large-text.png`) }),
+      h.img({ src: require('../../assets/images/logos/large-text.png') }),
     ]);
 
     const mainContentEl = h.div({
@@ -262,9 +271,9 @@ export default class ReportFree extends Component {
     }, [
       headerEl,
       h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
-      h.div('.text', [this.state.currentLine
-        ? h(Fade, { changed: this.state.currentLine }, [h(markup, { markup: this.state.currentLine })])
-        : h.p('Loading...'),
+      h.div('.text', [this.state.currentLine ?
+        h(Fade, { changed: this.state.currentLine }, [h(markup, { markup: this.state.currentLine })]) :
+        h.p('Loading...'),
       ]),
       audioEl,
       h.div('.image', [
@@ -288,23 +297,23 @@ export default class ReportFree extends Component {
 
     const restEl = h.div('.rest', [
       h.div('.action-1', [
-        h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) }), ]),
+        h.div('.img', [h.img({ src: require('../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png') })]),
         h.div([
-          h.p(`Get Your Deluxe Archetype Report For Only $37.00 Now!`),
+          h.p('Get Your Deluxe Archetype Report For Only $37.00 Now!'),
           h.a({ href: this.archetypeDetails.clickbank.link }, [h.button(['Click Here To Order Now'])]),
         ]),
       ]),
       h.div('.testimonial', [
-        h.p(`“Reading it felt almost as if I was reliving my entire life. What’s even crazier is that it showed me things about myself that I didn’t even know before!”`),
+        h.p('“Reading it felt almost as if I was reliving my entire life. What’s even crazier is that it showed me things about myself that I didn’t even know before!”'),
         h('div.youtube', [
           h(Youtube, { videoId: 'jWWB3adrqro' }),
           // h.iframe({ src: 'https://www.youtube.com/watch?v=jWWB3adrqro', width: 420 }),
         ]),
       ]),
       h.div('.action-2', [
-        h.div('.img', [h.img({ src: require(`../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png`) })]),
+        h.div('.img', [h.img({ src: require('../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png') })]),
         h.div('.side', [
-          h.div('.heading', `Get Your Deluxe Archetype Report For Only $37.00 Now!`),
+          h.div('.heading', 'Get Your Deluxe Archetype Report For Only $37.00 Now!'),
           h.div('.delivery', [
             h.div('.label', [
               h.div('Delivery E-mail:'),
@@ -320,13 +329,13 @@ export default class ReportFree extends Component {
             h.img({ src: require('../../assets/images/pop-up/shield.png') }),
             h.p('All payments are secure'),
           ]),
-          h.div('.footer', `Order now and you’ll receive the Deluxe Archetype Report instantly. We know for a fact that you’ll gain an enormous amount of value from this detailed report. But  if you decide that this product isn’t for you, we’ll give you a 100% refund within the next 60 days of purchase. No questions asked.`),
+          h.div('.footer', 'Order now and you’ll receive the Deluxe Archetype Report instantly. We know for a fact that you’ll gain an enormous amount of value from this detailed report. But  if you decide that this product isn’t for you, we’ll give you a 100% refund within the next 60 days of purchase. No questions asked.'),
         ]),
       ]),
       h.div('.ribbon', [
         h.img({ src: require('../../assets/images/pop-up/60-day-money-back-guarantee.png') }),
-        h.p(`Take your time to look through your Deluxe Archetype Report and everything else that comes with it. If you decide within the next 60 days that you’re not completely satisfied with your Deluxe Archetype Report, just drop us an e-mail at contact@individualogist.com and we’ll issue you a full refund. No questions nor explanations will be necessary.`),
-        h.p(`I’m making this guarantee because I’m 100% certain that this report has the capacity to truly turn your life around. That’s how much I believe in the process of individuation, and that’s how much I believe you will benefit from it. So, no matter what, you’ve got the longer end of the stick. There is absolutely no risk involved, and it’s all up to you and whether you decide to take this life-changing path.`),
+        h.p('Take your time to look through your Deluxe Archetype Report and everything else that comes with it. If you decide within the next 60 days that you’re not completely satisfied with your Deluxe Archetype Report, just drop us an e-mail at contact@individualogist.com and we’ll issue you a full refund. No questions nor explanations will be necessary.'),
+        h.p('I’m making this guarantee because I’m 100% certain that this report has the capacity to truly turn your life around. That’s how much I believe in the process of individuation, and that’s how much I believe you will benefit from it. So, no matter what, you’ve got the longer end of the stick. There is absolutely no risk involved, and it’s all up to you and whether you decide to take this life-changing path.'),
       ]),
     ]);
 
@@ -338,5 +347,4 @@ export default class ReportFree extends Component {
       isLocalhost && h.pre([JSON.stringify(this.state, null, 1)]),
     ])]);
   }
-
 }
