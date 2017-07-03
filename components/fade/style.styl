@@ -9,3 +9,12 @@
 .leave.leave-active
   opacity: 0
   transition: opacity .5s
+
+:global
+  .cSSTransitionGroup
+    .markup:not(:first-child)
+      background: yellow
+      z-index: -2
+      display: none
+      // background: blue
+      position: absolute

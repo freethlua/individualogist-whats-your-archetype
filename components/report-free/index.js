@@ -300,7 +300,7 @@ export default class ReportFree extends Component {
       h.h1([markdown(`**${this.props.formData.name}'s** Archetype Reading`)]),
       h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
       h.div('.text', [
-        Fade(h(markup, { markup: this.state.currentLine || 'Loading...', key: this.state.currentLine }))
+        Fade(h(markup, { markup: this.state.currentLine || '', key: this.state.currentLine }))
       ]),
       audioEl,
       h.div('.image', [
