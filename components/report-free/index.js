@@ -208,16 +208,16 @@ export default class ReportFree extends Component {
           const replacement = this.props.formData[key.key];
           if (replacement) {
             const index = key.index + (lastReplacement ? lastReplacement.length : 0);
-            currentLine = currentLine.substring(0, index) +
-              replacement +
-              currentLine.substring(index);
+            currentLine = currentLine.substring(0, index)
+              + replacement
+              + currentLine.substring(index);
           }
           lastReplacement = replacement;
         } else if (key.js) {
           if (
-            key.js.path.match('compatibility') &&
-            (!line.class || !line.class.includes('compatibility')) &&
-            key.js.fadeIn
+            key.js.path.match('compatibility')
+            && (!line.class || !line.class.includes('compatibility'))
+            && key.js.fadeIn
           ) {
             line.class = arrify(line.class).concat(['compatibility']);
             currentLineHasBeenAddedWithImpliedClass = true;
@@ -320,7 +320,7 @@ export default class ReportFree extends Component {
         Fade(h(markup, { markup: this.state.currentLine || '', key: this.state.currentLine }))
       ]),
       audioEl,
-      h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
+      h.img('.play-pause', { src: require('../../assets/images/misc/play-pause.png'), class: this.state.audioPaused ? 'visible' : '' }),
     ]);
 
     const restEl = h.div('.rest', [
