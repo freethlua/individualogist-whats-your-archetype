@@ -42,9 +42,11 @@ export default class ReportFree extends Component {
     this.onkeydown = throttle(this.onkeydown, 200).bind(this);
 
     window.addEventListener('keydown', this.onkeydown.bind(this));
+    window.addEventListener('beforeunload', this.onbeforeunload.bind(this));
   }
   componentWillUnmount() {
     window.removeEventListener('keydown', this.onkeydown);
+    window.removeEventListener('beforeunload', this.onbeforeunload);
   }
 
   componentDidMount() {
@@ -114,6 +116,19 @@ export default class ReportFree extends Component {
     }
     e.preventDefault();
     return false;
+  }
+
+  onbeforeunload(e) {
+    if (this.redirectInitiated) {
+      return;
+    }
+    setTimeout(() => {
+      this.redirectInitiated = true;
+      window.location = `/deluxe-archetype-report-${this.archetype}-reading-3/`;
+    });
+    const dialogText = 'CLAIM YOUR $10 DISCOUNT NOW\nGET THE DELUXE ARCHETYPE REPORT TODAY!';
+    e.returnValue = dialogText;
+    return dialogText;
   }
 
   cueAction(action, opts, transcriptLine) {
