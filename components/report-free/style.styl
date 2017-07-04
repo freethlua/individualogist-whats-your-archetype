@@ -34,7 +34,7 @@
 
 for currentPercent in (1..100)
   .current-percent-currentPercent:before
-    z-index: 3
+    z-index: 5
     transition: 1000ms
     content ' '
     // border 2px dotted yellow
@@ -78,7 +78,9 @@ for currentPercent in (1..100)
 .text
   position: absolute
   top: 0
-  z-index: 1
+  // z-index: 1
+
+  // background black
 
   // .free-reading-ended &
   //   pointer-events: none
@@ -133,6 +135,7 @@ for currentPercent in (1..100)
 .image
   position: relative
   text-align: center
+  // z-index: -1
   .foreground
     opacity: .7
     width: 100%
@@ -180,8 +183,9 @@ a.button
   text-decoration: none
 
 .rest
+  // border: 3px dotted yellow
   // background: black
-  z-index: 2
+  // z-index: 21
   margin-top: -20vh
   // margin-top: -50vh
 
@@ -195,6 +199,7 @@ a.button
   // background: linear-gradient(to right, rgba(134,57,129, .8), rgba(202,45,130,.9))
   // background: linear-gradient(to right, #111, #fff)
   box-shadow: 20px 20px 20px rgb(0,0,0,.4)
+  // border: 3px dotted yellow
   width: 80%
   max-width: 1000px
   height 13em

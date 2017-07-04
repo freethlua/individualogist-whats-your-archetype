@@ -311,16 +311,16 @@ export default class ReportFree extends Component {
     }, [
       headerEl,
       h.h1([markdown(`**${this.props.formData.name}'s** Archetype Reading`)]),
-      h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
-      h.div('.text', [
-        Fade(h(markup, { markup: this.state.currentLine || '', key: this.state.currentLine }))
-      ]),
-      audioEl,
       h.div('.image', [
         h.div('.foreground', [
           Fade(h.img({ src: this.state.img, key: this.state.img }))
         ]),
       ]),
+      h.div('.text', [
+        Fade(h(markup, { markup: this.state.currentLine || '', key: this.state.currentLine }))
+      ]),
+      audioEl,
+      h.div('.play-pause', { class: this.state.audioPaused ? 'visible' : '' }),
     ]);
 
     const restEl = h.div('.rest', [
