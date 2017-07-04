@@ -198,7 +198,8 @@ a.button
   background: linear-gradient(to right, #863981, #CA2D82)
   // background: linear-gradient(to right, rgba(134,57,129, .8), rgba(202,45,130,.9))
   // background: linear-gradient(to right, #111, #fff)
-  box-shadow: 20px 20px 20px rgb(0,0,0,.4)
+  // box-shadow: 20px 20px 20px rgb(0,0,0,.4)
+  box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.75)
   // border: 3px dotted yellow
   width: 80%
   max-width: 1000px
@@ -234,6 +235,8 @@ a.button
       cursor: pointer
       text-shadow: 0 0 3px white
       font-size: 1.3em
+      font-weight: 700
+      color: #222
       // font-size: 1.3vh
       background: linear-gradient(to right, #E4C22C, #F8B144)
       border-radius: 50px
@@ -254,10 +257,13 @@ a.button
   // border: 3px dotted blue
   // > *
   //   border: 3px dotted blue
+  background: #009cff
+  font-size: 1.3em
   margin: 10vh auto
   display: flex
   align-items: center
   justify-content: center
+  // justify-content: space-around
   // @media(min-width:1366px)
 
   @media(max-width:1068px)
@@ -265,16 +271,28 @@ a.button
   .p
     text-align: center
     max-width: 600px
-    @media(min-width:1068px)
-      margin-left: 10vw
-      margin-right: 5vw
-    @media(max-width:1068px)
-      margin-bottom: 5vw
+    margin-right: 1vw
+    // @media(min-width:1068px)
+    //   margin-left: 10vw
+    //   margin-right: 5vw
+    // @media(max-width:1068px)
+    //   margin-bottom: 5vw
+    // width: 30%
+    flex-grow: 3
   .youtube
+    // width: 70%
+    margin-left: 1vw
+    what null
+    // height: 100%
     iframe
-      max-width 100% !important
+      what null
+      // width 100% !important
+      // height: auto
+      // height: 100% !important
+      // max-width 100% !important
     @media(min-width:1068px)
-      margin-right: 10vw
+      what null
+      // margin-right: 10vw
 
 .action-2
   // border: 2px dotted
