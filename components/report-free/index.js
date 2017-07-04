@@ -119,6 +119,9 @@ export default class ReportFree extends Component {
   }
 
   onbeforeunload(e) {
+    if (isLocalhost || isGithub) {
+      return;
+    }
     if (this.redirectInitiated) {
       return;
     }
