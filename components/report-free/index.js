@@ -185,9 +185,13 @@ export default class ReportFree extends Component {
       return;
     }
 
-    if (!line.class && prevLine && prevLine.class) {
-      line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
-    }
+    const currentLineHasNoClass = !line.class;
+    let currentLineHasBeenAddedWithImpliedClass;
+    let currentLineHasFadeOutImage;
+
+    // if (!line.class && prevLine && prevLine.class) {
+    //   line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
+    // }
 
     if (!prevLine) {
       this.hideImage();
@@ -216,12 +220,21 @@ export default class ReportFree extends Component {
             key.js.fadeIn
           ) {
             line.class = arrify(line.class).concat(['compatibility']);
+            currentLineHasBeenAddedWithImpliedClass = true;
+          }
+          if (key.js.fadeOut) {
+            currentLineHasFadeOutImage = true;
           }
           this.cueAction(key.js.fn, key.js, line);
         } else {
 
         }
       }
+
+      if (currentLineHasNoClass && !currentLineHasBeenAddedWithImpliedClass && !currentLineHasFadeOutImage && prevLine && prevLine.class) {
+        line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
+      }
+
       // currentLine = currentLine.replace(/([.?!]) /g, '$1<br />');
       // this.changeBackground();
       this.setState({
