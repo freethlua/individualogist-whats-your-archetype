@@ -1,3 +1,4 @@
+import { FBComments } from 'facebook-plugins';
 import hs from 'preact-hyperstyler';
 import commentLogo from './assets/comment-logo.png';
 import styles from './style.styl';
@@ -14,4 +15,11 @@ export default h.div('.outer', [h.div('.container', [
   //   'data-width': '100%',
   //   'data-numposts': 5,
   // }),
+  h(FBComments, {
+    appId: '247959338893932',
+    href: 'http://individualogist.com/whats-your-archetype/',
+    // width={750}
+    numPosts: 5,
+    // locale="fr_CA"
+  }),
 ])]);
