@@ -40,13 +40,17 @@ export default class ReportFree extends Component {
     this.changeBackground();
 
     this.onkeydown = throttle(this.onkeydown, 200).bind(this);
+    this.onbeforeunload = this.onbeforeunload.bind(this);
+    this.onclick = this.onclick.bind(this);
 
-    window.addEventListener('keydown', this.onkeydown.bind(this));
-    window.addEventListener('beforeunload', this.onbeforeunload.bind(this));
+    window.addEventListener('keydown', this.onkeydown);
+    window.addEventListener('beforeunload', this.onbeforeunload);
+    window.addEventListener('click', this.onclick);
   }
   componentWillUnmount() {
     window.removeEventListener('keydown', this.onkeydown);
     window.removeEventListener('beforeunload', this.onbeforeunload);
+    window.removeEventListener('click', this.onclick);
   }
 
   componentDidMount() {
@@ -120,18 +124,27 @@ export default class ReportFree extends Component {
 
   onbeforeunload(e) {
     if (isLocalhost || isGithub) {
-      return;
+      // return;
     }
     if (this.redirectInitiated) {
+      return;
+    }
+    if (this.justClicked) {
       return;
     }
     setTimeout(() => {
       this.redirectInitiated = true;
       window.location = `/deluxe-archetype-report-${this.archetype}-reading-3/`;
-    });
-    const dialogText = 'CLAIM YOUR $10 DISCOUNT NOW\nGET THE DELUXE ARCHETYPE REPORT TODAY!';
+    }, 1000);
+    // const dialogText = 'CLAIM YOUR $10 DISCOUNT NOW\nGET THE DELUXE ARCHETYPE REPORT TODAY!';
+    const dialogText = '********************************\n\nATTENTION!!!! \n\nDo not leave this page\n\nClaim your exclusive offer today\n\n\********************************';
     e.returnValue = dialogText;
     return dialogText;
+  }
+
+  onclick(e) {
+    this.justClicked = true
+    setTimeout(() => this.justClicked = false, 100);
   }
 
   cueAction(action, opts, transcriptLine) {
