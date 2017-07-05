@@ -19,7 +19,7 @@ export default h.div('.outer', [h.div('.container', [
     h(FBComments, {
       appId: '247959338893932',
       href: 'http://individualogist.com/whats-your-archetype/',
-      width: '100%',
+      // width: '100%',
       numPosts: 5,
     }),
   ]),
