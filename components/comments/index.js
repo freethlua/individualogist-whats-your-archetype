@@ -15,11 +15,12 @@ export default h.div('.outer', [h.div('.container', [
   //   'data-width': '100%',
   //   'data-numposts': 5,
   // }),
-  h(FBComments, {
-    appId: '247959338893932',
-    href: 'http://individualogist.com/whats-your-archetype/',
-    // width={750}
-    numPosts: 5,
-    // locale="fr_CA"
-  }),
+  h.div('.fb-comments', [
+    h(FBComments, {
+      appId: '247959338893932',
+      href: 'http://individualogist.com/whats-your-archetype/',
+      width: '100%',
+      numPosts: 5,
+    }),
+  ]),
 ])]);
