@@ -101,5 +101,5 @@ class App extends Component {
   }
 }
 
-const target = document.getElementById('whats-your-archetype_app') || document.body;
+const target = document.getElementById('app') || document.getElementById('whats-your-archetype_app') || document.body;
 store.ready.then((data) => render(h(App, data), target));
