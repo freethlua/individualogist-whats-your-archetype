@@ -9,7 +9,7 @@
     <title>What's Your Archetype? | Individualogist</title>
   </head>
   <body>
-    <script src='/wp-content/themes/individualogist/whats-your-archetype/build/app.js' async></script>
     <div id="whats-your-archetype_app"></div>
+    <script src='/wp-content/themes/individualogist/whats-your-archetype/build/app.js' async></script>
   </body>
 </html>
