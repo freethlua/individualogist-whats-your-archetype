@@ -5,5 +5,5 @@ stats.json
 
 # # Ideally "build" is auto-generated hence it should be ignored
 # # But the current server(s) aren't capable of running node/build process
-# build
+!build
 
