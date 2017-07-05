@@ -70,8 +70,6 @@ class App extends Component {
   render() {
     console.log(this.state);
 
-    const header = h.div('.header', [cmp.header]);
-
     const quiz = h.div('.quiz', [h(cmp.quiz, {
       onFinish: (quizData) => {
         this.setState({ quizData });
@@ -94,21 +92,14 @@ class App extends Component {
     const reportFree = h.div('.reportFree', [h(cmp.reportFree, Object.assign({}, this.state))]);
 
     if (!this.state.quizData) {
-      return h.div('.app', [quiz, cmp.comments]);
+      return h.div('.app', [quiz, cmp.comments, cmp.footer]);
     } else if (!this.state.formData || !this.state.aweberSuccess) {
-      return h.div('.app', [reportIntro, cmp.comments]);
+      return h.div('.app', [reportIntro, cmp.comments, cmp.footer]);
     } else {
-      return h.div('.app', [reportFree]);
+      return h.div('.app', [reportFree, cmp.comments, cmp.footer]);
     }
   }
 }
 
 const target = document.getElementById('whats-your-archetype_app') || document.body;
-
-store.ready.then((data) => {
-  // data = {}
-  const rendered = render(h(App, data), target);
-  const footer = document.getElementById('whats-your-archetype_footer') || document.body;
-
-  render(cmp.footer, footer);
-});
+store.ready.then((data) => render(h(App, data), target));
