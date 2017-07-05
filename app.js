@@ -102,4 +102,17 @@ class App extends Component {
 }
 
 const target = document.getElementById('app') || document.getElementById('whats-your-archetype_app') || document.body;
-store.ready.then((data) => render(h(App, data), target));
+store.ready.then(data => {
+  window.reload = () => {
+    // console.log(`window.FB:`, window.FB);
+    // const fbComments = document.createElement('div');
+    // fbComments.className = 'fb-comments';
+    // FB.XFBML.parse(fbComments, () => {
+    //   console.log(fbComments);
+    // });
+    render(h(App, data), target, target.lastChild);
+  };
+  return render(h(App, data), target);
+}).catch(error => {
+  render(h.pre(error), target);
+});

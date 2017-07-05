@@ -12,6 +12,7 @@
     "case": "^1.5.2",
     "debounce": "^1.0.2",
     "facebook-plugins": "^1.0.5",
+    "facebook-web-sdk-promise": "^1.0.0",
     "fade": "^0.2.0",
     "filter-duplicates": "^2.0.0",
     "font-awesome": "^4.7.0",
