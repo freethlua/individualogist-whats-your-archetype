@@ -17,7 +17,3 @@
     <footer id="whats-your-archetype_footer"></div>
   </body>
 </html>
-
-
-<input type="range">
-
