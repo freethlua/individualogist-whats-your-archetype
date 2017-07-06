@@ -1,5 +1,6 @@
 import webpack from 'webpack';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import html from 'html-webpack-plugin';
 import 'pathify-string';
@@ -28,18 +29,25 @@ export default {
       ].filter(Boolean)
     }, {
       test: /\.css$/,
-      use: ['style-loader', 'css-loader']
+      // use: ['style-loader', 'css-loader'],
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: ['css-loader'],
+      }),
     }, {
       test: /\.styl$/,
-      use: ['style-loader', {
-        loader: 'css-loader',
-        options: {
-          modules: true,
-          localIdentName: '[hash:base64:5]',
-          // localIdentName: isDev ? '[path][name]' : '[hash:base64:5]',
-          camelCase: true,
-        },
-      }, 'stylus-loader']
+      use: ExtractTextPlugin.extract({
+        fallback: 'style-loader',
+        use: [{
+          loader: 'css-loader',
+          options: {
+            modules: true,
+            localIdentName: '[hash:base64:5]',
+            // localIdentName: isDev ? '[path][name]' : '[hash:base64:5]',
+            camelCase: true,
+          },
+        }, 'stylus-loader']
+      })
     }, {
       test: /\.(png|jpe?g|woff|woff2|eot|ttf|svg|pdf|mp3|docx|txt)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       use: {
@@ -54,7 +62,12 @@ export default {
       use: 'pug-loader',
     }],
   },
-  plugins: [!isDev && new CleanWebpackPlugin(['build']),
+  plugins: [
+    !isDev && new CleanWebpackPlugin(['build']),
+    new ExtractTextPlugin({
+      filename: '[name].[chunkhash].css',
+      disable: isDev,
+    }),
     isDev && new webpack.NamedModulesPlugin() || new webpack.HashedModuleIdsPlugin(),
     !isDev && new webpack.optimize.CommonsChunkPlugin({
       name: 'node_modules',
@@ -66,11 +79,8 @@ export default {
     !isDev && new html({
       template: 'index.html',
       inject: false,
-      // title: _.startCase(pkgJson.name),
-      // config: commonConfig.get(),
     }),
     !isDev && new webpack.optimize.UglifyJsPlugin({
-      // mangle: { except: ['$super', '$', 'exports', 'require'] },
       mangle: false,
       comments: false,
     }),
