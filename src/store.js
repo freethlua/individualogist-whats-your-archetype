@@ -1,5 +1,5 @@
 import localforage from 'localforage';
-import { version } from './package.json';
+import { version } from '../package';
 
 localforage.config({ name: 'v' + version });
 

@@ -8,13 +8,14 @@ import styles from './style.styl';
 const h = hs(styles);
 
 export default class Quiz extends Component {
-
   componentWillMount() {
     this.setState({ archetypes, questions });
     this.refs = { li: [] };
 
     this.onkeydown = throttle(e => {
-      if (window.pageYOffset > 500) return;
+      if (window.pageYOffset > 500) {
+        return;
+      }
       if (e.keyCode === 39) {
         // right
         this.setState({ cqi: Math.min((this.state.cqi || 0) + 1, this.state.questions.length - 1) });
@@ -29,7 +30,6 @@ export default class Quiz extends Component {
     }, 200);
 
     window.addEventListener('keydown', this.onkeydown);
-
   }
 
   componentWillUnmount() {
@@ -90,7 +90,7 @@ export default class Quiz extends Component {
             class: { visible: cqi === qi },
             ref: ref => this.refs.li[qi] = ref,
           }, [
-            h.label('.question', { for: `q[${qi}]` }, [h.span('.order', [`${qi+1}/${this.state.questions.length}`]), h.span('.question', [q.question])]),
+            h.label('.question', { for: `q[${qi}]` }, [h.span('.order', [`${qi + 1}/${this.state.questions.length}`]), h.span('.question', [q.question])]),
             h.div('.answers', {}, q.answers.map((a, ai) => h.label('.answer', { for: `q[${qi}][${ai}]` }, [h.input({
               // class: { checked: this.state.questions[qi].ai === ai },
               checked: this.state.questions[qi].ai === ai,
@@ -136,15 +136,17 @@ export default class Quiz extends Component {
 
   componentDidUpdate() {
     // console.log(`this.firstCheckEl:`, this.firstCheckEl);
-    if (this.firstCheckEl) this.firstCheckEl.focus()
+    if (this.firstCheckEl) {
+ this.firstCheckEl.focus(); 
+}
   }
 
   componentDidMount() {
-    if (this.firstCheckEl) this.firstCheckEl.focus()
-  }
-
+    if (this.firstCheckEl) {
+ this.firstCheckEl.focus(); 
 }
-
+  }
+}
 
 // make "enter" check the checkbox
 document.addEventListener('keypress', e => {

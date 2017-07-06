@@ -1,6 +1,6 @@
 const lame = require('lame');
 const fs = require('fs');
-require('../pathify-string');
+require('pathify-string');
 
 const encoder = new lame.Encoder({
   // // input
@@ -15,13 +15,13 @@ const encoder = new lame.Encoder({
 
 const dir = __dirname.join('../../assets/audios');
 
-for (let inFile of fs.readdirSync(dir).filter(f => f.match(/\.mp3$/))) {
+for (const inFile of fs.readdirSync(dir).filter(f => f.match(/\.mp3$/))) {
   const inFilePath = dir.join(inFile);
   const outFile = inFile.basename + '-64' + inFile.extname;
   const outFilePath = dir.join(outFile);
 
   const inStream = fs.createReadStream(inFilePath);
-  const outStream = fs.createReadStream(inFilePath + '');
+  const outStream = fs.createReadStream(String(inFilePath));
 
   inStream.pipe(encoder);
   encoder.pipe(outFilePath);

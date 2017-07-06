@@ -1,12 +1,12 @@
 import URL from 'url';
 import { Component, render } from 'preact';
 import hs from 'preact-hyperstyler';
-import { version } from './package.json';
+import { version } from '../package';
 import './handle-errors';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
 import store from './store';
 import * as cmp from './components';
-import styles from './app.styl';
+import styles from './style.styl';
 
 const h = hs(styles);
 
@@ -68,7 +68,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
 
     const quiz = h.div('.quiz', [h(cmp.quiz, {
       onFinish: (quizData) => {
@@ -103,16 +103,9 @@ class App extends Component {
 
 const target = document.getElementById('app') || document.getElementById('whats-your-archetype_app') || document.body;
 store.ready.then(data => {
-  window.reload = () => {
-    // console.log(`window.FB:`, window.FB);
-    // const fbComments = document.createElement('div');
-    // fbComments.className = 'fb-comments';
-    // FB.XFBML.parse(fbComments, () => {
-    //   console.log(fbComments);
-    // });
-    render(h(App, data), target, target.lastChild);
-  };
-  return render(h(App, data), target);
+  window.reload = () => render(h(App, data), target, target.lastChild);
+  render(h(App, data), target);
+  document.getElementById('loading').remove();
 }).catch(error => {
   render(h.pre(error), target);
 });

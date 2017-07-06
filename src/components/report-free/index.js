@@ -13,7 +13,7 @@ import styles from './style.styl';
 const h = hs(styles);
 
 export default class ReportFree extends Component {
-  componentWillMount() {
+  async componentWillMount() {
     // window.title = this.props.quizData.archetype
 
     this.archetype = this.props.quizData.archetype;
@@ -24,14 +24,16 @@ export default class ReportFree extends Component {
     this.archetypeDetails = archetypes[this.archetype];
 
     try {
-      this.audioSrc = require(`../../assets/audios/${this.archetype}.mp3`);
+      this.audioSrc = await
+      import(`../../assets/audios/${this.archetype}.mp3`);
     } catch (error) {
       this.error = `Cannot load the audio file: '${this.archetype}.mp3'`;
       return;
     }
 
     try {
-      this.transcript = require(`../../assets/audios/${this.archetype}`);
+      this.transcript = await
+      import(`../../assets/audios/${this.archetype}`);
     } catch (error) {
       this.error = `Cannot load the transcript file: '${this.archetype}'`;
       return;
@@ -46,6 +48,8 @@ export default class ReportFree extends Component {
     window.addEventListener('keydown', this.onkeydown);
     window.addEventListener('beforeunload', this.onbeforeunload);
     window.addEventListener('click', this.onclick);
+
+    this.setState({ loaded: true });
   }
   componentWillUnmount() {
     window.removeEventListener('keydown', this.onkeydown);
@@ -143,7 +147,7 @@ export default class ReportFree extends Component {
   }
 
   onclick(e) {
-    this.justClicked = true
+    this.justClicked = true;
     setTimeout(() => this.justClicked = false, 100);
   }
 
@@ -151,7 +155,7 @@ export default class ReportFree extends Component {
     this[action](opts, transcriptLine);
   }
 
-  displayImage(opts, transcriptLine) {
+  async displayImage(opts, transcriptLine) {
     if (opts.fadeOut) {
       this.hideImage();
     } else {
@@ -160,7 +164,8 @@ export default class ReportFree extends Component {
         //   opts.class = arrify(opts.class).concat(['compatibility']);
         // }
         this.setState({
-          img: require('../../assets/' + opts.path),
+          img: await
+          import('../../assets/' + opts.path),
           // imgClass: opts.class || this.state.imgClass,
         });
       } catch (error) {
@@ -190,13 +195,16 @@ export default class ReportFree extends Component {
     this.setState({ lastBackgroundChangeTime: Number(new Date()) });
   }
 
-  ontimeupdate() {
+  async ontimeupdate() {
     if (this.audioEl.ended) {
       this.hideImage();
-      this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
-      this.transcript = require('../../assets/audios/deluxe-archetype-sales');
+      this.setState({ freeReadingEnded: true, loaded: false });
+      this.audioEl.src = await
+      import('../../assets/audios/deluxe-archetype-sales.mp3');
+      this.transcript = await
+      import('../../assets/audios/deluxe-archetype-sales');
       this.audioEl.play();
-      this.setState({ freeReadingEnded: true });
+      this.setState({ freeReadingEnded: true, loaded: true });
       return;
     }
 
@@ -239,16 +247,16 @@ export default class ReportFree extends Component {
           const replacement = this.props.formData[key.key];
           if (replacement) {
             const index = key.index + (lastReplacement ? lastReplacement.length : 0);
-            currentLine = currentLine.substring(0, index)
-              + replacement
-              + currentLine.substring(index);
+            currentLine = currentLine.substring(0, index) +
+              replacement +
+              currentLine.substring(index);
           }
           lastReplacement = replacement;
         } else if (key.js) {
           if (
-            key.js.path.match('compatibility')
-            && (!line.class || !line.class.includes('compatibility'))
-            && key.js.fadeIn
+            key.js.path.match('compatibility') &&
+            (!line.class || !line.class.includes('compatibility')) &&
+            key.js.fadeIn
           ) {
             line.class = arrify(line.class).concat(['compatibility']);
             currentLineHasBeenAddedWithImpliedClass = true;
@@ -296,7 +304,7 @@ export default class ReportFree extends Component {
     }
   }
 
-  changeBackground() {
+  async changeBackground() {
     if (!this.state.lastBackgroundChangeTime || this.state.lastBackgroundChangeTime + 4000 < new Date()) {
       const cbg = this.state.currentBackgroundIndex || 0;
       const nbg = cbg >= 4 ? 1 : cbg + 1;
@@ -313,6 +321,10 @@ export default class ReportFree extends Component {
   }
 
   render() {
+    if (!this.state || !this.state.loaded) {
+      return 'Loading...';
+    }
+
     const { archetype, audioSrc, transcript } = this;
 
     if (this.error) {

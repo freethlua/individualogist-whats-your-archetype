@@ -5,15 +5,16 @@ import styles from './style.styl';
 
 const h = hs(styles);
 
-// //connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=247959338893932
-
-// export default
-
-
 export default h(class comments extends Component {
-  componentDidMount() { this.update() }
-  componentDidUpdate() { this.update() }
-  update() { window.FB && window.FB.XFBML.parse(this.ref) }
+  componentDidMount() {
+    this.update();
+  }
+  componentDidUpdate() {
+    this.update();
+  }
+  update() {
+    window.FB && window.FB.XFBML.parse(this.ref);
+  }
   render() {
     return h.div('.outer', {
       ref: ref => this.ref = ref,

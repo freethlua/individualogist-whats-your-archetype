@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>What's Your Archetype?</title>
+  </head>
+  <body>
+    <pre id='loading'>Loading...</pre>
+    <div id='app'></div>
+    <% htmlWebpackPlugin.files.js.forEach(js => { %><script type='text/javascript' src='<%= js %>' defer></script><% }) %>
+    <script defer src='//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=247959338893932'></script>
+  </body>
+</html>

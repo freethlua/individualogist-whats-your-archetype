@@ -1,4 +1,3 @@
-
 export { default as quiz } from './quiz';
 export { default as reportFree } from './report-free';
 export { default as reportDeluxe } from './report-deluxe';
