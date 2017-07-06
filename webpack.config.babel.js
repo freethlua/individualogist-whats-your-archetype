@@ -63,7 +63,7 @@ export default {
     !isDev && new webpack.optimize.CommonsChunkPlugin({
       name: 'webpack',
     }),
-    !new html({
+    !isDev && new html({
       template: 'index.html',
       inject: false,
       // title: _.startCase(pkgJson.name),
