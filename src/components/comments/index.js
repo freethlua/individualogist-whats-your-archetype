@@ -22,9 +22,10 @@ export default h(class comments extends Component {
       h.img({ src: commentLogo }),
       h.div('.heading', 'What archetype did you get? Let us know in the comments below!'),
       h.div('.fb-comments', {
-        'data-href': 'http://individualogist.com/whats-your-archetype/',
+        href: 'http://individualogist.com/whats-your-archetype/',
         numPosts: 5,
         // width: '100%',
+        orderBy: 'reverse_time'
       }),
     ])]);
   }
