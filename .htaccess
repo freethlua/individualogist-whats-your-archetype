@@ -13,5 +13,3 @@ RewriteRule ^(.*)$ /build/$1
 # This does not expose the internal URL.
 RewriteCond %{SCRIPT_FILENAME} -d
 RewriteRule ^build/(.*[^/])$ http://www.example.com/$1/ [R=301]
-
-
