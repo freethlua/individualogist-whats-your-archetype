@@ -83,7 +83,9 @@ export default {
     !isDev && new webpack.optimize.UglifyJsPlugin({
       mangle: false,
       comments: false,
-      ascii_only: true,
+      output: {
+        ascii_only: true,
+      }
     }),
     !isDev && new BundleAnalyzerPlugin({
       analyzerMode: 'static',
