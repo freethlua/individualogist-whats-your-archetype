@@ -3,4 +3,5 @@ window.isGithub = Boolean(location.hostname.match(/github.io/));
 
 __webpack_public_path__ = isLocalhost ? '' :
   isGithub ? location.pathname :
-  '/wp-content/themes/individualogist/whats-your-archetype/';
+    '';
+// '/wp-content/themes/individualogist/whats-your-archetype/';
