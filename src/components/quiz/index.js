@@ -46,6 +46,7 @@ export default class Quiz extends Component {
 
   render() {
     const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();
+    console.log('this.refs.li[cqi]:', this.refs.li[cqi]);
 
     return h.div('.wrapper', [h.div('.container', [
       // h.pre('.debug', { style: 'position:fixed!important;bottom:0!important;right:0!important' }, JSON.stringify(this.state.questions.map(q => q.answer), null, 2))
@@ -83,7 +84,8 @@ export default class Quiz extends Component {
         }),
         h.ol({
           style: {
-            height: this.refs.li[cqi] ? this.refs.li[cqi].offsetHeight : '12.5em',
+            // height: '12.5em',
+            height: this.refs.li[cqi] ? String(this.refs.li[cqi].offsetHeight) : '12.5em',
           }
         }, this.state.questions.map((q, qi) =>
           h.li({
@@ -137,14 +139,14 @@ export default class Quiz extends Component {
   componentDidUpdate() {
     // console.log(`this.firstCheckEl:`, this.firstCheckEl);
     if (this.firstCheckEl) {
- this.firstCheckEl.focus(); 
-}
+      this.firstCheckEl.focus();
+    }
   }
 
   componentDidMount() {
     if (this.firstCheckEl) {
- this.firstCheckEl.focus(); 
-}
+      this.firstCheckEl.focus();
+    }
   }
 }
 

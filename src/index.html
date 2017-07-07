@@ -7,10 +7,10 @@
   <body>
     <pre id='loading'>Loading...</pre>
     <div id='app'></div>
-    <% htmlWebpackPlugin.files.js.forEach(js => { %>
-    <script type="text/javascript" src="<%= js %>" defer></script>
-    <% }) %><% htmlWebpackPlugin.files.css.forEach(css => { %>
+    <% htmlWebpackPlugin.files.css.forEach(css => { %>
     <link type="text/css" rel="stylesheet" href="<%= css %>" lazyload>
+    <% }) %><% htmlWebpackPlugin.files.js.forEach(js => { %>
+    <script type="text/javascript" src="<%= js %>" defer></script>
     <% }) %>
     <script defer src='//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=247959338893932'></script>
   </body>
