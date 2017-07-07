@@ -1,15 +1,54 @@
 RewriteEngine On
 
-# Map http://www.example.com to /build.
-RewriteRule /?(.*) /build/$1 [L]
+RewriteRule ^(.*)$ build/$1
 
-# # Map http://www.example.com/x to /build/x unless there is a x in the web root.
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteCond %{REQUEST_URI} !^/build/
-# RewriteRule ^(.*)$ /build/$1
-#
-# # Add trailing slash to directories within build
-# # This does not expose the internal URL.
-# RewriteCond %{SCRIPT_FILENAME} -d
-# RewriteRule ^build/(.*[^/])$ http://www.example.com/$1/ [R=301]
+RewriteRule ^(.*)$ build/$1
+
+RewriteRule ^(.*)/$ build/$1/
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)/$ build/$1/
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*[^/])$ build/$1/
+
+
+RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+RewriteRule ^(.*)$ - [E=BASE:%1]
+
+RewriteCond %{REQUEST_URI}::$1 ^(.*?/)(.*)::\2$
+RewriteRule ^(.*)$ build$1 [E=BASE:%1]
+
+
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
+RewriteRule ^.*$ %2index.php [QSA,L]
+
+
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
+RewriteRule ^.*$ %2index.php [QSA,L]
+
+
+
+RewriteEngine on
+RewriteBase /
+RewriteRule ^testdir/(.*)$ build/$1 [L]
+RewriteRule ^(.*)$ zf/$1 [L]
+
+
+RewriteRule ^$ build [L]
+RewriteRule ^/(.*)$ build/$1 [L]
+
+
+RewriteRule ^$ build/index.html [L]
+RewriteRule ^(.+)$ build/$1 [L]
+
+RewriteRule ^$ build [L]
+
+
