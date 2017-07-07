@@ -83,8 +83,7 @@ export default {
     //
     new ExtractTextPlugin({
       filename: '[name].[chunkhash].css',
-      // disable: isDev,
-      disable: true,
+      disable: isDev,
     }),
     isDev && new webpack.NamedModulesPlugin() || new webpack.HashedModuleIdsPlugin(),
     //
