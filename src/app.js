@@ -88,7 +88,6 @@ class App extends Component {
         formEl.querySelector('input[name=name]').focus();
         window.scrollTo(0, 0);
       },
-      // ref: ref =>
     })]);
 
     const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, {
@@ -100,7 +99,6 @@ class App extends Component {
     if (!this.state.quizData) {
       return h.div('.app', [quiz, cmp.comments, cmp.footer]);
     } else if (!this.state.formData || !this.state.aweberSuccess) {
-      window.scrollTo(0, 0);
       return h.div('.app', [reportIntro, cmp.comments, cmp.footer]);
     } else {
       return h.div('.app', [reportFree, cmp.comments, cmp.footer]);
