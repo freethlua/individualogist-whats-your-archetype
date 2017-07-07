@@ -6,7 +6,8 @@ import './handle-errors';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
 import store from './store';
 import * as cmp from './components';
-import styles from './style.styl';
+import styles from './app.styl';
+import './shell.styl';
 
 const h = hs(styles);
 

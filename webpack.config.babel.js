@@ -9,8 +9,7 @@ const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
 
 export default {
   context: __dirname.join('src'),
-  entry: { app: ['./__webpack_public_path__', 'whatwg-fetch', 'babel-polyfill', '.'] },
-  // entry: { app: ['./test'] },
+  entry: { app: ['./__webpack_public_path__', 'whatwg-fetch', 'babel-polyfill', './app'] },
   output: {
     filename: isDev ? '[name].js' : '[name].[chunkhash].js',
     chunkFilename: 'chunks/[name].[chunkhash].js',
@@ -84,7 +83,7 @@ export default {
     }), !isDev && new webpack.optimize.CommonsChunkPlugin({
       name: 'webpack',
     }), !isDev && new html({
-      template: 'index.html',
+      template: 'shell.html',
       inject: false,
     }), !isDev && new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
