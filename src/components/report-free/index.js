@@ -73,7 +73,6 @@ export default class ReportFree extends Component {
       }
     }
     await this.ontimeupdate();
-    console.log('even?');
     this.playPause();
     window.scrollTo(0, 0);
     this.setState({ ready: true });
@@ -193,7 +192,6 @@ export default class ReportFree extends Component {
       }
     }
     const newState = this.audioEl.paused;
-    console.log('newState:', newState);
     this.setState({ audioPaused: newState });
     this.setState({ lastBackgroundChangeTime: Number(new Date()) });
   }
@@ -202,9 +200,7 @@ export default class ReportFree extends Component {
     if (this.audioEl.ended) {
       this.hideImage();
       this.setState({ freeReadingEnded: true, ready: false });
-      console.log('getting:', 'this.audioEl.src');
       this.audioEl.src = await import('../../assets/audios/deluxe-archetype-sales.mp3');
-      console.log('this.audioEl.src:', this.audioEl.src);
       this.transcript = await import('../../assets/audios/deluxe-archetype-sales');
       this.audioEl.play();
       this.setState({ freeReadingEnded: true, ready: true });

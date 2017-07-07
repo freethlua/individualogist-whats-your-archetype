@@ -100,7 +100,7 @@ export default {
     //
     !isDev && new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
-      // mangle: false,
+      mangle: false,
       comments: false,
       output: {
         ascii_only: true
