@@ -8,7 +8,10 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-car.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28769'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=caregiveroptin2',
+    },
   },
   creator: {
     title: 'The Creator',
@@ -19,7 +22,10 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-cre.individua1.pay.clickbank.net/?cbskin=16829&cbfid=27121'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=creatoroptin2',
+    },
   },
   explorer: {
     title: 'The Explorer',
@@ -30,7 +36,10 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-exp.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28787'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=exploreroptin2',
+    },
   },
   hero: {
     title: 'The Hero',
@@ -41,7 +50,10 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-her.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28788'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=herooptin2',
+    },
   },
   innocent: {
     title: 'The Innocent',
@@ -52,7 +64,10 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-inn.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28789'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=innocentoptin2',
+    },
   },
   jester: {
     title: 'The Jester',
@@ -63,7 +78,10 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-jes.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28790'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=jesteroptin2',
+    },
   },
   lover: {
     title: 'The Lover',
@@ -74,7 +92,10 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-lov.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28791'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=loveroptin2',
+    },
   },
   magician: {
     title: 'The Magician',
@@ -85,7 +106,10 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-mag.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28792'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=memberoptin2',
+    },
   },
   member: {
     title: 'The Member',
@@ -96,7 +120,10 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-mem.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28793'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=magicianoptin2',
+    },
   },
   outlaw: {
     title: 'The Outlaw',
@@ -107,7 +134,10 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-out.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28794'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=outlawoptin2',
+    },
   },
   ruler: {
     title: 'The Ruler',
@@ -118,7 +148,10 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-rul.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28795'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=ruleroptin2',
+    },
   },
   sage: {
     title: 'The Sage',
@@ -129,6 +162,9 @@ module.exports = {
     },
     clickbank: {
       link: 'http://dar-sag.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28797'
-    }
+    },
+    clickmagick: {
+      imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=sageoptin2',
+    },
   },
 };

@@ -27,7 +27,7 @@ export default class Form extends Component {
       h.form({
         onSubmit: e => {
           this.props.onSubmit(this.state);
-          if (window.isLocalhost) {
+          if (window.isDev) {
             e.preventDefault();
             window.location = this.redirectUrl;
           }

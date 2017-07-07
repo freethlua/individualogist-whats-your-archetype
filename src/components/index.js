@@ -6,3 +6,4 @@ export { default as form } from './form';
 export { default as comments } from './comments';
 export { default as header } from './header';
 export { default as footer } from './footer';
+export { default as tracking } from './tracking';

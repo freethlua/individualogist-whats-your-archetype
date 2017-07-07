@@ -1,5 +1,6 @@
 window.isLocalhost = Boolean(!location.hostname || location.hostname.match(/localhost|(127|192)\.[0-9.]+/));
 window.isGithub = Boolean(location.hostname.match(/github.io/));
+window.isDev = isLocalhost || isGithub;
 
 // __webpack_public_path__ = isLocalhost ? '' :
 //   isGithub ? location.pathname :
