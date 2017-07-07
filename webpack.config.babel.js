@@ -31,7 +31,8 @@ export default {
       include: __dirname.join('src'),
       use: [ //
         isDev && 'webpack-module-hot-accept',
-        'babel-loader',
+        //
+        !isDev && 'babel-loader',
       ].filter(Boolean)
     }, {
       test: /\.css$/,

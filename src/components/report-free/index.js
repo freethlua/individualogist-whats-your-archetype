@@ -24,16 +24,14 @@ export default class ReportFree extends Component {
     this.archetypeDetails = archetypes[this.archetype];
 
     try {
-      this.audioSrc = await
-      import(`../../assets/audios/${this.archetype}.mp3`);
+      this.audioSrc = require(`../../assets/audios/${this.archetype}.mp3`);
     } catch (error) {
       this.error = `Cannot load the audio file: '${this.archetype}.mp3'`;
       return;
     }
 
     try {
-      this.transcript = await
-      import(`../../assets/audios/${this.archetype}`);
+      this.transcript = await import(`../../assets/audios/${this.archetype}`);
     } catch (error) {
       this.error = `Cannot load the transcript file: '${this.archetype}'`;
       return;
@@ -49,7 +47,8 @@ export default class ReportFree extends Component {
     window.addEventListener('beforeunload', this.onbeforeunload);
     window.addEventListener('click', this.onclick);
 
-    this.setState({ loaded: true });
+    // this.setState({ willMountReady: true });
+    this.ready();
   }
   componentWillUnmount() {
     window.removeEventListener('keydown', this.onkeydown);
@@ -57,7 +56,8 @@ export default class ReportFree extends Component {
     window.removeEventListener('click', this.onclick);
   }
 
-  componentDidMount() {
+  // async componentDidMount() {
+  async ready() {
     if ('dev' in url.query) {
       if ('seekTo' in url.query) {
         this.audioEl.currentTime = parseInt(url.query.seekTo, 10);
@@ -72,9 +72,11 @@ export default class ReportFree extends Component {
         }
       }
     }
-    this.ontimeupdate();
+    await this.ontimeupdate();
+    console.log('even?');
     this.playPause();
     window.scrollTo(0, 0);
+    this.setState({ ready: true });
   }
 
   onkeydown(e) {
@@ -191,6 +193,7 @@ export default class ReportFree extends Component {
       }
     }
     const newState = this.audioEl.paused;
+    console.log('newState:', newState);
     this.setState({ audioPaused: newState });
     this.setState({ lastBackgroundChangeTime: Number(new Date()) });
   }
@@ -198,13 +201,13 @@ export default class ReportFree extends Component {
   async ontimeupdate() {
     if (this.audioEl.ended) {
       this.hideImage();
-      this.setState({ freeReadingEnded: true, loaded: false });
-      this.audioEl.src = await
-      import('../../assets/audios/deluxe-archetype-sales.mp3');
-      this.transcript = await
-      import('../../assets/audios/deluxe-archetype-sales');
+      this.setState({ freeReadingEnded: true, ready: false });
+      console.log('getting:', 'this.audioEl.src');
+      this.audioEl.src = await import('../../assets/audios/deluxe-archetype-sales.mp3');
+      console.log('this.audioEl.src:', this.audioEl.src);
+      this.transcript = await import('../../assets/audios/deluxe-archetype-sales');
       this.audioEl.play();
-      this.setState({ freeReadingEnded: true, loaded: true });
+      this.setState({ freeReadingEnded: true, ready: true });
       return;
     }
 
@@ -304,7 +307,7 @@ export default class ReportFree extends Component {
     }
   }
 
-  async changeBackground() {
+  changeBackground() {
     if (!this.state.lastBackgroundChangeTime || this.state.lastBackgroundChangeTime + 4000 < new Date()) {
       const cbg = this.state.currentBackgroundIndex || 0;
       const nbg = cbg >= 4 ? 1 : cbg + 1;
@@ -321,9 +324,9 @@ export default class ReportFree extends Component {
   }
 
   render() {
-    if (!this.state || !this.state.loaded) {
-      return 'Loading...';
-    }
+    // if (!this.state || !this.state.willMountReady) {
+    //   return 'Loading...';
+    // }
 
     const { archetype, audioSrc, transcript } = this;
 
