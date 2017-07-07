@@ -83,7 +83,12 @@ class App extends Component {
       onSubmit: (formData) => {
         this.setState({ formData });
         store.save(this.state);
-      }
+      },
+      componentDidMount: formEl => {
+        formEl.querySelector('input[name=name]').focus();
+        window.scrollTo(0, 0);
+      },
+      // ref: ref =>
     })]);
 
     const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, {
@@ -95,6 +100,7 @@ class App extends Component {
     if (!this.state.quizData) {
       return h.div('.app', [quiz, cmp.comments, cmp.footer]);
     } else if (!this.state.formData || !this.state.aweberSuccess) {
+      window.scrollTo(0, 0);
       return h.div('.app', [reportIntro, cmp.comments, cmp.footer]);
     } else {
       return h.div('.app', [reportFree, cmp.comments, cmp.footer]);
@@ -106,7 +112,9 @@ const target = document.getElementById('app') || document.getElementById('whats-
 store.ready.then(data => {
   window.reload = () => render(h(App, data), target, target.lastChild);
   render(h(App, data), target);
-  document.getElementById('loading').remove();
+  if (document.getElementById('loading')) {
+    document.getElementById('loading').remove();
+  }
 }).catch(error => {
   render(h.pre(error), target);
 });
