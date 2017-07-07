@@ -19,7 +19,7 @@ export default h(class comments extends Component {
     return h.div('.outer', {
       ref: ref => this.ref = ref,
     }, [h.div('.container', [
-      h.img({ src: commentLogo }),
+      // h.img({ src: commentLogo }),
       h.div('.heading', 'What archetype did you get? Let us know in the comments below!'),
       h.div('.fb-comments', {
         href: 'http://individualogist.com/whats-your-archetype/',
