@@ -83,7 +83,9 @@ export default class Quiz extends Component {
         }),
         h.ol({
           style: {
-            height: this.refs.li[cqi] ? String(this.refs.li[cqi].offsetHeight) : '12.5em',
+            height: this.refs.li[cqi] ?
+              this.refs.li[cqi].offsetHeight + 'px' :
+              '12.5em',
           }
         }, this.state.questions.map((q, qi) =>
           h.li({

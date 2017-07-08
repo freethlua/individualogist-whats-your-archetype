@@ -112,7 +112,7 @@ class App extends Component {
 const target = document.getElementById('app') || document.getElementById('whats-your-archetype_app') || document.body;
 store.ready.then(data => {
   window.reload = () => render(h(App, data), target, target.lastChild);
-  render(h(App, data), target);
+  render(h(App, data), target, target.lastChild);
   if (document.getElementById('loading')) {
     document.getElementById('loading').remove();
   }

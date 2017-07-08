@@ -1,7 +1,8 @@
 import webpack from 'webpack';
-import CleanWebpackPlugin from 'clean-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import clean from 'clean-webpack-plugin';
+import copy from 'copy-webpack-plugin';
+import extract from 'extract-text-webpack-plugin';
+import analyze from 'webpack-bundle-analyzer/lib/BundleAnalyzerPlugin';
 import html from 'html-webpack-plugin';
 import 'pathify-string';
 
@@ -37,7 +38,7 @@ export default {
     }, {
       test: /\.css$/,
       // use: ['style-loader', 'css-loader'],
-      use: ExtractTextPlugin.extract({
+      use: extract.extract({
         fallback: 'style-loader',
         use: [{
           loader: 'css-loader',
@@ -49,7 +50,7 @@ export default {
       })
     }, {
       test: /\.styl$/,
-      use: ExtractTextPlugin.extract({
+      use: extract.extract({
         fallback: 'style-loader',
         use: [{
           loader: 'css-loader',
@@ -80,9 +81,9 @@ export default {
   },
   plugins: [
     //
-    !isDev && new CleanWebpackPlugin(['build']),
+    !isDev && new clean(['build']),
     //
-    new ExtractTextPlugin({
+    new extract({
       filename: '[name].[chunkhash].css',
       disable: isDev,
     }),
@@ -93,10 +94,14 @@ export default {
       minChunks: module => module.context.includes('node_modules')
     }), !isDev && new webpack.optimize.CommonsChunkPlugin({
       name: 'webpack'
-    }), !isDev && new html({
+    }),
+    //
+    !isDev && new html({
       template: 'shell.html',
       inject: false
     }),
+    // //
+    // copy([{}]),
     //
     !isDev && new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
@@ -107,7 +112,7 @@ export default {
       }
     }),
     //
-    !isDev && new BundleAnalyzerPlugin({
+    !isDev && new analyze({
       analyzerMode: 'static',
       openAnalyzer: false,
       generateStatsFile: true
