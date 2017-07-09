@@ -1,5 +1,5 @@
 import { Component } from 'preact';
-import { route } from 'preact-router-relative';
+import { route } from 'preact-router';
 import hs from 'preact-hyperstyler';
 import arrify from 'arrify';
 import filterDuplicates from 'filter-duplicates';
@@ -19,11 +19,11 @@ export default class ReportFree extends Component {
 
     if (!this.props.quizData) {
       this.setState({ redirecting: '/quiz' });
-      // route('/quiz');
+      route('/quiz');
       return
     } else if (!this.props.formData || !this.props.aweberSuccess) {
       this.setState({ redirecting: '/intro' });
-      // route('/intro');
+      route('/intro');
       return;
     }
 

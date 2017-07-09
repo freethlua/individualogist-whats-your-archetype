@@ -1,7 +1,7 @@
 import URL from 'url';
 import { Component, render } from 'preact';
 import hs from 'preact-hyperstyler';
-import Router, { route } from 'preact-router-relative';
+import Router, { route } from 'preact-router';
 import AsyncRoute from 'preact-async-route';
 import { version } from '../package';
 import './handle-errors';
@@ -97,22 +97,19 @@ class App extends Component {
         this.setState({ quizData });
         store.save(this.state);
         route('/intro');
-        // if (window.isDev) {
-        //   // this.setState(Object.assign({ aweberSuccess: quizData.aweberRedirectHash }, quizData));
-        //   store.save(this.state);
-        //   route('/intro');
-        //   return true;
-        // }
       }
     })), cmp.comments, cmp.footer]);
     const intro = () => h.div([h(cmp.reportIntro, Object.assign({}, this.state, {
       form: h(cmp.form, Object.assign({}, this.state, {
-        onSubmit: formData => {
-          this.setState({ formData, aweberSuccess: formData.aweberRedirectHash });
-          store.save(this.state);
+        onSubmit: (e, formData) => {
           if (window.isDev) {
+            this.setState({ formData, aweberSuccess: formData.aweberRedirectHash });
+            store.save(this.state);
             route('/reading');
-            return true;
+            e.preventDefault();
+          } else {
+            this.setState({ formData });
+            store.save(this.state);
           }
         },
         componentDidMount: formEl => {
@@ -127,7 +124,7 @@ class App extends Component {
     const syncRoute = (path, component) => h(component, { path });
     const asyncRoute = (path, component) => h(AsyncRoute, { path, component });
 
-    return h(Router, { class: ['app'] }, [
+    return h.div('.app', [h(Router, [
       h.div({ path: '/', default: true }, [h(redirect)]),
       syncRoute('/quiz', quiz),
       syncRoute('/intro', intro),
@@ -136,15 +133,7 @@ class App extends Component {
       // asyncRoute('/quiz', quiz),
       // asyncRoute('/intro', intro),
       // asyncRoute('/reading', reading),
-    ]);
-
-    // if (!this.state.quizData) {
-    //   return h.div('.app', [quiz, cmp.comments, cmp.footer]);
-    // } else if (!this.state.formData || !this.state.aweberSuccess) {
-    //   return h.div('.app', [reportIntro, cmp.comments, cmp.footer, tracking]);
-    // } else {
-    //   return h.div('.app', [reportFree, cmp.comments, cmp.footer, tracking]);
-    // }
+    ])]);
   }
 }
 

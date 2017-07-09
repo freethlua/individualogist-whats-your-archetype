@@ -1,5 +1,5 @@
 import { Component } from 'preact';
-import { route } from 'preact-router-relative';
+import { route } from 'preact-router';
 import hs from 'preact-hyperstyler';
 import throttle from 'throttleit';
 import archetypes from '../../data/archetypes';

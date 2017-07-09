@@ -1,6 +1,6 @@
 import { Component } from 'preact';
 import hs from 'preact-hyperstyler';
-import { route } from 'preact-router-relative';
+import { route } from 'preact-router';
 import archetypes from '../../data/archetypes';
 import styles from './style.styl';
 import md from 'preact-markdown';

@@ -1,6 +1,6 @@
 {
   "name": "whats-your-archetype",
-  "version": "0.22.1800",
+  "version": "0.23.2234",
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server --hot --inline"
@@ -26,7 +26,7 @@
     "preact-hyperstyler": "^0.3.1",
     "preact-markdown": "^0.3.0",
     "preact-markup": "^1.6.0",
-    "preact-router-relative": "^2.5.4a",
+    "preact-router": "^2.5.4",
     "quick-hash": "^1.0.4",
     "react-transition-group": "^1.2.0",
     "react-youtube": "^7.4.0",

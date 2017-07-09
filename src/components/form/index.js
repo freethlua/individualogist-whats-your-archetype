@@ -3,7 +3,7 @@ import { Component } from 'preact';
 import quickHash from 'quick-hash';
 import hs from 'preact-hyperstyler';
 import linkstate from 'linkstate';
-import { route } from 'preact-router-relative';
+import { route } from 'preact-router';
 import archetypes from '../../data/archetypes';
 import styles from './style.styl';
 
@@ -26,14 +26,7 @@ export default class Form extends Component {
   render() {
     return h.div('.container', [
       h.form({
-        onSubmit: e => {
-          if (this.props.onSubmit(this.state)) {
-            e.preventDefault();
-            return false;
-          } else {
-            route(this.redirectUrl);
-          }
-        },
+        onSubmit: e => this.props.onSubmit(e, this.state),
         action: 'https://www.aweber.com/scripts/addlead.pl',
         method: 'POST',
         ref: ref => this.formEl = ref,
