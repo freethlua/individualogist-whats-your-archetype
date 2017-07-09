@@ -5,6 +5,7 @@ import Router, { route } from 'preact-router';
 import { version } from '../package';
 import './handle-errors';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
+import fixSubdomain from './utils/fix-subdomain';
 import store from './store';
 import * as cmp from './components';
 import styles from './app.styl';
@@ -68,16 +69,6 @@ class App extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   if (!this.state.quizData) {
-  //     route('/quiz');
-  //   } else if (!this.state.formData || !this.state.aweberSuccess) {
-  //     route('/intro');
-  //   } else {
-  //     route('/reading');
-  //   }
-  // }
-
   render() {
     const tracking = !isDev && h(cmp.tracking, this.state);
 
@@ -130,8 +121,7 @@ class App extends Component {
         if (window.isDev) {
           return `(dev mode) Not redirecting to '/${path}'`;
         } else {
-          const host /*without subdomain*/ = location.host.split('.').slice(1).join('.');
-          path = `//${host}/${path}`;
+          path = fixSubdomain(path);
           location.assign(path);
           return `Redirecting to '${path}'...`;
         }

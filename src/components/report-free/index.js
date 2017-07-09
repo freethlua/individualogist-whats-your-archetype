@@ -9,6 +9,7 @@ import markdown from 'preact-markdown';
 import Youtube from 'react-youtube';
 import Fade from '../fade';
 import archetypes from '../../data/archetypes';
+import fixSubdomain from '../../utils/fix-subdomain';
 import styles from './style.styl';
 
 const h = hs(styles);
@@ -151,7 +152,8 @@ export default class ReportFree extends Component {
     }
     setTimeout(() => {
       this.redirectInitiated = true;
-      route(`/deluxe-archetype-report-${this.archetype}-reading-3/`);
+      location.assign(fixSubdomain(`/deluxe-archetype-report-${this.archetype}-reading-3/`));
+      // route(`/deluxe-archetype-report-${this.archetype}-reading-3/`);
     }, 1000);
     // const dialogText = 'CLAIM YOUR $10 DISCOUNT NOW\nGET THE DELUXE ARCHETYPE REPORT TODAY!';
     const dialogText = '********************************\n\nATTENTION!!!! \n\nDo not leave this page\n\nClaim your exclusive offer today\n\n\********************************';
