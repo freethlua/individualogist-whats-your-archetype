@@ -80,7 +80,7 @@ class App extends Component {
   // }
 
   render() {
-    const tracking = !isDev && h(cmp.tracking, state);
+    const tracking = !isDev && h(cmp.tracking, this.state);
 
     const redirect = () => {
       if (!this.state.quizData) {
