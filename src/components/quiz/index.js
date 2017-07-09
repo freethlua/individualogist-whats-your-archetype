@@ -10,12 +10,6 @@ const h = hs(styles);
 
 export default class Quiz extends Component {
   componentWillMount() {
-    if (this.props.formData && this.props.aweberSuccess) {
-      this.setState({ redirecting: '/intro' });
-      route('/intro');
-      return;
-    }
-
     this.setState({ archetypes, questions });
     this.refs = { li: [] };
 
@@ -52,8 +46,8 @@ export default class Quiz extends Component {
   }
 
   render() {
-    if (this.state && this.state.redirecting) {
-      return `Redirecting to ${this.state.redirecting}...`;
+    if (this.props.quizData) {
+      return route('/intro');
     }
 
     const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();

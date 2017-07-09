@@ -5,6 +5,7 @@ import Router, { route } from 'preact-router';
 import { version } from '../package';
 import './handle-errors';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
+import Case from 'case';
 import fixSubdomain from './utils/fix-subdomain';
 import store from './store';
 import * as cmp from './components';
@@ -20,6 +21,7 @@ window.cleanUrl = URL.format(Object.assign({}, url, {
   query: {},
   search: null
 }));
+window.originalTitle = document.title;
 
 class App extends Component {
   componentWillMount() {
@@ -116,6 +118,7 @@ class App extends Component {
 
     const redirectExternal = ({ path }) => {
       if (path in paths) {
+        document.title = Case.title(path) + ' | ' + window.originalTitle;
         return h(paths[path]);
       } else {
         if (window.isDev) {
@@ -136,11 +139,14 @@ class App extends Component {
 }
 
 const target = document.getElementById('app') || document.getElementById('whats-your-archetype_app') || document.body;
+const loadingElement = document.getElementById('loading');
 store.ready.then(data => {
   window.reload = () => render(h(App, data), target, target.lastChild);
   render(h(App, data), target, target.lastChild);
-  if (document.getElementById('loading')) {
-    document.getElementById('loading').remove();
+  if (loadingElement) {
+    window.showLoading = () => loadingElement.style.display = 'block';
+    window.hideLoading = () => loadingElement.style.display = 'none';
+    window.hideLoading();
   }
 }).catch(error => {
   render(h.pre(error.stack || error.message || error), target, target.lastChild);

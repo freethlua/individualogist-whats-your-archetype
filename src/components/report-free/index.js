@@ -18,16 +18,6 @@ export default class ReportFree extends Component {
   async componentWillMount() {
     // window.title = this.props.quizData.archetype
 
-    if (!this.props.quizData) {
-      this.setState({ redirecting: '/quiz' });
-      route('/quiz');
-      return;
-    } else if (!this.props.formData || !this.props.aweberSuccess) {
-      this.setState({ redirecting: '/intro' });
-      route('/intro');
-      return;
-    }
-
     this.archetype = this.props.quizData.archetype;
     if (!this.archetype) {
       this.error = 'Need to have an archetype before this component could be rendered';
@@ -336,12 +326,10 @@ export default class ReportFree extends Component {
   }
 
   render() {
-    // if (!this.state || !this.state.willMountReady) {
-    //   return 'Loading...';
-    // }
-
-    if (this.state && this.state.redirecting) {
-      return `Redirecting to ${this.state.redirecting}...`;
+    if (!this.props.quizData) {
+      return route('/quiz');
+    } else if (!this.props.formData || !this.props.aweberSuccess) {
+      return route('/intro');
     }
 
     const { archetype, audioSrc, transcript } = this;
