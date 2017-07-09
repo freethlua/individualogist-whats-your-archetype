@@ -1,4 +1,5 @@
 import { Component } from 'preact';
+import { route } from 'preact-router-relative';
 import hs from 'preact-hyperstyler';
 import arrify from 'arrify';
 import filterDuplicates from 'filter-duplicates';
@@ -16,6 +17,16 @@ export default class ReportFree extends Component {
   async componentWillMount() {
     // window.title = this.props.quizData.archetype
 
+    if (!this.props.quizData) {
+      this.setState({ redirecting: '/quiz' });
+      // route('/quiz');
+      return
+    } else if (!this.props.formData || !this.props.aweberSuccess) {
+      this.setState({ redirecting: '/intro' });
+      // route('/intro');
+      return;
+    }
+
     this.archetype = this.props.quizData.archetype;
     if (!this.archetype) {
       this.error = 'Need to have an archetype before this component could be rendered';
@@ -31,7 +42,8 @@ export default class ReportFree extends Component {
     }
 
     try {
-      this.transcript = await import(`../../assets/audios/${this.archetype}`);
+      this.transcript = await
+      import (`../../assets/audios/${this.archetype}`);
     } catch (error) {
       this.error = `Cannot load the transcript file: '${this.archetype}'`;
       return;
@@ -166,7 +178,7 @@ export default class ReportFree extends Component {
         // }
         this.setState({
           img: await
-          import('../../assets/' + opts.path),
+          import ('../../assets/' + opts.path),
           // imgClass: opts.class || this.state.imgClass,
         });
       } catch (error) {
@@ -200,8 +212,10 @@ export default class ReportFree extends Component {
     if (this.audioEl.ended) {
       this.hideImage();
       this.setState({ freeReadingEnded: true, ready: false });
-      this.audioEl.src = await import('../../assets/audios/deluxe-archetype-sales.mp3');
-      this.transcript = await import('../../assets/audios/deluxe-archetype-sales');
+      this.audioEl.src = await
+      import ('../../assets/audios/deluxe-archetype-sales.mp3');
+      this.transcript = await
+      import ('../../assets/audios/deluxe-archetype-sales');
       this.audioEl.play();
       this.setState({ freeReadingEnded: true, ready: true });
       return;
@@ -246,16 +260,16 @@ export default class ReportFree extends Component {
           const replacement = this.props.formData[key.key];
           if (replacement) {
             const index = key.index + (lastReplacement ? lastReplacement.length : 0);
-            currentLine = currentLine.substring(0, index) +
-              replacement +
-              currentLine.substring(index);
+            currentLine = currentLine.substring(0, index)
+              + replacement
+              + currentLine.substring(index);
           }
           lastReplacement = replacement;
         } else if (key.js) {
           if (
-            key.js.path.match('compatibility') &&
-            (!line.class || !line.class.includes('compatibility')) &&
-            key.js.fadeIn
+            key.js.path.match('compatibility')
+            && (!line.class || !line.class.includes('compatibility'))
+            && key.js.fadeIn
           ) {
             line.class = arrify(line.class).concat(['compatibility']);
             currentLineHasBeenAddedWithImpliedClass = true;
@@ -323,6 +337,10 @@ export default class ReportFree extends Component {
     // if (!this.state || !this.state.willMountReady) {
     //   return 'Loading...';
     // }
+
+    if (this.state && this.state.redirecting) {
+      return `Redirecting to ${this.state.redirecting}...`;
+    }
 
     const { archetype, audioSrc, transcript } = this;
 

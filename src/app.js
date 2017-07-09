@@ -1,6 +1,8 @@
 import URL from 'url';
 import { Component, render } from 'preact';
 import hs from 'preact-hyperstyler';
+import Router, { route } from 'preact-router-relative';
+import AsyncRoute from 'preact-async-route';
 import { version } from '../package';
 import './handle-errors';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
@@ -29,8 +31,7 @@ class App extends Component {
     }
 
     if ('dev' in url.query) {
-      // window.history.replaceState({}, 'page2', cleanUrl);
-      // console.log({ url.query });
+      window.history.replaceState(null, null, window.location.href.split('?')[0]);
       if ('report' in url.query) {
         if (url.query.report === 'free') {
           const aweberSuccess = 'test-override';
@@ -51,7 +52,7 @@ class App extends Component {
     }
 
     if ('aweberSuccess' in url.query && this.state.formData) {
-      window.history.replaceState({}, 'page2', cleanUrl);
+      window.history.replaceState(null, null, window.location.href.split('?')[0]);
       if (url.query.aweberSuccess === this.state.formData.aweberRedirectHash) {
         console.log('authenticated!');
         this.setState({
@@ -68,44 +69,82 @@ class App extends Component {
     }
   }
 
+  // componentDidMount() {
+  //   if (!this.state.quizData) {
+  //     route('/quiz');
+  //   } else if (!this.state.formData || !this.state.aweberSuccess) {
+  //     route('/intro');
+  //   } else {
+  //     route('/reading');
+  //   }
+  // }
+
   render() {
-    // console.log(this.state);
-    const state = Object.assign({}, this.state);
-
-    const quiz = h.div('.quiz', [h(cmp.quiz, {
-      onFinish: (quizData) => {
-        this.setState({ quizData });
-        store.save(this.state);
-      }
-    })]);
-
-    const form = h.div('.form', [h(cmp.form, {
-      quizData: this.state.quizData,
-      onSubmit: (formData) => {
-        this.setState({ formData });
-        store.save(this.state);
-      },
-      componentDidMount: formEl => {
-        formEl.querySelector('input[name=name]').focus();
-        window.scrollTo(0, 0);
-      },
-    })]);
-
-    const reportIntro = h.div('.reportIntro', [h(cmp.reportIntro, {
-      form,
-      archetype: this.state && this.state.quizData && this.state.quizData.archetype
-    })]);
-    const reportFree = h.div('.reportFree', [h(cmp.reportFree, state)]);
-
     const tracking = !isDev && h(cmp.tracking, state);
 
-    if (!this.state.quizData) {
-      return h.div('.app', [quiz, cmp.comments, cmp.footer]);
-    } else if (!this.state.formData || !this.state.aweberSuccess) {
-      return h.div('.app', [reportIntro, cmp.comments, cmp.footer, tracking]);
-    } else {
-      return h.div('.app', [reportFree, cmp.comments, cmp.footer, tracking]);
-    }
+    const redirect = () => {
+      if (!this.state.quizData) {
+        route('/quiz');
+      } else if (!this.state.formData || !this.state.aweberSuccess) {
+        route('/intro');
+      } else {
+        route('/reading');
+      }
+    };
+
+    const quiz = () => h.div([h(cmp.quiz, Object.assign({}, this.state, {
+      onFinish: quizData => {
+        this.setState({ quizData });
+        store.save(this.state);
+        route('/intro');
+        // if (window.isDev) {
+        //   // this.setState(Object.assign({ aweberSuccess: quizData.aweberRedirectHash }, quizData));
+        //   store.save(this.state);
+        //   route('/intro');
+        //   return true;
+        // }
+      }
+    })), cmp.comments, cmp.footer]);
+    const intro = () => h.div([h(cmp.reportIntro, Object.assign({}, this.state, {
+      form: h(cmp.form, Object.assign({}, this.state, {
+        onSubmit: formData => {
+          this.setState({ formData, aweberSuccess: formData.aweberRedirectHash });
+          store.save(this.state);
+          if (window.isDev) {
+            route('/reading');
+            return true;
+          }
+        },
+        componentDidMount: formEl => {
+          formEl.querySelector('input[name=name]').focus();
+          window.scrollTo(0, 0);
+        },
+      }))
+    })), cmp.comments, cmp.footer, tracking]);
+
+    const reading = () => h.div([h(cmp.reportFree, Object.assign({}, this.state)), cmp.comments, cmp.footer, tracking]);
+
+    const syncRoute = (path, component) => h(component, { path });
+    const asyncRoute = (path, component) => h(AsyncRoute, { path, component });
+
+    return h(Router, { class: ['app'] }, [
+      h.div({ path: '/', default: true }, [h(redirect)]),
+      syncRoute('/quiz', quiz),
+      syncRoute('/intro', intro),
+      syncRoute('/reading', reading),
+      // async not working when routing changes for some reason
+      // asyncRoute('/quiz', quiz),
+      // asyncRoute('/intro', intro),
+      // asyncRoute('/reading', reading),
+    ]);
+
+    // if (!this.state.quizData) {
+    //   return h.div('.app', [quiz, cmp.comments, cmp.footer]);
+    // } else if (!this.state.formData || !this.state.aweberSuccess) {
+    //   return h.div('.app', [reportIntro, cmp.comments, cmp.footer, tracking]);
+    // } else {
+    //   return h.div('.app', [reportFree, cmp.comments, cmp.footer, tracking]);
+    // }
   }
 }
 

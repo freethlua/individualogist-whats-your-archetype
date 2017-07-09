@@ -1,4 +1,5 @@
-import { Component, render } from 'preact';
+import { Component } from 'preact';
+import { route } from 'preact-router-relative';
 import hs from 'preact-hyperstyler';
 import throttle from 'throttleit';
 import archetypes from '../../data/archetypes';
@@ -9,6 +10,12 @@ const h = hs(styles);
 
 export default class Quiz extends Component {
   componentWillMount() {
+    if (this.props.formData && this.props.aweberSuccess) {
+      this.setState({ redirecting: '/intro' });
+      route('/intro');
+      return;
+    }
+
     this.setState({ archetypes, questions });
     this.refs = { li: [] };
 
@@ -45,6 +52,10 @@ export default class Quiz extends Component {
   }
 
   render() {
+    if (this.state && this.state.redirecting) {
+      return `Redirecting to ${this.state.redirecting}...`;
+    }
+
     const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();
 
     return h.div('.wrapper', [h.div('.container', [
@@ -83,9 +94,9 @@ export default class Quiz extends Component {
         }),
         h.ol({
           style: {
-            height: this.refs.li[cqi] ?
-              this.refs.li[cqi].offsetHeight + 'px' :
-              '12.5em',
+            height: this.refs.li[cqi]
+              ? this.refs.li[cqi].offsetHeight + 'px'
+              : '12.5em',
           }
         }, this.state.questions.map((q, qi) =>
           h.li({
@@ -126,7 +137,8 @@ export default class Quiz extends Component {
                     archetype: sortedArchetypes[0],
                     archetypes: this.state.archetypes,
                   });
-                  setTimeout(() => this.props.onFinish(this.state), 333);
+                  this.props.onFinish(this.state);
+                  // setTimeout(() => this.props.onFinish(this.state), 333);
                   // console.log(this.state);
                 }
               }

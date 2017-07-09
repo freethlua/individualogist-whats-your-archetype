@@ -13,7 +13,9 @@ export default h(class comments extends Component {
     this.update();
   }
   update() {
-    window.FB && window.FB.XFBML.parse(this.ref);
+    if (!window.isDev) {
+      window.FB && window.FB.XFBML.parse(this.ref);
+    }
   }
   render() {
     return h.div('.outer', {
