@@ -85,39 +85,39 @@ export default {
     //
     new extract({
       filename: '[name].[chunkhash].css',
-      // disable: isDev,
-      disable: true,
+      disable: isDev,
+      // disable: true,
     }),
     isDev && new webpack.NamedModulesPlugin() || new webpack.HashedModuleIdsPlugin(),
-    // //
-    // !isDev && new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'node_modules',
-    //   minChunks: module => module.context.includes('node_modules')
-    // }), !isDev && new webpack.optimize.CommonsChunkPlugin({
-    //   name: 'webpack'
-    // }),
     //
+    !isDev && new webpack.optimize.CommonsChunkPlugin({
+      name: 'node_modules',
+      minChunks: module => module.context.includes('node_modules')
+    }), !isDev && new webpack.optimize.CommonsChunkPlugin({
+      name: 'webpack'
+    }),
+
     !isDev && new html({
       template: 'shell.html',
       inject: false
     }),
     // //
     // copy([{}]),
-    // //
-    // !isDev && new webpack.optimize.UglifyJsPlugin({
-    //   sourceMap: true,
-    //   mangle: false,
-    //   comments: false,
-    //   output: {
-    //     ascii_only: true
-    //   }
-    // }),
-    // //
-    // !isDev && new analyze({
-    //   analyzerMode: 'static',
-    //   openAnalyzer: false,
-    //   generateStatsFile: true
-    // }),
+    //
+    !isDev && new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      mangle: false,
+      comments: false,
+      output: {
+        ascii_only: true
+      }
+    }),
+    //
+    !isDev && new analyze({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+      generateStatsFile: true
+    }),
   ].filter(Boolean),
   resolve: {
     alias: {
