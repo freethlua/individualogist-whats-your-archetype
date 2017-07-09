@@ -2,7 +2,6 @@ import URL from 'url';
 import { Component, render } from 'preact';
 import hs from 'preact-hyperstyler';
 import Router, { route } from 'preact-router';
-import AsyncRoute from 'preact-async-route';
 import { version } from '../package';
 import './handle-errors';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
@@ -92,14 +91,17 @@ class App extends Component {
       }
     };
 
-    const quiz = () => h.div([h(cmp.quiz, Object.assign({}, this.state, {
+    const paths = {};
+
+    paths.quiz = () => h.div([h(cmp.quiz, Object.assign({}, this.state, {
       onFinish: quizData => {
         this.setState({ quizData });
         store.save(this.state);
         route('/intro');
       }
     })), cmp.comments, cmp.footer]);
-    const intro = () => h.div([h(cmp.reportIntro, Object.assign({}, this.state, {
+
+    paths.intro = () => h.div([h(cmp.reportIntro, Object.assign({}, this.state, {
       form: h(cmp.form, Object.assign({}, this.state, {
         onSubmit: (e, formData) => {
           if (window.isDev) {
@@ -119,31 +121,22 @@ class App extends Component {
       }))
     })), cmp.comments, cmp.footer, tracking]);
 
-    const reading = () => h.div([h(cmp.reportFree, Object.assign({}, this.state)), cmp.comments, cmp.footer, tracking]);
+    paths.reading = () => h.div([h(cmp.reportFree, Object.assign({}, this.state)), cmp.comments, cmp.footer, tracking]);
 
-    const syncRoute = (path, component) => h(component, { path });
-    const asyncRoute = (path, component) => h(AsyncRoute, { path, component });
-
-    return h.div('.app', [h(Router, [
-      h.div({ path: '/', default: true }, [h(redirect)]),
-      syncRoute('/quiz', quiz),
-      syncRoute('/intro', intro),
-      syncRoute('/reading', reading),
-      // async not working when routing changes for some reason
-      // asyncRoute('/quiz', quiz),
-      // asyncRoute('/intro', intro),
-      // asyncRoute('/reading', reading),
-      syncRoute('/:path', class Path extends Component {
-        componentWillMount() {
-          if (!window.isDev) {
-            const host /*without subdomain*/ = location.host.split('.').slice(1).join('.');
-            const path = `//${host}/${this.props.path}`;
-            this.setState({ path });
-            location.assign(path);
-            // route(path);
-          }
+    class redirectExternal extends Component {
+      componentWillMount() {
+        if (!(this.props.path) && !window.isDev) {
+          const host /*without subdomain*/ = location.host.split('.').slice(1).join('.');
+          const path = `//${host}/${this.props.path}`;
+          this.setState({ path });
+          location.assign(path);
+          // route(path);
         }
-        render(props, state) {
+      }
+      render(props, state) {
+        if (this.props.path in paths) {
+          return h(paths[this.props.path]);
+        } else {
           const path = state.path || props.path;
           if (window.isDev) {
             return `(dev mode) Not redirecting to '/${path}'`;
@@ -151,7 +144,12 @@ class App extends Component {
             return `Redirecting to '${path}'...`;
           }
         }
-      }),
+      }
+    }
+
+    return h.div('.app', [h(Router, [
+      h(redirect, { path: '/', default: true }),
+      h(redirectExternal, { path: '/:path' }),
     ])]);
   }
 }
