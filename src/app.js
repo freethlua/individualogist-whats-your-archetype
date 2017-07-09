@@ -123,30 +123,20 @@ class App extends Component {
 
     paths.reading = () => h.div([h(cmp.reportFree, Object.assign({}, this.state)), cmp.comments, cmp.footer, tracking]);
 
-    class redirectExternal extends Component {
-      componentWillMount() {
-        console.log(`this.props.path:`, this.props.path);
-        if (!(this.props.path in paths) && !window.isDev) {
-          const host /*without subdomain*/ = location.host.split('.').slice(1).join('.');
-          const path = `//${host}/${this.props.path}`;
-          this.setState({ path });
-          location.assign(path);
-          // route(path);
-        }
-      }
-      render(props, state) {
-        if (this.props.path in paths) {
-          return h(paths[this.props.path]);
+    const redirectExternal = ({ path }) => {
+      if (path in paths) {
+        return h(paths[path]);
+      } else {
+        if (window.isDev) {
+          return `(dev mode) Not redirecting to '/${path}'`;
         } else {
-          const path = state.path || props.path;
-          if (window.isDev) {
-            return `(dev mode) Not redirecting to '/${path}'`;
-          } else {
-            return `Redirecting to '${path}'...`;
-          }
+          const host /*without subdomain*/ = location.host.split('.').slice(1).join('.');
+          path = `//${host}/${path}`;
+          location.assign(path);
+          return `Redirecting to '${path}'...`;
         }
       }
-    }
+    };
 
     return h.div('.app', [h(Router, [
       h(redirect, { path: '/', default: true }),
