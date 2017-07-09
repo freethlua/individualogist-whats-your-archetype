@@ -125,6 +125,7 @@ class App extends Component {
 
     class redirectExternal extends Component {
       componentWillMount() {
+        console.log(`this.props.path:`, this.props.path);
         if (!(this.props.path in paths) && !window.isDev) {
           const host /*without subdomain*/ = location.host.split('.').slice(1).join('.');
           const path = `//${host}/${this.props.path}`;
