@@ -3,6 +3,7 @@ import { Component, render } from 'preact';
 import hs from 'preact-hyperstyler';
 import Router, { route } from 'preact-router';
 import AsyncRoute from 'preact-async-route';
+import parseDomain from 'parse-domain';
 import { version } from '../package';
 import './handle-errors';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
@@ -133,6 +134,24 @@ class App extends Component {
       // asyncRoute('/quiz', quiz),
       // asyncRoute('/intro', intro),
       // asyncRoute('/reading', reading),
+      syncRoute('/:path', class Path extends Component {
+        componentWillMount() {
+          if (!window.isDev) {
+            const { domain, tld } = parseDomain(location.href);
+            const path = `//${domain}.${tld}/${this.props.path}`;
+            this.setState({ path });
+            route(path);
+          }
+        }
+        render(props, state) {
+          const path = state.path || props.path;
+          if (window.isDev) {
+            return `(dev mode) Not redirecting to '/${path}'`;
+          } else {
+            return `Redirecting to '${path}'...`;
+          }
+        }
+      }),
     ])]);
   }
 }
