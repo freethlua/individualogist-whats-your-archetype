@@ -25,18 +25,30 @@ export default class ReportFree extends Component {
     }
     this.archetypeDetails = archetypes[this.archetype];
 
+    let audioName;
+    if ('deluxe' in url.query) {
+      if (url.query.deluxe === 'follow-up') {
+        audioName = 'deluxe-archetype-follow-up-sales';
+      } else {
+        audioName = 'deluxe-archetype-sales';
+      }
+    } else {
+      audioName = this.archetype;
+    }
+
+
     try {
-      this.audioSrc = require(`../../assets/audios/${this.archetype}.mp3`);
+      this.audioSrc = require(`../../assets/audios/${audioName}.mp3`);
     } catch (error) {
-      this.error = `Cannot load the audio file: '${this.archetype}.mp3'`;
+      this.error = `Cannot load the audio file: '${audioName}.mp3'`;
       return;
     }
 
     try {
       this.transcript = await
-      import (`../../assets/audios/${this.archetype}`);
+      import (`../../assets/audios/${audioName}`);
     } catch (error) {
-      this.error = `Cannot load the transcript file: '${this.archetype}'`;
+      this.error = `Cannot load the transcript file: '${audioName}'`;
       return;
     }
 
@@ -53,6 +65,7 @@ export default class ReportFree extends Component {
     // this.setState({ willMountReady: true });
     this.ready();
   }
+
   componentWillUnmount() {
     window.removeEventListener('keydown', this.onkeydown);
     window.removeEventListener('beforeunload', this.onbeforeunload);
@@ -75,6 +88,7 @@ export default class ReportFree extends Component {
         }
       }
     }
+
     await this.ontimeupdate();
     this.playPause();
     window.scrollTo(0, 0);
@@ -204,8 +218,7 @@ export default class ReportFree extends Component {
     if (this.audioEl.ended) {
       this.hideImage();
       this.setState({ freeReadingEnded: true, ready: false });
-      this.audioEl.src = await
-      import ('../../assets/audios/deluxe-archetype-sales.mp3');
+      this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
       this.transcript = await
       import ('../../assets/audios/deluxe-archetype-sales');
       this.audioEl.play();
