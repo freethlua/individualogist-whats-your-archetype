@@ -20,7 +20,7 @@ export default class ReportFree extends Component {
     if (!this.props.quizData) {
       this.setState({ redirecting: '/quiz' });
       route('/quiz');
-      return
+      return;
     } else if (!this.props.formData || !this.props.aweberSuccess) {
       this.setState({ redirecting: '/intro' });
       route('/intro');
