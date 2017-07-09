@@ -145,5 +145,6 @@ store.ready.then(data => {
     document.getElementById('loading').remove();
   }
 }).catch(error => {
-  render(h.pre(error), target);
+  render(h.pre(error.stack || error.message || error), target, target.lastChild);
+  console.error(error);
 });
