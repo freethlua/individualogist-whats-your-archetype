@@ -3,7 +3,6 @@ import { Component, render } from 'preact';
 import hs from 'preact-hyperstyler';
 import Router, { route } from 'preact-router';
 import AsyncRoute from 'preact-async-route';
-import parseDomain from 'parse-domain';
 import { version } from '../package';
 import './handle-errors';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
@@ -137,10 +136,11 @@ class App extends Component {
       syncRoute('/:path', class Path extends Component {
         componentWillMount() {
           if (!window.isDev) {
-            const { domain, tld } = parseDomain(location.href);
-            const path = `//${domain}.${tld}/${this.props.path}`;
+            const host /*without subdomain*/ = location.host.split('.')[1];
+            const path = `//${host}/${this.props.path}`;
             this.setState({ path });
-            route(path);
+            location.assign(path);
+            // route(path);
           }
         }
         render(props, state) {
