@@ -136,7 +136,7 @@ class App extends Component {
       syncRoute('/:path', class Path extends Component {
         componentWillMount() {
           if (!window.isDev) {
-            const host /*without subdomain*/ = location.host.split('.')[1];
+            const host /*without subdomain*/ = location.host.split('.').slice(1).join('.');
             const path = `//${host}/${this.props.path}`;
             this.setState({ path });
             location.assign(path);
