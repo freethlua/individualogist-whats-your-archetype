@@ -27,6 +27,7 @@ export default class ReportFree extends Component {
 
     let audioName;
     if ('deluxe' in url.query) {
+      this.deluxe = true;
       if (url.query.deluxe === 'follow-up') {
         audioName = 'deluxe-archetype-follow-up-sales';
       } else {
@@ -216,6 +217,9 @@ export default class ReportFree extends Component {
 
   async ontimeupdate() {
     if (this.audioEl.ended) {
+      if (this.deluxe) {
+        return;
+      }
       this.hideImage();
       this.setState({ freeReadingEnded: true, ready: false });
       this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
@@ -436,7 +440,7 @@ export default class ReportFree extends Component {
         .concat([this.state.freeReadingEnded && 'free-reading-ended'].filter(Boolean))
     }, [
       mainContentEl,
-      this.state.freeReadingEnded && restEl,
+      (this.state.freeReadingEnded || this.deluxe) && restEl,
       isLocalhost && h.pre([JSON.stringify(this.state, null, 1)]),
     ])]);
   }

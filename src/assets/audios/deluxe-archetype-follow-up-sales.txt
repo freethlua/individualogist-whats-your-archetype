@@ -870,7 +870,7 @@ But no {{name}}, I’m NOT going to ask you for that amount of money.
 
 10:11 
 
-I’m not even going to ask you for $200\.
+I’m not even going to ask you for $200.
 
 146
 
