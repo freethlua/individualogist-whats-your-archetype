@@ -28,7 +28,7 @@ Because this means that your archetype is the Outlaw!
 
 What does this actually mean?
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/outlaw.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/archetype-icons/outlaw.png', fadeIn: true} {{/displayImage}}
 
 00:14 
 
@@ -60,7 +60,7 @@ The quiz that you’ve just taken is designed to identify your archetype...
 
 A personality profile that’s broken down your entire being...
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/outlaw.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/archetype-icons/outlaw.png', fadeOut: true} {{/displayImage}}
 
 00:34 
 
@@ -224,7 +224,7 @@ You hold your values and principles close to your heart...
 
 And you’re always ready to stick to your guns.
 
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/script-images/globe.png', fadeIn: true} {{/displayImage}}
 
 02:30 
 
@@ -238,7 +238,7 @@ There is something else about you, {{name}}…
 
 You are the one who will ignite massive change in the world.
 
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
 
 02:40 
 
@@ -594,7 +594,7 @@ And that’s what Individuation aims to teach you.
 
 But there’s more to what I’ve learned about you, {{name}}…
 
-{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeIn: true} {{/displayImage}}
 
 07:43 
 
@@ -632,7 +632,7 @@ Your thoughts and dreams are vivid, colourful...
 
 And symbolic of who you are as an individual.
 
-{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeOut: true} {{/displayImage}}
 
 08:12 
 
@@ -700,7 +700,7 @@ But every superhero needs a side-kick; a partner in crime.
 
 One who will stick by them when the going gets tough. And the outlaw is no exception.
 
-{{JS:{fn:'displayImage', path:'images/love-compatibility/outlaw-love-compatibility.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/love-compatibility/outlaw-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 09:10 
 
@@ -792,7 +792,7 @@ You will be the happiest you’ve ever been in that regard.
 
 But you will find that happiness that you’re looking for soon enough.
 
-{{JS:{fn:'displayImage', path:'images/love-compatibility/outlaw-love-compatibility.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/love-compatibility/outlaw-love-compatibility.png', fadeOut: true} {{/displayImage}}
 
 10:23 
 

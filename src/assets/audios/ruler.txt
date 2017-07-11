@@ -22,7 +22,7 @@ then congratulations!
 
 Because this means that your archetype is the Ruler!
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/ruler.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/archetype-icons/ruler.png', fadeIn: true} {{/displayImage}}
 
 00:10 
 
@@ -42,7 +42,7 @@ Don’t worry, everything you need to know will be on this page.
 
 Stick to the end of it and I promise that you’ll experience something truly magical.
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/ruler.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/archetype-icons/ruler.png', fadeOut: true} {{/displayImage}}
 
 00:23 
 
@@ -218,7 +218,7 @@ and you’re always ready to stick to your guns.
 
 There is something else about you, {{name}}…
 
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/script-images/globe.png', fadeIn: true} {{/displayImage}}
 
 02:22 
 
@@ -226,7 +226,7 @@ There is something else about you, {{name}}…
 
 You will be the one to lead enormous change in the world.
 
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
 
 02:25 
 
@@ -540,7 +540,7 @@ And that’s what Individuation aims to teach you.
 
 But there’s more to what I’ve learned about you, {{name}}…
 
-{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeIn: true} {{/displayImage}}
 
 06:19 
 
@@ -572,7 +572,7 @@ In fact, I get the sense that you have quite the imagination.
 
 Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
 
-{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeOut: true} {{/displayImage}}
 
 06:43 
 
@@ -634,7 +634,7 @@ You’re the one who people rely on and look up to.
 
 But every pilot needs a co-pilot; a partner in crime who will stick by them when the going gets tough.
 
-{{JS:{fn:'displayImage', path:'images/love-compatibility/ruler-love-compatibility.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/love-compatibility/ruler-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 07:29 
 
@@ -702,7 +702,7 @@ I sense that in the coming years, you will be the happiest you’ve ever been in
 
 – but you will find that happiness that you’re looking for soon enough.
 
-{{JS:{fn:'displayImage', path:'images/love-compatibility/ruler-love-compatibility.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/love-compatibility/ruler-love-compatibility.png', fadeOut: true} {{/displayImage}}
 
 08:22 
 

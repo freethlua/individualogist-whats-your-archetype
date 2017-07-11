@@ -16,7 +16,7 @@ If you’ve made it here, then congratulations!
 
 Because this means that your archetype is the Innocent!
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/innocent.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/archetype-icons/innocent.png', fadeIn: true} {{/displayImage}}
 
 4      
 
@@ -36,7 +36,7 @@ Don’t worry, everything you need to know will be on this page.
 
 Stick to the end of it and I promise that you’ll experience something truly magical.    
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/innocent.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/archetype-icons/innocent.png', fadeOut: true} {{/displayImage}}
 
 7      
 
@@ -206,7 +206,7 @@ You hold your values and principles close to your heart, and you’re always rea
 
 There is something else about you, {{name}}…
 
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/script-images/globe.png', fadeIn: true} {{/displayImage}}
 
 35
 
@@ -214,7 +214,7 @@ There is something else about you, {{name}}…
 
 You represent what it means to be strong.
 
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
 
 36
 
@@ -582,7 +582,7 @@ There’s more to what I’ve learned about you, {{name}}…
 
 It feels to me that you’re a deeply emotional and spiritual person.
 
-{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeIn: true} {{/displayImage}}
 
 97
 
@@ -608,7 +608,7 @@ In fact, I get the sense that you have quite the imagination.
 
 Your thoughts and dreams are vivid, colourful, and…
 
-{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeOut: true} {{/displayImage}}
 
 101
 
@@ -700,7 +700,7 @@ But even angels need someone to rely on…
 
 A partner in crime who will stick by them when the going gets tough.
 
-{{JS:{fn:'displayImage', path:'images/love-compatibility/innocent-love-compatibility.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/love-compatibility/innocent-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 116
 
@@ -786,7 +786,7 @@ I sense that in the coming years, you will be the happiest you’ve ever been in
 
 But you will find that happiness that you’re looking for soon enough.
 
-{{JS:{fn:'displayImage', path:'images/love-compatibility/innocent-love-compatibility.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/love-compatibility/innocent-love-compatibility.png', fadeOut: true} {{/displayImage}}
 
 130
 

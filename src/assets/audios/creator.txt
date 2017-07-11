@@ -16,7 +16,7 @@ If you’ve made it here, then congratulations!
 
 Because this means that your archetype is the Creator!
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/creator.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/archetype-icons/creator.png', fadeIn: true} {{/displayImage}}
 
 4
 
@@ -36,7 +36,7 @@ Don’t worry, everything you need to know will be on this page.
 
 Stick to the end of it and I promise that you’ll experience something truly magical.
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/creator.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/archetype-icons/creator.png', fadeOut: true} {{/displayImage}}
 
 7
 
@@ -242,7 +242,7 @@ You put your heart and soul into anything that you create...
 
 There is something else about you, {{name}}…
 
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/script-images/globe.png', fadeIn: true} {{/displayImage}}
 
 41
 
@@ -250,7 +250,7 @@ There is something else about you, {{name}}…
 
 You are the one who will one day solve some of the world’s biggest problems.
 
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
 
 42
 
@@ -762,7 +762,7 @@ But there’s more to what I’ve learned about you, {{name}}…
 
 It feels to me that you’re a deeply emotional and spiritual person.
 
-{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeIn: true} {{/displayImage}}
 
 127
 
@@ -794,7 +794,7 @@ Your thoughts and dreams are vivid, colourful...
 
 And symbolic of who you are as an individual.
 
-{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeOut: true} {{/displayImage}}
 
 132
 
@@ -880,7 +880,7 @@ But every Creator needs a partner in crime...
 
 ...who will stick by them when the going gets tough.
 
-{{JS:{fn:'displayImage', path:'images/love-compatibility/creator-love-compatibility.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/love-compatibility/creator-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 146
 
@@ -990,7 +990,7 @@ You will be the happiest you’ve ever been in that regard.
 
 But you will find that happiness you’re looking for soon enough.
 
-{{JS:{fn:'displayImage', path:'images/love-compatibility/creator-love-compatibility.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/love-compatibility/creator-love-compatibility.png', fadeOut: true} {{/displayImage}}
 
 164
 

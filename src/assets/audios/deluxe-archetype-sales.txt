@@ -802,7 +802,7 @@ Like your Deluxe Archetype Report, these additional reports are easy to understa
 
 {{name}}, You will receive:
 
-{{JS:{fn:'displayImage', path:'images/pop-up/dar-priceless.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/pop-up/dar-priceless.png', fadeIn: true} {{/displayImage}}
 
 09:29 
 
@@ -840,7 +840,7 @@ The total value of all of these products is at least $244.00,
 
 and that’s practically pennies compared to how much value you’ll receive from them!
 
-{{JS:{fn:'displayImage', path:'images/pop-up/dar-priceless.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/pop-up/dar-priceless.png', fadeOut: true} {{/displayImage}}
 
 09:51 
 
@@ -908,7 +908,7 @@ So, here’s what we’re going to do.
 
 I’m going to cut you an exclusive, one-time deal.
 
-{{JS:{fn:'displayImage', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeIn: true} {{/displayImage}}
 
 10:29 
 
@@ -958,7 +958,7 @@ and it definitely encourages us to keep doing what we do.
 
 The Deluxe Archetype Report is all yours for just $37.
 
-{{JS:{fn:'displayImage', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeOut: true} {{/displayImage}}
 
 11:00 
 
@@ -1026,7 +1026,7 @@ On top of giving away the whole package for just $37,
 
 I’m also going to make the following guarantee for your own personal protection:
 
-{{JS:{fn:'displayImage', path:'images/pop-up/60-day-money-back-guarantee.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/pop-up/60-day-money-back-guarantee.png', fadeIn: true} {{/displayImage}}
 
 11:49 
 
@@ -1076,7 +1076,7 @@ That’s how much I believe in the process of individuation,
 
 and that’s how much I believe you will benefit from it.
 
-{{JS:{fn:'displayImage', path:'images/pop-up/60-day-money-back-guarantee.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/pop-up/60-day-money-back-guarantee.png', fadeOut: true} {{/displayImage}}
 
 12:29 
 
@@ -1528,7 +1528,7 @@ This means that Individuation has stood the test of time to be a proven personal
 
 There have also been numerous conclusive scientific studies about analytical psychology and individuation across the globe.
 
-{{JS:{fn:'displayImage', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeIn: true} {{/displayImage}}
 
 18:44 
 

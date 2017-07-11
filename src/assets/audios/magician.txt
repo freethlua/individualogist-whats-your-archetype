@@ -16,7 +16,7 @@ If you’ve made it here, then congratulations!
 
 Because this means that your archetype is the Magician!
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/magician.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/archetype-icons/magician.png', fadeIn: true} {{/displayImage}}
 
 4
 
@@ -36,7 +36,7 @@ Don’t worry, everything you need to know will be on this page.
 
 Stick to the end of it and I promise that you’ll experience something truly magical.
 
-{{JS:{fn:'displayImage', path:'images/archetype-icons/magician.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/archetype-icons/magician.png', fadeOut: true} {{/displayImage}}
 
 7
 
@@ -212,7 +212,7 @@ Sort of like an actual magician who has many tricks hidden in his sleeves.
 
 There is something else about you, {{name}}…
 
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/script-images/globe.png', fadeIn: true} {{/displayImage}}
 
 36
 
@@ -238,7 +238,7 @@ And although success might not be at your feet right now…
 
 Your riches and fulfilment are merely waiting for you.
 
-{{JS:{fn:'displayImage', path:'images/script-images/globe.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
 
 40
 
@@ -630,7 +630,7 @@ But there’s more to what I’ve learned about you, {{name}}…
 
 It feels to me that you’re a deeply emotional and spiritual person.
 
-{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeIn: true} {{/displayImage}}
 
 105
 
@@ -662,7 +662,7 @@ Your thoughts and dreams are vivid, colourful…
 
 And symbolic of who you are as an individual.
 
-{{JS:{fn:'displayImage', path:'images/script-images/spiritual.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeOut: true} {{/displayImage}}
 
 110
 
@@ -730,7 +730,7 @@ But every magician needs a side-kick…
 
 A partner in crime who will stick by them when the going gets tough.
 
-{{JS:{fn:'displayImage', path:'images/love-compatibility/magician-love-compatibility.png', fadeIn: true}}}
+{{#displayImage}} {path:'images/love-compatibility/magician-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 121
 
@@ -816,7 +816,7 @@ I sense that in the coming years, you will be the happiest you’ve ever been in
 
 But you will find that happiness that you’re looking for soon enough.
 
-{{JS:{fn:'displayImage', path:'images/love-compatibility/magician-love-compatibility.png', fadeOut: true}}}
+{{#displayImage}} {path:'images/love-compatibility/magician-love-compatibility.png', fadeOut: true} {{/displayImage}}
 
 135
 
