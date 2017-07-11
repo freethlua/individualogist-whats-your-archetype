@@ -26,18 +26,32 @@ window.originalTitle = document.title;
 class App extends Component {
   componentWillMount() {
     if ('new' in url.query) {
-      window.history.replaceState({}, 'page2', cleanUrl);
+      window.history.replaceState(null, null, cleanUrl);
       store.clear();
     } else {
       this.setState(this.props);
+    }
+
+    const aweberSuccess = 'test-override';
+
+    if ('deluxe' in url.query) {
+      this.setState({
+        aweberSuccess,
+        deluxe: true,
+        formData: Object.assign({
+          name: url.query.name,
+        }, this.state && this.state.formData),
+        quizData: Object.assign({
+          archetype: url.query.archetype,
+        }, this.state && this.state.formData),
+      });
+      store.save(this.state);
     }
 
     if ('dev' in url.query) {
       window.history.replaceState(null, null, window.location.href.split('?')[0]);
       if ('report' in url.query) {
         if (url.query.report === 'free') {
-          const aweberSuccess = 'test-override';
-
           this.setState({
             aweberSuccess,
             formData: {

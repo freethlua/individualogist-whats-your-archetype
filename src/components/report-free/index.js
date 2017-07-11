@@ -30,13 +30,8 @@ export default class ReportFree extends Component {
     this.archetypeDetails = archetypes[this.archetype];
 
     let audioName;
-    if ('deluxe' in url.query) {
-      this.deluxe = true;
-      if (url.query.deluxe === 'follow-up') {
-        audioName = 'deluxe-archetype-follow-up-sales';
-      } else {
-        audioName = 'deluxe-archetype-sales';
-      }
+    if ('deluxe' in url.query || this.props.deluxe) {
+      audioName = 'deluxe-archetype-follow-up-sales';
     } else {
       audioName = this.archetype;
     }
