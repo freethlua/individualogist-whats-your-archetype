@@ -7,9 +7,12 @@ import throttle from 'throttleit';
 import markup from 'preact-markup';
 import markdown from 'preact-markdown';
 import Youtube from 'react-youtube';
+import Mustache from 'mustache';
+import JSON from 'json5';
 import Fade from '../fade';
 import archetypes from '../../data/archetypes';
 import fixSubdomain from '../../utils/fix-subdomain';
+import otranscribeTxtToJson from '../../utils/otranscribe-txt-to-json';
 import styles from './style.styl';
 
 const h = hs(styles);
@@ -46,10 +49,9 @@ export default class ReportFree extends Component {
     }
 
     try {
-      this.transcript = await
-      import (`../../assets/audios/${audioName}`);
+      this.transcript = otranscribeTxtToJson(await import(`../../assets/audios/${audioName}.txt`));
     } catch (error) {
-      this.error = `Cannot load the transcript file: '${audioName}'`;
+      this.error = `Cannot load the transcript file: '${audioName}'. ${error.message}`;
       return;
     }
 
@@ -215,6 +217,18 @@ export default class ReportFree extends Component {
     this.setState({ lastBackgroundChangeTime: Number(new Date()) });
   }
 
+  parseTranscript(str) {
+    try {
+      const str = require(path);
+      console.log(`str:`, str);
+      const json = otranscribeTxtToJson(str);
+      return json;
+    } catch (error) {
+      error.message = `Error parsing '${path}'. ` + error.message
+      throw error;
+    }
+  }
+
   async ontimeupdate() {
     if (this.audioEl.ended) {
       if (this.deluxe) {
@@ -223,8 +237,7 @@ export default class ReportFree extends Component {
       this.hideImage();
       this.setState({ freeReadingEnded: true, ready: false });
       this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
-      this.transcript = await
-      import ('../../assets/audios/deluxe-archetype-sales');
+      this.transcript = otranscribeTxtToJson(await import('../../assets/audios/deluxe-archetype-sales.txt'));
       this.audioEl.play();
       this.setState({ freeReadingEnded: true, ready: true });
       return;
@@ -258,10 +271,15 @@ export default class ReportFree extends Component {
       this.hideImage();
     }
 
-    let currentLine = line.text;
-
+    const locals = Object.assign({
+      displayImage: () => (text, render) => {
+        console.log(JSON.parse(render(text)));
+      }
+    }, this.props.formData, this.props.quizData);
+    // let currentLine = line.text;
+    // const currentLineParsed = Mustache.render(currentLine, locals, locals);
+    const currentLine = Mustache.render(line.text, locals, locals);
     if (this.state.currentLine === currentLine) {
-
     } else {
       let lastReplacement;
       for (const key of line.keys || []) {
@@ -304,6 +322,8 @@ export default class ReportFree extends Component {
         currentPercent: percent,
         currentLine,
         currentLineOpts: line,
+        // locals,
+        // currentLineParsed,
       });
 
       // preload next image(s)

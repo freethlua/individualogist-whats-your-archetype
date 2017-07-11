@@ -64,7 +64,7 @@ export default {
         }, 'stylus-loader']
       })
     }, {
-      test: /\.(png|jpe?g|woff|woff2|eot|ttf|svg|pdf|mp3|docx|txt)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      test: /\.(png|jpe?g|woff|woff2|eot|ttf|svg|pdf|mp3|docx)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
       use: {
         loader: 'url-loader',
         query: {
@@ -77,6 +77,9 @@ export default {
     }, {
       test: /\.(pug|jade)$/,
       use: 'pug-loader'
+    }, {
+      test: /\.(txt)$/,
+      use: 'text-loader'
     }]
   },
   plugins: [

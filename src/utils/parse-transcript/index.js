@@ -1,3 +1,5 @@
+const mustache = require('mustache');
+
 // const { parseStringTemplateGenerator } = require('string-template-parser');
 
 // const parseAngularStringTemplate = parseStringTemplateGenerator({
@@ -10,7 +12,14 @@ const JSON = require('json5');
 module.exports = parse;
 
 function parse(str) {
-  // console.log(`str:`, str);
+  console.log(`str:`, str);
+  const parsed = mustache.parse(str);
+  // console.log(`parsed:`, parsed);
+  return parsed;
+};
+
+function parseOld(str) {
+  console.log(`str:`, str);
   if (!str) return '';
   const keys = extractKeys(str);
   let final = '';
