@@ -4,6 +4,8 @@
 
 If you’re watching this video,
 
+{{#displayImage}} {path:'images/archetype-icons/{{archetype}}.png', fadeIn: true} {{/displayImage}}
+
 2
 
  00:02 

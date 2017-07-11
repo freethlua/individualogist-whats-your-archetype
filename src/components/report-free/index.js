@@ -9,6 +9,7 @@ import markdown from 'preact-markdown';
 import Youtube from 'react-youtube';
 import Mustache from 'mustache';
 import JSON from 'json5';
+import delay from 'promise-delay';
 import Fade from '../fade';
 import archetypes from '../../data/archetypes';
 import fixSubdomain from '../../utils/fix-subdomain';
@@ -49,7 +50,7 @@ export default class ReportFree extends Component {
     }
 
     try {
-      this.transcript = otranscribeTxtToJson(await import(`../../assets/audios/${audioName}.txt`));
+      this.transcript = this.parseTranscript(await import(`../../assets/audios/${audioName}.txt`));
     } catch (error) {
       this.error = `Cannot load the transcript file: '${audioName}'. ${error.message}`;
       return;
@@ -75,8 +76,13 @@ export default class ReportFree extends Component {
     window.removeEventListener('click', this.onclick);
   }
 
-  // async componentDidMount() {
+  // componentDidMount() { this.setState({rendered: true}) }
+  // componentWillUpdate() { this.setState({rendered: false}) }
+  // componentDidMount() { this.setState({rendered: true}) }
+
   async ready() {
+    await delay(1000);
+    console.log(`document.readyState:`, document.readyState);
     if ('dev' in url.query) {
       if ('seekTo' in url.query) {
         this.audioEl.currentTime = parseInt(url.query.seekTo, 10);
@@ -219,10 +225,10 @@ export default class ReportFree extends Component {
 
   parseTranscript(str) {
     try {
-      const str = require(path);
-      console.log(`str:`, str);
-      const json = otranscribeTxtToJson(str);
-      return json;
+      return otranscribeTxtToJson(str).map(line => {
+        line.parsed = Mustache.parse(line.text);
+        return line;
+      });
     } catch (error) {
       error.message = `Error parsing '${path}'. ` + error.message
       throw error;
@@ -237,7 +243,7 @@ export default class ReportFree extends Component {
       this.hideImage();
       this.setState({ freeReadingEnded: true, ready: false });
       this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
-      this.transcript = otranscribeTxtToJson(await import('../../assets/audios/deluxe-archetype-sales.txt'));
+      this.transcript = this.parseTranscript(await import('../../assets/audios/deluxe-archetype-sales.txt'));
       this.audioEl.play();
       this.setState({ freeReadingEnded: true, ready: true });
       return;
@@ -267,48 +273,62 @@ export default class ReportFree extends Component {
     //   line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
     // }
 
-    if (!prevLine) {
-      this.hideImage();
-    }
-
+    const currentLineRaw = line.text;
+    let imageDisplayedInThisLine = false;
     const locals = Object.assign({
       displayImage: () => (text, render) => {
-        console.log(JSON.parse(render(text)));
-      }
-    }, this.props.formData, this.props.quizData);
-    // let currentLine = line.text;
-    // const currentLineParsed = Mustache.render(currentLine, locals, locals);
-    const currentLine = Mustache.render(line.text, locals, locals);
-    if (this.state.currentLine === currentLine) {
-    } else {
-      let lastReplacement;
-      for (const key of line.keys || []) {
-        if (key.key) {
-          const replacement = this.props.formData[key.key];
-          if (replacement) {
-            const index = key.index + (lastReplacement ? lastReplacement.length : 0);
-            currentLine = currentLine.substring(0, index)
-              + replacement
-              + currentLine.substring(index);
-          }
-          lastReplacement = replacement;
-        } else if (key.js) {
+        imageDisplayedInThisLine = true;
+        if (this.state.currentLineRaw !== currentLineRaw) {
+          const data = JSON.parse(render(text));
+          console.log(`data.path.match('compatibility'):`, data.path.match('compatibility'));
           if (
-            key.js.path.match('compatibility')
+            data.path.match('compatibility')
             && (!line.class || !line.class.includes('compatibility'))
-            && key.js.fadeIn
+            && data.fadeIn
           ) {
             line.class = arrify(line.class).concat(['compatibility']);
             currentLineHasBeenAddedWithImpliedClass = true;
           }
-          if (key.js.fadeOut) {
+          if (data.fadeOut) {
             currentLineHasFadeOutImage = true;
           }
-          this.cueAction(key.js.fn, key.js, line);
-        } else {
-
+          this.displayImage(data, line);
         }
       }
+    }, this.props.formData, this.props.quizData);
+    // let currentLine = line.text;
+    // const currentLineParsed = Mustache.render(currentLine, locals, locals);
+    const currentLine = Mustache.render(currentLineRaw, locals, locals);
+    if (this.state.currentLine === currentLine) {
+    } else {
+      let lastReplacement;
+      // for (const key of line.keys || []) {
+      //   if (key.key) {
+      //     const replacement = this.props.formData[key.key];
+      //     if (replacement) {
+      //       const index = key.index + (lastReplacement ? lastReplacement.length : 0);
+      //       currentLine = currentLine.substring(0, index)
+      //         + replacement
+      //         + currentLine.substring(index);
+      //     }
+      //     lastReplacement = replacement;
+      //   } else if (key.js) {
+      //     if (
+      //       key.js.path.match('compatibility')
+      //       && (!line.class || !line.class.includes('compatibility'))
+      //       && key.js.fadeIn
+      //     ) {
+      //       line.class = arrify(line.class).concat(['compatibility']);
+      //       currentLineHasBeenAddedWithImpliedClass = true;
+      //     }
+      //     if (key.js.fadeOut) {
+      //       currentLineHasFadeOutImage = true;
+      //     }
+      //     this.cueAction(key.js.fn, key.js, line);
+      //   } else {
+
+      //   }
+      // }
 
       if (currentLineHasNoClass && !currentLineHasBeenAddedWithImpliedClass && !currentLineHasFadeOutImage && prevLine && prevLine.class) {
         line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
@@ -321,29 +341,36 @@ export default class ReportFree extends Component {
         currentTimeEnd,
         currentPercent: percent,
         currentLine,
+        currentLineRaw,
         currentLineOpts: line,
         // locals,
         // currentLineParsed,
       });
 
-      // preload next image(s)
-      if (nextLine && nextLine.keys) {
-        nextLine.keys.forEach(key => {
-          if (key.js && key.fn === 'displayImage' && key.js.path) {
-            const image = new Image();
-            image.src = key.js.path;
-          }
-        });
-      }
+      // // preload next image(s)
+      // if (nextLine && nextLine.keys) {
+      //   nextLine.keys.forEach(key => {
+      //     if (key.js && key.fn === 'displayImage' && key.js.path) {
+      //       const image = new Image();
+      //       image.src = key.js.path;
+      //     }
+      //   });
+      // }
     }
     // break;
 
-    for (let i = 0; i < this.transcript.length; i++) {
-      const line = this.transcript[i];
-      const nextLine = this.transcript[i + 1];
-      const currentTimeEnd = line.end || nextLine && nextLine.start || Infinity;
-      if (currentTime < currentTimeEnd) {}
+    // for (let i = 0; i < this.transcript.length; i++) {
+    //   const line = this.transcript[i];
+    //   const nextLine = this.transcript[i + 1];
+    //   const currentTimeEnd = line.end || nextLine && nextLine.start || Infinity;
+    //   if (currentTime < currentTimeEnd) {}
+    // }
+
+    if (!prevLine && !imageDisplayedInThisLine) {
+      this.hideImage();
     }
+
+
   }
 
   changeBackground() {
