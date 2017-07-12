@@ -37,7 +37,6 @@ export default class ReportFree extends Component {
       audioName = this.archetype;
     }
 
-
     try {
       this.audioSrc = require(`../../assets/audios/${audioName}.mp3`);
     } catch (error) {
@@ -78,7 +77,7 @@ export default class ReportFree extends Component {
 
   async ready() {
     await delay(1000);
-    console.log(`document.readyState:`, document.readyState);
+    console.log('document.readyState:', document.readyState);
     if ('dev' in url.query) {
       if ('seekTo' in url.query) {
         this.audioEl.currentTime = parseInt(url.query.seekTo, 10);
@@ -189,7 +188,7 @@ export default class ReportFree extends Component {
         // }
         this.setState({
           img: await
-          import ('../../assets/' + opts.path),
+          import('../../assets/' + opts.path),
           // imgClass: opts.class || this.state.imgClass,
         });
       } catch (error) {
@@ -226,7 +225,7 @@ export default class ReportFree extends Component {
         return line;
       });
     } catch (error) {
-      error.message = `Error parsing '${path}'. ` + error.message
+      error.message = `Error parsing '${path}'. ` + error.message;
       throw error;
     }
   }
@@ -276,11 +275,11 @@ export default class ReportFree extends Component {
         imageDisplayedInThisLine = true;
         if (this.state.currentLineRaw !== currentLineRaw) {
           const data = JSON.parse(render(text));
-          console.log(`data.path.match('compatibility'):`, data.path.match('compatibility'));
+          console.log('data.path.match(\'compatibility\'):', data.path.match('compatibility'));
           if (
-            data.path.match('compatibility')
-            && (!line.class || !line.class.includes('compatibility'))
-            && data.fadeIn
+            data.path.match('compatibility') &&
+            (!line.class || !line.class.includes('compatibility')) &&
+            data.fadeIn
           ) {
             line.class = arrify(line.class).concat(['compatibility']);
             currentLineHasBeenAddedWithImpliedClass = true;
@@ -365,8 +364,6 @@ export default class ReportFree extends Component {
     if (!prevLine && !imageDisplayedInThisLine) {
       this.hideImage();
     }
-
-
   }
 
   changeBackground() {
@@ -435,7 +432,7 @@ export default class ReportFree extends Component {
 
     const restEl = h.div('.rest', [
       h.div('.action-1', [
-        h.div('.img', [h.img({ src: require('../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png') })]),
+        h.div('.img', [h.img({ src: require('../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses-small.png') })]),
         h.div([
           h.p('Get Your Deluxe Archetype Report For Only $37.00 Now!'),
           h.a({ href: this.archetypeDetails.clickbank.link }, [h.button(['Click Here To Order Now'])]),
@@ -449,7 +446,7 @@ export default class ReportFree extends Component {
         ]),
       ]),
       h.div('.action-2', [
-        h.div('.img', [h.img({ src: require('../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses.png') })]),
+        h.div('.img', [h.img({ src: require('../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses-large.png') })]),
         h.div('.side', [
           h.div('.heading', 'Get Your Deluxe Archetype Report For Only $37.00 Now!'),
           h.div('.delivery', [

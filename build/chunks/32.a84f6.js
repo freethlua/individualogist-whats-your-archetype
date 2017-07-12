@@ -1,2 +1,0 @@
-webpackJsonp([32],{"5xh1":function(module,exports,__webpack_require__){module.exports=__webpack_require__.p+"assets/new-deluxe-archetype-report-with-bonuses-3H7wJ.png"}});
-//# sourceMappingURL=32.a84f6.js.map
