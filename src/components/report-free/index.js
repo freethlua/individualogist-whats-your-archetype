@@ -484,7 +484,7 @@ export default class ReportFree extends Component {
     }, [
       mainContentEl,
       (this.state.freeReadingEnded || this.deluxe) && restEl,
-      isLocalhost && h.pre([JSON.stringify(this.state, null, 1)]),
+      // isLocalhost && h.pre([JSON.stringify(this.state, null, 1)]),
     ])]);
   }
 }
