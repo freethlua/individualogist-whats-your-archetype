@@ -1,6 +1,6 @@
 # whats-your-archetype
 
-Front-end for http://individualogist.com/whats-your-archetype-v3
+Front-end for http://archetype.individualogist.com
 
 ## Setup
 
@@ -112,19 +112,6 @@ There's following main components:
     // ...
     h.img({ src: logo }),
     ```
-
-* Transcripts
-
-  Audio files and their corresponding transcripts are in [`assets/audios`](src/assets/audios). The transcripts exist in two formats: the source: `.txt`, and the auto-generated: `.json` or `.js`
-
-  Note: **Do not edit** `.json` or `.js`, **only edit** `.txt`.
-
-  To re/generate `.json` or `.js` from `.txt` run the following command:
-
-  ```sh
-  node src/utils/parse-transcript/parse-dir
-  ```
-
 
 [preact]: http://preactjs.com
 [webpack]: https://webpack.js.org
