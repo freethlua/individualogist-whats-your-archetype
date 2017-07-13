@@ -141,12 +141,12 @@ class App extends Component {
         document.title = Case.title(path) + ' | ' + window.originalTitle;
         return h(paths[path]);
       } else if (window.isDev) {
-          return `(dev mode) Not redirecting to '/${path}'`;
-        } else {
-          path = fixSubdomain(path);
-          location.assign(path);
-          return `Redirecting to '${path}'...`;
-        }
+        return `(dev mode) Not redirecting to '/${path}'`;
+      } else {
+        path = fixSubdomain(path);
+        location.assign(path);
+        return `Redirecting to '${path}'...`;
+      }
     };
 
     return h.div('.app', [h(Router, [

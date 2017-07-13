@@ -7,7 +7,10 @@ import archetypes from '../data/archetypes';
 // later edit: this has been moved to appState for persistence. i.e. it now only renders once EVER
 
 export default props => h.div('.tracking', [ //
-  !props.clickmagickRenderedOnce && props.formData && h.img('.clickmagick', {
+  !props.clickmagickRenderedOnce &&
+  props.formData &&
+  props.aweberSuccess &&
+  h.img('.clickmagick', {
     src: archetypes[props.quizData.archetype].clickmagick.imgSrc,
     onload: props.clickmagickRendered,
   }),
