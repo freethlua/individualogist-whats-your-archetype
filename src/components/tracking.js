@@ -8,7 +8,7 @@ import archetypes from '../data/archetypes';
 
 export default props => h.div('.tracking', [ //
   !props.clickmagickRenderedOnce && props.formData && h.img('.clickmagick', {
-    src: archetypes[this.props.quizData.archetype].clickmagick.imgSrc,
+    src: archetypes[props.quizData.archetype].clickmagick.imgSrc,
     onload: props.clickmagickRendered,
   }),
 ]);
