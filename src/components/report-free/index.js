@@ -205,6 +205,7 @@ export default class ReportFree extends Component {
   }
 
   playPause(playPause = true) {
+    if (!this.audioEl) return;
     const oldState = this.audioEl.paused;
     if (playPause) {
       if (oldState) {

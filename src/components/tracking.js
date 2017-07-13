@@ -32,7 +32,7 @@ export default class extends Component {
       } else {
         console.log('Debug:', 'clickmagick being rendered for the first time');
         clickmagickRenderedOnce = true;
-        this.props.clickmagickRendered({ clickmagickRenderedOnce });
+        // this.props.clickmagickRendered({ clickmagickRenderedOnce });
         const clickmagick = h.img('.clickmagick', {
           src: archetypes[this.props.quizData.archetype].clickmagick.imgSrc,
           onload: this.props.clickmagickRendered,
