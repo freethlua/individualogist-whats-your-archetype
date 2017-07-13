@@ -231,6 +231,7 @@ export default class ReportFree extends Component {
   }
 
   async ontimeupdate() {
+    if (!this.audioEl) return;
     if (this.audioEl.ended) {
       if (this.deluxe) {
         return;
