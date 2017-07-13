@@ -45,6 +45,23 @@ Front-end for http://archetype.individualogist.com
 
     The server runs at `http://localhost:8080`
 
+## Quick recipes
+
+* Run locally to test things out
+
+    Just see "Run locally" above.
+
+* Make some changes and upload to server
+
+    1. Make changes
+    2. Make a git commit `git commit -a -m 'change description'`
+    3. Run `npm build`
+    4. Make a git commit again along with the build\*: `git commit -a -m built on <the date>`
+    5. Push to upstream: `git push`
+
+    <sup>\*Adding `build` to version control was necessary at the time. Feel free to build on server if possible, and use "bfg repo cleaner" to clean build from the history</sup>
+
+    Currently the server is set up in a way that it periodically (1 min interval cron job) does a `git pull` and is therefore automatically showing the latest pushed changes.
 
 ## The code
 
