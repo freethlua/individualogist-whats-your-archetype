@@ -4,7 +4,16 @@ Front-end for http://archetype.individualogist.com
 
 ## Setup
 
-1. Clone repo
+### Prerequisites
+
+1. Install [NodeJS](https://nodejs.org/en/)
+
+### Setup
+
+1. Clone this repo
+
+    $ git clone <...>
+    $ cd <repo-dir>
 
 2. Run
 
@@ -12,29 +21,29 @@ Front-end for http://archetype.individualogist.com
     npm install
     ```
 
-* Build for production
+    * Build for production
 
-    This will compile and build the static site:
+        This will compile and build the static site:
 
-    ```sh
-    npm build
-    ```
+        ```sh
+        npm build
+        ```
 
-    The output will be in [`/build`](build) dir containing the `index.html` which can be served statically.
+        The output will be in [`/build`](build) dir containing the `index.html` which can be served statically.
 
-    If serving with Apache, root dir may be served directly using the provided [`.htaccess`](.htaccess) file which takes care of serving contents from the [`/build`](build) dir.
+        If serving with Apache, root dir may be served directly using the provided [`.htaccess`](.htaccess) file which takes care of serving contents from the [`/build`](build) dir.
 
-* Run locally
+    * Run locally
 
-    This should be used during development
+        This should be used during development
 
-    This will run [webpack-dev-server] which will compile, serve, and reload changes automatically on file modifications.
+        This will run [webpack-dev-server] which will compile, serve, and reload changes automatically on file modifications.
 
-    ```sh
-    npm dev
-    ```
+        ```sh
+        npm dev
+        ```
 
-    The server runs at `http://localhost:8080`
+        The server runs at `http://localhost:8080`
 
 
 ## The code
