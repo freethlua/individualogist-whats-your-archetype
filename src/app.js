@@ -86,7 +86,13 @@ class App extends Component {
   }
 
   render() {
-    const tracking = !isDev && h(cmp.tracking, this.state);
+    const tracking = !isDev && h(cmp.tracking, Object.assign({
+      clickmagickRendered: () => {
+        console.log('clickmagickRendered');
+        this.setState({ clickmagickRenderedOnce: true });
+        store.save(this.state);
+      }
+    }, this.state));
 
     const redirect = () => {
       if (!this.state.quizData) {
@@ -134,15 +140,13 @@ class App extends Component {
       if (path in paths) {
         document.title = Case.title(path) + ' | ' + window.originalTitle;
         return h(paths[path]);
-      } else {
-        if (window.isDev) {
+      } else if (window.isDev) {
           return `(dev mode) Not redirecting to '/${path}'`;
         } else {
           path = fixSubdomain(path);
           location.assign(path);
           return `Redirecting to '${path}'...`;
         }
-      }
     };
 
     return h.div('.app', [h(Router, [
