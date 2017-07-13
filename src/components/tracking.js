@@ -7,12 +7,17 @@ let clickmagickRenderedOnce = false;
 export default props => {
   const components = [];
 
-  if (props.quizData && props.quizData.archetype && !clickmagickRenderedOnce) {
-    clickmagickRenderedOnce = true;
-    const clickmagick = h.img('.clickmagick', {
-      src: archetypes[props.quizData.archetype].clickmagick.imgSrc,
-    });
-    components.push(clickmagick);
+  if (props.quizData && props.quizData.archetype) {
+    if (clickmagickRenderedOnce) {
+      console.log('Debug:', 'clickmagick already rendered once, skipping this');
+    } else {
+      console.log('Debug:', 'clickmagick being rendered for the first time');
+      clickmagickRenderedOnce = true;
+      const clickmagick = h.img('.clickmagick', {
+        src: archetypes[props.quizData.archetype].clickmagick.imgSrc,
+      });
+      components.push(clickmagick);
+    }
   }
 
   return h.div('.tracking', components);
