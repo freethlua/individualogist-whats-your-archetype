@@ -12,8 +12,10 @@ Front-end for http://archetype.individualogist.com
 
 1. Clone this repo
 
+    ```sh
     $ git clone <...>
     $ cd <repo-dir>
+    ```
 
 2. Install dependencies
 
