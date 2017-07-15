@@ -24,6 +24,8 @@ and your free archetype report.
 
 And welcome to the Individualogist family!
 
+{{#displayImage}} {path:'images/archetype-icons/{{archetype}}.png', fadeOut: true} {{/displayImage}}
+
 5
 
 00:11 
