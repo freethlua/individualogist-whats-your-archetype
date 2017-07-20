@@ -10,7 +10,7 @@ export default h(class comments extends Component {
     this.update();
   }
   componentDidUpdate() {
-    this.update();
+    // this.update();
   }
   update() {
     if (window.isDev || this.ref && this.ref.querySelector('iframe')) {
