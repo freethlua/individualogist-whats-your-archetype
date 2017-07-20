@@ -22,9 +22,14 @@ export default h(class comments extends Component {
       return;
     }
     console.log('rendering FB comments...');
-    window.FB.XFBML.parse(this.ref);
-    clearTimeout(this.timeout);
-    this.timeout = setTimeout(() => this.update(), 2000);
+    // window.FB.XFBML.parse(this.ref);
+    clearTimeout(this.timeout1);
+    // this.timeout = setTimeout(() => this.update(), 2000);
+    this.timeout1 = setTimeout(() => {
+      window.FB.XFBML.parse(this.ref);
+      clearTimeout(this.timeout2);
+      this.timeout2 = setTimeout(() => this.update(), 2000);
+    }, 2000);
     // if (!window.isDev && !this.rendered && !this.ref.querySelector('iframe')) {
     //   console.log('rendering FB comments...');
     //   window.FB.XFBML.parse(this.ref);
