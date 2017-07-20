@@ -17,11 +17,19 @@ export default h(class comments extends Component {
       'this.rendered': this.rendered,
       'this.ref.querySelector(\'iframe\')': this.ref.querySelector('iframe'),
     });
-    if (!window.isDev && !this.rendered && !this.ref.querySelector('iframe')) {
-      console.log('rendering FB comments...');
-      window.FB.XFBML.parse(this.ref);
+    if (window.isDev || this.rendered || this.ref.querySelector('iframe')) {
       this.rendered = true;
+      return;
     }
+    console.log('rendering FB comments...');
+    window.FB.XFBML.parse(this.ref);
+    setTimeout(() => this.update(), 300);
+    // if (!window.isDev && !this.rendered && !this.ref.querySelector('iframe')) {
+    //   console.log('rendering FB comments...');
+    //   window.FB.XFBML.parse(this.ref);
+    //   setTimeout(() => this.update(), 300);
+    //   this.rendered = true;
+    // }
   }
   render() {
     return h.div('.outer', {
