@@ -125,6 +125,15 @@ class App extends Component {
           } else {
             this.setState({ formData });
             store.save(this.state);
+            try {
+              fbq('track', 'Lead', {
+                value: 0.00,
+                currency: 'USD'
+              });
+            } catch (error) {
+              console.log('Couldn\'t fire facebook tracking event');
+              console.error(error);
+            }
           }
         },
         componentDidMount: formEl => {
