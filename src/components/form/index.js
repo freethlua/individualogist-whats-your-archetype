@@ -18,6 +18,7 @@ export default class Form extends Component {
     currentUrl.query.aweberSuccess = aweberRedirectHash;
     delete currentUrl.search;
     this.redirectUrl = URL.format(currentUrl);
+    console.log('this.redirectUrl:', this.redirectUrl);
   }
 
   componentDidMount() {
