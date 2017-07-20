@@ -205,7 +205,8 @@ export default class ReportFree extends Component {
   }
 
   playPause(playPause = true) {
-    if (!this.audioEl) return;
+    if (!this.audioEl) 
+{return;}
     const oldState = this.audioEl.paused;
     if (playPause) {
       if (oldState) {
@@ -232,7 +233,8 @@ export default class ReportFree extends Component {
   }
 
   async ontimeupdate() {
-    if (!this.audioEl) return;
+    if (!this.audioEl) 
+{return;}
     if (this.audioEl.ended) {
       if (this.deluxe) {
         return;
@@ -277,7 +279,7 @@ export default class ReportFree extends Component {
         imageDisplayedInThisLine = true;
         if (this.state.currentLineRaw !== currentLineRaw) {
           const data = JSON.parse(render(text));
-          console.log('data.path.match(\'compatibility\'):', data.path.match('compatibility'));
+          // console.log('data.path.match(\'compatibility\'):', data.path.match('compatibility'));
           if (
             data.path.match('compatibility') &&
             (!line.class || !line.class.includes('compatibility')) &&
