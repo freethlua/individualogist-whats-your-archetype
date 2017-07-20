@@ -13,12 +13,7 @@ export default h(class comments extends Component {
     this.update();
   }
   update() {
-    console.log({
-      'this.rendered': this.rendered,
-      'this.ref.querySelector(\'iframe\')': this.ref.querySelector('iframe'),
-    });
-    if (window.isDev || this.rendered || this.ref.querySelector('iframe')) {
-      this.rendered = true;
+    if (window.isDev || this.ref && this.ref.querySelector('iframe')) {
       return;
     }
     console.log('rendering FB comments...');
