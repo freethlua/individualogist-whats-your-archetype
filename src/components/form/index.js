@@ -13,11 +13,7 @@ export default class Form extends Component {
   componentWillMount() {
     const aweberRedirectHash = this.aweberRedirectHash = quickHash(String(new Date()), Number(new Date()));
     this.setState({ aweberRedirectHash });
-    // currentUrl.query.aweberSuccess = aweberRedirectHash;
-    // delete currentUrl.search;
-    // this.redirectUrl = URL.format(currentUrl);
     this.redirectUrl = location.protocol + '//' + location.host + '/reading?aweberSuccess=' + aweberRedirectHash;
-    console.log('this.redirectUrl:', this.redirectUrl);
   }
 
   componentDidMount() {

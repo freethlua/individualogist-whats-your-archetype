@@ -16,25 +16,27 @@ export default h(class comments extends Component {
     if (window.isDev || this.ref && this.ref.querySelector('iframe')) {
       return;
     }
-    // window.FB.XFBML.parse();
-    clearTimeout(this.timeout);
-    this.timeout = setTimeout(() => {
-      console.log('rendering FB comments...');
-      window.FB.XFBML.parse(this.ref);
-      // setTimeout(() => this.update(), 2000);
-    }, 2000);
+    console.log('rendering FB comments...');
+    window.FB.XFBML.parse(this.ref);
+    // // window.FB.XFBML.parse();
     // clearTimeout(this.timeout);
-    // // this.timeout = setTimeout(() => this.update(), 2000);
     // this.timeout = setTimeout(() => {
-    //   // window.FB.XFBML.parse(this.ref);
-    //   setTimeout(() => this.update(), 2000);
-    // }, 2000);
-    // if (!window.isDev && !this.rendered && !this.ref.querySelector('iframe')) {
     //   console.log('rendering FB comments...');
     //   window.FB.XFBML.parse(this.ref);
-    //   setTimeout(() => this.update(), 300);
-    //   this.rendered = true;
-    // }
+    //   // setTimeout(() => this.update(), 2000);
+    // }, 2000);
+    // // clearTimeout(this.timeout);
+    // // // this.timeout = setTimeout(() => this.update(), 2000);
+    // // this.timeout = setTimeout(() => {
+    // //   // window.FB.XFBML.parse(this.ref);
+    // //   setTimeout(() => this.update(), 2000);
+    // // }, 2000);
+    // // if (!window.isDev && !this.rendered && !this.ref.querySelector('iframe')) {
+    // //   console.log('rendering FB comments...');
+    // //   window.FB.XFBML.parse(this.ref);
+    // //   setTimeout(() => this.update(), 300);
+    // //   this.rendered = true;
+    // // }
   }
   render() {
     return h.div('.outer', {
