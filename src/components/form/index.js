@@ -12,6 +12,7 @@ const h = hs(styles);
 export default class Form extends Component {
   componentWillMount() {
     const currentUrl = URL.parse(String(location), true);
+    currentUrl.path = '/reading';
     const aweberRedirectHash = this.aweberRedirectHash = quickHash(String(new Date()), Number(new Date()));
     this.setState({ aweberRedirectHash });
     currentUrl.query.aweberSuccess = aweberRedirectHash;

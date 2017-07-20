@@ -23,7 +23,8 @@ export default h(class comments extends Component {
     }
     console.log('rendering FB comments...');
     window.FB.XFBML.parse(this.ref);
-    // setTimeout(() => this.update(), 300);
+    clearTimeout(this.timeout);
+    this.timeout = setTimeout(() => this.update(), 2000);
     // if (!window.isDev && !this.rendered && !this.ref.querySelector('iframe')) {
     //   console.log('rendering FB comments...');
     //   window.FB.XFBML.parse(this.ref);
