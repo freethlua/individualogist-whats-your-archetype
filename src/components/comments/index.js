@@ -17,7 +17,7 @@ export default h(class comments extends Component {
       'this.rendered': this.rendered,
       'this.ref.querySelector(\'iframe\')': this.ref.querySelector('iframe'),
     });
-    if (window.isDev && !this.rendered && !this.ref.querySelector('iframe')) {
+    if (!window.isDev && !this.rendered && !this.ref.querySelector('iframe')) {
       console.log('rendering FB comments...');
       window.FB.XFBML.parse(this.ref);
       this.rendered = true;
