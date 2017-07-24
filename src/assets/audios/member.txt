@@ -136,7 +136,9 @@ The Member, and what it means.
 
 01:08 
 
-23{{name}}, you are truly a unique individual.
+23
+
+{{name}}, you are truly a unique individual.
 
 01:12 
 
