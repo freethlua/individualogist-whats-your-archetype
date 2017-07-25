@@ -238,6 +238,8 @@ And although success might not be at your feet right now…
 
 Your riches and fulfilment are merely waiting for you.
 
+{{pausePopup}}
+
 {{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
 
 40
