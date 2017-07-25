@@ -244,8 +244,6 @@ Your riches and fulfilment are merely waiting for you.
 
 02:39 
 
-{{pausePopup}}
-
 But there’s something else, {{name}}.
 
 41
