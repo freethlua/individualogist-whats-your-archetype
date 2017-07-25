@@ -182,6 +182,10 @@ export default class ReportFree extends Component {
     this[action](opts, transcriptLine);
   }
 
+  mustacheFunction(fn) {
+    return () => (mustacheText, renderMustache) => this[fn](JSON.parse(renderMustache(mustacheText)));
+  }
+
   async displayImage(opts, transcriptLine) {
     if (opts.fadeOut) {
       this.hideImage();
@@ -215,11 +219,21 @@ export default class ReportFree extends Component {
     }
   }
 
+  confirmToContinue({ type, message, button } = {}) {
+    if (!this.pausePopupFlag) {
+      this.pausePopupFlag = true;
+      this.pause({ tween: false }, () => {
+        alert(message);
+        this.play();
+      });
+    }
+  }
+
   play({
     updateState = true,
     tween = true,
     tweenDuration = tween ? 1 : 0,
-  } = {}) {
+  } = {}, callback = typeof arguments[0] === 'function' && arguments[0]) {
     if (!this.audioEl) {
       return;
     }
@@ -231,6 +245,10 @@ export default class ReportFree extends Component {
       volume: 1,
       duration: tweenDuration,
       // ease: 'linear',
+    }).on('complete', () => {
+      if (callback) {
+        callback();
+      }
     });
     if (updateState) {
       this.setState({ audioPaused: false });
@@ -240,7 +258,7 @@ export default class ReportFree extends Component {
     updateState = true,
     tween = true,
     tweenDuration = tween ? 1 : 0,
-  } = {}) {
+  } = {}, callback = typeof arguments[0] === 'function' && arguments[0]) {
     if (!this.audioEl) {
       return;
     }
@@ -250,6 +268,9 @@ export default class ReportFree extends Component {
       ease: 'expo-out',
     }).on('complete', () => {
       this.audioEl.pause();
+      if (callback) {
+        callback();
+      }
     });
     if (updateState) {
       this.setState({ audioPaused: true });
@@ -351,6 +372,7 @@ export default class ReportFree extends Component {
         }
       },
       pausePopup: () => this.pausePopup(),
+      confirmToContinue: this.mustacheFunction('confirmToContinue'),
     }, this.props.formData, this.props.quizData);
     // let currentLine = line.text;
     // const currentLineParsed = Mustache.render(currentLine, locals, locals);
