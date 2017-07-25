@@ -1,6 +1,6 @@
 {
   "name": "whats-your-archetype",
-  "version": "1.0.0",
+  "version": "1.0.0-staging-1a",
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server --hot --inline"
