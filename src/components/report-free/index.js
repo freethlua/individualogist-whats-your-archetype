@@ -205,6 +205,25 @@ export default class ReportFree extends Component {
     });
   }
 
+  pausePopup() {
+    this.pause();
+  }
+
+  play() {
+    if (!this.audioEl) {
+      return;
+    }
+    this.audioEl.play();
+    this.setState({ audioPaused: false });
+  }
+  pause() {
+    if (!this.audioEl) {
+      return;
+    }
+    this.audioEl.pause();
+    this.setState({ audioPaused: true });
+  }
+
   playPause(playPause = true) {
     if (!this.audioEl) {
       return;
