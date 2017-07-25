@@ -10,6 +10,7 @@ import Youtube from 'react-youtube';
 import Mustache from 'mustache';
 import JSON from 'json5';
 import delay from 'promise-delay';
+import tweenr from 'tweenr';
 import Fade from '../fade';
 import archetypes from '../../data/archetypes';
 import fixSubdomain from '../../utils/fix-subdomain';
@@ -17,6 +18,8 @@ import otranscribeTxtToJson from '../../utils/otranscribe-txt-to-json';
 import styles from './style.styl';
 
 const h = hs(styles);
+
+// autoPlay(true);
 
 export default class ReportFree extends Component {
   async componentWillMount() {
@@ -46,7 +49,7 @@ export default class ReportFree extends Component {
 
     try {
       this.transcript = this.parseTranscript(await
-        import(`../../assets/audios/${audioName}.txt`));
+        import (`../../assets/audios/${audioName}.txt`));
     } catch (error) {
       this.error = `Cannot load the transcript file: '${audioName}'. ${error.message}`;
       return;
@@ -189,7 +192,7 @@ export default class ReportFree extends Component {
         // }
         this.setState({
           img: await
-          import('../../assets/' + opts.path),
+          import ('../../assets/' + opts.path),
           // imgClass: opts.class || this.state.imgClass,
         });
       } catch (error) {
@@ -206,22 +209,51 @@ export default class ReportFree extends Component {
   }
 
   pausePopup() {
-    this.pause();
+    if (!this.pausePopupFlag) {
+      this.pause();
+      this.pausePopupFlag = true;
+    }
   }
 
-  play() {
+  play({
+    updateState = true,
+    tween = true,
+    tweenDuration = tween ? 1 : 0,
+  } = {}) {
     if (!this.audioEl) {
       return;
     }
+    // this.setState({ currentTime: this.state.currentTimeStart });
+    this.audioEl.volume = 0;
+    this.audioEl.currentTime = this.state.currentTimeStart;
     this.audioEl.play();
-    this.setState({ audioPaused: false });
+    tweenr().to(this.audioEl, {
+      volume: 1,
+      duration: tweenDuration,
+      // ease: 'linear',
+    });
+    if (updateState) {
+      this.setState({ audioPaused: false });
+    }
   }
-  pause() {
+  pause({
+    updateState = true,
+    tween = true,
+    tweenDuration = tween ? 1 : 0,
+  } = {}) {
     if (!this.audioEl) {
       return;
     }
-    this.audioEl.pause();
-    this.setState({ audioPaused: true });
+    tweenr().to(this.audioEl, {
+      volume: 0,
+      duration: tweenDuration,
+      ease: 'expo-out',
+    }).on('complete', () => {
+      this.audioEl.pause();
+    });
+    if (updateState) {
+      this.setState({ audioPaused: true });
+    }
   }
 
   playPause(playPause = true) {
@@ -231,13 +263,13 @@ export default class ReportFree extends Component {
     const oldState = this.audioEl.paused;
     if (playPause) {
       if (oldState) {
-        this.audioEl.play();
+        this.play();
       } else {
-        this.audioEl.pause();
+        this.pause({ tweenDuration: .2 });
       }
     }
-    const newState = this.audioEl.paused;
-    this.setState({ audioPaused: newState });
+    // const newState = this.audioEl.paused;
+    // this.setState({ audioPaused: newState });
     this.setState({ lastBackgroundChangeTime: Number(new Date()) });
   }
 
@@ -265,7 +297,7 @@ export default class ReportFree extends Component {
       this.setState({ freeReadingEnded: true, ready: false });
       this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
       this.transcript = this.parseTranscript(await
-        import('../../assets/audios/deluxe-archetype-sales.txt'));
+        import ('../../assets/audios/deluxe-archetype-sales.txt'));
       this.audioEl.play();
       this.setState({ freeReadingEnded: true, ready: true });
       return;
@@ -274,11 +306,12 @@ export default class ReportFree extends Component {
     const currentTime = this.audioEl.currentTime || 0;
     const percent = Math.round(100 * currentTime / this.audioEl.duration || Infinity);
 
-    let line, prevLine, nextLine, currentTimeEnd;
+    let line, prevLine, nextLine, currentTimeStart, currentTimeEnd;
     this.transcript.find((_line, i) => {
       line = _line;
       nextLine = this.transcript[i + 1];
       prevLine = this.transcript[i - 1];
+      currentTimeStart = line.start || prevLine && prevLine.end || 0;
       currentTimeEnd = line.end || nextLine && nextLine.start;
       return currentTime < currentTimeEnd;
     });
@@ -304,9 +337,9 @@ export default class ReportFree extends Component {
           const data = JSON.parse(render(text));
           // console.log('data.path.match(\'compatibility\'):', data.path.match('compatibility'));
           if (
-            data.path.match('compatibility') &&
-            (!line.class || !line.class.includes('compatibility')) &&
-            data.fadeIn
+            data.path.match('compatibility')
+            && (!line.class || !line.class.includes('compatibility'))
+            && data.fadeIn
           ) {
             line.class = arrify(line.class).concat(['compatibility']);
             currentLineHasBeenAddedWithImpliedClass = true;
@@ -360,6 +393,7 @@ export default class ReportFree extends Component {
       // this.changeBackground();
       this.setState({
         currentTime,
+        currentTimeStart,
         currentTimeEnd,
         currentPercent: percent,
         currentLine,
