@@ -45,7 +45,8 @@ export default class ReportFree extends Component {
     }
 
     try {
-      this.transcript = this.parseTranscript(await import(`../../assets/audios/${audioName}.txt`));
+      this.transcript = this.parseTranscript(await
+        import(`../../assets/audios/${audioName}.txt`));
     } catch (error) {
       this.error = `Cannot load the transcript file: '${audioName}'. ${error.message}`;
       return;
@@ -205,8 +206,9 @@ export default class ReportFree extends Component {
   }
 
   playPause(playPause = true) {
-    if (!this.audioEl) 
-{return;}
+    if (!this.audioEl) {
+      return;
+    }
     const oldState = this.audioEl.paused;
     if (playPause) {
       if (oldState) {
@@ -233,8 +235,9 @@ export default class ReportFree extends Component {
   }
 
   async ontimeupdate() {
-    if (!this.audioEl) 
-{return;}
+    if (!this.audioEl) {
+      return;
+    }
     if (this.audioEl.ended) {
       if (this.deluxe) {
         return;
@@ -242,7 +245,8 @@ export default class ReportFree extends Component {
       this.hideImage();
       this.setState({ freeReadingEnded: true, ready: false });
       this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
-      this.transcript = this.parseTranscript(await import('../../assets/audios/deluxe-archetype-sales.txt'));
+      this.transcript = this.parseTranscript(await
+        import('../../assets/audios/deluxe-archetype-sales.txt'));
       this.audioEl.play();
       this.setState({ freeReadingEnded: true, ready: true });
       return;
@@ -293,13 +297,13 @@ export default class ReportFree extends Component {
           }
           this.displayImage(data, line);
         }
-      }
+      },
+      pausePopup: () => this.pausePopup(),
     }, this.props.formData, this.props.quizData);
     // let currentLine = line.text;
     // const currentLineParsed = Mustache.render(currentLine, locals, locals);
     const currentLine = Mustache.render(currentLineRaw, locals, locals);
-    if (this.state.currentLine === currentLine) {
-    } else {
+    if (this.state.currentLine === currentLine) {} else {
       let lastReplacement;
       // for (const key of line.keys || []) {
       //   if (key.key) {
