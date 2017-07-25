@@ -228,8 +228,6 @@ Your riches and fulfilment are merely waiting for you.
 
 But there’s something else, {{name}}.
 
-{{#confirmToContinue}} {type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/confirmToContinue}}
-
 38
 
 02:33 
