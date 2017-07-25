@@ -234,6 +234,8 @@ And although success might not be at your feet right now, your riches and fulfil
 
 But there’s something else, {{name}}.
 
+{{#confirmToContinue}} {type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/confirmToContinue}}
+
 39
 
 02:44 
