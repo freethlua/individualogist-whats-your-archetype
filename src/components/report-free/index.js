@@ -51,7 +51,7 @@ export default class ReportFree extends Component {
 
     try {
       this.transcript = this.parseTranscript(await
-        import (`../../assets/audios/${audioName}.txt`));
+        import(`../../assets/audios/${audioName}.txt`));
     } catch (error) {
       this.error = `Cannot load the transcript file: '${audioName}'. ${error.message}`;
       return;
@@ -198,7 +198,7 @@ export default class ReportFree extends Component {
         // }
         this.setState({
           img: await
-          import ('../../assets/' + opts.path),
+          import('../../assets/' + opts.path),
           // imgClass: opts.class || this.state.imgClass,
         });
       } catch (error) {
@@ -320,7 +320,7 @@ export default class ReportFree extends Component {
       this.setState({ freeReadingEnded: true, ready: false });
       this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
       this.transcript = this.parseTranscript(await
-        import ('../../assets/audios/deluxe-archetype-sales.txt'));
+        import('../../assets/audios/deluxe-archetype-sales.txt'));
       this.audioEl.play();
       this.setState({ freeReadingEnded: true, ready: true });
       return;
@@ -360,9 +360,9 @@ export default class ReportFree extends Component {
           const data = JSON.parse(render(text));
           // console.log('data.path.match(\'compatibility\'):', data.path.match('compatibility'));
           if (
-            data.path.match('compatibility')
-            && (!line.class || !line.class.includes('compatibility'))
-            && data.fadeIn
+            data.path.match('compatibility') &&
+            (!line.class || !line.class.includes('compatibility')) &&
+            data.fadeIn
           ) {
             line.class = arrify(line.class).concat(['compatibility']);
             currentLineHasBeenAddedWithImpliedClass = true;
