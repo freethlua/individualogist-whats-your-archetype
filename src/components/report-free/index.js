@@ -16,6 +16,7 @@ import archetypes from '../../data/archetypes';
 import fixSubdomain from '../../utils/fix-subdomain';
 import otranscribeTxtToJson from '../../utils/otranscribe-txt-to-json';
 import testimonials from '../testimonials';
+import deluxeFaqs from '../deluxe-faqs';
 import styles from './style.styl';
 
 const h = hs(styles);
@@ -557,6 +558,7 @@ export default class ReportFree extends Component {
         h.p('I’m making this guarantee because I’m 100% certain that this report has the capacity to truly turn your life around. That’s how much I believe in the process of individuation, and that’s how much I believe you will benefit from it. So, no matter what, you’ve got the longer end of the stick. There is absolutely no risk involved, and it’s all up to you and whether you decide to take this life-changing path.'),
       ]),
       h(testimonials),
+      h(deluxeFaqs),
     ]);
 
     return h.div('.wrapper', [h.div({
