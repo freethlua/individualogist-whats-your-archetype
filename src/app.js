@@ -5,6 +5,7 @@ import Router, { route } from 'preact-router';
 import { version } from '../package';
 import './handle-errors';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
+import 'typeface-roboto-slab';
 import Case from 'case';
 import fixSubdomain from './utils/fix-subdomain';
 import store from './store';
