@@ -6,6 +6,7 @@ import { version } from '../package';
 import './handle-errors';
 import 'roboto-fontface/css/roboto/roboto-fontface.css';
 import 'typeface-roboto-slab';
+import 'reset-css';
 import Case from 'case';
 import fixSubdomain from './utils/fix-subdomain';
 import store from './store';
