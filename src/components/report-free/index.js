@@ -287,7 +287,7 @@ export default class ReportFree extends Component {
       if (oldState) {
         this.play();
       } else {
-        this.pause({ tweenDuration: .2 });
+        this.pause({ tweenDuration: 0.2 });
       }
     }
     // const newState = this.audioEl.paused;
