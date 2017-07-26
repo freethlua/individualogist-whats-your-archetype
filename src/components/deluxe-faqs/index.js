@@ -1,4 +1,5 @@
 import hs from 'preact-hyperstyler';
+import md from 'preact-markdown';
 import faqsText from './faqs.txt';
 import styles from './style.styl';
 
@@ -13,9 +14,12 @@ const colors = {
   questionBackground: 'E9EAEA',
 };
 
-export default props => h.div('.faqs', faqsArray.map(([q, a]) =>
-  h.details({ open: true }, [
-    h.summary(q),
-    h.p(a),
-  ]),
-));
+export default props => h.div('.faqs', [
+  h.header('The Answers To All Of Your Fears, Doubts, and Concerns'),
+  ...faqsArray.map(([q, a]) =>
+    h.details([
+      h.summary([md(q)]),
+      md(a),
+    ]),
+  )
+]);

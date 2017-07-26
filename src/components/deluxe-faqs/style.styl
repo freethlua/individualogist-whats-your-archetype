@@ -1,0 +1,53 @@
+
+.faqs
+  place: holder
+  background: #662D91
+  color: #F3F3F4
+  display: flex
+  flex-flow: column
+  align-items: center
+  padding-top: 2em
+  padding-bottom: 2em
+  > *
+    place: holder
+    width: 100%
+    max-width: 1000px
+    max-width: 800px
+
+.header
+  place: holder
+  font-size: 1.9em
+  margin: 1em 0
+
+.details
+  // padding: .5em
+  background: #E9EAEA
+  color: black
+  // border: 1px solid
+  margin: .3em 0
+  place: holder
+  .summary + *
+    margin-top: .5em
+    padding: .5em
+    p
+      line-height: 1.2em
+      margin-bottom: 1em
+
+.summary
+  place: holder
+  // border: 1px solid
+  padding: .5em
+  // margin: .3em 0
+  p:after
+    content: '?'
+  *
+    display: inline
+  cursor: pointer
+  &:hover
+    font-weight: bold
+    // background:
+
+.p
+  place: holder
+
+
