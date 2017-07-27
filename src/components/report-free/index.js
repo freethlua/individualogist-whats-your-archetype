@@ -502,7 +502,10 @@ export default class ReportFree extends Component {
       ref: ref => this.mainContentEl = ref,
     }, [
       headerEl,
-      h.h1([markdown(`**${this.props.formData.name}'s** Archetype Reading`)]),
+      h.h1([
+        h.span('.name', this.props.formData.name + '\'s'),
+        h.span('.rest', 'Archetype Reading'),
+      ]),
       h.div('.image', [
         h.div('.foreground', [
           Fade(h.img({ src: this.state.img, key: this.state.img }))
