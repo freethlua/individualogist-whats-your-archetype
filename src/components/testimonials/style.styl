@@ -28,7 +28,7 @@
 
 .p
   placeholder: null
-  font-size: 1.25em
+  // font-size: 1.25em
   font-weight: 300
   margin: 1em 0
   line-height: 1.25em
@@ -43,6 +43,8 @@
 
 .footer
   placeholder: null
+  > *
+    margin-bottom: .5em
   .info
     font-weight: 300
 
@@ -72,14 +74,17 @@
   // > *
   //   border: 1px dotted
   display: flex
+  @media(max-width:800px)
+    flex-direction: column
+    text-align: center
   align-items: center
   justify-content: space-between
   // flex-wrap: wrap
   .img
     placeholder: null
     // border: 1px dotted yellow
-    width: 30%
-    height: auto
+    // width: 30%
+    // height: auto
   .main
     placeholder: null
     // border: 1px dotted red
@@ -87,4 +92,24 @@
     // width: 100%
     margin-left: 1em
   margin: 2em 1em 3em 1em
+
+
+
+.img
+  placeholder: null
+  border-radius: 100%
+  width: 200px
+  height: 200px
+  object-fit: cover
+  object-position: top
+  // height: 150px
+  // overflow: hidden
+  // position: absolute
+  // top: 0
+  // margin: 1em
+  @media(max-width:800px)
+    width: 150px
+    height: 150px
+    margin-bottom: 1em
+
 
