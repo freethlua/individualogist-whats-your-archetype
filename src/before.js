@@ -3,7 +3,7 @@ window.isGithub = Boolean(location.hostname.match(/github.io/));
 window.isDev = isLocalhost || isGithub;
 
 if (window.isDev) {
-  console.log(`Dev mode`, { isLocalhost, isGithub });
+  console.log('Dev mode', { isLocalhost, isGithub });
 }
 
 // __webpack_public_path__ = isLocalhost ? '' :
