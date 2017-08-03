@@ -168,7 +168,7 @@ export default class ReportFree extends Component {
       } else {
         this.redirectInitiated = false;
       }
-      // location.assign(redirectUrl);
+      location.assign(redirectUrl);
       // route(`/deluxe-archetype-report-${this.archetype}-reading-3/`);
     }, 1000);
     // const dialogText = 'CLAIM YOUR $10 DISCOUNT NOW\nGET THE DELUXE ARCHETYPE REPORT TODAY!';
