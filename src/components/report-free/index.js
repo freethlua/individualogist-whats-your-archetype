@@ -160,7 +160,15 @@ export default class ReportFree extends Component {
     }
     setTimeout(() => {
       this.redirectInitiated = true;
-      location.assign(fixSubdomain(`/deluxe-archetype-report-${this.archetype}-reading-3/`));
+      // location.assign(fixSubdomain(`/deluxe-archetype-report-${this.archetype}-reading-3/?name=${this.props.formData.name}&email=${this.props.formData.email}`));
+      const redirectUrl = fixSubdomain(`/deluxe-archetype-report-${this.archetype}-reading-3/?name=${this.props.formData.name}&email=${this.props.formData.email}`);
+      const dialogText = 'CLAIM YOUR $10 DISCOUNT NOW\nGET THE DELUXE ARCHETYPE REPORT TODAY!';
+      if (confirm(dialogText)) {
+        location.assign(redirectUrl);
+      } else {
+        this.redirectInitiated = false;
+      }
+      // location.assign(redirectUrl);
       // route(`/deluxe-archetype-report-${this.archetype}-reading-3/`);
     }, 1000);
     // const dialogText = 'CLAIM YOUR $10 DISCOUNT NOW\nGET THE DELUXE ARCHETYPE REPORT TODAY!';
@@ -205,7 +213,7 @@ export default class ReportFree extends Component {
   }
 
   playPause(playPause = true) {
-    if (!this.audioEl) 
+    if (!this.audioEl)
 {return;}
     const oldState = this.audioEl.paused;
     if (playPause) {
@@ -233,7 +241,7 @@ export default class ReportFree extends Component {
   }
 
   async ontimeupdate() {
-    if (!this.audioEl) 
+    if (!this.audioEl)
 {return;}
     if (this.audioEl.ended) {
       if (this.deluxe) {
