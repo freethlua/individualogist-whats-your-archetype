@@ -1,13 +1,13 @@
 const fs = require('fs');
-const forEachFile = require('../parse-dir');
+require('pathify-string');
 const parse = require('.');
 
-forEachFile((str, { dir, file }) => {
+const otranscribeDir = __dirname.join('../../assets/transcripts-otranscribe');
+const durationBasedDir = __dirname.join('../../assets/transcripts-duration-based');
+
+for (const file of fs.readdirSync(otranscribeDir)) {
+  const str = fs.readFileSync(otranscribeDir.join(file), 'utf8');
   const outputStr = parse(str);
-
-  // outputFile = dir.join(file.replace(file.extname + '', '.new' + file.extname));
-  outputFile = file
-
+  outputFile = durationBasedDir.join(file);
   fs.writeFileSync(outputFile, outputStr);
-
-});
+}
