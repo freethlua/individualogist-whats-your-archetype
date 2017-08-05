@@ -1,0 +1,20 @@
+1
+
+00:03  
+
+Hello {{name}},
+
+2
+
+00:06 
+
+If you’ve made it here, then congratulations!
+
+3
+
+00:09 
+
+Because this means that your archetype is the Caregiver!
+
+{{#displayImage}} {path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/displayImage}}
+
