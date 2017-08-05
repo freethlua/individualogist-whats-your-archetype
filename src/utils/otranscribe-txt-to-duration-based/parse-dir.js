@@ -5,7 +5,7 @@ const parse = require('.');
 forEachFile((str, { dir, file }) => {
   const outputStr = parse(str);
 
-  outputFile = file.replace(file.extname, '.new' + file.extname);
+  outputFile = dir.join(file.replace(file.extname + '', '.new' + file.extname));
 
   fs.writeFileSync(outputFile, outputStr);
 

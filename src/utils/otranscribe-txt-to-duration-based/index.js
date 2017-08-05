@@ -12,7 +12,7 @@ module.exports = txt => {
     }
     // console.log(i);
     prev = c
-  }).join('/n');
+  }).join('\n');
 
 }
 
