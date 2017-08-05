@@ -1,0 +1,136 @@
+2.000: undefined
+NaN.000: Hello {{name}},
+3.000: If you’ve made it here..
+1.000: Then congratulations!
+4.000: Because this means that your archetype is the Outlaw!
+2.000: What does this actually mean?{{#displayImage}} {path:'images/archetype-icons/outlaw.png', fadeIn: true} {{/displayImage}}
+4.000: Don’t worry, everything you need to know will be on this page.
+1.000: Stick to the end of it...
+6.000: And I promise that you’ll experience something truly magical.
+5.000: The quiz that you’ve just taken is designed to identify your archetype...
+4.000: A personality profile that’s broken down your entire being...{{#displayImage}} {path:'images/archetype-icons/outlaw.png', fadeOut: true} {{/displayImage}}
+5.000: Your tendencies, your strengths, your past, and your future.
+4.000: Your archetype takes into account your gender, your marital status...
+6.000: How you answered the quiz, and how long you took to get those answers.
+3.000: That’s right, {{name}}.
+4.000: You can use the information to make astronomical changes in your life.
+5.000: You’ll be able to leverage on your strengths, improve on your weaknesses...
+4.000: And embark on the life that you’ve always dreamed of.
+1.000: But before we get to that...
+8.000: I want to share with you about your archetype, The Outlaw, and what it means.
+5.000: {{name}}, you truly are a unique individual.
+5.000: And I genuinely believe that this world needs more people like you.
+4.000: You are a free-minded and free-spirited individual.
+4.000: Nothing stands in your way and nothing controls your desires.
+7.000: You are the true representation of what it really means to be the captain of your own ship.
+3.000: You are different in that way, {{name}}.
+5.000: While the world walks in one direction, you have no qualms with going against it.
+5.000: That’s what makes you so special, {{name}}.
+5.000: You’re deeply sensitive when it comes to the social and environmental issues of the world.
+4.000: You’re able to empathize with anyone and everyone.
+4.000: That’s because as an Outlaw, you are highly compassionate.
+3.000: You put the needs of others before your own...
+3.000: And you’re able to connect with strangers just as well as...
+5.000: you’re able to connect with your closest loved ones.
+4.000: {{name}}, you may not know it yet...
+3.000: But you are more morally and ethically upright than others.
+3.000: You hold your values and principles close to your heart...
+4.000: And you’re always ready to stick to your guns.{{#displayImage}} {path:'images/script-images/globe.png', fadeIn: true} {{/displayImage}}
+5.000: There is something else about you, {{name}}…
+5.000: You are the one who will ignite massive change in the world.{{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
+8.000: {{name}}, I’m getting the sense that you’re going to live a long, and happy life.
+3.000: Although success might not be at your feet right now,
+6.000: your riches and fulfilment are merely waiting for you.
+4.000: {{#confirmToContinue}} {type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/confirmToContinue}}But there’s something else, {{name}}.
+6.000: Even though you will triumph, your path to success will not come easy.
+3.000: You must challenge yourself with trusting people.
+4.000: Being vulnerable can be an incredibly scary thought for you,
+5.000: but it’s important to take small steps towards the direction...
+3.000: And make a few minor mistakes along the way.
+5.000: This can be applied to both your personal and work relationships.
+4.000: {{name}}, don’t let that discourage you.
+7.000: It never hurts to open up once in a while to a loved one, such as family or close friends.
+7.000: The world can be a vicious place if you’re standing alone; even if that thought doesn’t scare you,
+3.000: it should definitely be something worth pondering about.
+5.000: The world needs people like you to be in positions of power.
+3.000: You are the one who keeps the world grounded.
+4.000: You do, however, need to understand that it’s important for you...
+5.000: To combat your cynicism by being more emotionally connected.
+7.000: That way, you’ll be able to build trust and create even more fruitful interactions.
+11.000: After all, {{name}}, the path to enlightenment and fulfilment lies within your hands.
+6.000: {{name}}, I can already tell that your friends and family really look up to you.
+6.000: You’re always ready to stand up for those in need, even if it means that...
+5.000: You will be persecuted for your actions.
+3.000: You’re not the type of person to have huge circles of friends...
+4.000: But you’re not someone who has trouble with making friends.
+3.000: In fact, you have no trouble at all when it comes to...
+4.000: impressing others with your intelligence and passionate nature.
+5.000: You are extremely selective with who you choose to let into your life.
+7.000: You prefer to keep your loved ones close, and your wolf pack small.
+7.000: {{name}}, you are incredibly brave and find comfort in chaos.
+3.000: You tend to struggle with being understood...
+4.000: But you know deep down in your heart that your intentions are always centred...
+8.000: Around the greater good – even if your strategies and mannerisms speak otherwise.
+5.000: {{name}}, you are a natural-born leader.
+8.000: I sense that you will find success and fulfilment as an entrepreneur, an activist, or a philanthropist.
+5.000: You can be very authoritative, {{name}}.
+4.000: You tend to want things done your way, on your time...
+4.000: Even if your demands are exceedingly difficult to fulfil.
+8.000: Nevertheless, {{name}}, you are going to make a lasting mark in your lifetime.
+4.000: You’re able to look at the world from a broad and altruistic perspective.
+8.000: You see the big picture, and you have what it takes to make this world a better place.
+6.000: {{name}}, I sense that you despise systems and everything that comes with it...
+3.000: Which is why you’re constantly rebelling against authority.
+6.000: You would do anything and everything you can to promote your own ways...
+8.000: And your own beliefs, which becomes clearly evident in your slightly destructive nature.
+5.000: Ultimately, {{name}}, you are a visionary.
+3.000: You have a clear idea of how you want to be in the world.
+5.000: You do, however, tend to have difficulty discerning right from wrong.
+5.000: I’m getting the sense that you’re not too concerned about monetary riches...
+3.000: Although you do wish you had more wealth.
+7.000: There is, however, a greater purpose for you in this lifetime, {{name}}.
+8.000: However, {{name}}, that can make you dependent on others for your own happiness.
+4.000: That is something that you need to be careful of.
+5.000: At times, it might feel as if you’re living your life for others.
+4.000: That’s not what you want, {{name}}.
+4.000: You want to live life for yourself. You want to love yourself.
+5.000: When you’re able to do that, success and the life of your dreams will follow.
+4.000: And that’s what Individuation aims to teach you.
+4.000: But there’s more to what I’ve learned about you, {{name}}…{{#displayImage}} {path:'images/script-images/spiritual.png', fadeIn: true} {{/displayImage}}
+6.000: It feels to me that you’re a deeply emotional and spiritual person.
+5.000: You’re connected to your soul in a way that’s far more profound than others.
+4.000: Your thought process does not follow the rules and logic of the world.
+5.000: In fact, I get the sense that you have quite the imagination.
+3.000: Your thoughts and dreams are vivid, colourful...
+6.000: And symbolic of who you are as an individual.{{#displayImage}} {path:'images/script-images/spiritual.png', fadeOut: true} {{/displayImage}}
+5.000: {{name}}, you’re not someone who likes to argue.
+6.000: You tend to avoid conflict and you’re uncanny when it comes to devising win-win situations.
+5.000: But when backed into a corner, you’re not one to back down.
+6.000: You fight fiercely for your loved ones and for righteousness.
+5.000: You’re the first person to step in when you see a fight breaking out.
+5.000: You’re the first person to reach for your pockets in the sight of a struggling busker.
+5.000: You’re the first person your friends call when they’ve had a horrible day.
+4.000: You’re the one who people rely on and look up to.
+5.000: {{name}}, you are the role model for the world.
+6.000: But every superhero needs a side-kick; a partner in crime.
+6.000: One who will stick by them when the going gets tough. And the outlaw is no exception.{{#displayImage}} {path:'images/love-compatibility/outlaw-love-compatibility.png', fadeIn: true} {{/displayImage}}
+6.000: This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
+3.000: Or if you’re already in a committed relationship...
+6.000: There’s a real good chance that your spouse is one of those archetypes.
+6.000: {{name}}, you’re not the kind of person that has trouble when it comes to love.
+5.000: People find themselves drawn to your charisma and kind nature.
+3.000: You’re sort of a rare breed when it comes to love.
+3.000: You communicate better than anyone else...
+3.000: And you’re an incredibly thoughtful individual.
+8.000: The relationships that you forge with potential lovers are always profound and deep.
+5.000: You become very selective with those who you choose to date...
+5.000: And who you choose to end up with – for good reason, of course.
+2.000: I sense that in the coming years...
+7.000: You will be the happiest you’ve ever been in that regard.
+4.000: {{name}}, I’m sensing that your love life isn’t going to be the smoothest...
+7.000: But you will find that happiness that you’re looking for soon enough.{{#displayImage}} {path:'images/love-compatibility/outlaw-love-compatibility.png', fadeOut: true} {{/displayImage}}
+7.000: But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life.
+8.000: Your spouse or partner is meant to play a supporting role in your life; not the lead.
+2.000: Focus on your own personal growth...
+3.000: And I promise you, {{name}}...
+NaN.000: You will soon discover heavenly rewards.
