@@ -7,23 +7,11 @@ module.exports = txt => {
   return json.map(c => {
     let ret
     if (prev && prev.end) {
-      ret = `${formatTime(c.end - prev.end)}: ${c.text}`;
+      ret = `${c.end - prev.end}.000: ${c.text}`;
     } else {
-      ret = `${formatTime(c.start - (prev && prev.start || 0))}: ${c.text}`;
+      ret = `${c.start - (prev && prev.start || 0)}.000: ${c.text}`;
     }
     prev = c
     return ret;
   }).join('\n');
-
-}
-
-
-function formatTime(secs) {
-  if (secs < 60) {
-    return `${secs}.000`;
-  } else if (secs < 60 * 60) {
-    const mins = parseInt(secs / 60, 10);
-    secs = secs % 60;
-    return `${mins}:${secs}.000`
-  }
 }
