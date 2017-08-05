@@ -33,7 +33,7 @@ export default {
       use: [ //
         isDev && 'webpack-module-hot-accept',
         //
-        !isDev && 'babel-loader',
+        'babel-loader',
       ].filter(Boolean)
     }, {
       test: /\.css$/,
@@ -69,9 +69,9 @@ export default {
         loader: 'url-loader',
         query: {
           limit: 1000,
-          name: isDev ?
-            '[path][name].[ext]' :
-            'assets/[name]-[hash:base64:5].[ext]'
+          name: isDev
+            ? '[path][name].[ext]'
+            : 'assets/[name]-[hash:base64:5].[ext]'
         }
       }
     }, {

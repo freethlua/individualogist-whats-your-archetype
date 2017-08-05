@@ -17,6 +17,7 @@ import fixSubdomain from '../../utils/fix-subdomain';
 import otranscribeTxtToJson from '../../utils/otranscribe-txt-to-json';
 import testimonials from '../testimonials';
 import deluxeFaqs from '../deluxe-faqs';
+import sliderPausePopup from '../slider-pause-popup';
 import styles from './style.styl';
 
 const h = hs(styles);
@@ -228,12 +229,20 @@ export default class ReportFree extends Component {
     }
   }
 
-  confirmToContinue({ type, message, button } = {}) {
+  async confirmToContinue(opts) {
     if (!this.pausePopupFlag) {
       this.pausePopupFlag = true;
       this.pause({ tween: false }, () => {
-        alert(message);
-        this.play();
+        this.setState({
+          sliderPausePopup: {
+            show: true,
+            ...opts,
+            done: () => {
+              this.play();
+              this.setState({ sliderPausePopup: null });
+            },
+          }
+        });
       });
     }
   }
@@ -579,6 +588,7 @@ export default class ReportFree extends Component {
       action2,
       h(deluxeFaqs),
       action2,
+      this.state.sliderPausePopup && h(sliderPausePopup, this.state.sliderPausePopup),
     ]);
 
     return h.div('.wrapper', [h.div({
