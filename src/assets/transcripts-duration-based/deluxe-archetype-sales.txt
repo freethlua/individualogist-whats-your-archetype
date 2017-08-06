@@ -1,5 +1,5 @@
-1.000: undefined
-NaN.000: Okay, {{name}}…
+1.000: 
+1.000: Okay, {{name}}…
 2.000: That’s all I can share with you for now…
 1.000: But {{name}},
 4.000: if you’ve gained something valuable from this free archetype reading,
@@ -258,4 +258,4 @@ NaN.000: Okay, {{name}}…
 5.000: and you’ll receive the entire Deluxe Archetype Report package immediately.
 3.000: The time has come for you to take action.
 3.000: Now, let’s get this show on the road.
-NaN.000: We’ll speak again soon, and that’s a promise.
+1.000: We’ll speak again soon, and that’s a promise.

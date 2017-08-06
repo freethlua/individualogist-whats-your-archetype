@@ -1,4 +1,4 @@
-6.000: Hello {{name}},
+4.000: Hello {{name}},
 4.000: If you’ve made it here, then congratulations!
 3.000: Because this means that your archetype is the Explorer!{{#displayImage}} {path:'images/archetype-icons/explorer.png', fadeIn: true} {{/displayImage}}
 5.000: But what does this actually mean?

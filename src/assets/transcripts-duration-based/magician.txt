@@ -1,4 +1,4 @@
-5.000: Hello {{name}}
+2.000: Hello {{name}}
 2.000: If you’ve made it here, then congratulations!
 3.000: Because this means that your archetype is the Magician!{{#displayImage}} {path:'images/archetype-icons/magician.png', fadeIn: true} {{/displayImage}}
 4.000: But what does this actually mean?

@@ -1,5 +1,5 @@
-2.000: undefined
-NaN.000: Hello {{name}},
+2.000: 
+2.000: Hello {{name}},
 3.000: If you’ve made it here..
 1.000: Then congratulations!
 4.000: Because this means that your archetype is the Outlaw!
@@ -133,4 +133,4 @@ NaN.000: Hello {{name}},
 8.000: Your spouse or partner is meant to play a supporting role in your life; not the lead.
 2.000: Focus on your own personal growth...
 3.000: And I promise you, {{name}}...
-NaN.000: You will soon discover heavenly rewards.
+1.000: You will soon discover heavenly rewards.

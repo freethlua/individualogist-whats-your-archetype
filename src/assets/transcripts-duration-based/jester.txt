@@ -1,4 +1,4 @@
-1.000: Hello {{name}},
+3.000: Hello {{name}},
 3.000: If you’ve made it here, then congratulations!
 3.000: Because this means that your archetype is the Jester!{{#displayImage}} {path:'images/archetype-icons/jester.png', fadeIn: true} {{/displayImage}}
 3.000: But what does this actually mean?

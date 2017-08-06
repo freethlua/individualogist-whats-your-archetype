@@ -1,4 +1,4 @@
-0.000: If you’re watching this video,{{#displayImage}} {path:'images/archetype-icons/{{archetype}}.png', fadeIn: true} {{/displayImage}}
+2.000: If you’re watching this video,{{#displayImage}} {path:'images/archetype-icons/{{archetype}}.png', fadeIn: true} {{/displayImage}}
 2.000: it means that you have already received your free archetype reading,
 3.000: and your free archetype report.
 3.000: And welcome to the Individualogist family!{{#displayImage}} {path:'images/archetype-icons/{{archetype}}.png', fadeOut: true} {{/displayImage}}

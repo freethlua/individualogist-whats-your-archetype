@@ -1,5 +1,5 @@
-3.000: undefined
-NaN.000: Hello {{name}},
+2.000: 
+2.000: Hello {{name}},
 4.000: If you’ve made it here, then congratulations!
 3.000: Because this means that your archetype is the Sage!
 3.000: But what does this actually mean?{{#displayImage}} {path:'images/archetype-icons/sage.png', fadeIn: true} {{/displayImage}}
@@ -130,4 +130,4 @@ NaN.000: Hello {{name}},
 7.000: But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life.
 5.000: Your spouse or partner is meant to play a supporting role in your life; not the lead.
 4.000: Focus on your own personal growth, and I promise you,
-NaN.000: {{name}}, you will soon discover heavenly rewards.
+1.000: {{name}}, you will soon discover heavenly rewards.
