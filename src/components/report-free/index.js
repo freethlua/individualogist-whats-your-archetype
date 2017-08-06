@@ -346,7 +346,7 @@ export default class ReportFree extends Component {
     const currentTime = this.audioEl.currentTime || 0;
 
     if (this.state.currentTimeStart && isDev) {
-      console.log(`time since currentTimeStart:`, currentTime - this.state.currentTimeStart);
+      // console.log(`time since currentTimeStart:`, currentTime - this.state.currentTimeStart);
     }
 
     if (this.state.currentTimeEnd && currentTime < this.state.currentTimeEnd) {
@@ -556,8 +556,9 @@ export default class ReportFree extends Component {
     }, [
       mainContentEl,
       (this.state.freeReadingEnded || this.deluxe) && restEl,
-      this.state.sliderPausePopup && h(sliderPausePopup, { class: 'sliderPausePopup' }, this.state.sliderPausePopup),
-      isLocalhost && h.textarea([JSON.stringify(this.state, null, 1)]),
+      this.state.sliderPausePopup && h(sliderPausePopup, this.state.sliderPausePopup),
+      //
+      !isLocalhost && h.textarea([JSON.stringify(this.state, null, 1)]),
     ])]);
   }
 }
