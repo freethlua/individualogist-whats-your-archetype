@@ -166,14 +166,15 @@ export default class ReportFree extends Component {
     }
     setTimeout(() => {
       this.redirectInitiated = true;
-      const redirectUrl = fixSubdomain(`/deluxe-archetype-report-${this.archetype}-reading-3/`);
+      // location.assign(fixSubdomain(`/deluxe-archetype-report-${this.archetype}-reading-3/?name=${this.props.formData.name}&email=${this.props.formData.email}`));
+      const redirectUrl = fixSubdomain(`/deluxe-archetype-report-${this.archetype}-reading-3/?name=${this.props.formData.name}&email=${this.props.formData.email}`);
       const dialogText = 'CLAIM YOUR $10 DISCOUNT NOW\nGET THE DELUXE ARCHETYPE REPORT TODAY!';
       if (confirm(dialogText)) {
         location.assign(redirectUrl);
       } else {
         this.redirectInitiated = false;
       }
-      // location.assign(redirectUrl);
+      location.assign(redirectUrl);
       // route(`/deluxe-archetype-report-${this.archetype}-reading-3/`);
     }, 1000);
     // const dialogText = 'CLAIM YOUR $10 DISCOUNT NOW\nGET THE DELUXE ARCHETYPE REPORT TODAY!';
