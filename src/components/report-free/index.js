@@ -547,7 +547,6 @@ export default class ReportFree extends Component {
       action2,
       h(deluxeFaqs),
       action2,
-      this.state.sliderPausePopup && h(sliderPausePopup, this.state.sliderPausePopup),
     ]);
 
     return h.div('.wrapper', [h.div({
@@ -557,6 +556,7 @@ export default class ReportFree extends Component {
     }, [
       mainContentEl,
       (this.state.freeReadingEnded || this.deluxe) && restEl,
+      this.state.sliderPausePopup && h(sliderPausePopup, { class: 'sliderPausePopup' }, this.state.sliderPausePopup),
       isLocalhost && h.textarea([JSON.stringify(this.state, null, 1)]),
     ])]);
   }
