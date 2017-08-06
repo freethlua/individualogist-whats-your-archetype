@@ -229,7 +229,7 @@ export default class ReportFree extends Component {
     }
   }
 
-  async confirmToContinue(opts) {
+  confirmToContinue(opts) {
     if (!this.pausePopupFlag) {
       this.pausePopupFlag = true;
       this.pause({ tween: false }, () => {
@@ -245,6 +245,7 @@ export default class ReportFree extends Component {
         });
       });
     }
+    return ''
   }
 
   play({
