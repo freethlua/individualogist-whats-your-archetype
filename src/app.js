@@ -51,7 +51,7 @@ class App extends Component {
     }
 
     if ('dev' in url.query) {
-      window.history.replaceState(null, null, window.location.href.split('?')[0]);
+      // window.history.replaceState(null, null, window.location.href.split('?')[0]);
       if ('report' in url.query) {
         if (url.query.report === 'free') {
           this.setState({

@@ -1,14 +1,11 @@
-require('pathify-string');
-const util = require('util');
+const forEachFile = require('../parse-dir');
+
 const beautify = require('js-beautify').js_beautify;
 const fs = require('fs');
 const otranscribeTxtToJson = require('../otranscribe-txt-to-json');
 const parseTranscript = require('.');
 
-const dir = __dirname.join('../../assets/audios');
-
-for (const file of fs.readdirSync(dir).filter(f => f.match(/\.txt$/))) {
-  const str = fs.readFileSync(dir.join(file), 'utf8');
+forEachFile((str, { dir, file }) => {
   const ojson = otranscribeTxtToJson(str);
   // console.log({ ojson, str });
   ojson.forEach(t => {
@@ -32,4 +29,5 @@ for (const file of fs.readdirSync(dir).filter(f => f.match(/\.txt$/))) {
     outputFile,
     '/* auto-generated */ module.exports = ' + outputJson
   );
-}
+
+});

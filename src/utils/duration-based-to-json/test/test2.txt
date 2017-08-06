@@ -1,0 +1,27 @@
+1
+
+Hello {{name}},
+
+00:06 
+
+2
+
+If you’ve made it here , then congratulations! Because this means that your archetype is the Caregiver!
+
+{{#displayImage}} {path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/displayImage}}
+
+00:12 
+
+3
+
+But what does this actually mean? Don’t worry, everything you need to know will be on this page. Stick to the end of it and I promise that you’ll experience something truly magical.
+
+{{#displayImage}} {path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/displayImage}}
+
+00:25 
+
+4
+
+The quiz that you’ve just taken is designed to identify your archetype – a personality profile that’s broken down your entire being. Your tendencies, your strengths, your past, and your future.
+
+00:40 

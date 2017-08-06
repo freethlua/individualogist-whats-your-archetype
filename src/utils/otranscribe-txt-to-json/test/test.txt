@@ -1,27 +1,917 @@
 1
 
-00:05 
+00:03  
 
 Hello {{name}},
 
- 2
+2
 
-00:11 
+00:06 
 
-If you’ve made it here, then congratulations! Because this means that your archetype is the Hero!
-
- {{#displayImage}} {path:'images/archetype-icons/hero.png', fadeIn: true} {{/displayImage}}
+If you’ve made it here, then congratulations!
 
 3
 
- 00:19 
+00:09 
 
-But what does this actually mean? Don’t worry, everything you need to know will be on this page. Stick to the end of it and I promise that you’ll experience something truly magical.
+Because this means that your archetype is the Caregiver!
 
- {{#displayImage}} {path:'images/archetype-icons/hero.png', fadeOut: true} {{/displayImage}}
+{{#displayImage}} {path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/displayImage}}
 
 4
 
+00:12 
+
+But what does this actually mean?
+
+5
+
+00:15 
+
+Don’t worry, everything you need to know will be on this page.
+
+6
+
+00:19 
+
+Stick to the end of it and I promise you that you’ll experience something truly magical.
+
+{{#displayImage}} {path:'images/archetype-icons/caregiver.png', fadeOut: true} {{/displayImage}}
+
+7
+
+00:25 
+
+The quiz that you’ve just taken is designed to...
+
+8
+
+00:29 
+
+...Identify your archetype – a personality profile that’s...
+
+9
+
 00:32 
 
-The quiz that you’ve just taken is designed to identify your archetype – a personality profile that’s broken down your entire being. Your tendencies, your strengths, your past, and your future.
+...broken down your entire being.
+
+10
+
+00:35 
+
+Your tendencies, your strengths, your past, and your future.
+
+11
+
+00:40 
+
+Your archetype takes into account your gender...
+
+12
+
+00:43 
+
+Your marital status...
+
+13
+
+ 00:45 
+
+How you answered the quiz...
+
+14
+
+ 00:46 
+
+And how long you took to get those answers.
+
+15
+
+00:49 
+
+That’s right, {{name}}.
+
+16
+
+00:50 
+
+You can use that information to make astronomical changes in your life.
+
+17
+
+00:54 
+
+You’ll be able to leverage on your strengths...
+
+18
+
+00:57 
+
+Improve on your weaknesses...
+
+19
+
+00:59 
+
+And embark on the life that you’ve always dreamed of.
+
+20
+
+01:02 
+
+But before we get into that...
+
+21
+
+01:04 
+
+I want to share with you about your archetype...
+
+22
+
+01:07 
+
+The Caregiver, and what it means.
+
+23
+
+01:10 
+
+{{name}}, you truly are a unique individual.
+
+24
+
+01:13 
+
+And I genuinely believe that this world needs more people like you.
+
+25
+
+01:18 
+
+You are a mature and deeply intelligent being...
+
+26
+
+01:21 
+
+not necessarily in the sense of academics...
+
+27
+
+01:24 
+
+...But in terms of thinking differently.
+
+28
+
+01:27 
+
+While the world walks in one direction...
+
+29
+
+01:29 
+
+...You have no qualms with going against it.
+
+30
+
+01:32 
+
+That’s what makes you so special, {{name}}.
+
+31
+
+01:36 
+
+You’re also deeply sensitive.
+
+32
+
+01:37 
+
+You’re able to see and feel all the pains of the world.
+
+33
+
+01:41 
+
+That’s because as a Caregiver, you are highly compassionate.
+
+33
+
+01:45 
+
+Your selflessness comes unparalleled.
+
+34
+
+01:48 
+
+You’re always willing to extend a helping hand to...
+
+35
+
+01:51  
+
+...Your friends, strangers...
+
+36
+
+01:53 
+
+...And sometimes, even to your enemies.
+
+37
+
+01:56 
+
+{{name}}, you might not know it yet...
+
+38
+
+01:57 
+
+But your generosity inspires everyone around you...
+
+39
+
+02:01 
+
+...The people that you help, and the people who witness you helping others.
+
+40
+
+02:05 
+
+There is something else about you, {{name}}…
+
+{{#displayImage}} {path:'images/script-images/globe.png', fadeIn: true} {{/displayImage}}
+
+41
+
+02:08 
+
+You are the one who holds the world together.
+
+{{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
+
+42
+
+02:12 
+
+I’m getting the sense that you’re going to live...
+
+43
+
+02:13 
+
+...A long, healthy, and fulfilled life.
+
+44
+
+02:16 
+
+And although success might not be at your feet right now...
+
+45
+
+02:20 
+
+...Your riches and fulfilment are merely waiting for you.
+
+46
+
+02:24 
+
+{{#confirmToContinue}} {type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/confirmToContinue}}
+
+But there’s something else, {{name}}.
+
+47
+
+02:27 
+
+Even though you will triumph...
+
+48
+
+02:28 
+
+...Your path to success will not come easy.
+
+49
+
+02:31 
+
+Your sympathetic and giving nature...
+
+50
+
+02:33 
+
+...Makes you vulnerable to persecutions.
+
+51
+
+02:36 
+
+In fact...
+
+52
+
+02:37 
+
+You might have already experienced such instances already.
+
+53
+
+02:41 
+
+But {{name}}...
+
+54
+
+02:42 
+
+Don’t let that discourage you.
+
+55
+
+02:44 
+
+The world needs your altruistic and giving nature.
+
+56
+
+02:48 
+
+The world needs people like you to be in positions of power.
+
+57
+
+02:52 
+
+You are the one who keeps the world grounded.
+
+58
+
+02:55 
+
+You are the one who keeps the hungry fed.
+
+59
+
+02:58 
+
+You are the one who keeps the children safe.
+
+60
+
+03:01 
+
+And you will find yourself in that position of power soon…
+
+61
+
+03:05 
+
+...Very soon.
+
+62
+
+03:06 
+
+You will encounter wicked hearts and selfish people...
+
+63
+
+03:10 
+
+But don’t let that lose sight of who you truly are, {{name}}.
+
+64
+
+03:13 
+
+{{name}}, I can already tell...
+
+65
+
+03:15 
+
+...That your friends and family really look up to you.
+
+66
+
+03:18 
+
+You’re the one who they come to for detailed advice...
+
+67
+
+03:21 
+
+A listening ear...
+
+68
+
+03:22 
+
+Or just for a quick chat.
+
+69
+
+03:25 
+
+You’re not the type of person to have a huge circle of friends.
+
+70
+
+03:28 
+
+But you’re not someone who has trouble with making friends.
+
+71
+
+03:31 
+
+In fact...
+
+72
+
+03:32 
+
+You have no trouble at all…
+
+73
+
+03:34 
+
+...When it comes to impressing others with your intelligence and sweet nature.
+
+74
+
+03:38 
+
+But you’re extremely selective with who you choose to let into your life.
+
+75
+
+03:42 
+
+You prefer to keep your loved ones close, and your wolf pack small.
+
+76
+
+03:47 
+
+{{name}}, you are incredibly nurturing.
+
+77
+
+03:50 
+
+People see you as a mother-like figure.
+
+78
+
+03:52 
+
+This makes you a natural-born teacher…
+
+79
+
+03:55 
+
+...But not really in the sense of education.
+
+80
+
+03:57 
+
+I sense that you will find success and fulfilment as…
+
+81
+
+04:01 
+
+A counsellor, a nurse, a trainer, or a guide of some sort.
+
+82
+
+04:06 
+
+You will also excel in non-profit organizations and charities.
+
+83
+
+04:11 
+
+You can be very protective, {{name}}.
+
+84
+
+04:13 
+
+Especially as a parent.
+
+85
+
+04:16 
+
+You love your children, friends, and family fiercely...
+
+86
+
+04:20 
+
+...And you are willing to give and sacrifice everything that you have for them.
+
+87
+
+04:25 
+
+{{name}}, you are going to make a lasting mark in your lifetime.
+
+88
+
+04:29 
+
+You’re able to look at the world from a broad and altruistic perspective.
+
+89
+
+04:34 
+
+You see the big picture...
+
+90
+
+04:36 
+
+...And you will do everything that you can to make it a better place.
+
+91
+
+04:40 
+
+Each archetype has a calling in life.
+
+92
+
+04:43 
+
+A calling that will lead you to joy and fulfilment.
+
+93
+
+04:46 
+
+{{name}}, I’d like to share with you what I’ve discovered about your calling.
+
+93
+
+04:51 
+
+{{name}}, you tend to concern yourself with acts of sharing.
+
+94
+
+04:55 
+
+You’re always happy to share your knowledge...
+
+95
+
+04:57 
+
+...Wisdom, and experiences with those around you.
+
+96
+
+05:01 
+
+That is where you derive fulfilment from.
+
+97
+
+05:04 
+
+The more you share, the more you express care for others...
+
+98
+
+05:07 
+
+...The happier you seem to be.
+
+99
+
+05:10 
+
+However, {{name}}...
+
+100
+
+05:11 
+
+...That can make you dependent on others for your own happiness.
+
+101
+
+05:14 
+
+And that is something that you need to be careful of.
+
+102
+
+05:17 
+
+At times, it might feel as if you’re living your life for others.
+
+103
+
+05:21 
+
+That’s not what you want, {{name}}.
+
+104
+
+05:23 
+
+You want to live life for yourself.
+
+105
+
+05:26 
+
+You want to love yourself.
+
+106
+
+05:28 
+
+When you’re able to do that...
+
+107
+
+05:30 
+
+...Success and the life of your dreams will follow.
+
+108
+
+05:33 
+
+And that’s what Individuation aims to teach you.
+
+109
+
+05:36 
+
+But there’s more to what I’ve learned about you, {{name}}…
+
+110
+
+05:40 
+
+It feels to me that you’re a deeply emotional and spiritual person.
+
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeIn: true} {{/displayImage}}
+
+111
+
+05:45 
+
+You’re connected to your soul in a way that’s far more profound than others.
+
+112
+
+05:50 
+
+Your thought process does not follow the rules and logic of the world.
+
+113
+
+05:54 
+
+In fact, I get the sense that you have quite the imagination.
+
+114
+
+05:58 
+
+Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
+
+{{#displayImage}} {path:'images/script-images/spiritual.png', fadeOut: true} {{/displayImage}}
+
+115
+
+06:05 
+
+{{name}}, you’re not someone who likes to argue.
+
+116
+
+06:08 
+
+You tend to avoid conflict…
+
+117
+
+06:10 
+
+...And you’re uncanny when it comes to devising win-win situations.
+
+118
+
+06:14 
+
+But when backed into a corner, you’re not one to back down.
+
+119
+
+06:18 
+
+You fight fiercely for your loved ones and for righteousness.
+
+120
+
+06:23 
+
+You’re the first person to step in when you see a fight breaking out.
+
+121
+
+06:27 
+
+You’re the first person to reach for your pockets in the sight of a struggling busker.
+
+122
+
+06:31 
+
+You’re the first person your friends call when they’ve had a horrible day.
+
+123
+
+06:36 
+
+You’re the one who people rely on and look up to.
+
+124
+
+06:40 
+
+{{name}}, you are the role model of the world.
+
+125
+
+06:44 
+
+But every superhero needs a side-kick…
+
+126
+
+06:46 
+
+A partner in crime who will stick by them when the going gets tough.
+
+{{#displayImage}} {path:'images/love-compatibility/caregiver-love-compatibility.png', fadeIn: true} {{/displayImage}}
+
+127
+
+06:50 
+
+This little chart I’ve prepared represents...
+
+128
+
+06:53 
+
+...the archetypes that you’re most likely to end up with.
+
+129
+
+06:56 
+
+Or if you’re already in a committed relationship...
+
+130
+
+06:59 
+
+...There’s a really good chance that your spouse is one of these archetypes.
+
+131
+
+07:03 
+
+{{name}}, you’re not the kind of person that has trouble when it comes to love.
+
+132
+
+07:08 
+
+Love interests find themselves drawn to your nurturing and giving nature.
+
+133
+
+07:13 
+
+You’re sort of a rare breed when it comes to love.
+
+134
+
+07:16 
+
+You’re fiercely loyal, patient, giving, and emotionally connected.
+
+135
+
+07:21 
+
+The relationships that you forge with potential lovers...
+
+136
+
+07:24 
+
+...Are always profound and deep.
+
+137
+
+07:27 
+
+You become very selective with who you choose to date...
+
+138
+
+ 07:30 
+
+...And who you choose to end up with…
+
+139
+
+07:32 
+
+For good reason, of course.
+
+140
+
+07:35 
+
+I sense that in the coming years...
+
+141
+
+07:37 
+
+You will be the happiest you’ve ever been in that regard.
+
+{{#displayImage}} {path:'images/love-compatibility/caregiver-love-compatibility.png', fadeOut: true} {{/displayImage}}
+
+142
+
+07:40 
+
+But don’t forget, {{name}}...
+
+143
+
+07:42 
+
+How you perceive yourself should not be determined by your love life.
+
+144
+
+07:47 
+
+Your spouse or partner is meant to play a supporting role in your life...
+
+145
+
+07:51 
+
+...Not the lead.
+
+146
+
+07:53   
+
+Focus on your own personal growth...
+
+147
+
+07:55 
+
+...and I promise you, {{name}}...
+
+148
+
+07:58 
+
+...You will soon discover heavenly rewards.
