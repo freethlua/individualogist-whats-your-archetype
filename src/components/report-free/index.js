@@ -14,13 +14,17 @@ import tweenr from 'tweenr';
 import Fade from '../fade';
 import archetypes from '../../data/archetypes';
 import fixSubdomain from '../../utils/fix-subdomain';
-import transcriptsToJson from '../../utils/duration-based-to-json';
 import testimonials from '../testimonials';
 import deluxeFaqs from '../deluxe-faqs';
 import sliderPausePopup from '../slider-pause-popup';
 import styles from './style.styl';
 
 const h = hs(styles);
+
+import transcriptsToJson from '../../utils/otranscribe-txt-to-json';
+const transcriptsDir = 'transcripts-otranscribe';
+// import transcriptsToJson from '../../utils/duration-based-to-json';
+// const transcriptsDir = 'transcripts-duration-based';
 
 // autoPlay(true);
 
@@ -53,7 +57,7 @@ export default class ReportFree extends Component {
 
     try {
       this.transcript = this.parseTranscript(await
-        import (`../../assets/transcripts-duration-based/${audioName}.txt`));
+        import (`../../assets/${transcriptsDir}/${audioName}.txt`));
     } catch (error) {
       error.message = `Cannot load the transcript for: '${audioName}'. ${error.message}`
       throw error
@@ -141,9 +145,11 @@ export default class ReportFree extends Component {
     } else if (e.keyCode === 39) {
       // right
       this.audioEl.currentTime += e.shiftKey ? 20 : 5;
+      this.setState({ currentTimeEnd: null });
     } else if (e.keyCode === 37) {
       // left
       this.audioEl.currentTime -= e.shiftKey ? 20 : 5;
+      this.setState({ currentTimeEnd: null });
     } else if (e.keyCode === 190) {
       // period
       this.audioEl.currentTime = 0;
@@ -310,7 +316,7 @@ export default class ReportFree extends Component {
   }
 
   async ontimeupdate() {
-    console.log('ontimeupdate');
+    // console.log('ontimeupdate');
     if (!this.audioEl) {
       console.debug(`ontimeupdate fired without audioEl`);
       return;
@@ -327,7 +333,7 @@ export default class ReportFree extends Component {
       console.log('Deluxe audio loaded');
       try {
         this.transcript = this.parseTranscript(await
-          import ('../../assets/transcripts-duration-based/deluxe-archetype-sales.txt'));
+          import (`../../assets/${transcriptsDir}/deluxe-archetype-sales.txt`));
       } catch (error) {
         error.message = `Cannot load the transcript for: 'deluxe-archetype-sales'. ${error.message}`
         throw error
@@ -338,6 +344,16 @@ export default class ReportFree extends Component {
     }
 
     const currentTime = this.audioEl.currentTime || 0;
+
+    if (this.state.currentTimeStart && isDev) {
+      console.log(`time since currentTimeStart:`, currentTime - this.state.currentTimeStart);
+    }
+
+    if (this.state.currentTimeEnd && currentTime < this.state.currentTimeEnd) {
+      return;
+    }
+    // console.log('ontimeupdate');
+
     const percent = Math.round(100 * currentTime / this.audioEl.duration || Infinity);
 
     let line, prevLine, nextLine, currentTimeStart, currentTimeEnd;
@@ -356,7 +372,7 @@ export default class ReportFree extends Component {
       return;
     }
 
-    console.log(`line:`, line);
+    // console.log(`line:`, line);
 
     const currentLineHasNoClass = !line.class;
     let currentLineHasBeenAddedWithImpliedClass;
