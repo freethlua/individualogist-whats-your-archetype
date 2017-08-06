@@ -14,7 +14,7 @@ export default class extends Component {
         h.p(props.message),
         h.button({
           onclick: props.done
-        }, [props.buttonLabel]),
+        }, [props.button || props.buttonLabel]),
       ]);
     } else {
 

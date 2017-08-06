@@ -553,10 +553,11 @@ export default class ReportFree extends Component {
       class: ['container']
         .concat(arrify(this.state.currentLineOpts && this.state.currentLineOpts.class))
         .concat([this.state.freeReadingEnded && 'free-reading-ended'].filter(Boolean))
+        .concat([this.state.sliderPausePopup && 'slider-paused'].filter(Boolean))
     }, [
       mainContentEl,
       (this.state.freeReadingEnded || this.deluxe) && restEl,
-      this.state.sliderPausePopup && h(sliderPausePopup, this.state.sliderPausePopup),
+      this.state.sliderPausePopup && h.div('.sliderPausePopup', [h(sliderPausePopup, this.state.sliderPausePopup)]),
       //
       !isLocalhost && h.textarea([JSON.stringify(this.state, null, 1)]),
     ])]);
