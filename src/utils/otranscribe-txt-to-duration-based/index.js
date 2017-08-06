@@ -3,15 +3,16 @@ const parseStr = require('../otranscribe-txt-to-json');
 module.exports = txt => {
   const json = parseStr(txt);
 
-  let prev
-  return json.map(c => {
-    let ret
-    if (prev && prev.end) {
-      ret = `${c.end - prev.end}.000: ${c.text}`;
+  return json.map((curr, i) => {
+    const prev = json[i - 1];
+    const next = json[i + 1];
+    curr.text = curr.text || '';
+    if (prev) {
+      return `${(curr.end || curr.start) - (prev.end || prev.start) || 1}.000: ${curr.text}`;
+    } else if (next) {
+      return `${(next.end || next.start) - (curr.end || curr.start) || 1}.000: ${curr.text}`;
     } else {
-      ret = `${c.start - (prev && prev.start || 0)}.000: ${c.text}`;
+      return `1.000: ${curr.text}`;
     }
-    prev = c
-    return ret;
   }).join('\n');
 }

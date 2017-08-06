@@ -7,7 +7,7 @@ function parseStr(str) {
   while (match = pattern.exec(str)) {
     if (prev) array.push({
       start: (prevArrItem && prevArrItem.start || 0) + parseInt(prev[1], 10) * 1000 + parseInt(prev[2], 10),
-      str: str.substring(prev.index + match[0].length, match.index),
+      text: str.substring(prev.index + match[0].length, match.index),
     });
     prevArrItem = array[array.length - 1];
     prev = match;
