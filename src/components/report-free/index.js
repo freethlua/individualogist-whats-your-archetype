@@ -89,9 +89,13 @@ export default class ReportFree extends Component {
         if (index < 0) {
           index += this.transcript.length;
         }
+        console.log(`Seeking to ${index}`);
         let line;
         if (index && (line = this.transcript[index])) {
+          // console.log(`line:`, line);
+          console.log(`line.start:`, line.start);
           this.audioEl.currentTime = line.start;
+          console.log(`Seeked to ${this.audioEl.currentTime}/${this.audioEl.duration}`);
         }
       }
     }
@@ -306,16 +310,21 @@ export default class ReportFree extends Component {
   }
 
   async ontimeupdate() {
+    console.log('ontimeupdate');
     if (!this.audioEl) {
+      console.debug(`ontimeupdate fired without audioEl`);
       return;
     }
     if (this.audioEl.ended) {
+      console.log(`Audio ended`);
       if (this.deluxe) {
+        console.log(`Deluxe audio ended`);
         return;
       }
       this.hideImage();
       this.setState({ freeReadingEnded: true, ready: false });
       this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
+      console.log('Deluxe audio loaded');
       try {
         this.transcript = this.parseTranscript(await
           import ('../../assets/transcripts-duration-based/deluxe-archetype-sales.txt'));
@@ -334,7 +343,7 @@ export default class ReportFree extends Component {
     let line, prevLine, nextLine, currentTimeStart, currentTimeEnd;
     // console.log(`this.transcript[0]:`, this.transcript[0]);
     this.transcript.find((_line, i) => {
-      console.log({ _line, i });
+      // console.log({ _line, i });
       line = _line;
       nextLine = this.transcript[i + 1];
       prevLine = this.transcript[i - 1];
