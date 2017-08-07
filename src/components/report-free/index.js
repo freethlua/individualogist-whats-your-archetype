@@ -564,7 +564,7 @@ export default class ReportFree extends Component {
       (this.state.freeReadingEnded || this.deluxe) && restEl,
       this.state.sliderPausePopup && h.div('.sliderPausePopup', [h(sliderPausePopup, this.state.sliderPausePopup)]),
       //
-      !isLocalhost && h.textarea([JSON.stringify(this.state, null, 1)]),
+      isLocalhost && h.textarea([JSON.stringify(this.state, null, 1)]),
     ])]);
   }
 }
