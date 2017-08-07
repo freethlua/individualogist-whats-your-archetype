@@ -2,8 +2,6 @@
 
 00:00 
 
-{{#confirmToContinue}} {type: 'ok', message: "{{name}}, we've talked at length about your archetype. Now, I'd like to share with you more about the individuation journey. Click on the button below to continue!", button: 'Yes, tell me more about individuation!'} {{/confirmToContinue}}
-
 If you’re watching this video,
 
 {{#displayImage}} {path:'images/archetype-icons/{{archetype}}.png', fadeIn: true} {{/displayImage}}
