@@ -475,11 +475,12 @@ export default class ReportFree extends Component {
       class: [
         'slider',
         'content',
-        'current-percent-' + this.state.currentPercent,
+        // 'current-percent-' + this.state.currentPercent,
       ],
       style: { backgroundImage: `url(${this.state.background})` },
       ref: ref => this.mainContentEl = ref,
     }, [
+      h.div('.current-percent', { style: { width: `${this.state.currentPercent}%` } }),
       headerEl,
       h.h1([
         h.span('.name', this.props.formData.name + '\'s'),

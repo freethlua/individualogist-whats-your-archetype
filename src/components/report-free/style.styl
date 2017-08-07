@@ -32,20 +32,15 @@
   position: absolute
   bottom: 0px
 
-for currentPercent in (1..100)
-  .current-percent-currentPercent:before
-    z-index: 5
-    transition: 1000ms
-    content ' '
-    // border 2px dotted yellow
-    width: 1% * currentPercent
-    display: block
-    height 2px
-    background: white
-    // background-image: linear-gradient(to right, #6A2977, #009ED5)
-    position: absolute
-    top: 0
-    // bottom: -10em
+.current-percent
+  z-index: 1000
+  transition: 1000ms
+  content ' '
+  display: block
+  height 2px
+  background: white
+  position: absolute
+  top: 0
 
 .h1
   // border: 3px dotted yellow
