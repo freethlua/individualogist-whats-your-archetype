@@ -8,6 +8,7 @@
   },
   "repository": "freethlua/individualogist-whats-your-archetype",
   "dependencies": {
+    "@font/nunito": "^1.0.3",
     "@tweenjs/tween.js": "^16.10.0",
     "arrify": "^1.0.1",
     "bulma": "^0.4.2",
@@ -24,6 +25,7 @@
     "linkstate": "^1.0.1",
     "localforage": "^1.5.0",
     "mustache": "^2.3.0",
+    "nunito-fontface": "^0.7.1",
     "preact": "^8.1.0",
     "preact-compat": "^3.16.0",
     "preact-hyperscript": "^0.7.1",
