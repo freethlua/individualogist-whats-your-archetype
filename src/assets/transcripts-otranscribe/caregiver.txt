@@ -286,13 +286,7 @@ And although success might not be at your feet right now...
 
 02:24 
 
-{{#confirmToContinue}}
-  {
-    type: 'ok',
-    message: 'Would you like to learn more about your path to fulfilment?',
-    button: 'Click here to continue'
-  }
-{{/confirmToContinue}}
+{{#confirmToContinue}} {type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/confirmToContinue}}
 
 But there’s something else, {{name}}.
 
