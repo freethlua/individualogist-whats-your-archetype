@@ -12,6 +12,7 @@ export default class extends Component {
       // test this!
       return h.div('.ok', [
         h.p(props.message),
+        h.img('.arrow', { src: require('./assets/double-down-arrows.png') }),
         h.button({
           onclick: props.done
         }, [props.button || props.buttonLabel]),
