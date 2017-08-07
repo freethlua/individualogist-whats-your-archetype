@@ -343,7 +343,7 @@ export default class ReportFree extends Component {
         throw error
       }
       this.audioEl.play();
-      this.setState({ freeReadingEnded: true, ready: true });
+      this.setState({ freeReadingEnded: true, ready: true, currentTimeEnd: null });
       return;
     }
 
