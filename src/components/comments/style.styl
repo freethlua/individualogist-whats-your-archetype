@@ -30,19 +30,34 @@
     left: 50%
     margin-left: -75px
     // position: absolute
-  .heading
-    null what
-    font-size: 2em
-    font-weight: bold
-    text-align: center
-    background: purple
-    color: #fff
-    border-radius: 5px
-    width: 80%
-    padding: .5em
-    margin-top: 30px
-    margin-bottom: 30px
-    box-shadow: 5px 5px 10px #000
+
+.heading
+  null what
+  font-size: 2em
+  font-weight: bold
+  text-align: center
+  background: #904BE6
+  font-weight: 100
+  color: #fff
+  border-radius: 5px
+  width: 80%
+  padding: 1em
+  margin-top: 30px
+  margin-bottom: 30px
+  box-shadow: 5px 5px 10px rgba(0,0,0,.5)
+  position: relative
+  &:before
+    content: ''
+    display: inline-block
+    position: absolute
+    width: 1em
+    height: 1em
+    transform: rotate(45deg)
+    margin-left: calc(50% - 1.4em)
+    bottom: -15px
+    background: @background
+    // box-shadow: @box-shadow
+    // z-index: -1
 
 
 .fb-comments
