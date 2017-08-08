@@ -145,11 +145,11 @@ export default class ReportFree extends Component {
     } else if (e.keyCode === 39) {
       // right
       this.audioEl.currentTime += e.shiftKey ? 20 : 5;
-      this.setState({ currentTimeEnd: null });
+      this.setState({ currentTimeEnd: null, currentTranscriptIndex: null });
     } else if (e.keyCode === 37) {
       // left
       this.audioEl.currentTime -= e.shiftKey ? 20 : 5;
-      this.setState({ currentTimeEnd: null });
+      this.setState({ currentTimeEnd: null, currentTranscriptIndex: null });
     } else if (e.keyCode === 190) {
       // period
       this.audioEl.currentTime = 0;
@@ -319,6 +319,28 @@ export default class ReportFree extends Component {
     });
   }
 
+
+  currentTranscriptIndexFinder(currentTime = 0, currentTranscriptIndex = 0) {
+    const line = this.transcript[currentTranscriptIndex];
+    const nextLine = this.transcript[currentTranscriptIndex + 1];
+    const prevLine = this.transcript[currentTranscriptIndex - 1];
+    const currentTimeStart = line.start || prevLine && prevLine.end || 0;
+    const currentTimeEnd = line.end || nextLine && nextLine.start || Infinity;
+    if (currentTime < currentTimeEnd) {
+      return {
+        currentTranscriptIndex,
+        line,
+        nextLine,
+        prevLine,
+        currentTimeStart,
+        currentTimeEnd,
+      }
+    } else {
+      return this.currentTranscriptIndexFinder(currentTime, currentTranscriptIndex + 1);
+    }
+  }
+
+
   async ontimeupdate() {
     // console.log('ontimeupdate');
     if (!this.audioEl) {
@@ -342,8 +364,8 @@ export default class ReportFree extends Component {
         error.message = `Cannot load the transcript for: 'deluxe-archetype-sales'. ${error.message}`
         throw error
       }
-      this.audioEl.play();
-      this.setState({ freeReadingEnded: true, ready: true, currentTimeEnd: null });
+      this.setState({ freeReadingEnded: true, ready: true, currentTimeEnd: null, currentTranscriptIndex: null });
+      setTimeout(() => this.audioEl.play());
       return;
     }
 
@@ -360,24 +382,23 @@ export default class ReportFree extends Component {
 
     const percent = Math.round(100 * currentTime / this.audioEl.duration || Infinity);
 
-    let line, prevLine, nextLine, currentTimeStart, currentTimeEnd;
-    // console.log(`this.transcript[0]:`, this.transcript[0]);
-    this.transcript.find((_line, i) => {
-      // console.log({ _line, i });
-      line = _line;
-      nextLine = this.transcript[i + 1];
-      prevLine = this.transcript[i - 1];
-      currentTimeStart = line.start || prevLine && prevLine.end || 0;
-      currentTimeEnd = line.end || nextLine && nextLine.start;
-      return currentTime < currentTimeEnd;
-    });
+    const {
+      line,
+      prevLine,
+      nextLine,
+      currentTimeStart,
+      currentTimeEnd,
+      currentTranscriptIndex,
+    } = this.currentTranscriptIndexFinder(
+      currentTime,
+      (this.state && this.state.currentTranscriptIndex && (this.state.currentTranscriptIndex + 1)) || 0
+    );
 
     if (!line) {
       return;
     }
 
     // console.log(`line:`, line);
-
     const currentLineHasNoClass = !line.class;
     let currentLineHasBeenAddedWithImpliedClass;
     let currentLineHasFadeOutImage;
@@ -416,13 +437,14 @@ export default class ReportFree extends Component {
       }
 
       this.setState({
+        currentLineOpts: line,
         currentTime,
         currentTimeStart,
         currentTimeEnd,
         currentPercent: percent,
         currentLine,
         currentLineRaw,
-        currentLineOpts: line,
+        currentTranscriptIndex,
       });
     }
 
