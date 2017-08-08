@@ -93,14 +93,7 @@ export default class ReportFree extends Component {
         if (index < 0) {
           index += this.transcript.length;
         }
-        console.log(`Seeking to ${index}`);
-        let line;
-        if (index && (line = this.transcript[index])) {
-          // console.log(`line:`, line);
-          console.log(`line.start:`, line.start);
-          this.audioEl.currentTime = line.start;
-          console.log(`Seeked to ${this.audioEl.currentTime}/${this.audioEl.duration}`);
-        }
+        this.setState({ currentTranscriptIndex: index });
       }
     }
 
@@ -325,7 +318,7 @@ export default class ReportFree extends Component {
     const nextLine = this.transcript[currentTranscriptIndex + 1];
     const prevLine = this.transcript[currentTranscriptIndex - 1];
     const currentTimeStart = line.start || prevLine && prevLine.end || 0;
-    const currentTimeEnd = line.end || nextLine && nextLine.start || Infinity;
+    const currentTimeEnd = line.end || nextLine && nextLine.start || (nextLine && nextLine.end && line.start) || Infinity;
     if (currentTime < currentTimeEnd) {
       return {
         currentTranscriptIndex,
@@ -380,6 +373,8 @@ export default class ReportFree extends Component {
     }
     // console.log('ontimeupdate');
 
+    this.pausePopupFlag = false;
+
     const percent = Math.round(100 * currentTime / this.audioEl.duration || Infinity);
 
     const {
@@ -398,12 +393,24 @@ export default class ReportFree extends Component {
       return;
     }
 
+    // if (!line.text) {
+    //   console.log('Line has no text', {
+    //     line,
+    //     prevLine,
+    //     nextLine,
+    //     currentTimeStart,
+    //     currentTimeEnd,
+    //     currentTranscriptIndex,
+    //   });
+    //   return;
+    // }
+
     // console.log(`line:`, line);
     const currentLineHasNoClass = !line.class;
     let currentLineHasBeenAddedWithImpliedClass;
     let currentLineHasFadeOutImage;
 
-    const currentLineRaw = line.text;
+    const currentLineRaw = line.text || '';
     let imageDisplayedInThisLine = false;
     const locals = Object.assign({
       displayImage: () => (text, render) => {
