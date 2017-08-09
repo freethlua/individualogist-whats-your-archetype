@@ -9,7 +9,7 @@ export async function ready() {
     } else if ('seekToIndex' in url.query) {
       let index = parseInt(url.query.seekToIndex, 10);
       if (index < 0) {
-        index += this.transcript.length + 1;
+        index += this.transcript.length - 1;
       }
       this.setState({ currentTranscriptIndex: index });
     }
