@@ -1,4 +1,5 @@
 import Mustache from 'mustache';
+import JSON from 'json5';
 import arrify from 'arrify';
 import filterDuplicates from 'filter-duplicates';
 
@@ -16,7 +17,7 @@ export async function ontimeupdate() {
       console.log(`Deluxe audio ended`);
       return;
     }
-    this.hideImage();
+    // this.hideImage();
     this.setState({ freeReadingEnded: true, ready: false });
     this.audioEl.src = require('../../../assets/audios/deluxe-archetype-sales.mp3');
     console.log('Deluxe audio loaded');
@@ -64,19 +65,6 @@ export async function ontimeupdate() {
     return;
   }
 
-  // if (!line.text) {
-  //   console.log('Line has no text', {
-  //     line,
-  //     prevLine,
-  //     nextLine,
-  //     currentTimeStart,
-  //     currentTimeEnd,
-  //     currentTranscriptIndex,
-  //   });
-  //   return;
-  // }
-
-  // console.log(`line:`, line);
   const currentLineHasNoClass = !line.class;
   let currentLineHasBeenAddedWithImpliedClass;
   let currentLineHasFadeOutImage;
@@ -84,26 +72,47 @@ export async function ontimeupdate() {
   const currentLineRaw = line.text || '';
   let imageDisplayedInThisLine = false;
   const locals = Object.assign({
-    displayImage: () => (text, render) => {
-      imageDisplayedInThisLine = true;
-      if (this.state.currentLineRaw !== currentLineRaw) {
-        const data = JSON.parse(render(text));
-        if (
-          data.path.match('compatibility')
-          && (!line.class || !line.class.includes('compatibility'))
-          && data.fadeIn
-        ) {
-          line.class = arrify(line.class).concat(['compatibility']);
-          currentLineHasBeenAddedWithImpliedClass = true;
+    fn: () => (mustacheText, renderMustache) => {
+      let mustacheParsed;
+      try {
+        mustacheParsed = JSON.parse(renderMustache(mustacheText));
+      } catch (error) {
+        error.message = `Couldn't parse '${mustacheText}'. ` + error.message;
+        throw error;
+      }
+      const { fn, ...opts } = mustacheParsed;
+      this.setState({
+        [fn]: opts
+      });
+      if (typeof this[fn] === 'function') {
+        console.log(`Executing function: ${fn}(…opts)`, opts);
+        const result = this[fn](opts);
+        console.log(`result:`, result);
+        if (result) {
+
         }
-        if (data.fadeOut) {
-          currentLineHasFadeOutImage = true;
-        }
-        this.displayImage(data, line);
       }
     },
-    pausePopup: () => this.pausePopup(),
-    confirmToContinue: this.mustacheFunction('confirmToContinue'),
+    // displayImage: () => (text, render) => {
+    //   imageDisplayedInThisLine = true;
+    //   if (this.state.currentLineRaw !== currentLineRaw) {
+    //     const data = JSON.parse(render(text));
+    //     if (
+    //       data.path.match('compatibility')
+    //       && (!line.class || !line.class.includes('compatibility'))
+    //       && data.fadeIn
+    //     ) {
+    //       line.class = arrify(line.class).concat(['compatibility']);
+    //       currentLineHasBeenAddedWithImpliedClass = true;
+    //     }
+    //     if (data.fadeOut) {
+    //       currentLineHasFadeOutImage = true;
+    //     }
+    //     this.displayImage(data, line);
+    //   }
+    // },
+    // pausePopup: () => this.pausePopup(),
+    // confirmToContinue: this.mustacheFunction('confirmToContinue'),
   }, this.props.formData, this.props.quizData);
 
   const currentLine = Mustache.render(currentLineRaw, locals, locals);
@@ -127,6 +136,6 @@ export async function ontimeupdate() {
   }
 
   if (!prevLine && !imageDisplayedInThisLine) {
-    this.hideImage();
+    // this.hideImage();
   }
 }

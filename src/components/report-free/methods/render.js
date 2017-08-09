@@ -54,7 +54,14 @@ export function render() {
     ]),
     h.div('.image', [
       h.div('.foreground', [
-        Fade(h.img({ src: this.state.img, key: this.state.img }))
+        Fade(h.img(this.state
+          && this.state.displayImage
+          && this.state.displayImage.fadeIn
+          && this.state.displayImage.path
+          && {
+            src: require('../../../assets/' + this.state.displayImage.path),
+            key: this.state.displayImage.path
+          } || {}))
       ]),
       Fade(h(component('loveCompatibility'), this.state.loveCompatibility)),
     ]),
