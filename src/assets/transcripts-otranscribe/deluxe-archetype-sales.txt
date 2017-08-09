@@ -1,8 +1,10 @@
+0
+
+{{#confirmToContinue}} {type: 'ok', message: "{{name}}, we've talked at length about your archetype. Now, I'd like to share with you more about the individuation journey. Click on the button below to continue!", button: 'Yes, tell me more about individuation!'} {{/confirmToContinue}}
+
 00:01 
 
 1
-
-{{#confirmToContinue}} {type: 'ok', message: "{{name}}, we've talked at length about your archetype. Now, I'd like to share with you more about the individuation journey. Click on the button below to continue!", button: 'Yes, tell me more about individuation!'} {{/confirmToContinue}}
 
 Okay, {{name}}…
 
