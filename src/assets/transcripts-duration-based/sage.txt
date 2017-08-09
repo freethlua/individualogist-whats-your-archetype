@@ -1,4 +1,4 @@
-2.000: 
+2.000:
 2.000: Hello {{name}},
 4.000: If you’ve made it here, then congratulations!
 3.000: Because this means that your archetype is the Sage!
@@ -111,7 +111,7 @@
 4.000: You’re the first person your friends call when they’ve had a horrible day.
 3.000: You’re the one who people rely on and look up to.
 3.000: {{name}}, you are the guardian of the world.
-7.000: But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.{{#displayImage}} {path:'images/love-compatibility/sage-love-compatibility.png', fadeIn: true} {{/displayImage}}
+7.000: But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.{{#loveCompatibility}} {fadeIn: true} {{/loveCompatibility}}
 4.000: This little chart I’ve prepared represents the archetypes
 2.000: that you’re most likely to end up with.
 2.000: Or if you’re already in a committed relationship,

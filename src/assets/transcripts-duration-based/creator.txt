@@ -142,7 +142,7 @@
 5.000: {{name}}, you are the role model of the world.
 3.000: And I have complete confidence that you will one day change it for the better.
 7.000: But every Creator needs a partner in crime...
-3.000: ...who will stick by them when the going gets tough.{{#displayImage}} {path:'images/love-compatibility/creator-love-compatibility.png', fadeIn: true} {{/displayImage}}
+3.000: ...who will stick by them when the going gets tough.{{#loveCompatibility}} {fadeIn: true} {{/loveCompatibility}}
 3.000: This little chart represents the archetypes that you’re most likely to end up with.
 5.000: Or if you’re already in a committed relationship…
 3.000: There’s a really good chance that your spouse is one of those archetypes.

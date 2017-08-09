@@ -119,7 +119,7 @@
 4.000: You’re the one who people rely on and look up to.
 4.000: {{name}}, you are the light of hope and happiness of the world.
 5.000: But every superhero needs a side-kick…
-3.000: A partner in crime who will stick by them when the going gets tough.{{#displayImage}} {path:'images/love-compatibility/jester-love-compatibility.png', fadeIn: true} {{/displayImage}}
+3.000: A partner in crime who will stick by them when the going gets tough.{{#loveCompatibility}} {fadeIn: true} {{/loveCompatibility}}
 5.000: This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
 5.000: Or if you’re already in a committed relationship…
 3.000: There’s a really good chance that your spouse is one of those archetypes.
@@ -133,7 +133,7 @@
 2.000: For a good reason, of course.
 2.000: I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
 7.000: {{name}}, I’m sensing that your love life isn’t going to be the smoothest…
-5.000: But you will find the happiness that you’re looking for soon enough.{{#displayImage}} {path:'images/love-compatibility/jester-love-compatibility.png', fadeIn: true} {{/displayImage}}
+5.000: But you will find the happiness that you’re looking for soon enough.{{#loveCompatibility}} {fadeIn: true} {{/loveCompatibility}}
 7.000: But don’t forget, {{name}}…
 2.000: How you perceive yourself should not be determined by your love life.
 5.000: Your spouse or partner is meant to play a supporting role in your life…

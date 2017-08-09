@@ -882,7 +882,7 @@ But every Creator needs a partner in crime...
 
 ...who will stick by them when the going gets tough.
 
-{{#displayImage}} {path:'images/love-compatibility/creator-love-compatibility.png', fadeIn: true} {{/displayImage}}
+{{#loveCompatibility}} {fadeIn: true} {{/loveCompatibility}}
 
 146
 

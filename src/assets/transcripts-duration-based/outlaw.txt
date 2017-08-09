@@ -1,4 +1,4 @@
-2.000: 
+2.000:
 2.000: Hello {{name}},
 3.000: If you’ve made it here..
 1.000: Then congratulations!
@@ -113,7 +113,7 @@
 4.000: You’re the one who people rely on and look up to.
 5.000: {{name}}, you are the role model for the world.
 6.000: But every superhero needs a side-kick; a partner in crime.
-6.000: One who will stick by them when the going gets tough. And the outlaw is no exception.{{#displayImage}} {path:'images/love-compatibility/outlaw-love-compatibility.png', fadeIn: true} {{/displayImage}}
+6.000: One who will stick by them when the going gets tough. And the outlaw is no exception.{{#loveCompatibility}} {fadeIn: true} {{/loveCompatibility}}
 6.000: This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
 3.000: Or if you’re already in a committed relationship...
 6.000: There’s a real good chance that your spouse is one of those archetypes.
