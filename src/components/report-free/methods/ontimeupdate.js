@@ -2,6 +2,8 @@ import Mustache from 'mustache';
 import arrify from 'arrify';
 import filterDuplicates from 'filter-duplicates';
 
+import { transcriptsDir } from '../../../utils/transcripts'
+
 export async function ontimeupdate() {
   // console.log('ontimeupdate');
   if (!this.audioEl) {

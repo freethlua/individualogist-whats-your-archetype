@@ -1,10 +1,7 @@
 import throttle from 'throttleit';
 import archetypes from '../../../data/archetypes';
 
-import transcriptsToJson from '../../../utils/otranscribe-txt-to-json';
-const transcriptsDir = 'transcripts-otranscribe';
-// import transcriptsToJson from '../../utils/duration-based-to-json';
-// const transcriptsDir = 'transcripts-duration-based';
+import { transcriptsDir } from '../../../utils/transcripts'
 
 export async function componentWillMount() {
   // window.title = this.props.quizData.archetype
