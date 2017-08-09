@@ -690,7 +690,7 @@ But every lover needs a side-kick…
 
 A partner in crime who will stick by them when the going gets tough.
 
-{{#loveCompatibility}} {path:'assets/lover-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
+{{#displayImage}} {path:'images/love-compatibility/lover-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 114
 

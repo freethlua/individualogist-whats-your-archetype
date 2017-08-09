@@ -810,7 +810,7 @@ But every explorer needs someone to accompany them on their adventures...
 
 A partner-in-crime who will stick by them when the going gets tough.
 
-{{#loveCompatibility}} {path:'assets/explorer-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
+{{#displayImage}} {path:'images/love-compatibility/explorer-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 134
 

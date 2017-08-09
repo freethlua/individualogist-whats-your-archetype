@@ -110,7 +110,7 @@
 4.000: You’re the one who people rely on and look up to.
 4.000: {{name}}, you are the role model of the world.
 4.000: But every lover needs a side-kick…
-3.000: A partner in crime who will stick by them when the going gets tough.{{#loveCompatibility}} {path:'assets/lover-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
+3.000: A partner in crime who will stick by them when the going gets tough.{{#displayImage}} {path:'images/love-compatibility/lover-love-compatibility.png', fadeIn: true} {{/displayImage}}
 4.000: This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
 6.000: Or if you’re already in a committed relationship, there’s a really good chance that your spouse is one of those archetypes.
 7.000: {{name}}, you’re not the kind of person that has trouble when it comes to love.

@@ -780,7 +780,7 @@ But every superhero needs a side-kick;
 
 a partner in crime who will stick by them when the going gets tough.
 
-{{#loveCompatibility}} {path:'assets/member-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
+{{#displayImage}} {path:'images/love-compatibility/member-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 07:25 
 

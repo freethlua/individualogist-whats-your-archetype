@@ -690,7 +690,7 @@ You’re the one who people rely on and look up to.
 
 But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.
 
-{{#loveCompatibility}} {path:'assets/sage-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
+{{#displayImage}} {path:'images/love-compatibility/sage-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 07:17 
 

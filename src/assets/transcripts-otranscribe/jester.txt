@@ -744,7 +744,7 @@ But every superhero needs a side-kick…
 
 A partner in crime who will stick by them when the going gets tough.
 
-{{#loveCompatibility}} {path:'assets/jester-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
+{{#displayImage}} {path:'images/love-compatibility/jester-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 123
 
@@ -830,7 +830,7 @@ I sense that in the coming years, you will be the happiest you’ve ever been in
 
 But you will find the happiness that you’re looking for soon enough.
 
-{{#loveCompatibility}} {path:'assets/jester-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
+{{#displayImage}} {path:'images/love-compatibility/jester-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 137
 

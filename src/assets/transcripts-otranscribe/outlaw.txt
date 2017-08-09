@@ -702,7 +702,7 @@ But every superhero needs a side-kick; a partner in crime.
 
 One who will stick by them when the going gets tough. And the outlaw is no exception.
 
-{{#loveCompatibility}} {path:'assets/outlaw-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
+{{#displayImage}} {path:'images/love-compatibility/outlaw-love-compatibility.png', fadeIn: true} {{/displayImage}}
 
 09:10 
 
