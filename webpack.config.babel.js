@@ -128,9 +128,11 @@ export default {
       'create-react-class': 'preact-compat/lib/create-react-class'
     }
   },
+  stats: 'errors-only',
   devServer: {
     host: '0.0.0.0',
     disableHostCheck: true,
     historyApiFallback: true,
+    stats: 'errors-only',
   }
 };
