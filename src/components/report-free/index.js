@@ -91,7 +91,7 @@ export default class ReportFree extends Component {
       } else if ('seekToIndex' in url.query) {
         let index = parseInt(url.query.seekToIndex, 10);
         if (index < 0) {
-          index += this.transcript.length;
+          index += this.transcript.length + 1;
         }
         this.setState({ currentTranscriptIndex: index });
       }
@@ -350,6 +350,7 @@ export default class ReportFree extends Component {
       this.setState({ freeReadingEnded: true, ready: false });
       this.audioEl.src = require('../../assets/audios/deluxe-archetype-sales.mp3');
       console.log('Deluxe audio loaded');
+      // this.deluxe = true;
       try {
         this.transcript = this.parseTranscript(await
           import (`../../assets/${transcriptsDir}/deluxe-archetype-sales.txt`));
@@ -582,6 +583,8 @@ export default class ReportFree extends Component {
       h(deluxeFaqs),
       action2,
     ]);
+
+    console.log(`this.deluxe:`, this.deluxe);
 
     return h.div('.wrapper', [h.div({
       class: ['container']
