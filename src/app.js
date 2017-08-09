@@ -12,13 +12,15 @@ import 'reset-css';
 import Case from 'case';
 import fixSubdomain from './utils/fix-subdomain';
 import store from './store';
-import * as cmp from './components';
+import component from './components';
 import styles from './app.styl';
 import './shell.styl';
 
 const h = hs(styles);
 
 console.log('v' + version);
+
+// console.log(cmp);
 
 window.url = URL.parse(String(location), true);
 window.cleanUrl = URL.format(Object.assign({}, url, {
@@ -90,7 +92,7 @@ class App extends Component {
   }
 
   render() {
-    const tracking = !isDev && h(cmp.tracking, Object.assign({
+    const tracking = !isDev && h(component('tracking'), Object.assign({
       clickmagickRendered: () => {
         console.log('clickmagickRendered');
         this.setState({ clickmagickRenderedOnce: true });
@@ -110,16 +112,16 @@ class App extends Component {
 
     const paths = {};
 
-    paths.quiz = () => h.div([h(cmp.quiz, Object.assign({}, this.state, {
+    paths.quiz = () => h.div([h(component('quiz'), Object.assign({}, this.state, {
       onFinish: quizData => {
         this.setState({ quizData });
         store.save(this.state);
         route('/intro');
       }
-    })), cmp.comments, cmp.footer]);
+    })), component('comments'), component('footer')]);
 
-    paths.intro = () => h.div([h(cmp.reportIntro, Object.assign({}, this.state, {
-      form: h(cmp.form, Object.assign({}, this.state, {
+    paths.intro = () => h.div([h(component('reportIntro'), Object.assign({}, this.state, {
+      form: h(component('form'), Object.assign({}, this.state, {
         onSubmit: (e, formData) => {
           if (window.isDev) {
             this.setState({ formData, aweberSuccess: formData.aweberRedirectHash });
@@ -145,9 +147,9 @@ class App extends Component {
           window.scrollTo(0, 0);
         },
       }))
-    })), cmp.comments, cmp.footer, tracking]);
+    })), component('comments'), component('footer'), tracking]);
 
-    paths.reading = () => h.div([h(cmp.reportFree, Object.assign({}, this.state)), cmp.comments, cmp.footer, tracking]);
+    paths.reading = () => h.div([h(component('reportFree'), Object.assign({}, this.state)), component('comments'), component('footer'), tracking]);
 
     const redirectExternal = ({ path }) => {
       if (path in paths) {

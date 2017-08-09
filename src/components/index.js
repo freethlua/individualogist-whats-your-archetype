@@ -1,9 +1,14 @@
-export { default as quiz } from './quiz';
-export { default as reportFree } from './report-free';
-export { default as reportDeluxe } from './report-deluxe';
-export { default as reportIntro } from './report-intro';
-export { default as form } from './form';
-export { default as comments } from './comments';
-export { default as header } from './header';
-export { default as footer } from './footer';
-export { default as tracking } from './tracking';
+import { kebab } from 'case';
+
+export default name => {
+  try {
+    return require('./' + kebab(name)).default;
+  } catch (error) {}
+  try {
+    return require('./' + kebab(name) + '/index').default;
+  } catch (error) {}
+  try {
+    return require('./' + name + '/index').default;
+  } catch (error) {}
+  return require('./' + name).default;
+}
