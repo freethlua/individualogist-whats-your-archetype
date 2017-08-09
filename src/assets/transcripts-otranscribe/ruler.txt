@@ -636,7 +636,7 @@ You’re the one who people rely on and look up to.
 
 But every pilot needs a co-pilot; a partner in crime who will stick by them when the going gets tough.
 
-{{#displayImage}} {path:'images/love-compatibility/ruler-love-compatibility.png', fadeIn: true} {{/displayImage}}
+{{#loveCompatibility}} {path:'assets/ruler-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
 
 07:29 
 

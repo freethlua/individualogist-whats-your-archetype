@@ -1,4 +1,4 @@
-2.000: 
+2.000:
 2.000: Hello {{name}},
 2.000: If you’ve made it here,
 2.000: then congratulations!
@@ -126,7 +126,7 @@
 2.000: People look up to you and rely on you.
 4.000: {{name}}, you bring understanding to the misunderstood.
 3.000: But every superhero needs a side-kick;
-4.000: a partner in crime who will stick by them when the going gets tough.{{#displayImage}} {path:'images/love-compatibility/member-love-compatibility.png', fadeIn: true} {{/displayImage}}
+4.000: a partner in crime who will stick by them when the going gets tough.{{#loveCompatibility}} {path:'assets/member-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
 6.000: This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
 3.000: Or if you’re already in a committed relationship,
 4.000: there’s a really good chance that your spouse is one of those archetypes.

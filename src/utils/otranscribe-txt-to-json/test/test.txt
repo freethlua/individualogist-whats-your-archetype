@@ -780,7 +780,7 @@ But every superhero needs a side-kick…
 
 A partner in crime who will stick by them when the going gets tough.
 
-{{#displayImage}} {path:'images/love-compatibility/caregiver-love-compatibility.png', fadeIn: true} {{/displayImage}}
+{{#loveCompatibility}} {path:'assets/caregiver-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
 
 127
 

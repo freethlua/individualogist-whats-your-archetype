@@ -117,7 +117,7 @@
 4.000: You’re the one who people rely on and look up to.
 4.000: {{name}}, you are the role model of the world.
 2.000: But every magician needs a side-kick…
-4.000: A partner in crime who will stick by them when the going gets tough.{{#displayImage}} {path:'images/love-compatibility/magician-love-compatibility.png', fadeIn: true} {{/displayImage}}
+4.000: A partner in crime who will stick by them when the going gets tough.{{#loveCompatibility}} {path:'assets/magician-love-compatibility.png', fadeIn: true} {{/loveCompatibility}}
 3.000: This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
 6.000: Or if you’re already in a committed relationship…
 3.000: There’s a really good chance that your spouse is one of those archetypes.
