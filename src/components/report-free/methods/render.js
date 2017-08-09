@@ -119,8 +119,6 @@ export function render() {
     action2,
   ]);
 
-  console.log(`this.deluxe:`, this.deluxe);
-
   return h.div('.wrapper', [h.div({
     class: ['container']
       .concat(arrify(this.state.currentLineOpts && this.state.currentLineOpts.class))
