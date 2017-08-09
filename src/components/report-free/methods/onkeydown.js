@@ -7,7 +7,9 @@ export function onkeydown(e) {
   }
   if (e.keyCode === 32) {
     // space
-    this.playPause();
+    if (!this.state.sliderPausePopup) {
+      this.playPause();
+    }
   } else if (e.keyCode === 38 && e.ctrlKey) {
     // ctrl + up
     const before = this.audioEl.playbackRate;
