@@ -22,7 +22,7 @@ Because this means that your archetype is the Sage!
 
 But what does this actually mean?
 
-{{#displayImage}} {path:'images/archetype-icons/sage.png', fadeIn: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/sage.png', fadeIn: true} {{/fn}}
 
 00:15 
 
@@ -54,7 +54,7 @@ The quiz that you’ve just taken is designed to identify your archetype
 
 a personality profile that’s broken down your entire being.
 
-{{#displayImage}} {path:'images/archetype-icons/sage.png', fadeOut: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/sage.png', fadeOut: true} {{/fn}}
 
 00:35 
 
@@ -200,7 +200,7 @@ You hold your values and principles close to your heart,
 
 and you’re always ready to stick to your guns.
 
-{{#displayImage}} {path:'images/script-images/globe.png', fadeIn: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
 
 02:09 
 
@@ -214,7 +214,7 @@ There is something else about you, {{name}}…
 
 You form the foundation of the world’s progress and advancement.
 
-{{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 
 02:17 
 
@@ -238,7 +238,7 @@ your riches and fulfilment are merely waiting for you.
 
 39
 
-{{#confirmToContinue}} {type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/confirmToContinue}}
+{{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}
 
 But there’s something else, {{name}}.
 
@@ -602,7 +602,7 @@ It feels to me that you’re a deeply emotional and spiritual person.
 
 You’re connected to your soul in a way that’s far more profound than others.
 
-{{#displayImage}} {path:'images/script-images/spiritual.png', fadeIn: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
 
 06:19 
 
@@ -622,7 +622,7 @@ In fact, I get the sense that you have quite the imagination.
 
 Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
 
-{{#displayImage}} {path:'images/script-images/spiritual.png', fadeOut: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
 
 06:33 
 
@@ -690,7 +690,7 @@ You’re the one who people rely on and look up to.
 
 But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.
 
-{{#loveCompatibility}} {fadeIn: true} {{/loveCompatibility}}
+{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
 
 07:17 
 
@@ -770,7 +770,7 @@ and who you choose to end up with – for good reason, of course.
 
 I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
 
-{{#displayImage}} {path:'images/love-compatibility/sage-love-compatibility.png', fadeOut: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/love-compatibility/sage-love-compatibility.png', fadeOut: true} {{/fn}}
 
 08:03 
 

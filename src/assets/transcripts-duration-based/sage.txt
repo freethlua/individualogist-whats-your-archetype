@@ -2,12 +2,12 @@
 2.000: Hello {{name}},
 4.000: If you’ve made it here, then congratulations!
 3.000: Because this means that your archetype is the Sage!
-3.000: But what does this actually mean?{{#displayImage}} {path:'images/archetype-icons/sage.png', fadeIn: true} {{/displayImage}}
+3.000: But what does this actually mean?{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/sage.png', fadeIn: true} {{/fn}}
 4.000: Don’t worry, everything you need to know will be on this page.
 3.000: Stick to the end of it and I promise that
 3.000: you’ll experience something truly magical.
 5.000: The quiz that you’ve just taken is designed to identify your archetype
-5.000: a personality profile that’s broken down your entire being.{{#displayImage}} {path:'images/archetype-icons/sage.png', fadeOut: true} {{/displayImage}}
+5.000: a personality profile that’s broken down your entire being.{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/sage.png', fadeOut: true} {{/fn}}
 5.000: Your tendencies, your strengths, your past, and your future.
 3.000: Your archetype takes into account your gender,
 4.000: your marital status, how you answered the quiz,
@@ -31,13 +31,13 @@
 2.000: {{name}}, you might not know it yet,
 4.000: but you are more morally and ethically upright than others.
 3.000: You hold your values and principles close to your heart,
-3.000: and you’re always ready to stick to your guns.{{#displayImage}} {path:'images/script-images/globe.png', fadeIn: true} {{/displayImage}}
+3.000: and you’re always ready to stick to your guns.{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
 2.000: There is something else about you, {{name}}…
-6.000: You form the foundation of the world’s progress and advancement.{{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
+6.000: You form the foundation of the world’s progress and advancement.{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 4.000: {{name}}, I’m getting the sense that you’re going to live a long, and happy life.
 3.000: And although success might not be at your feet right now,
 3.000: your riches and fulfilment are merely waiting for you.
-3.000: {{#confirmToContinue}} {type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/confirmToContinue}}But there’s something else, {{name}}.
+3.000: {{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}.
 5.000: Even though you will triumph, your path to success will not come easy.
 4.000: You must ultimately defeat and control your hatred for ignorance.
 5.000: It is vital for you to understand that not everyone is capable of learning at your pace,
@@ -97,10 +97,10 @@
 3.000: And that’s what Individuation aims to teach you.
 4.000: But there’s more to what I’ve learned about you, {{name}}…
 4.000: It feels to me that you’re a deeply emotional and spiritual person.
-5.000: You’re connected to your soul in a way that’s far more profound than others.{{#displayImage}} {path:'images/script-images/spiritual.png', fadeIn: true} {{/displayImage}}
+5.000: You’re connected to your soul in a way that’s far more profound than others.{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
 4.000: Your thought process does not follow the rules and logic of the world.
 4.000: In fact, I get the sense that you have quite the imagination.
-6.000: Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.{{#displayImage}} {path:'images/script-images/spiritual.png', fadeOut: true} {{/displayImage}}
+6.000: Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
 4.000: {{name}}, you’re not someone who likes to argue.
 3.000: You tend to avoid conflict and you’re uncanny
 3.000: when it comes to devising win-win situations.
@@ -111,7 +111,7 @@
 4.000: You’re the first person your friends call when they’ve had a horrible day.
 3.000: You’re the one who people rely on and look up to.
 3.000: {{name}}, you are the guardian of the world.
-7.000: But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.{{#loveCompatibility}} {fadeIn: true} {{/loveCompatibility}}
+7.000: But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
 4.000: This little chart I’ve prepared represents the archetypes
 2.000: that you’re most likely to end up with.
 2.000: Or if you’re already in a committed relationship,
@@ -124,7 +124,7 @@
 4.000: The relationships that you forge with potential lovers are always profound and deep.
 4.000: You become very selective with who you choose to date
 4.000: and who you choose to end up with – for good reason, of course.
-5.000: I sense that in the coming years, you will be the happiest you’ve ever been in that regard.{{#displayImage}} {path:'images/love-compatibility/sage-love-compatibility.png', fadeOut: true} {{/displayImage}}
+5.000: I sense that in the coming years, you will be the happiest you’ve ever been in that regard.{{#fn}} {fn: 'displayImage', path:'images/love-compatibility/sage-love-compatibility.png', fadeOut: true} {{/fn}}
 4.000: {{name}}, I’m sensing that your love life isn’t going to be the smoothest
 4.000: – but you will find that happiness that you’re looking for soon enough.
 7.000: But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life.

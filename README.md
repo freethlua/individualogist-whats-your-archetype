@@ -183,7 +183,7 @@ There's following main components:
         The text is parsed with [Mustache.js](https://github.com/janl/mustache.js/) taking the variables from `quizData` and `formData` and some specialized functions such as `displayImage`. A normal text syntax `Hello {{name}},` gets rendered with the appropriate data (`formData.name` in this case). A function:
 
         ```
-        {{#displayImage}} {path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/displayImage}}
+        {{#fn}} {fn: 'displayImage', path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/fn}}
         ```
 
         This calls:
@@ -197,7 +197,7 @@ There's following main components:
         You may also use nested template syntax:
 
         ```
-        {{#displayImage}} {path:'images/archetype-icons/{{archetype}}.png', fadeIn: true} {{/displayImage}}
+        {{#fn}} {fn: 'displayImage', path:'images/archetype-icons/{{archetype}.png', fadeIn: true}} {{/fn}}
         ```
 
         So changing the slider images is actually controlled from within the transcripts themselves. The `displayImage` function, and the component itself takes care of actually displaying the image.

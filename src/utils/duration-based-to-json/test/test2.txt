@@ -8,7 +8,7 @@ Hello {{name}},
 
 If you’ve made it here , then congratulations! Because this means that your archetype is the Caregiver!
 
-{{#displayImage}} {path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/fn}}
 
 00:12 
 
@@ -16,7 +16,7 @@ If you’ve made it here , then congratulations! Because this means that your ar
 
 But what does this actually mean? Don’t worry, everything you need to know will be on this page. Stick to the end of it and I promise that you’ll experience something truly magical.
 
-{{#displayImage}} {path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/fn}}
 
 00:25 
 

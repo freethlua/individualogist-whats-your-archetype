@@ -1,9 +1,9 @@
 2.000: Hello {{name}},
 2.000: If you’ve made it here, then congratulations!
-4.000: Because this means that your archetype is the Creator!{{#displayImage}} {path:'images/archetype-icons/creator.png', fadeIn: true} {{/displayImage}}
+4.000: Because this means that your archetype is the Creator!{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/creator.png', fadeIn: true} {{/fn}}
 3.000: But what does this actually mean?
 3.000: Don’t worry, everything you need to know will be on this page.
-4.000: Stick to the end of it and I promise that you’ll experience something truly magical.{{#displayImage}} {path:'images/archetype-icons/creator.png', fadeOut: true} {{/displayImage}}
+4.000: Stick to the end of it and I promise that you’ll experience something truly magical.{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/creator.png', fadeOut: true} {{/fn}}
 6.000: The quiz that you’ve just taken is designed to identify your archetype...
 5.000: ...A personality profile that’s broken down your entire being.
 4.000: Your tendencies, your strengths, your past, and your future.
@@ -37,12 +37,12 @@
 2.000: More so than ordinary folk.
 2.000: You put your heart and soul into anything that you create...
 4.000: ...Ensuring that the outcome resembles the closest thing to perfection.
-5.000: There is something else about you, {{name}}…{{#displayImage}} {path:'images/script-images/globe.png', fadeIn: true} {{/displayImage}}
-3.000: You are the one who will one day solve some of the world’s biggest problems.{{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
+5.000: There is something else about you, {{name}}…{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
+3.000: You are the one who will one day solve some of the world’s biggest problems.{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 6.000: {{name}}, I’m getting the sense that you’re going to live a long, and abundant life.
 5.000: And although success might not be at your feet right now…
 3.000: ...Your riches and fulfilment are merely waiting for you.
-5.000: {{#confirmToContinue}} {type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/confirmToContinue}}But there’s something else, {{name}}.
+5.000: {{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}.
 2.000: Even though you will triumph, your path to success will not come easy.
 5.000: You see, {{name}}...
 2.000: When it comes to creating things and seeing ideas to fruition...
@@ -123,12 +123,12 @@
 2.000: Success and the life of your dreams will follow.
 4.000: And that’s what Individuation aims to teach you.
 3.000: But there’s more to what I’ve learned about you, {{name}}…
-5.000: It feels to me that you’re a deeply emotional and spiritual person.{{#displayImage}} {path:'images/script-images/spiritual.png', fadeIn: true} {{/displayImage}}
+5.000: It feels to me that you’re a deeply emotional and spiritual person.{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
 6.000: You’re connected to your soul in a way that’s far more profound than others.
 5.000: Your thought process does not follow the rules and logic of the world.
 5.000: In fact, I get the sense that you have quite the imagination.
 5.000: Your thoughts and dreams are vivid, colourful...
-4.000: And symbolic of who you are as an individual.{{#displayImage}} {path:'images/script-images/spiritual.png', fadeOut: true} {{/displayImage}}
+4.000: And symbolic of who you are as an individual.{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
 4.000: {{name}}, you’re not someone who likes to argue.
 4.000: You tend to avoid conflict...
 3.000: But you’ll never be afraid to express your own opinions...
@@ -142,7 +142,7 @@
 5.000: {{name}}, you are the role model of the world.
 3.000: And I have complete confidence that you will one day change it for the better.
 7.000: But every Creator needs a partner in crime...
-3.000: ...who will stick by them when the going gets tough.{{#loveCompatibility}} {fadeIn: true} {{/loveCompatibility}}
+3.000: ...who will stick by them when the going gets tough.{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
 3.000: This little chart represents the archetypes that you’re most likely to end up with.
 5.000: Or if you’re already in a committed relationship…
 3.000: There’s a really good chance that your spouse is one of those archetypes.
@@ -160,7 +160,7 @@
 2.000: I sense that in the coming years...
 2.000: You will be the happiest you’ve ever been in that regard.
 4.000: {{name}}, I’m sensing that your love life isn’t going to be the smoothest...
-6.000: But you will find that happiness you’re looking for soon enough.{{#displayImage}} {path:'images/love-compatibility/creator-love-compatibility.png', fadeOut: true} {{/displayImage}}
+6.000: But you will find that happiness you’re looking for soon enough.{{#fn}} {fn: 'displayImage', path:'images/love-compatibility/creator-love-compatibility.png', fadeOut: true} {{/fn}}
 4.000: But don’t forget, {{name}}...
 2.000: How you perceive yourself should not be determined by your love life.
 5.000: Your spouse or partner is meant to play a supporting role in your life...

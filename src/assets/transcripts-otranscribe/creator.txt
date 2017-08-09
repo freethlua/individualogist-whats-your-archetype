@@ -16,7 +16,7 @@ If you’ve made it here, then congratulations!
 
 Because this means that your archetype is the Creator!
 
-{{#displayImage}} {path:'images/archetype-icons/creator.png', fadeIn: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/creator.png', fadeIn: true} {{/fn}}
 
 4
 
@@ -36,7 +36,7 @@ Don’t worry, everything you need to know will be on this page.
 
 Stick to the end of it and I promise that you’ll experience something truly magical.
 
-{{#displayImage}} {path:'images/archetype-icons/creator.png', fadeOut: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/creator.png', fadeOut: true} {{/fn}}
 
 7
 
@@ -242,7 +242,7 @@ You put your heart and soul into anything that you create...
 
 There is something else about you, {{name}}…
 
-{{#displayImage}} {path:'images/script-images/globe.png', fadeIn: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
 
 41
 
@@ -250,7 +250,7 @@ There is something else about you, {{name}}…
 
 You are the one who will one day solve some of the world’s biggest problems.
 
-{{#displayImage}} {path:'images/script-images/globe.png', fadeOut: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 
 42
 
@@ -274,7 +274,7 @@ And although success might not be at your feet right now…
 
 02:44 
 
-{{#confirmToContinue}} {type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/confirmToContinue}}
+{{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}
 
 But there’s something else, {{name}}.
 
@@ -764,7 +764,7 @@ But there’s more to what I’ve learned about you, {{name}}…
 
 It feels to me that you’re a deeply emotional and spiritual person.
 
-{{#displayImage}} {path:'images/script-images/spiritual.png', fadeIn: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
 
 127
 
@@ -796,7 +796,7 @@ Your thoughts and dreams are vivid, colourful...
 
 And symbolic of who you are as an individual.
 
-{{#displayImage}} {path:'images/script-images/spiritual.png', fadeOut: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
 
 132
 
@@ -882,7 +882,7 @@ But every Creator needs a partner in crime...
 
 ...who will stick by them when the going gets tough.
 
-{{#loveCompatibility}} {fadeIn: true} {{/loveCompatibility}}
+{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
 
 146
 
@@ -992,7 +992,7 @@ You will be the happiest you’ve ever been in that regard.
 
 But you will find that happiness you’re looking for soon enough.
 
-{{#displayImage}} {path:'images/love-compatibility/creator-love-compatibility.png', fadeOut: true} {{/displayImage}}
+{{#fn}} {fn: 'displayImage', path:'images/love-compatibility/creator-love-compatibility.png', fadeOut: true} {{/fn}}
 
 164
 
