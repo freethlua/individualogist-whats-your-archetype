@@ -3,6 +3,7 @@ import { route } from 'preact-router';
 import markup from 'preact-markup';
 import Youtube from 'react-youtube';
 import arrify from 'arrify';
+import component from '../..';
 import fixSubdomain from '../../../utils/fix-subdomain';
 import testimonials from '../../testimonials';
 import deluxeFaqs from '../../deluxe-faqs';
@@ -55,6 +56,7 @@ export function render() {
       h.div('.foreground', [
         Fade(h.img({ src: this.state.img, key: this.state.img }))
       ]),
+      Fade(h(component('loveCompatibility'), this.state.loveCompatibility)),
     ]),
     h.div('.text', [
       Fade(h(markup, { markup: this.state.currentLine || '', key: this.state.currentLine }))

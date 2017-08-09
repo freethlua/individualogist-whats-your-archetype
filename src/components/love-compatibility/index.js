@@ -6,5 +6,7 @@ const h = hs(styles);
 
 export default class extends Component {
   componentDidMount() {}
-  render() {}
+  render() {
+    return 'Love Compatibility!!!'
+  }
 };
