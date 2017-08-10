@@ -3,4 +3,4 @@ import styles from './style.styl';
 
 const { img } = hs(styles);
 
-export default ({ archetype }) => img({ src: require('./assets/' + archetype + '-love-compatibility.png') });
+export default ({ archetype }) => img({ src: require('./assets/' + archetype + '.png') });
