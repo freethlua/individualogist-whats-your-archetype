@@ -1,7 +1,7 @@
 import JSON from 'json5';
 import arrify from 'arrify';
 
-const mustacheState = Symbol();
+const mustacheState = Symbol('mustacheState');
 
 export function mustacheFunction(fn) {
   return () => (mustacheText, renderMustache) => {
@@ -22,6 +22,7 @@ export function mustacheSetState(key, val) {
   this.setState({
     [key]: val
   });
+  console.log('Set `mustacheState`', key, val);
 }
 
 export function mustacheUnsetState(keys) {
@@ -29,9 +30,8 @@ export function mustacheUnsetState(keys) {
     console.log('No mustacheState to unset');
     return;
   }
-  const mustacheState = this[mustacheState]
   if (!keys) {
-    keys = [...mustacheState.keys()];
+    keys = [...this[mustacheState].keys()];
   }
   keys = arrify(keys);
   for (const key of keys) {
@@ -40,5 +40,5 @@ export function mustacheUnsetState(keys) {
       [key]: null
     });
   }
-  console.log('unset mustacheState keys:', keys);
+  console.log('Unset `mustacheState`', keys);
 }
