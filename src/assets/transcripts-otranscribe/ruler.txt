@@ -704,7 +704,7 @@ I sense that in the coming years, you will be the happiest you’ve ever been in
 
 – but you will find that happiness that you’re looking for soon enough.
 
-{{#fn}} {fn: 'displayImage', path:'images/love-compatibility/ruler-love-compatibility.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
 
 08:22 
 

@@ -139,7 +139,7 @@
 8.000: You become very selective with who you choose to date and who you choose to end up with – for good reason, of course.
 5.000: I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
 4.000: {{name}}, I’m sensing that your love life isn’t going to be the smoothest
-4.000: – but you will find that happiness that you’re looking for soon enough.{{#fn}} {fn: 'displayImage', path:'images/love-compatibility/member-love-compatibility.png', fadeOut: true} {{/fn}}
+4.000: – but you will find that happiness that you’re looking for soon enough.{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
 2.000: But don’t forget, {{name}},
 4.000: how you perceive yourself should not be determined by your love life.
 6.000: Your spouse or partner is meant to play a supporting role in your life; not to lead.

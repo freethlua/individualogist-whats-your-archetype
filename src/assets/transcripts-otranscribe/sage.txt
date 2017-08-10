@@ -770,7 +770,7 @@ and who you choose to end up with – for good reason, of course.
 
 I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
 
-{{#fn}} {fn: 'displayImage', path:'images/love-compatibility/sage-love-compatibility.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
 
 08:03 
 

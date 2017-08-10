@@ -872,7 +872,7 @@ I sense that in the coming years...
 
 You will be the happiest you’ve ever been in that regard.
 
-{{#fn}} {fn: 'displayImage', path:'images/love-compatibility/caregiver-love-compatibility.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
 
 142
 
