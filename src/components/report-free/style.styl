@@ -136,10 +136,20 @@
 
 
 .image
+  border 2px dotted orange
+  > *
+    border 2px dotted yellow
+    display: block
+    width: 100%
+    height: 100%
+    > *
+      border 2px dotted blue
   position: relative
   text-align: center
   // z-index: -1
   height: 100%
+  .displayImage
+
   .foreground
     opacity: .7
     width: 100%

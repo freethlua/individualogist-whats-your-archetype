@@ -53,17 +53,15 @@ export function render() {
       h.span('.rest', 'Archetype Reading'),
     ]),
     h.div('.image', [
-      h.div('.foreground', [
-        Fade(h.img(this.state
-          && this.state.displayImage
-          && this.state.displayImage.fadeIn
-          && this.state.displayImage.path
-          && {
-            src: require('../../../assets/' + this.state.displayImage.path),
-            key: this.state.displayImage.path
-          } || {}))
-      ]),
-      Fade(h(component('loveCompatibility'), this.state.loveCompatibility)),
+      // Fade(this.state.displayImage
+      //   && h.img('.displayImage', {
+      //     src: require('../../../assets/' + this.state.displayImage.path),
+      //     key: this.state.displayImage.path
+      //   })),
+      Fade(this.state.imageSingle
+        && h(component('imageSingle'), this.state.imageSingle)),
+      Fade(this.state.loveCompatibility
+        && h(component('loveCompatibility'), this.state.loveCompatibility)),
     ]),
     h.div('.text', [
       Fade(h(markup, { markup: this.state.currentLine || '', key: this.state.currentLine }))
