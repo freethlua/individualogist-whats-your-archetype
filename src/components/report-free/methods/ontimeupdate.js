@@ -74,11 +74,15 @@ export async function ontimeupdate() {
   let imageDisplayedInThisLine = false;
   const locals = Object.assign({
     fn: () => (mustacheText, renderMustache) => {
-      let mustacheParsed;
+      let renderedText, mustacheParsed;
       try {
-        mustacheParsed = JSON.parse(renderMustache(mustacheText));
+        renderedText = renderMustache(mustacheText);
+        mustacheParsed = JSON.parse(renderedText);
       } catch (error) {
-        error.message = `Couldn't parse '${mustacheText}'. ` + error.message;
+        error.message = `Couldn't parse: \n===\n`
+          + `mustacheText: ${mustacheText}\n===\n`
+          + `renderedText: ${renderedText}\n===\n`
+          + error.message;
         throw error;
       }
       const { fn, ...opts } = mustacheParsed;

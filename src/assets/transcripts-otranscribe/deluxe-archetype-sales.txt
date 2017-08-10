@@ -1,6 +1,6 @@
 0
 
-{{#fn}} {fn: 'confirmToContinue', type: 'ok', message: "{{name}, we've talked at length about your archetype. Now, I'd like to share with you more about the individuation journey. Click on the button below to continue!", button: 'Yes, tell me more about individuation!'}} {{/fn}}
+{{#fn}} {fn: 'confirmToContinue', type: 'ok', message: "{{name}}, we've talked at length about your archetype. Now, I'd like to share with you more about the individuation journey. Click on the button below to continue!", button: 'Yes, tell me more about individuation!'} {{/fn}}
 
 00:01 
 
@@ -806,7 +806,7 @@ Like your Deluxe Archetype Report, these additional reports are easy to understa
 
 {{name}}, You will receive:
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/dar-priceless.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses-small.png', fadeIn: true} {{/fn}}
 
 09:29 
 
@@ -844,7 +844,7 @@ The total value of all of these products is at least $244.00,
 
 and that’s practically pennies compared to how much value you’ll receive from them!
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/dar-priceless.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeOut: true} {{/fn}}
 
 09:51 
 
@@ -874,7 +874,7 @@ But no {{name}}, I’m NOT going to ask you for that amount of money.
 
 145
 
-I’m not even going to ask you for $200\.
+I’m not even going to ask you for $200.
 
 10:12 
 
