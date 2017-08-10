@@ -780,7 +780,7 @@ But every superhero needs a side-kick…
 
 A partner in crime who will stick by them when the going gets tough.
 
-{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'displayImage', class: 'love-compatibility', fadeIn: true} {{/fn}}
 
 127
 
@@ -872,7 +872,7 @@ I sense that in the coming years...
 
 You will be the happiest you’ve ever been in that regard.
 
-{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'displayImage', class: 'love-compatibility', fadeOut: true} {{/fn}}
 
 142
 

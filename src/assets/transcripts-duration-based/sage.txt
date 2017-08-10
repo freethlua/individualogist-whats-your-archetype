@@ -111,7 +111,7 @@
 4.000: You’re the first person your friends call when they’ve had a horrible day.
 3.000: You’re the one who people rely on and look up to.
 3.000: {{name}}, you are the guardian of the world.
-7.000: But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
+7.000: But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.{{#fn}} {fn: 'displayImage', class: 'love-compatibility', fadeIn: true} {{/fn}}
 4.000: This little chart I’ve prepared represents the archetypes
 2.000: that you’re most likely to end up with.
 2.000: Or if you’re already in a committed relationship,
@@ -124,7 +124,7 @@
 4.000: The relationships that you forge with potential lovers are always profound and deep.
 4.000: You become very selective with who you choose to date
 4.000: and who you choose to end up with – for good reason, of course.
-5.000: I sense that in the coming years, you will be the happiest you’ve ever been in that regard.{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
+5.000: I sense that in the coming years, you will be the happiest you’ve ever been in that regard.{{#fn}} {fn: 'displayImage', class: 'love-compatibility', fadeOut: true} {{/fn}}
 4.000: {{name}}, I’m sensing that your love life isn’t going to be the smoothest
 4.000: – but you will find that happiness that you’re looking for soon enough.
 7.000: But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life.
