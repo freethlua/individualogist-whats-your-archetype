@@ -126,7 +126,7 @@
 2.000: People look up to you and rely on you.
 4.000: {{name}}, you bring understanding to the misunderstood.
 3.000: But every superhero needs a side-kick;
-4.000: a partner in crime who will stick by them when the going gets tough.{{#fn}} {fn: 'displayImage', class: 'love-compatibility', fadeIn: true} {{/fn}}
+4.000: a partner in crime who will stick by them when the going gets tough.{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
 6.000: This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
 3.000: Or if you’re already in a committed relationship,
 4.000: there’s a really good chance that your spouse is one of those archetypes.
@@ -139,7 +139,7 @@
 8.000: You become very selective with who you choose to date and who you choose to end up with – for good reason, of course.
 5.000: I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
 4.000: {{name}}, I’m sensing that your love life isn’t going to be the smoothest
-4.000: – but you will find that happiness that you’re looking for soon enough.{{#fn}} {fn: 'displayImage', class: 'love-compatibility', fadeOut: true} {{/fn}}
+4.000: – but you will find that happiness that you’re looking for soon enough.{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
 2.000: But don’t forget, {{name}},
 4.000: how you perceive yourself should not be determined by your love life.
 6.000: Your spouse or partner is meant to play a supporting role in your life; not to lead.

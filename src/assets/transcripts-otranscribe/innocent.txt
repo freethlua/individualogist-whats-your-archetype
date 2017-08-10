@@ -702,7 +702,7 @@ But even angels need someone to rely on…
 
 A partner in crime who will stick by them when the going gets tough.
 
-{{#fn}} {fn: 'displayImage', class: 'love-compatibility', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
 
 116
 
@@ -788,7 +788,7 @@ I sense that in the coming years, you will be the happiest you’ve ever been in
 
 But you will find that happiness that you’re looking for soon enough.
 
-{{#fn}} {fn: 'displayImage', class: 'love-compatibility', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
 
 130
 
