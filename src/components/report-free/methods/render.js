@@ -53,11 +53,6 @@ export function render() {
       h.span('.rest', 'Archetype Reading'),
     ]),
     h.div('.sliderImage', [
-      // Fade(this.state.displayImage
-      //   && h.img('.displayImage', {
-      //     src: require('../../../assets/' + this.state.displayImage.path),
-      //     key: this.state.displayImage.path
-      //   })),
       Fade(this.state.sliderImageSingle
         && h(component('sliderImageSingle'), this.state.sliderImageSingle)),
       Fade(this.state.sliderImageLoveCompat

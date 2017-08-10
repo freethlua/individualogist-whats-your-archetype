@@ -5,7 +5,7 @@ import styles from './style.styl';
 const h = hs(styles);
 
 // export default child => child;
-export default child => child && h(CSSTransitionGroup, {
+export default child => h(CSSTransitionGroup, {
   transitionName: styles,
   transitionEnterTimeout: 1000,
   transitionLeaveTimeout: 500,
