@@ -16,5 +16,5 @@ If you’ve made it here, then congratulations!
 
 Because this means that your archetype is the Caregiver!
 
-{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/fn}}
 

@@ -1,7 +1,7 @@
-2.000: If you’re watching this video,{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/{{archetype}.png', fadeIn: true}} {{/fn}}
+2.000: If you’re watching this video,{{#fn}} {fn: 'sliderImageSingle', path:'images/archetype-icons/{{archetype}.png', fadeIn: true}} {{/fn}}
 2.000: it means that you have already received your free archetype reading,
 3.000: and your free archetype report.
-3.000: And welcome to the Individualogist family!{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/{{archetype}.png', fadeOut: true}} {{/fn}}
+3.000: And welcome to the Individualogist family!{{#fn}} {fn: 'sliderImageSingle', path:'images/archetype-icons/{{archetype}.png', fadeOut: true}} {{/fn}}
 3.000: I want you to know that there is so much more
 2.000: that I can tell you about your archetype.
 3.000: This free reading is merely scraping the surface.
@@ -131,13 +131,13 @@
 5.000: All of this on top of your Deluxe Archetype Report.
 4.000: That’s how much I believe in this product.
 2.000: Like your Deluxe Archetype Report, these additional reports are easy to understand and extremely valuable.
-8.000: {{name}}, You will receive:{{#fn}} {fn: 'imageSingle', path:'images/pop-up/dar-priceless.png', fadeIn: true} {{/fn}}
+8.000: {{name}}, You will receive:{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/dar-priceless.png', fadeIn: true} {{/fn}}
 2.000: The Exploring Your Birthdate with The Chinese Zodiac eBook,
 4.000: The Discovering Your Aura eBook,
 2.000: and The Beginners Guide to the Fengshui Paradigm eBook
 4.000: I’ll be completely honest with you.
 2.000: The total value of all of these products is at least $244.00,
-5.000: and that’s practically pennies compared to how much value you’ll receive from them!{{#fn}} {fn: 'imageSingle', path:'images/pop-up/dar-priceless.png', fadeOut: true} {{/fn}}
+5.000: and that’s practically pennies compared to how much value you’ll receive from them!{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/dar-priceless.png', fadeOut: true} {{/fn}}
 5.000: After all, you can’t put a dollar figure on improving your life –
 4.000: because such a gift would be practically priceless.
 4.000: Money can always be earned, and there’s only so much time we have left to live.
@@ -148,7 +148,7 @@
 2.000: That seems like a pretty fair price.
 2.000: But no, I’m not even going to ask you for that much.
 4.000: So, here’s what we’re going to do.
-2.000: I’m going to cut you an exclusive, one-time deal.{{#fn}} {fn: 'imageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeIn: true} {{/fn}}
+2.000: I’m going to cut you an exclusive, one-time deal.{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeIn: true} {{/fn}}
 3.000: You’ll get the full package, including the Deluxe Archetype Report, for only $37.
 7.000: That’s it.
 1.000: But I want you to share with me your success story.
@@ -156,7 +156,7 @@
 5.000: and I want to read about your experiences too.
 3.000: We need the feedback to keep on improving our products,
 4.000: and it definitely encourages us to keep doing what we do.
-4.000: The Deluxe Archetype Report is all yours for just $37.{{#fn}} {fn: 'imageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeOut: true} {{/fn}}
+4.000: The Deluxe Archetype Report is all yours for just $37.{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeOut: true} {{/fn}}
 5.000: Now, you have two options.
 2.000: You can continue on the life path that you’re on right now
 3.000: and stay exactly the way that you are, unaware of your life’s purpose,
@@ -167,7 +167,7 @@
 4.000: and all 3 FREE bonus reports, will be sent to you INSTANTLY.
 6.000: But that’s not the best that I can do. I know I can do better than that.
 5.000: On top of giving away the whole package for just $37,
-4.000: I’m also going to make the following guarantee for your own personal protection:{{#fn}} {fn: 'imageSingle', path:'images/pop-up/60-day-money-back-guarantee.png', fadeIn: true} {{/fn}}
+4.000: I’m also going to make the following guarantee for your own personal protection:{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/60-day-money-back-guarantee.png', fadeIn: true} {{/fn}}
 4.000: {{name}},take your time to look through your Deluxe Archetype Report and everything else that comes with it.
 6.000: If you decide within the next 60 days that you’re not completely satisfied with your Deluxe Archetype Report,
 7.000: Just drop us an e-mail at individualogist.com and we’ll issue you a full refund.
@@ -175,7 +175,7 @@
 4.000: I’m making this guarantee
 2.000: Because I’m 100% certain that this report has the capacity to truly turn your life around.
 7.000: That’s how much I believe in the process of individuation,
-4.000: and that’s how much I believe you will benefit from it.{{#fn}} {fn: 'imageSingle', path:'images/pop-up/60-day-money-back-guarantee.png', fadeOut: true} {{/fn}}
+4.000: and that’s how much I believe you will benefit from it.{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/60-day-money-back-guarantee.png', fadeOut: true} {{/fn}}
 3.000: {{name}}, so, no matter what, you’ve got the longer end of the stick.
 5.000: There is absolutely no risk involved, and that’s all up to you
 4.000: and whether you decide to take this life-changing path.
@@ -250,7 +250,7 @@
 6.000: Individuation is a psychological process that was created by thought leaders in the psychological world decades ago.
 8.000: In fact, principles of Individuation can be traced all the way back to the days of Aristotle.
 6.000: This means that Individuation has stood the test of time to be a proven personal development process.
-8.000: There have also been numerous conclusive scientific studies about analytical psychology and individuation across the globe.{{#fn}} {fn: 'imageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeIn: true} {{/fn}}
+8.000: There have also been numerous conclusive scientific studies about analytical psychology and individuation across the globe.{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeIn: true} {{/fn}}
 8.000: Unlock your Deluxe Archetype Report and the full package of 3 FREE reports now,
 6.000: before they’re no longer available to you!
 3.000: All you have to do is click the button below {{name}},

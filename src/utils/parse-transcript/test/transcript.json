@@ -1,5 +1,5 @@
 [{
   "start": 5,
   "end": 11,
-  "text": "Hello {{name}}, and welcome! {{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/{{archetype}.png', fadeIn: true}} {{/fn}}"
+  "text": "Hello {{name}}, and welcome! {{#fn}} {fn: 'sliderImageSingle', path:'images/archetype-icons/{{archetype}.png', fadeIn: true}} {{/fn}}"
 }]
