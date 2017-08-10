@@ -89,9 +89,8 @@ export async function ontimeupdate() {
 
         }
       } else {
-        this.setState({
-          [fn]: opts
-        });
+        console.log(`No function found, setting state {${fn}: …opts}`, opts);
+        this.mustacheSetState(fn, opts);
       }
     },
   }, this.props.formData, this.props.quizData);
