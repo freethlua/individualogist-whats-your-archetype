@@ -690,7 +690,7 @@ But every lover needs a side-kick…
 
 A partner in crime who will stick by them when the going gets tough.
 
-{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageLoveCompat', fadeIn: true} {{/fn}}
 
 114
 
@@ -758,7 +758,7 @@ For a good reason, of course.
 
 I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
 
-{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageLoveCompat', fadeOut: true} {{/fn}}
 
 125 
 

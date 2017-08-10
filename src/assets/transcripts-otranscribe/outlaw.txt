@@ -702,7 +702,7 @@ But every superhero needs a side-kick; a partner in crime.
 
 One who will stick by them when the going gets tough. And the outlaw is no exception.
 
-{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageLoveCompat', fadeIn: true} {{/fn}}
 
 09:10 
 
@@ -794,7 +794,7 @@ You will be the happiest you’ve ever been in that regard.
 
 But you will find that happiness that you’re looking for soon enough.
 
-{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageLoveCompat', fadeOut: true} {{/fn}}
 
 10:23 
 

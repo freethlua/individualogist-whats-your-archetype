@@ -690,7 +690,7 @@ You’re the one who people rely on and look up to.
 
 But every superhero needs a side-kick; a partner in crime who will stick by them when the going gets tough.
 
-{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageLoveCompat', fadeIn: true} {{/fn}}
 
 07:17 
 
@@ -770,7 +770,7 @@ and who you choose to end up with – for good reason, of course.
 
 I sense that in the coming years, you will be the happiest you’ve ever been in that regard.
 
-{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageLoveCompat', fadeOut: true} {{/fn}}
 
 08:03 
 

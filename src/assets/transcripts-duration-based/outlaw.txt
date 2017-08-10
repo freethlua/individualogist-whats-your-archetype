@@ -113,7 +113,7 @@
 4.000: You’re the one who people rely on and look up to.
 5.000: {{name}}, you are the role model for the world.
 6.000: But every superhero needs a side-kick; a partner in crime.
-6.000: One who will stick by them when the going gets tough. And the outlaw is no exception.{{#fn}} {fn: 'loveCompatibility', fadeIn: true} {{/fn}}
+6.000: One who will stick by them when the going gets tough. And the outlaw is no exception.{{#fn}} {fn: 'sliderImageLoveCompat', fadeIn: true} {{/fn}}
 6.000: This little chart I’ve prepared represents the archetypes that you’re most likely to end up with.
 3.000: Or if you’re already in a committed relationship...
 6.000: There’s a real good chance that your spouse is one of those archetypes.
@@ -128,7 +128,7 @@
 2.000: I sense that in the coming years...
 7.000: You will be the happiest you’ve ever been in that regard.
 4.000: {{name}}, I’m sensing that your love life isn’t going to be the smoothest...
-7.000: But you will find that happiness that you’re looking for soon enough.{{#fn}} {fn: 'loveCompatibility', fadeOut: true} {{/fn}}
+7.000: But you will find that happiness that you’re looking for soon enough.{{#fn}} {fn: 'sliderImageLoveCompat', fadeOut: true} {{/fn}}
 7.000: But don’t forget, {{name}}, how you perceive yourself should not be determined by your love life.
 8.000: Your spouse or partner is meant to play a supporting role in your life; not the lead.
 2.000: Focus on your own personal growth...
