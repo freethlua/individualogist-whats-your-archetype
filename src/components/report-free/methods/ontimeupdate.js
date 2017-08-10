@@ -13,6 +13,7 @@ export async function ontimeupdate() {
   }
   if (this.audioEl.ended) {
     console.log(`Audio ended`);
+    // this.mustacheUnsetState();
     if (this.deluxe) {
       console.log(`Deluxe audio ended`);
       return;

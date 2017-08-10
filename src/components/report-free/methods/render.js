@@ -125,6 +125,7 @@ export function render() {
     class: ['container']
       .concat(arrify(this.state.currentLineOpts && this.state.currentLineOpts.class))
       .concat([this.state.freeReadingEnded && 'free-reading-ended'].filter(Boolean))
+      .concat([this.state.sliderImageLoveCompat && 'sliderImageLoveCompat'].filter(Boolean))
       .concat([this.state.sliderPausePopup && 'slider-paused'].filter(Boolean))
   }, [
     mainContentEl,
