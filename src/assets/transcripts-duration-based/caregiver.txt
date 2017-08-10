@@ -1,9 +1,9 @@
 3.000: Hello {{name}},
 3.000: If you’ve made it here, then congratulations!
-3.000: Because this means that your archetype is the Caregiver!{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/fn}}
+3.000: Because this means that your archetype is the Caregiver!{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/caregiver.png', fadeIn: true} {{/fn}}
 3.000: But what does this actually mean?
 3.000: Don’t worry, everything you need to know will be on this page.
-4.000: Stick to the end of it and I promise you that you’ll experience something truly magical.{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/caregiver.png', fadeOut: true} {{/fn}}
+4.000: Stick to the end of it and I promise you that you’ll experience something truly magical.{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/caregiver.png', fadeOut: true} {{/fn}}
 6.000: The quiz that you’ve just taken is designed to...
 4.000: ...Identify your archetype – a personality profile that’s...
 3.000: ...broken down your entire being.
@@ -38,8 +38,8 @@
 3.000: {{name}}, you might not know it yet...
 1.000: But your generosity inspires everyone around you...
 4.000: ...The people that you help, and the people who witness you helping others.
-4.000: There is something else about you, {{name}}…{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
-3.000: You are the one who holds the world together.{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
+4.000: There is something else about you, {{name}}…{{#fn}} {fn: 'imageSingle', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
+3.000: You are the one who holds the world together.{{#fn}} {fn: 'imageSingle', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 4.000: I’m getting the sense that you’re going to live...
 1.000: ...A long, healthy, and fulfilled life.
 3.000: And although success might not be at your feet right now...
@@ -109,11 +109,11 @@
 2.000: ...Success and the life of your dreams will follow.
 3.000: And that’s what Individuation aims to teach you.
 3.000: But there’s more to what I’ve learned about you, {{name}}…
-4.000: It feels to me that you’re a deeply emotional and spiritual person.{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
+4.000: It feels to me that you’re a deeply emotional and spiritual person.{{#fn}} {fn: 'imageSingle', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
 5.000: You’re connected to your soul in a way that’s far more profound than others.
 5.000: Your thought process does not follow the rules and logic of the world.
 4.000: In fact, I get the sense that you have quite the imagination.
-4.000: Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
+4.000: Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.{{#fn}} {fn: 'imageSingle', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
 7.000: {{name}}, you’re not someone who likes to argue.
 3.000: You tend to avoid conflict…
 2.000: ...And you’re uncanny when it comes to devising win-win situations.

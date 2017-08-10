@@ -22,7 +22,7 @@ then congratulations!
 
 Because this means that your archetype is the Ruler!
 
-{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/ruler.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/ruler.png', fadeIn: true} {{/fn}}
 
 00:10 
 
@@ -42,7 +42,7 @@ Don’t worry, everything you need to know will be on this page.
 
 Stick to the end of it and I promise that you’ll experience something truly magical.
 
-{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/ruler.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/ruler.png', fadeOut: true} {{/fn}}
 
 00:23 
 
@@ -218,7 +218,7 @@ and you’re always ready to stick to your guns.
 
 There is something else about you, {{name}}…
 
-{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
 
 02:22 
 
@@ -226,7 +226,7 @@ There is something else about you, {{name}}…
 
 You will be the one to lead enormous change in the world.
 
-{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 
 02:25 
 
@@ -542,7 +542,7 @@ And that’s what Individuation aims to teach you.
 
 But there’s more to what I’ve learned about you, {{name}}…
 
-{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
 
 06:19 
 
@@ -574,7 +574,7 @@ In fact, I get the sense that you have quite the imagination.
 
 Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
 
-{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
 
 06:43 
 

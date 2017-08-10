@@ -1,10 +1,10 @@
 2.000: Hello {{name}},
 2.000: If you’ve made it here, then congratulations!
-3.000: Because this means that your archetype is the Hero!{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/hero.png', fadeIn: true} {{/fn}}
+3.000: Because this means that your archetype is the Hero!{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/hero.png', fadeIn: true} {{/fn}}
 4.000: But what does this actually mean?
 4.000: Don’t worry, everything you need to know will be on this page.
 4.000: Stick to the end of it and I promise that you’ll…
-2.000: Experience something truly magical.{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/hero.png', fadeOut: true} {{/fn}}
+2.000: Experience something truly magical.{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/hero.png', fadeOut: true} {{/fn}}
 3.000: The quiz that you’ve just taken is designed to identify your archetype…
 5.000: A personality profile that’s broken down your entire being.
 5.000: Your tendencies, your strengths, your past, and your future.
@@ -39,11 +39,11 @@
 2.000: But you are more morally and ethically upright than others.
 4.000: You hold your values and principles close to your heart…
 3.000: And you’re always ready to stick to your guns.
-3.000: There is something else about you, {{name}}…{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
+3.000: There is something else about you, {{name}}…{{#fn}} {fn: 'imageSingle', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
 3.000: You are not just an everyday “Hero”.
 4.000: You are the Hero who will one day save the world.
 4.000: Not like a superhero…
-2.000: But you will create solutions to the world’s biggest problems.{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
+2.000: But you will create solutions to the world’s biggest problems.{{#fn}} {fn: 'imageSingle', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 4.000: {{name}}, I’m getting the sense that you’re going to live a long, and happy life.
 5.000: And although success might not be at your feet right now…
 4.000: Your riches and fulfilment are merely waiting for you.
@@ -112,12 +112,12 @@
 2.000: When you’re able to do that, success and the life of your dreams will follow.
 5.000: And that’s what Individuation aims to teach you.
 4.000: But there’s more to what I’ve learned about you, {{name}}…
-4.000: It feels to me that you’re a deeply emotional and spiritual person.{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
+4.000: It feels to me that you’re a deeply emotional and spiritual person.{{#fn}} {fn: 'imageSingle', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
 5.000: You’re connected to your soul in a way that’s far more profound than others.
 5.000: Your thought process does not follow the rules and logic of the world.
 5.000: In fact, I get the sense that you have quite the imagination.
 4.000: Your thoughts and dreams are vivid, colourful…
-3.000: And symbolic of who you are as an individual.{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
+3.000: And symbolic of who you are as an individual.{{#fn}} {fn: 'imageSingle', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
 4.000: And unlike others, you’re never one to shy away from a challenge or a task…
 5.000: No matter how difficult it appears to be.
 3.000: {{name}}, you’re not someone who likes to argue.

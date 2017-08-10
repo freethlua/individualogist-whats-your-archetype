@@ -1,9 +1,9 @@
 2.000: Hello {{name}}
 2.000: If you’ve made it here, then congratulations!
-3.000: Because this means that your archetype is the Magician!{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/magician.png', fadeIn: true} {{/fn}}
+3.000: Because this means that your archetype is the Magician!{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/magician.png', fadeIn: true} {{/fn}}
 4.000: But what does this actually mean?
 3.000: Don’t worry, everything you need to know will be on this page.
-4.000: Stick to the end of it and I promise that you’ll experience something truly magical.{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/magician.png', fadeOut: true} {{/fn}}
+4.000: Stick to the end of it and I promise that you’ll experience something truly magical.{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/magician.png', fadeOut: true} {{/fn}}
 6.000: The quiz that you’ve just taken is designed to identify your archetype…
 5.000: A personality profile that’s broken down your entire being.
 4.000: Your tendencies, your strengths, your past, and your future.
@@ -32,11 +32,11 @@
 3.000: But you are an innately talented individual and an excellent all-rounder.
 5.000: You are a capable individual who’s able to wear many different hats…
 4.000: Sort of like an actual magician who has many tricks hidden in his sleeves.
-4.000: There is something else about you, {{name}}…{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
+4.000: There is something else about you, {{name}}…{{#fn}} {fn: 'imageSingle', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
 3.000: You are a visionary who has the capacity to bring real change to the world.
 5.000: {{name}}, I’m getting the sense that you’re going to live a long, and happy life.
 4.000: And although success might not be at your feet right now…
-4.000: Your riches and fulfilment are merely waiting for you.{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
+4.000: Your riches and fulfilment are merely waiting for you.{{#fn}} {fn: 'imageSingle', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 3.000: {{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}.
 3.000: Even though you will triumph, your path to success will not come easy.
 5.000: As a Magician, your biggest challenge lies within how critical you are of people.
@@ -101,12 +101,12 @@
 2.000: When you’re able to do that, success and the life of your dreams will follow.
 5.000: And that’s what Individuation aims to teach you.
 4.000: But there’s more to what I’ve learned about you, {{name}}…
-3.000: It feels to me that you’re a deeply emotional and spiritual person.{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
+3.000: It feels to me that you’re a deeply emotional and spiritual person.{{#fn}} {fn: 'imageSingle', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
 5.000: You’re connected to your soul in a way that’s far more profound than others.
 4.000: Your thought process does not follow the rules and logic of the world.
 5.000: In fact, I get the sense that you have quite the imagination.
 3.000: Your thoughts and dreams are vivid, colourful…
-3.000: And symbolic of who you are as an individual.{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
+3.000: And symbolic of who you are as an individual.{{#fn}} {fn: 'imageSingle', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
 3.000: {{name}}, you’re not someone who likes to argue.
 5.000: You tend to avoid conflict and you’re uncanny when it comes to devising win-win situations.
 5.000: But when backed into a corner, you’re not one to back down.

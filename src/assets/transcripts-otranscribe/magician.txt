@@ -16,7 +16,7 @@ If you’ve made it here, then congratulations!
 
 Because this means that your archetype is the Magician!
 
-{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/magician.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/magician.png', fadeIn: true} {{/fn}}
 
 4
 
@@ -36,7 +36,7 @@ Don’t worry, everything you need to know will be on this page.
 
 Stick to the end of it and I promise that you’ll experience something truly magical.
 
-{{#fn}} {fn: 'displayImage', path:'images/archetype-icons/magician.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/archetype-icons/magician.png', fadeOut: true} {{/fn}}
 
 7
 
@@ -212,7 +212,7 @@ Sort of like an actual magician who has many tricks hidden in his sleeves.
 
 There is something else about you, {{name}}…
 
-{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
 
 36
 
@@ -238,7 +238,7 @@ And although success might not be at your feet right now…
 
 Your riches and fulfilment are merely waiting for you.
 
-{{#fn}} {fn: 'displayImage', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 
 40
 
@@ -632,7 +632,7 @@ But there’s more to what I’ve learned about you, {{name}}…
 
 It feels to me that you’re a deeply emotional and spiritual person.
 
-{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
 
 105
 
@@ -664,7 +664,7 @@ Your thoughts and dreams are vivid, colourful…
 
 And symbolic of who you are as an individual.
 
-{{#fn}} {fn: 'displayImage', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'imageSingle', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
 
 110
 
