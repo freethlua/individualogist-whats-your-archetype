@@ -81,9 +81,6 @@ export async function ontimeupdate() {
         throw error;
       }
       const { fn, ...opts } = mustacheParsed;
-      this.setState({
-        [fn]: opts
-      });
       if (typeof this[fn] === 'function') {
         console.log(`Executing function: ${fn}(…opts)`, opts);
         const result = this[fn](opts);
@@ -91,28 +88,12 @@ export async function ontimeupdate() {
         if (result) {
 
         }
+      } else {
+        this.setState({
+          [fn]: opts
+        });
       }
     },
-    // displayImage: () => (text, render) => {
-    //   imageDisplayedInThisLine = true;
-    //   if (this.state.currentLineRaw !== currentLineRaw) {
-    //     const data = JSON.parse(render(text));
-    //     if (
-    //       data.path.match('compatibility')
-    //       && (!line.class || !line.class.includes('compatibility'))
-    //       && data.fadeIn
-    //     ) {
-    //       line.class = arrify(line.class).concat(['compatibility']);
-    //       currentLineHasBeenAddedWithImpliedClass = true;
-    //     }
-    //     if (data.fadeOut) {
-    //       currentLineHasFadeOutImage = true;
-    //     }
-    //     this.displayImage(data, line);
-    //   }
-    // },
-    // pausePopup: () => this.pausePopup(),
-    // confirmToContinue: this.mustacheFunction('confirmToContinue'),
   }, this.props.formData, this.props.quizData);
 
   const currentLine = Mustache.render(currentLineRaw, locals, locals);
