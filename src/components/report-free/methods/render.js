@@ -52,16 +52,16 @@ export function render() {
       h.span('.name', this.props.formData.name + '\'s'),
       h.span('.rest', 'Archetype Reading'),
     ]),
-    h.div('.image', [
+    h.div('.sliderImage', [
       // Fade(this.state.displayImage
       //   && h.img('.displayImage', {
       //     src: require('../../../assets/' + this.state.displayImage.path),
       //     key: this.state.displayImage.path
       //   })),
-      Fade(this.state.imageSingle
-        && h(component('imageSingle'), this.state.imageSingle)),
-      Fade(this.state.loveCompatibility
-        && h(component('loveCompatibility'), this.state.loveCompatibility)),
+      Fade(this.state.sliderImageSingle
+        && h(component('sliderImageSingle'), this.state.sliderImageSingle)),
+      Fade(this.state.sliderImageLoveCompat
+        && h(component('sliderImageLoveCompat'), this.state.sliderImageLoveCompat)),
     ]),
     h.div('.text', [
       Fade(h(markup, { markup: this.state.currentLine || '', key: this.state.currentLine }))
