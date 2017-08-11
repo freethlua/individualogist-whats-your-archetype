@@ -120,7 +120,7 @@ class App extends Component {
       }
     })), component('comments'), component('footer')]);
 
-    paths.intro = () => h.div([h(component('reportIntro'), Object.assign({}, this.state, {
+    paths.intro = () => h.div([h(component('intro'), Object.assign({}, this.state, {
       form: h(component('form'), Object.assign({}, this.state, {
         onSubmit: (e, formData) => {
           if (window.isDev) {
@@ -149,7 +149,19 @@ class App extends Component {
       }))
     })), component('comments'), component('footer'), tracking]);
 
-    paths.reading = () => h.div([h(component('reportFree'), Object.assign({}, this.state)), component('comments'), component('footer'), tracking]);
+    paths.reading = () => h.div([
+      h(component('reading'), Object.assign({}, this.state)),
+      component('comments'),
+      component('footer'),
+      tracking,
+    ]);
+
+    paths.deluxe = () => h.div([
+      h(component('deluxe'), Object.assign({ deluxe: url.query.deluxe }, this.state)),
+      component('comments'),
+      component('footer'),
+      tracking,
+    ]);
 
     const redirectExternal = ({ path }) => {
       if (path in paths) {
