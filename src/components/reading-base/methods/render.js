@@ -65,6 +65,15 @@ export function render() {
     h.img('.play-pause', { src: require('../../../assets/images/misc/play-pause.png'), class: this.state.audioPaused ? 'visible' : '' }),
   ]);
 
+  const toast = h(component('toast'), {
+    onhide: () => this.setState({ toastHidden: true }),
+    hidden: this.state.toastHidden,
+  }, [h.div([
+    h.div([h.code('⏵⏸ '), h.kbd('space')]),
+    h.div([h.kbd('⭠'), h.code('/'), h.kbd('⭢'), h.code(' seek')]),
+    h.div([h.kbd('ctrl'), h.code('+'), h.kbd('⭡'), h.code('/'), h.kbd('⭣'), h.code(' speed')]),
+  ])]);
+
   return h.div('.wrapper', [h.div({
     class: ['container']
       .concat(arrify(this.state.currentLineOpts && this.state.currentLineOpts.class))
@@ -72,6 +81,7 @@ export function render() {
       .concat([this.state.sliderImageLoveCompat && 'sliderImageLoveCompat'].filter(Boolean))
       .concat([this.state.sliderPausePopup && 'slider-paused'].filter(Boolean))
   }, [
+    toast,
     mainContentEl,
     this.state.sliderPausePopup && h.div('.sliderPausePopup', [h(component('sliderPausePopup'), this.state.sliderPausePopup)]),
     isLocalhost && h.textarea([JSON.stringify(this.state, null, 1)]),
