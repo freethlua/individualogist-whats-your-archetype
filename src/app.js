@@ -157,7 +157,7 @@ class App extends Component {
     ]);
 
     paths.deluxe = () => h.div([
-      h(component('deluxe'), Object.assign({ deluxe: url.query.deluxe }, this.state)),
+      h(component('reading-deluxe'), Object.assign({}, url.query, this.state)),
       component('comments'),
       component('footer'),
       tracking,

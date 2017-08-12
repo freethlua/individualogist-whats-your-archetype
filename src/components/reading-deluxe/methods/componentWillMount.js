@@ -13,5 +13,5 @@ export async function componentWillMount() {
   }
   this.archetypeDetails = archetypes[this.archetype];
 
-  this.setState({ audioName: this.archetype });
+  this.audioName = this.archetype;
 }

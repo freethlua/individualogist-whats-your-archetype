@@ -1,6 +1,6 @@
 import { Component } from 'preact';
 import h from 'preact-hyperscript-h';
-import archetypes from '../data/archetypes';
+import archetypes from '../../data/archetypes';
 
 /* quick-fix for making this render only once in the apps life cycle */
 let clickmagickRenderedOnce = false;
