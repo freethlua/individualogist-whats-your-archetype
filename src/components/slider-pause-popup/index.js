@@ -8,6 +8,7 @@ const h = hs(styles);
 export default class extends Component {
   componentDidMount() {
     this.buttonEl.focus();
+    window.scrollTo(0, 0);
   }
   render(props) {
     if (!props.show) return;
