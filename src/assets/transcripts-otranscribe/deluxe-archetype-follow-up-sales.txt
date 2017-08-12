@@ -806,7 +806,7 @@ Like your Deluxe Archetype Report, these additional reports are easy to understa
 
 {{name}}, You will receive:
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/dar-priceless.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses-small.png', fadeIn: true} {{/fn}}
 
 135
 
@@ -844,7 +844,7 @@ The total value of all of these products is at least $244.00,
 
 and that’s practically pennies compared to how much value you’ll receive from them!
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/dar-priceless.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeOut: true} {{/fn}}
 
 141
 
