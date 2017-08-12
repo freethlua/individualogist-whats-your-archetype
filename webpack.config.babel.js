@@ -7,6 +7,7 @@ import html from 'html-webpack-plugin';
 import 'pathify-string';
 
 const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
+const isProd = !isDev;
 
 export default {
   context: __dirname.join('src'),
@@ -30,7 +31,7 @@ export default {
     rules: [{
       test: /\.js$/,
       include: __dirname.join('src'),
-      use: [ //
+      use: [
         isDev && 'webpack-module-hot-accept',
         { loader: 'babel-loader', options: { retainLines: true } },
       ].filter(Boolean)
@@ -82,31 +83,28 @@ export default {
     }]
   },
   plugins: [
-    //
-    !isDev && new clean(['build']),
-    //
+    isProd && new clean(['build']),
     new extract({
       filename: '[name].[chunkhash].css',
       disable: isDev,
       // disable: true,
     }),
     isDev && new webpack.NamedModulesPlugin() || new webpack.HashedModuleIdsPlugin(),
-    //
-    !isDev && new webpack.optimize.CommonsChunkPlugin({
+    isProd && new webpack.optimize.CommonsChunkPlugin({
       name: 'node_modules',
       minChunks: module => module.context.includes('node_modules')
-    }), !isDev && new webpack.optimize.CommonsChunkPlugin({
+    }),
+    isProd && new webpack.optimize.CommonsChunkPlugin({
       name: 'webpack'
     }),
-
-    !isDev && new html({
+    isProd && new html({
       template: 'shell.html',
       inject: false
     }),
     // //
     // copy([{}]),
     //
-    !isDev && new webpack.optimize.UglifyJsPlugin({
+    isProd && new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
       mangle: false,
       comments: false,
@@ -114,8 +112,7 @@ export default {
         ascii_only: true
       }
     }),
-    //
-    !isDev && new analyze({
+    isProd && new analyze({
       analyzerMode: 'static',
       openAnalyzer: false,
       generateStatsFile: true
