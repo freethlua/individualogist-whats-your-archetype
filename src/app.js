@@ -89,6 +89,7 @@ class App extends Component {
         });
       }
     }
+
   }
 
   render() {
@@ -150,7 +151,7 @@ class App extends Component {
     })), component('comments'), component('footer'), tracking]);
 
     paths.reading = () => h.div([
-      h(component('reading'), Object.assign({}, this.state)),
+      h(component('reading'), Object.assign({}, url.query, this.state)),
       component('comments'),
       component('footer'),
       tracking,

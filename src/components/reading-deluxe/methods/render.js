@@ -1,5 +1,6 @@
 import hs from 'preact-hyperstyler';
 import Youtube from 'react-youtube';
+import archetypes from '../../../data/archetypes';
 import component from '../..';
 import styles from '../style.styl';
 
@@ -21,7 +22,7 @@ export function render() {
     h.div('.img', [h.img({ src: require('../../../assets/images/pop-up/new-deluxe-archetype-report-with-bonuses-small.png') })]),
     h.div([
       h.p('Get Your Deluxe Archetype Report For Only $37.00 Now!'),
-      h.a({ href: this.archetypeDetails.clickbank.link }, [h.button(['Click Here To Order Now'])]),
+      h.a({ href: archetypes[this.props.quizData.archetype].clickbank.link }, [h.button(['Click Here To Order Now'])]),
     ]),
   ]);
 
@@ -47,7 +48,7 @@ export function render() {
           h.div(this.props.formData.name),
         ])
       ]),
-      h.a({ href: this.archetypeDetails.clickbank.link }, [h.button(['Order Now'])]),
+      h.a({ href: archetypes[this.props.quizData.archetype].clickbank.link }, [h.button(['Order Now'])]),
       h.div('.shield', [
         h.img({ src: require('../../../assets/images/pop-up/shield.png') }),
         h.p('All payments are secure'),
@@ -69,7 +70,7 @@ export function render() {
 
   return h.div('.wrapper.deluxe', [
     h(component('reading-base'), {
-      audioName: this.props.deluxe === 'follow-up' ? 'deluxe-archetype-follow-up-sales' : 'deluxe-archetype-sales',
+      audioName: this.props.deluxe === 'follow-up' || 'follow-up' in this.props ? 'deluxe-archetype-follow-up-sales' : 'deluxe-archetype-sales',
       ...this.props,
     }),
     restEl,

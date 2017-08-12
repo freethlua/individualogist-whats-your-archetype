@@ -1,6 +1,7 @@
 import Mustache from 'mustache';
 import JSON from 'json5';
 import arrify from 'arrify';
+import delay from 'promise-delay';
 import filterDuplicates from 'filter-duplicates';
 
 import { transcriptsDir } from '../../../utils/transcripts'
@@ -16,7 +17,7 @@ export async function ontimeupdate() {
     this.props.onended();
   }
 
-  const currentTime = this.audioEl.currentTime || 0;
+  const currentTime = (this.audioEl.currentTime || 0);
 
   if (this.state.currentTimeStart && isDev) {
     // console.log(`time since currentTimeStart:`, currentTime - this.state.currentTimeStart);
@@ -87,6 +88,13 @@ export async function ontimeupdate() {
     let lastReplacement;
     if (currentLineHasNoClass && !currentLineHasBeenAddedWithImpliedClass && !currentLineHasFadeOutImage && prevLine && prevLine.class) {
       line.class = filterDuplicates(arrify(line.class).concat(arrify(prevLine.class)));
+    }
+
+    const diff = this.audioEl.currentTime - currentTimeStart;
+    if (diff) {
+      console.log('Audio not in sync', diff);
+      // await delay(1000 * diff);
+      // this.audioEl.currentTime = currentTimeStart;
     }
 
     this.setState({
