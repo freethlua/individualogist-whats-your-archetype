@@ -15,6 +15,7 @@ export async function ontimeupdate() {
   if (this.audioEl.ended) {
     console.log(`Audio ended`);
     this.props.onended();
+    return;
   }
 
   const currentTime = (this.audioEl.currentTime || 0);
