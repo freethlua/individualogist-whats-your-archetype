@@ -200,8 +200,6 @@ You hold your values and principles close to your heart,
 
 and you’re always ready to stick to your guns.
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
-
 02:09 
 
 34
@@ -214,11 +212,13 @@ There is something else about you, {{name}}…
 
 You form the foundation of the world’s progress and advancement.
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageGlobe', fadeIn: true} {{/fn}}
 
 02:17 
 
 36
+
+{{#fn}} {fn: 'sliderImageGlobe', fadeOut: true} {{/fn}}
 
 {{name}}, I’m getting the sense that you’re going to live a long, and happy life.
 
