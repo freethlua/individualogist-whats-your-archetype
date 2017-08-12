@@ -1,0 +1,33 @@
+displaySize = 500px
+speed = 10s
+
+image = melted-ice-surface-darker-texture
+imageWidth = 1000*2
+imageHeight = 500
+
+div.globe-container
+  // border: 1px dotted
+  // display: block!important
+  width: displaySize
+  height: displaySize
+  border-radius: displaySize
+  margin: auto
+  background:url('./assets/' + image + '.jpg') top left repeat-x
+  background-size: cover
+  animation: rotate speed infinite linear reverse
+  overflow: hidden
+  box-shadow: 2px 2px 4px rgba(0,0,0,.5)
+
+div.globe
+  position: absolute
+  width: displaySize
+  height: displaySize
+  box-shadow: inset 20px 0 10px rgba(0,0,0,0.5)
+  border-radius: displaySize
+
+
+@keyframes rotate
+  0%
+    background-position:0px 0px
+  100%
+    background-position:(-((imageWidth/2)*(displaySize/imageHeight)))px 0px

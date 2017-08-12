@@ -59,6 +59,8 @@ export function render() {
           archetype: this.props.quizData.archetype,
           ...this.state.sliderImageLoveCompat
         })),
+      Fade(this.state.sliderImageGlobe
+        && h(component('sliderImageGlobe'), this.state.sliderImageGlobe)),
     ]),
     h.div('.text', [
       Fade(h(markup, { markup: this.state.currentLine || '', key: this.state.currentLine }))

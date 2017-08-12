@@ -13,3 +13,7 @@ export function sliderImageSingle(opts) {
 export function sliderImageLoveCompat(opts) {
   return this::sliderImage('sliderImageLoveCompat', opts);
 }
+
+export function sliderImageGlobe(opts) {
+  return this::sliderImage('sliderImageGlobe', opts);
+}
