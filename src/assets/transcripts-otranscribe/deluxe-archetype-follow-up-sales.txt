@@ -4,7 +4,7 @@
 
 If you’re watching this video,
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/archetype-icons/{{archetype}.png', fadeIn: true}} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/archetype-icons/{{archetype}}.png', fadeIn: true} {{/fn}}
 
 2
 
@@ -24,7 +24,7 @@ and your free archetype report.
 
 And welcome to the Individualogist family!
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/archetype-icons/{{archetype}.png', fadeOut: true}} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/archetype-icons/{{archetype}}.png', fadeOut: true} {{/fn}}
 
 5
 
