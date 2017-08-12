@@ -19,7 +19,6 @@ export function render() {
     return route('/intro');
   }
 
-  const { archetype } = this.props;
   const { audioSrc, transcript } = this;
 
   if (this.error) {
@@ -56,7 +55,10 @@ export function render() {
       Fade(this.state.sliderImageSingle
         && h(component('sliderImageSingle'), this.state.sliderImageSingle)),
       Fade(this.state.sliderImageLoveCompat
-        && h(component('sliderImageLoveCompat'), { archetype, ...this.state.sliderImageLoveCompat })),
+        && h(component('sliderImageLoveCompat'), {
+          archetype: this.props.quizData.archetype,
+          ...this.state.sliderImageLoveCompat
+        })),
     ]),
     h.div('.text', [
       Fade(h(markup, { markup: this.state.currentLine || '', key: this.state.currentLine }))
