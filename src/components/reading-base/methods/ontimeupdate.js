@@ -65,7 +65,10 @@ export async function ontimeupdate() {
           + `mustacheText: ${mustacheText}\n===\n`
           + `renderedText: ${renderedText}\n===\n`
           + error.message;
-        throw error;
+        if (isDev) {
+          this.pause();
+          throw error;
+        }
       }
       const { fn, ...opts } = mustacheParsed;
       if (typeof this[fn] === 'function') {
