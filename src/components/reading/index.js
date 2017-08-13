@@ -8,7 +8,7 @@ const h = hs(styles);
 
 export default class extends Component {
   render() {
-    if (!this.props.quizData) {
+    if (!this.props.quizData || !this.props.quizData.archetype) {
       return route('/quiz');
     } else if (!this.props.formData || !this.props.aweberSuccess) {
       return route('/intro');

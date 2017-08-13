@@ -8,7 +8,7 @@ import md from 'preact-markdown';
 const h = hs(styles);
 
 export default props => {
-  if (!props || !props.quizData) {
+  if (!props || !props.quizData || !props.quizData.archetype) {
     return route('/quiz');
   } else if (props.formData && props.aweberSuccess) {
     return route('/reading');

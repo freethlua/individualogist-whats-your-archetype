@@ -46,7 +46,7 @@ export default class Quiz extends Component {
   }
 
   render() {
-    if (this.props.quizData) {
+    if (this.props.quizData && this.props.quizData.archetype) {
       return route('/intro');
     }
 
