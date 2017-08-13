@@ -8,7 +8,7 @@ import './handle-errors';
 // import 'typeface-roboto-slab';
 // import '@font/nunito/index.css';
 import 'nunito-fontface';
-import 'reset-css';
+// import 'reset-css';
 import Case from 'case';
 import fixSubdomain from './utils/fix-subdomain';
 import store from './store';
