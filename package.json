@@ -11,6 +11,7 @@
     "@font/nunito": "^1.0.3",
     "@tweenjs/tween.js": "^16.10.0",
     "arrify": "^1.0.1",
+    "bootstrap": "4.0.0-beta",
     "bulma": "^0.4.2",
     "case": "^1.5.2",
     "debounce": "^1.0.2",

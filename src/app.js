@@ -9,6 +9,7 @@ import './handle-errors';
 // import '@font/nunito/index.css';
 import 'nunito-fontface';
 // import 'reset-css';
+import 'bootstrap/dist/css/bootstrap-reboot.css'
 import Case from 'case';
 import fixSubdomain from './utils/fix-subdomain';
 import store from './store';
