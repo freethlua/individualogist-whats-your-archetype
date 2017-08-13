@@ -14,6 +14,10 @@ export default class extends Component {
       return route('/intro');
     }
 
+    if ('deluxe' in url.query) {
+      return route('/deluxe?' + url.query.deluxe);
+    }
+
     if (this.error) {
       return h.pre(this.error);
     }
