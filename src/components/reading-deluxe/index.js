@@ -1,4 +1,5 @@
 import { Component } from 'preact';
+import { route } from 'preact-router';
 import Youtube from 'react-youtube';
 import hs from 'preact-hyperstyler';
 import archetypes from '../../data/archetypes';
@@ -9,6 +10,12 @@ const h = hs(styles);
 
 export default class extends Component {
   render() {
+    if (!this.props.quizData) {
+      return route('/quiz');
+    } else if (!this.props.formData || !this.props.aweberSuccess) {
+      return route('/intro');
+    }
+
     if (this.error) {
       return h.pre(this.error);
     }

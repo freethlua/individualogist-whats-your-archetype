@@ -9,13 +9,10 @@ import styles from '../style.styl';
 const h = hs(styles);
 
 export function render() {
+
   if (!this.props.quizData) {
-    // console.log('redireted to /quiz');
-    // return 'redireted to /quiz'
     return route('/quiz');
   } else if (!this.props.formData || !this.props.aweberSuccess) {
-    // console.log('redireted to /intro');
-    // return 'redireted to /intro'
     return route('/intro');
   }
 

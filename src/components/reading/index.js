@@ -1,6 +1,6 @@
 import { Component } from 'preact';
-import hs from 'preact-hyperstyler';
 import { route } from 'preact-router';
+import hs from 'preact-hyperstyler';
 import component from '..';
 import styles from './style.styl';
 
@@ -8,6 +8,12 @@ const h = hs(styles);
 
 export default class extends Component {
   render() {
+    if (!this.props.quizData) {
+      return route('/quiz');
+    } else if (!this.props.formData || !this.props.aweberSuccess) {
+      return route('/intro');
+    }
+
     if (this.error) {
       return h.pre(this.error);
     }
