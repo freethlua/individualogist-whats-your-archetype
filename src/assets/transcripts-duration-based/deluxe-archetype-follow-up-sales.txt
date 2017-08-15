@@ -148,7 +148,7 @@
 2.000: That seems like a pretty fair price.
 2.000: But no, I’m not even going to ask you for that much.
 4.000: So, here’s what we’re going to do.
-2.000: I’m going to cut you an exclusive, one-time deal.{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeIn: true} {{/fn}}
+2.000: I’m going to cut you an exclusive, one-time deal.{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat-additional.png', fadeIn: true} {{/fn}}
 3.000: You’ll get the full package, including the Deluxe Archetype Report, for only $37.
 7.000: That’s it.
 1.000: But I want you to share with me your success story.
@@ -156,7 +156,7 @@
 5.000: and I want to read about your experiences too.
 3.000: We need the feedback to keep on improving our products,
 4.000: and it definitely encourages us to keep doing what we do.
-4.000: The Deluxe Archetype Report is all yours for just $37.{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeOut: true} {{/fn}}
+4.000: The Deluxe Archetype Report is all yours for just $37.{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat-additional.png', fadeOut: true} {{/fn}}
 5.000: Now, you have two options.
 2.000: You can continue on the life path that you’re on right now
 3.000: and stay exactly the way that you are, unaware of your life’s purpose,
@@ -250,7 +250,7 @@
 6.000: Individuation is a psychological process that was created by thought leaders in the psychological world decades ago.
 8.000: In fact, principles of Individuation can be traced all the way back to the days of Aristotle.
 6.000: This means that Individuation has stood the test of time to be a proven personal development process.
-8.000: There have also been numerous conclusive scientific studies about analytical psychology and individuation across the globe.{{#fn}} {fn: 'sliderImageSingle', path:'images/pop-up/new-deluxe-archetype-report-with-bonuses.png', fadeIn: true} {{/fn}}
+8.000: There have also been numerous conclusive scientific studies about analytical psychology and individuation across the globe.{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat-additional.png', fadeIn: true} {{/fn}}
 8.000: Unlock your Deluxe Archetype Report and the full package of 3 FREE reports now,
 6.000: before they’re no longer available to you!
 3.000: All you have to do is click the button below {{name}},
