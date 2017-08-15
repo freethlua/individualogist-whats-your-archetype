@@ -230,8 +230,6 @@ You will be the one to lead enormous change in the world.
 
 38
 
-{{#fn}} {fn: 'sliderImageGlobe', fadeOut: true} {{/fn}}
-
 {{name}}, I’m getting the sense that you’re going to live a long, and happy life.
 
 02:30 
@@ -249,6 +247,8 @@ your riches and fulfilment are merely waiting for you.
 02:38 
 
 41
+
+{{#fn}} {fn: 'sliderImageGlobe', fadeOut: true} {{/fn}}
 
 {{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}
 
