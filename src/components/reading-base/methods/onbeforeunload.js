@@ -2,7 +2,7 @@ import fixSubdomain from '../../../utils/fix-subdomain';
 
 export function onbeforeunload(e) {
   if (window.isDev) {
-    // return;
+    return;
   }
   if (this.redirectInitiated) {
     return;
