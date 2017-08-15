@@ -204,6 +204,8 @@ and you’re always ready to stick to your guns.
 
 34
 
+{{#fn}} {fn: 'sliderImageGlobe', fadeIn: true} {{/fn}}
+
 There is something else about you, {{name}}…
 
 02:11 
@@ -212,13 +214,9 @@ There is something else about you, {{name}}…
 
 You form the foundation of the world’s progress and advancement.
 
-{{#fn}} {fn: 'sliderImageGlobe', fadeIn: true} {{/fn}}
-
 02:17 
 
 36
-
-{{#fn}} {fn: 'sliderImageGlobe', fadeOut: true} {{/fn}}
 
 {{name}}, I’m getting the sense that you’re going to live a long, and happy life.
 
@@ -237,6 +235,8 @@ your riches and fulfilment are merely waiting for you.
 02:27 
 
 39
+
+{{#fn}} {fn: 'sliderImageGlobe', fadeOut: true} {{/fn}}
 
 {{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}
 

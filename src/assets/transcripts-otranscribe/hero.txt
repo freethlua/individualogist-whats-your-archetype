@@ -252,9 +252,9 @@ And you’re always ready to stick to your guns.
 
 02:38 
 
-There is something else about you, {{name}}…
+{{#fn}} {fn: 'sliderImageGlobe', fadeIn: true} {{/fn}}
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
+There is something else about you, {{name}}…
 
 43
 
@@ -280,8 +280,6 @@ Not like a superhero…
 
 But you will create solutions to the world’s biggest problems.
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
-
 47
 
 02:55 
@@ -303,6 +301,8 @@ Your riches and fulfilment are merely waiting for you.
 50
 
 03:08 
+
+{{#fn}} {fn: 'sliderImageGlobe', fadeOut: true} {{/fn}}
 
 {{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}
 

@@ -240,17 +240,15 @@ You put your heart and soul into anything that you create...
 
 02:22 
 
-There is something else about you, {{name}}…
+{{#fn}} {fn: 'sliderImageGlobe', fadeIn: true} {{/fn}}
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
+There is something else about you, {{name}}…
 
 41
 
 02:25 
 
 You are the one who will one day solve some of the world’s biggest problems.
-
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 
 42
 
@@ -273,6 +271,8 @@ And although success might not be at your feet right now…
 45
 
 02:44 
+
+{{#fn}} {fn: 'sliderImageGlobe', fadeOut: true} {{/fn}}
 
 {{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}
 

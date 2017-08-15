@@ -192,17 +192,15 @@ It’s no wonder that the people you encounter always feel so drawn to you.
 
 02:09 
 
-There is something else about you, {{name}}…
+{{#fn}} {fn: 'sliderImageGlobe', fadeIn: true} {{/fn}}
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
+There is something else about you, {{name}}…
 
 33
 
 02:12 
 
 You represent the empathy that the world truly needs.
-
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 
 34
 
@@ -225,6 +223,8 @@ Your riches and fulfilment are merely waiting for you.
 37
 
 02:30 
+
+{{#fn}} {fn: 'sliderImageGlobe', fadeOut: true} {{/fn}}
 
 {{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}
 

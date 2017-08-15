@@ -224,11 +224,11 @@ You hold your values and principles close to your heart...
 
 And you’re always ready to stick to your guns.
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
-
 02:30 
 
 38
+
+{{#fn}} {fn: 'sliderImageGlobe', fadeIn: true} {{/fn}}
 
 There is something else about you, {{name}}…
 
@@ -237,8 +237,6 @@ There is something else about you, {{name}}…
 39
 
 You are the one who will ignite massive change in the world.
-
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 
 02:40 
 
@@ -261,6 +259,8 @@ your riches and fulfilment are merely waiting for you.
 02:57 
 
 43
+
+{{#fn}} {fn: 'sliderImageGlobe', fadeOut: true} {{/fn}}
 
 {{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}
 

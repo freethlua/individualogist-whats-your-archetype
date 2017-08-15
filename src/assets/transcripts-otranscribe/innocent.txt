@@ -204,17 +204,15 @@ You hold your values and principles close to your heart, and you’re always rea
 
 02:22 
 
-There is something else about you, {{name}}…
+{{#fn}} {fn: 'sliderImageGlobe', fadeIn: true} {{/fn}}
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeIn: true} {{/fn}}
+There is something else about you, {{name}}…
 
 35
 
 02:25 
 
 You represent what it means to be strong.
-
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/globe.png', fadeOut: true} {{/fn}}
 
 36
 
@@ -231,6 +229,8 @@ And although success might not be at your feet right now, your riches and fulfil
 38
 
 02:42 
+
+{{#fn}} {fn: 'sliderImageGlobe', fadeOut: true} {{/fn}}
 
 {{#fn}} {fn: 'confirmToContinue', type: 'ok', message: 'Would you like to learn more about your path to fulfilment?', button: 'Click here to continue'} {{/fn}}
 
