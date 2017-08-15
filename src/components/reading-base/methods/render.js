@@ -58,6 +58,8 @@ export function render() {
         })),
       Fade(this.state.sliderImageGlobe
         && h(component('sliderImageGlobe'), this.state.sliderImageGlobe)),
+      Fade(this.state.sliderImageSpiritual
+        && h(component('sliderImageSpiritual'), this.state.sliderImageSpiritual)),
     ]),
     h.div('.text', [
       Fade(h(markup, { markup: this.state.currentLine || '', key: this.state.currentLine }))

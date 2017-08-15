@@ -17,3 +17,7 @@ export function sliderImageLoveCompat(opts) {
 export function sliderImageGlobe(opts) {
   return this::sliderImage('sliderImageGlobe', opts);
 }
+
+export function sliderImageSpiritual(opts) {
+  return this::sliderImage('sliderImageSpiritual', opts);
+}
