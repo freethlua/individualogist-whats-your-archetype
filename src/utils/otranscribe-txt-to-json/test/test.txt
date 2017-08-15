@@ -680,7 +680,7 @@ But there’s more to what I’ve learned about you, {{name}}…
 
 It feels to me that you’re a deeply emotional and spiritual person.
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSpiritual', fadeIn: true} {{/fn}}
 
 111
 
@@ -706,7 +706,7 @@ In fact, I get the sense that you have quite the imagination.
 
 Your thoughts and dreams are vivid, colourful, and symbolic of who you are as an individual.
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSpiritual', fadeOut: true} {{/fn}}
 
 115
 

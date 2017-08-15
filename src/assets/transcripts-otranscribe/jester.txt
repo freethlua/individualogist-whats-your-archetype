@@ -644,7 +644,7 @@ But there’s more to what I’ve learned about you, {{name}}…
 
 It feels to me that you might not be the most emotional and spiritual person.
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/spiritual.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSpiritual', fadeIn: true} {{/fn}}
 
 107
 
@@ -652,7 +652,7 @@ It feels to me that you might not be the most emotional and spiritual person.
 
 But you’re intimately connected to your soul in a way that’s far more profound than others.
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/script-images/spiritual.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSpiritual', fadeOut: true} {{/fn}}
 
 108
 
