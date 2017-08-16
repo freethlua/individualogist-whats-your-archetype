@@ -113,10 +113,16 @@
   > .img
     pointer-events: none
     position: relative
+    // max-width: 80%
     @media(min-width:900px)
       right: 100px
     > .img
-      width: 600px
+      display: block
+      margin: auto
+      max-width: 100%
+      @media(max-width:900px)
+        max-width: 80%
+      // width: 600px
     z-index: 1
   > .side
     position: relative
