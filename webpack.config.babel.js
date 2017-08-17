@@ -6,7 +6,7 @@ import analyze from 'webpack-bundle-analyzer/lib/BundleAnalyzerPlugin';
 import html from 'html-webpack-plugin';
 import 'pathify-string';
 
-const isDev = process.env.npm_lifecycle_script.includes('webpack-dev-server');
+const isDev = (process.env.npm_lifecycle_script || '').includes('webpack-dev-server');
 const isProd = !isDev;
 
 export default {
