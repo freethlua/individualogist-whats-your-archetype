@@ -21,7 +21,7 @@ export default class extends Component {
     }
 
     const action1 = h.div('.action-1', [
-      h.div('.img', [h.img({ src: require('../../assets/images/deluxe/deluxe-books-flat.png') })]),
+      h.div('.img', [h.img({ src: require('../../assets/images/deluxe/deluxe-books-flat.svg') })]),
       h.div([
         h.p('Get Your Deluxe Archetype Report For Only $37.00 Now!'),
         h.a({ href: archetypes[this.props.quizData.archetype].clickbank.link }, [h.button(['Click Here To Order Now'])]),
@@ -37,7 +37,7 @@ export default class extends Component {
     ]);
 
     const action2 = h.div('.action-2', [
-      h.div('.img', [h.img({ src: require('../../assets/images/deluxe/deluxe-books-flat-additional.png') })]),
+      h.div('.img', [h.img({ src: require('../../assets/images/deluxe/deluxe-books-flat.svg') })]),
       h.div('.side', [
         h.div('.heading', 'Get Your Deluxe Archetype Report For Only $37.00 Now!'),
         h.div('.delivery', [

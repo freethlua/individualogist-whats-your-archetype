@@ -806,7 +806,7 @@ Like your Deluxe Archetype Report, these additional reports are easy to understa
 
 {{name}}, You will receive:
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat-additional.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat.svg', fadeIn: true} {{/fn}}
 
 09:29 
 
@@ -844,7 +844,7 @@ The total value of all of these products is at least $244.00,
 
 and that’s practically pennies compared to how much value you’ll receive from them!
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat-additional.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat.svg', fadeOut: true} {{/fn}}
 
 09:51 
 
@@ -912,7 +912,7 @@ So, here’s what we’re going to do.
 
 I’m going to cut you an exclusive, one-time deal.
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat-additional.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat.svg', fadeIn: true} {{/fn}}
 
 10:29 
 
@@ -962,7 +962,7 @@ and it definitely encourages us to keep doing what we do.
 
 The Deluxe Archetype Report is all yours for just $37.
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat-additional.png', fadeOut: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat.svg', fadeOut: true} {{/fn}}
 
 11:00 
 
@@ -1532,7 +1532,7 @@ This means that Individuation has stood the test of time to be a proven personal
 
 There have also been numerous conclusive scientific studies about analytical psychology and individuation across the globe.
 
-{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat-additional.png', fadeIn: true} {{/fn}}
+{{#fn}} {fn: 'sliderImageSingle', path:'images/deluxe/deluxe-books-flat.svg', fadeIn: true} {{/fn}}
 
 18:44 
 
