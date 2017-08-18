@@ -85,6 +85,10 @@ export function render() {
       .concat([this.state.sliderPausePopup && 'slider-paused'].filter(Boolean))
   }, [
     // toast,
+    // h(component('sliderImageLoveCompat'), {
+    //   archetype: this.props.quizData.archetype,
+    //   ...this.state.sliderImageLoveCompat
+    // }),
     mainContentEl,
     this.state.sliderPausePopup && h.div('.sliderPausePopup', [h(component('sliderPausePopup'), this.state.sliderPausePopup)]),
     isLocalhost && h.textarea([JSON.stringify(this.state, null, 1)]),
