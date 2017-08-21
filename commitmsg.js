@@ -14,3 +14,4 @@ if (!['master'].includes(branch) && !message.includes(branch)) {
 }
 
 fs.writeFileSync(file, message, 'utf8');
+fs.writeFileSync(__dirname + '/last-commitmsg.txt', message, 'utf8');
