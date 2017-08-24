@@ -9,8 +9,13 @@ export function play({
     return;
   }
   this.audioEl.volume = 0;
-  this.audioEl.currentTime = this.state.currentTimeStart;
+  this.audioEl.currentTime = this.state.currentTimeStart || 0;
   this.audioEl.play();
+  if (this.audioEl.paused) {
+    console.log(`Couldn't play, the device isn't obeying (might need user action)`);
+    this.audioEl.volume = 1;
+    return;
+  }
   tweenr().to(this.audioEl, {
     volume: 1,
     duration: tweenDuration,

@@ -110,6 +110,7 @@ export async function ontimeupdate() {
       currentLine,
       currentLineRaw,
       currentTranscriptIndex,
+      // audioPaused: false,
     });
   }
 

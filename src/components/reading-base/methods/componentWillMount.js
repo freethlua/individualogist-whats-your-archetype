@@ -33,5 +33,7 @@ export async function componentWillMount() {
   window.addEventListener('beforeunload', this.onbeforeunload);
   window.addEventListener('click', this.onclick);
 
+  // this.setState({ audioPaused: true });
+
   this.ready();
 }

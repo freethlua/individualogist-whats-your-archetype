@@ -13,7 +13,9 @@ export function pause({
     duration: tweenDuration,
     ease: 'expo-out',
   }).on('complete', () => {
-    this.audioEl.pause();
+    if (this.audioEl) {
+      this.audioEl.pause();
+    }
     if (callback) {
       callback();
     }

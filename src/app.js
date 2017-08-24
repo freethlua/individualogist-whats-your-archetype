@@ -20,6 +20,9 @@ import './shell.styl';
 const h = hs(styles);
 
 console.log('v' + version);
+try {
+  console.log(`Last commit message: '${require('../last-commitmsg.txt').trim()}'`);
+} catch (error) {}
 
 // console.log(cmp);
 

@@ -34,7 +34,9 @@ export async function ready() {
   }
 
   await this.ontimeupdate();
-  this.playPause();
+  // this.playPause();
+  this.setState({ audioPaused: true });
+  this.play();
   window.scrollTo(0, 0);
   this.setState({ ready: true });
 }

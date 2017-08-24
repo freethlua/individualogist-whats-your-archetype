@@ -26,6 +26,7 @@ export function render() {
     src: audioSrc,
     ref: ref => this.audioEl = ref,
     ontimeupdate: e => this.ontimeupdate(),
+    autoplay: false,
   });
 
   const headerEl = h.header([
