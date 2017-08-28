@@ -38,7 +38,7 @@ export default class Form extends Component {
           name: 'name',
           placeholder: 'Name',
           onchange: linkstate(this, 'name'),
-          value: this.state.name || this.props.formData.name,
+          // value: this.state.name || this.props.formData && this.props.formData.name || '',
           required: true,
         }),
         h.input({
@@ -46,7 +46,7 @@ export default class Form extends Component {
           name: 'email',
           placeholder: 'Email',
           onchange: linkstate(this, 'email'),
-          value: this.state.email || this.props.formData.email,
+          // value: this.state.email || this.props.formData && this.props.formData.email || '',
           required: true,
         }),
         h.button('Start My Free Reading!'),

@@ -107,6 +107,7 @@ class App extends Component {
   }
 
   render() {
+
     const tracking = !isDev && h(component('tracking'), Object.assign({
       clickmagickRendered: () => {
         console.log('clickmagickRendered');
@@ -146,7 +147,7 @@ class App extends Component {
           }
         },
         componentDidMount: formEl => {
-          formEl.querySelector('input[name=name]').focus();
+          formEl.querySelector('input[type=hidden]').focus();
           window.scrollTo(0, 0);
         },
       }))
