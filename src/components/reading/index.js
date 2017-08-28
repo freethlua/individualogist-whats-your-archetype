@@ -8,12 +8,6 @@ const h = hs(styles);
 
 export default class extends Component {
   render() {
-    if (!this.props.quizData || !this.props.quizData.archetype) {
-      return route('/quiz');
-    } else if (!this.props.formData || !this.props.formData.email) {
-      return route('/intro');
-    }
-
     if ('deluxe' in url.query) {
       return route('/deluxe?' + url.query.deluxe);
     }

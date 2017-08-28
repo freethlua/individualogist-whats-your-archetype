@@ -46,7 +46,8 @@ export default class Quiz extends Component {
   }
 
   render() {
-    this.props.redirect();
+    const redirecting = this.props.redirect();
+    if (redirecting) return redirecting;
 
     const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();
 

@@ -94,16 +94,45 @@ class App extends Component {
       });
     }
 
+    console.log(`this.state:`, this.state);
   }
 
-  redirect(state = this.state || this, currentRoute = this.path || '/') {
-    if (!state.quizData || !state.quizData.archetype && currentRoute !== '/quiz') {
-      route('/quiz');
-    } else if (!state.formData || !state.formData.name || !state.formData.email && currentRoute !== '/intro') {
-      route('/intro');
-    } else if (currentRoute !== '/reading') {
-      route('/reading');
+  redirect(currentRoute = location.pathname) {
+    console.log(`Redirect requested from`, currentRoute);
+    console.log(this.state.quizData);
+    if (typeof currentRoute !== 'string') {
+      console.log(`currentRoute:`, currentRoute);
+      console.log(`this.path:`, this.path);
+      console.log(`arguments:`, arguments);
+      throw new Error('currentRoute is not a string');
     }
+    const redirectFrom = from => {
+      let to = from;
+      if (this.state.quizData && this.state.quizData.archetype) {
+        if (this.state.formData && this.state.formData.name && this.state.formData.email) {
+          if (!['/reading', '/deluxe'].includes(from)) {
+            to = '/reading';
+          }
+        } else {
+          to = '/intro';
+        }
+      } else {
+        to = '/quiz';
+      }
+      return from !== to && to;
+    }
+    const redirectTo = redirectFrom(currentRoute);
+    if (redirectTo) {
+      const msg = `redirecting from '${currentRoute}' to '${redirectTo}'`
+      console.log(msg);
+      route(redirectTo);
+      return msg;
+    }
+  }
+
+  componentDidMount() {
+    const redirecting = this.redirect();
+    if (redirecting) return redirecting;
   }
 
   render() {
@@ -124,7 +153,7 @@ class App extends Component {
         store.save(this.state);
         route('/intro');
       }
-    }, { redirect: this.redirect })), component('comments'), component('footer')]);
+    }, { redirect: ::this.redirect })), component('comments'), component('footer')]);
 
     paths.intro = () => h.div([h(component('intro'), Object.assign({}, this.state, {
       form: h(component('form'), Object.assign({}, this.state, {
@@ -151,23 +180,24 @@ class App extends Component {
           window.scrollTo(0, 0);
         },
       }))
-    }, { redirect: this.redirect })), component('comments'), component('footer'), tracking]);
+    }, { redirect: ::this.redirect })), component('comments'), component('footer'), tracking]);
 
     paths.reading = () => h.div([
-      h(component('reading'), Object.assign({}, url.query, this.state, { redirect: this.redirect })),
+      h(component('reading'), Object.assign({}, url.query, this.state, { redirect: ::this.redirect })),
       component('comments'),
       component('footer'),
       tracking,
     ]);
 
     paths.deluxe = () => h.div([
-      h(component('reading-deluxe'), Object.assign({}, url.query, this.state, { redirect: this.redirect })),
+      h(component('reading-deluxe'), Object.assign({}, url.query, this.state, { redirect: ::this.redirect })),
       component('comments'),
       component('footer'),
       tracking,
     ]);
 
-    const redirectExternal = ({ path }) => {
+    const router = ({ path }) => {
+      console.log(`Path requested: '${path}'`);
       if (path in paths) {
         document.title = Case.title(path) + ' | ' + window.originalTitle;
         return h(paths[path]);
@@ -180,10 +210,7 @@ class App extends Component {
       }
     };
 
-    return h.div('.app', [h(Router, [
-      h(::this.redirect, { path: '/', default: true }),
-      h(redirectExternal, { path: '/:path' }),
-    ])]);
+    return h.div('.app', [h(Router, [h(router, { path: '/:path' }), ])]);
   }
 }
 

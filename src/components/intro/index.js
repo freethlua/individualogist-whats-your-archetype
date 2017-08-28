@@ -8,7 +8,16 @@ import md from 'preact-markdown';
 const h = hs(styles);
 
 export default props => {
-  props.redirect();
+  const redirecting = props.redirect();
+  if (redirecting) return redirecting;
+
+  const archetypeDetails = archetypes[props.quizData.archetype];
+
+  if (!archetypeDetails) {
+    console.log(`props:`, props);
+    throw new Error('no')
+    return h.pre(`Invalid archetype: '${props.quizData.archetype}'`);
+  }
 
   return h.div('.wrapper', [h.div('.container', [
     h.div('.heading', [

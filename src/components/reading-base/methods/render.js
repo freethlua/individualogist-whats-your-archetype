@@ -10,7 +10,8 @@ const h = hs(styles);
 
 export function render() {
 
-  this.props.redirect()
+  const redirecting = this.props.redirect();
+  if (redirecting) return redirecting;
 
   const { audioSrc, transcript } = this;
 
