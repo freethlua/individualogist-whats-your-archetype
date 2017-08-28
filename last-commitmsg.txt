@@ -1,1 +1,1 @@
-#63 [dev] dotenv
+#63 archetypeDetails fix
