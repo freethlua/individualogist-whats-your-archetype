@@ -42,58 +42,48 @@ class App extends Component {
       this.setState(this.props);
     }
 
-    const aweberSuccess = 'test-override';
-
-    if ('deluxe' in url.query) {
+    if (url.query.name) {
+      window.history.replaceState(null, null, cleanUrl);
       this.setState({
-        aweberSuccess,
-        deluxe: true,
         formData: Object.assign({
           name: url.query.name,
-        }, this.state && this.state.formData),
-        quizData: Object.assign({
-          archetype: url.query.archetype,
         }, this.state && this.state.formData),
       });
       store.save(this.state);
     }
 
-    if ('dev' in url.query) {
-      // window.history.replaceState(null, null, window.location.href.split('?')[0]);
-      if ('report' in url.query) {
-        if (url.query.report === 'free') {
-          this.setState({
-            aweberSuccess,
-            formData: {
-              name: url.query.name || 'Testname',
-              email: url.query.email || 'test@test.com',
-              aweberRedirectHash: aweberSuccess
-            },
-            quizData: {
-              archetype: url.query.archetype || 'magician'
-            }
-          });
-        }
-      }
+    if (url.query.email) {
+      window.history.replaceState(null, null, cleanUrl);
+      this.setState({
+        formData: Object.assign({
+          email: url.query.email,
+        }, this.state && this.state.formData),
+      });
+      store.save(this.state);
     }
 
-    if ('aweberSuccess' in url.query && this.state.formData) {
-      window.history.replaceState(null, null, window.location.href.split('?')[0]);
-      if (url.query.aweberSuccess === this.state.formData.aweberRedirectHash) {
-        console.log('authenticated!');
-        this.setState({
-          aweberSuccess: url.query.aweberSuccess
-        });
-        store.save(this.state);
-      } else {
-        console.log('Couldn\'t authenticate...');
-        console.log({
-          formData: this.state.formData,
-          aweberSuccess: url.query.aweberSuccess
-        });
-      }
+    if (url.query.archetype) {
+      window.history.replaceState(null, null, cleanUrl);
+      this.setState({
+        quizData: Object.assign({
+          archetype: url.query.archetype,
+        }, this.state && this.state.quizData),
+      });
+      store.save(this.state);
     }
 
+    if ('test' in url.query) {
+      this.setState({
+        formData: Object.assign({
+          name: 'Testname',
+          email: 'test@test.com',
+        }, this.state && this.state.formData),
+        quizData: Object.assign({
+          archetype: 'caregiver'
+        }, this.state && this.state.quizData),
+      });
+      store.save(this.state);
+    }
   }
 
   render() {
@@ -106,9 +96,9 @@ class App extends Component {
     }, this.state));
 
     const redirect = () => {
-      if (!this.state.quizData) {
+      if (!this.state.quizData || !this.state.quizData.archetype) {
         route('/quiz');
-      } else if (!this.state.formData || !this.state.aweberSuccess) {
+      } else if (!this.state.formData || !this.state.formData.email) {
         route('/intro');
       } else {
         route('/reading');
@@ -128,14 +118,12 @@ class App extends Component {
     paths.intro = () => h.div([h(component('intro'), Object.assign({}, this.state, {
       form: h(component('form'), Object.assign({}, this.state, {
         onSubmit: (e, formData) => {
+          this.setState({ formData });
+          store.save(this.state);
           if (window.isDev) {
-            this.setState({ formData, aweberSuccess: formData.aweberRedirectHash });
-            store.save(this.state);
             route('/reading');
             e.preventDefault();
           } else {
-            this.setState({ formData });
-            store.save(this.state);
             try {
               fbq('track', 'Lead', {
                 value: 0.00,

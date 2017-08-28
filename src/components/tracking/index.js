@@ -6,16 +6,6 @@ import archetypes from '../../data/archetypes';
 let clickmagickRenderedOnce = false;
 // later edit: this has been moved to appState for persistence. i.e. it now only renders once EVER
 
-// export default props => h.div('.tracking', [ //
-//   !props.clickmagickRenderedOnce &&
-//   props.formData &&
-//   props.aweberSuccess &&
-//   h.img('.clickmagick', {
-//     src: archetypes[props.quizData.archetype].clickmagick.imgSrc,
-//     onload: props.clickmagickRendered,
-//   }),
-// ]);
-
 export default class extends Component {
   componentWillMount() {
     this.setState({ clickmagickRenderedOnce });
@@ -26,7 +16,7 @@ export default class extends Component {
   render() {
     const components = [];
 
-    if (this.props.formData && this.props.aweberSuccess) {
+    if (this.props.formData && this.props.formData.email) {
       if (this.state.clickmagickRenderedOnce || this.props.clickmagickRenderedOnce) {
         console.log('Debug:', 'clickmagick already rendered once, skipping this');
       } else {

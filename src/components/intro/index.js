@@ -10,7 +10,7 @@ const h = hs(styles);
 export default props => {
   if (!props || !props.quizData || !props.quizData.archetype) {
     return route('/quiz');
-  } else if (props.formData && props.aweberSuccess) {
+  } else if (props.formData && props.formData.email) {
     return route('/reading');
   }
 
