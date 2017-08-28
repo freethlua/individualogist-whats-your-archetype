@@ -8,11 +8,7 @@ import md from 'preact-markdown';
 const h = hs(styles);
 
 export default props => {
-  if (!props || !props.quizData || !props.quizData.archetype) {
-    return route('/quiz');
-  } else if (props.formData && props.formData.email) {
-    return route('/reading');
-  }
+  props.redirect();
 
   return h.div('.wrapper', [h.div('.container', [
     h.div('.heading', [

@@ -84,6 +84,25 @@ class App extends Component {
       });
       store.save(this.state);
     }
+
+    if (this.state.quizData && this.state.quizData.archetype && !archetypes[this.state.quizData.archetype]) {
+      console.log(`Invalid archetype: '${this.state.quizData.archetype}'`);
+      console.debug(this.state);
+      this.setState({
+        quizData: {},
+      });
+    }
+
+  }
+
+  redirect(state = this.state || this, currentRoute = this.path || '/') {
+    if (!state.quizData || !state.quizData.archetype && currentRoute !== '/quiz') {
+      route('/quiz');
+    } else if (!state.formData || !state.formData.name || !state.formData.email && currentRoute !== '/intro') {
+      route('/intro');
+    } else if (currentRoute !== '/reading') {
+      route('/reading');
+    }
   }
 
   render() {
@@ -95,16 +114,6 @@ class App extends Component {
       }
     }, this.state));
 
-    const redirect = () => {
-      if (!this.state.quizData || !this.state.quizData.archetype) {
-        route('/quiz');
-      } else if (!this.state.formData || !this.state.formData.email) {
-        route('/intro');
-      } else {
-        route('/reading');
-      }
-    };
-
     const paths = {};
 
     paths.quiz = () => h.div([h(component('quiz'), Object.assign({}, this.state, {
@@ -113,7 +122,7 @@ class App extends Component {
         store.save(this.state);
         route('/intro');
       }
-    })), component('comments'), component('footer')]);
+    }, { redirect: this.redirect })), component('comments'), component('footer')]);
 
     paths.intro = () => h.div([h(component('intro'), Object.assign({}, this.state, {
       form: h(component('form'), Object.assign({}, this.state, {
@@ -140,17 +149,17 @@ class App extends Component {
           window.scrollTo(0, 0);
         },
       }))
-    })), component('comments'), component('footer'), tracking]);
+    }, { redirect: this.redirect })), component('comments'), component('footer'), tracking]);
 
     paths.reading = () => h.div([
-      h(component('reading'), Object.assign({}, url.query, this.state)),
+      h(component('reading'), Object.assign({}, url.query, this.state, { redirect: this.redirect })),
       component('comments'),
       component('footer'),
       tracking,
     ]);
 
     paths.deluxe = () => h.div([
-      h(component('reading-deluxe'), Object.assign({}, url.query, this.state)),
+      h(component('reading-deluxe'), Object.assign({}, url.query, this.state, { redirect: this.redirect })),
       component('comments'),
       component('footer'),
       tracking,
@@ -170,7 +179,7 @@ class App extends Component {
     };
 
     return h.div('.app', [h(Router, [
-      h(redirect, { path: '/', default: true }),
+      h(::this.redirect, { path: '/', default: true }),
       h(redirectExternal, { path: '/:path' }),
     ])]);
   }

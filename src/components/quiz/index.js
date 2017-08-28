@@ -46,9 +46,7 @@ export default class Quiz extends Component {
   }
 
   render() {
-    if (this.props.quizData && this.props.quizData.archetype) {
-      return route('/intro');
-    }
+    this.props.redirect();
 
     const cqi = 'cqi' in this.state ? this.state.cqi : this.calcCqi();
 
