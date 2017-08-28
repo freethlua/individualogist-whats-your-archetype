@@ -4,7 +4,10 @@ import copy from 'copy-webpack-plugin';
 import extract from 'extract-text-webpack-plugin';
 import analyze from 'webpack-bundle-analyzer/lib/BundleAnalyzerPlugin';
 import html from 'html-webpack-plugin';
+import dotenv from 'dotenv';
 import 'pathify-string';
+
+dotenv.load();
 
 const isDev = (process.env.npm_lifecycle_script || process.argv.join()).includes('webpack-dev-server');
 const isProd = !isDev;
@@ -128,6 +131,7 @@ export default {
   stats: 'errors-only',
   devServer: {
     host: '0.0.0.0',
+    port: process.env.PORT,
     disableHostCheck: true,
     historyApiFallback: true,
     stats: 'errors-only',

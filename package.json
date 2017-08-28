@@ -16,6 +16,7 @@
     "case": "^1.5.2",
     "debounce": "^1.0.2",
     "delay": "^2.0.0",
+    "dotenv": "^4.0.0",
     "es6-tween": "^2.2.5",
     "fade": "^0.2.0",
     "filter-duplicates": "^2.0.0",
