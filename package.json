@@ -4,7 +4,7 @@
   "scripts": {
     "build": "webpack",
     "dev": "webpack-dev-server --hot --inline",
-    "commitmsg": "node commitmsg.js"
+    "prepush": "node prepush.js"
   },
   "repository": "freethlua/individualogist-whats-your-archetype",
   "dependencies": {
