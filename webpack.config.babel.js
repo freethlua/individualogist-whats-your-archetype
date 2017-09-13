@@ -1,31 +1,36 @@
-import webpack from 'webpack';
-import clean from 'clean-webpack-plugin';
-import copy from 'copy-webpack-plugin';
-import extract from 'extract-text-webpack-plugin';
-import analyze from 'webpack-bundle-analyzer/lib/BundleAnalyzerPlugin';
-import html from 'html-webpack-plugin';
-import dotenv from 'dotenv';
-import 'pathify-string';
+const path = require('path');
+const webpack = require('webpack');
+const clean = require('clean-webpack-plugin');
+const copy = require('copy-webpack-plugin');
+const analyze = require('webpack-bundle-analyzer/lib/BundleAnalyzerPlugin');
+const extract = require('extract-text-webpack-plugin');
+const html = require('html-webpack-plugin');
+const minify = require('uglifyjs-webpack-plugin');
+const dotenv = require('dotenv');
+const _ = require('lodash');
+const pkg = require('./package');
 
 dotenv.load();
 
 const isDev = (process.env.npm_lifecycle_script || process.argv.join()).includes('webpack-dev-server');
 const isProd = !isDev;
 
+const srcPath = path.join(__dirname, 'src');
+const buildPath = path.join(__dirname, 'build');
+
 export default {
-  context: __dirname.join('src'),
+  context: srcPath,
   entry: {
     app: [
-      './before',
       'whatwg-fetch',
       'babel-polyfill',
-      './app'
+      '.'
     ]
   },
   output: {
     filename: isDev ? '[name].js' : '[name].[chunkhash].js',
     chunkFilename: 'chunks/[name].[chunkhash].js',
-    path: __dirname.join('build'),
+    path: buildPath,
     sourceMapFilename: '[file].map',
     hashDigestLength: 5
   },
@@ -33,7 +38,7 @@ export default {
   module: {
     rules: [{
       test: /\.js$/,
-      include: __dirname.join('src'),
+      include: srcPath,
       use: [
         isDev && 'webpack-module-hot-accept',
         { loader: 'babel-loader', options: { retainLines: true } },
@@ -100,20 +105,25 @@ export default {
     isProd && new webpack.optimize.CommonsChunkPlugin({
       name: 'webpack'
     }),
-    isProd && new html({
-      template: 'shell.html',
+    new html({
+      template: 'index.html',
       inject: false
     }),
     // //
     // copy([{}]),
     //
-    isProd && new webpack.optimize.UglifyJsPlugin({
+    isProd && new minify({
       sourceMap: true,
-      mangle: false,
-      comments: false,
-      output: {
-        ascii_only: true
-      }
+      parallel: true,
+      uglifyOptions: {
+        ecma: 6,
+        sourceMap: true,
+        mangle: false,
+        comments: false,
+        output: {
+          ascii_only: true
+        }
+      },
     }),
     isProd && new analyze({
       analyzerMode: 'static',

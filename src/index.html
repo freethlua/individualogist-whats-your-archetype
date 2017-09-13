@@ -9,8 +9,7 @@
     <% }) %>
   </head>
   <body>
-    <div id='loading' class='loading'></div>
-    <div id='app'></div>
+    <div id='app' class='loading'> Loading... (requires javascript) </div>
     <% htmlWebpackPlugin.files.js.forEach(js => { %>
     <script type='text/javascript' src='<%= js %>' defer></script>
     <% }) %>

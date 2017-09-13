@@ -1,40 +1,16 @@
-import URL from 'url';
-import { Component, render } from 'preact';
+import { Component } from 'preact';
 import hs from 'preact-hyperstyler';
 import Router, { route } from 'preact-router';
-import { version } from '../package';
-import './handle-errors';
-// import 'roboto-fontface/css/roboto/roboto-fontface.css';
-// import 'typeface-roboto-slab';
-// import '@font/nunito/index.css';
-import 'nunito-fontface';
-// import 'reset-css';
-import 'bootstrap/dist/css/bootstrap-reboot.css'
 import Case from 'case';
-import archetypes from './data/archetypes';
-import fixSubdomain from './utils/fix-subdomain';
-import store from './store';
-import component from './components';
-import styles from './app.styl';
-import './shell.styl';
+import store from '../../store';
+import component from '..';
+import archetypes from '../../data/archetypes';
+import fixSubdomain from '../../utils/fix-subdomain';
+import styles from './style.styl';
 
 const h = hs(styles);
 
-console.log('v' + version);
-try {
-  console.log(`Last commit message: '${require('../last-commitmsg.txt').trim()}'`);
-} catch (error) {}
-
-// console.log(cmp);
-
-window.url = URL.parse(String(location), true);
-window.cleanUrl = URL.format(Object.assign({}, url, {
-  query: {},
-  search: null
-}));
-window.originalTitle = document.title;
-
-class App extends Component {
+export default class App extends Component {
   componentWillMount() {
     if ('new' in url.query) {
       window.history.replaceState(null, null, cleanUrl);
@@ -213,18 +189,3 @@ class App extends Component {
     return h.div('.app', [h(Router, [h(router, { path: '/:path' }), ])]);
   }
 }
-
-const target = document.getElementById('app') || document.getElementById('whats-your-archetype_app') || document.body;
-const loadingElement = document.getElementById('loading');
-store.ready.then(data => {
-  window.reload = () => render(h(App, data), target, target.lastChild);
-  render(h(App, data), target, target.lastChild);
-  if (loadingElement) {
-    window.showLoading = () => loadingElement.style.display = 'block';
-    window.hideLoading = () => loadingElement.style.display = 'none';
-    window.hideLoading();
-  }
-}).catch(error => {
-  render(h.pre(error.stack || error.message || error), target, target.lastChild);
-  console.error(error);
-});
