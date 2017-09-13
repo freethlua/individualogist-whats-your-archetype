@@ -7,7 +7,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-car.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28769'
+      link: 'http://dar-car.individua1.pay.clickbank.net/?cbskin=17588&cbfid=28769'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=caregiveroptin2',
@@ -21,7 +21,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-cre.individua1.pay.clickbank.net/?cbskin=16829&cbfid=27121'
+      link: 'http://dar-cre.individua1.pay.clickbank.net/?cbskin=17588&cbfid=27121'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=creatoroptin2',
@@ -35,7 +35,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-exp.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28787'
+      link: 'http://dar-exp.individua1.pay.clickbank.net/?cbskin=17588&cbfid=28787'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=exploreroptin2',
@@ -49,7 +49,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-her.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28788'
+      link: 'http://dar-her.individua1.pay.clickbank.net/?cbskin=17588&cbfid=28788'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=herooptin2',
@@ -63,7 +63,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-inn.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28789'
+      link: 'http://dar-inn.individua1.pay.clickbank.net/?cbskin=17588&cbfid=28789'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=innocentoptin2',
@@ -77,7 +77,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-jes.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28790'
+      link: 'http://dar-jes.individua1.pay.clickbank.net/?cbskin=17588&cbfid=28790'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=jesteroptin2',
@@ -91,7 +91,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-lov.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28791'
+      link: 'http://dar-lov.individua1.pay.clickbank.net/?cbskin=17588&cbfid=28791'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=loveroptin2',
@@ -105,7 +105,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-mag.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28792'
+      link: 'http://dar-mag.individua1.pay.clickbank.net/?cbskin=17588&cbfid=28792'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=memberoptin2',
@@ -119,7 +119,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-mem.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28793'
+      link: 'http://dar-mem.individua1.pay.clickbank.net/?cbskin=17588&cbfid=28793'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=magicianoptin2',
@@ -133,7 +133,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-out.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28794'
+      link: 'http://dar-out.individua1.pay.clickbank.net/?cbskin=17588&cbfid=28794'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=outlawoptin2',
@@ -147,7 +147,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-rul.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28795'
+      link: 'http://dar-rul.individua1.pay.clickbank.net/?cbskin=17588&cbfid=28795'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=ruleroptin2',
@@ -161,7 +161,7 @@ module.exports = {
       meta_adtracking: 'Quiz_Results_Opt_In',
     },
     clickbank: {
-      link: 'http://dar-sag.individua1.pay.clickbank.net/?cbskin=16829&cbfid=28797'
+      link: 'http://dar-sag.individua1.pay.clickbank.net/?cbskin=17588&cbfid=28797'
     },
     clickmagick: {
       imgSrc: 'http://www.clkmg.com/api/a/pixel/?uid=59760&att=2&ref=sageoptin2',
