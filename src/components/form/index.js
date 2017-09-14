@@ -1,6 +1,5 @@
 import URL from 'url';
 import { Component } from 'preact';
-import quickHash from 'quick-hash';
 import hs from 'preact-hyperstyler';
 import linkstate from 'linkstate';
 import { route } from 'preact-router';
